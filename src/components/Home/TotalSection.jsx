@@ -8,16 +8,16 @@ import users from "../../assets/icons/users.png";
 const TotalSection = () => {
   return (
     <div
-      className="h-[330px] object-fit mt-[120px]"
+      className="lg:h-[330px] md:h-[615px] h-[1200px] object-fit lg:mt-[120px] md:mt-[800px] mt-[1460px]"
       style={{
         backgroundImage: `url(${carouselBanner})`,
         backgroundSize: "auto",
-        backgroundPosition: "center",
+        backgroundPosition: "cover",
         backgroundRepeat: "repeat",
       }}
     >
       {/* start */}
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto h-300px pt-[40px]">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto h-300px pt-[40px] gap-12 lg:gap-0">
         <div
           className=""
           style={{

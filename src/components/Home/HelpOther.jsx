@@ -7,7 +7,6 @@ import BloodHandFive from "../../assets/BloodHandFive.png";
 import HelpObject1 from "../../assets/icons/HelpObject1.png";
 import HelpObject2 from "../../assets/icons/HelpObject2.png";
 import HelpObject3 from "../../assets/icons/HelpObject3.png";
-import maki_arrow from "../../assets/icons/maki_arrow.png";
 
 const HelpOther = () => {
   return (
@@ -27,8 +26,8 @@ const HelpOther = () => {
           Making your ways to help others
         </h2>
       </div>
-      <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto pl-12 pr-12 mt-8 gap-8">
-        {/* start */}
+      <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto lg:pl-12 pl-4 lg:pr-12 pr-4 mt-8 gap-8">
+        {/* star  t */}
         <div className="flex justify-center h-[455px] overflow-hidden">
           <div className="relative flex flex-col bg-[#F3A4A7] shadow-md rounded-2xl w-full">
             <div className="m-4">
@@ -65,7 +64,7 @@ const HelpOther = () => {
                   />
                 </div>
               </div>
-              <div className="ml-[260px] w-[90px] h-[60px] overflow-hidden rounded-2xl bg-white -mt-[242px]">
+              <div className="lg:ml-[260px] ml-[115px] lg:w-[90px] w-[53px] lg:h-[60px] h-[70px] overflow-hidden rounded-2xl bg-white lg:-mt-[242px] -mt-[248px]">
                 <img
                   src={BloodHandThree}
                   alt="BloodHandFirst"
