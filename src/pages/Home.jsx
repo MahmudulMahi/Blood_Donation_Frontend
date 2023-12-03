@@ -8,6 +8,7 @@ import TotalSection from "../components/Home/TotalSection";
 import NeedHelpSection from "../components/Home/NeedHelpSection";
 import ContactUs from "../components/Home/ContactUs";
 import ClientsThink from "../components/Home/ClientsThink";
+import MobileApp from "../components/Home/MobileApp";
 
 const Home = () => {
   return (
@@ -20,6 +21,8 @@ const Home = () => {
      <div className=""><NeedHelpSection /></div>
      <div className="mt-12"><ContactUs /></div>
      <div className="mt-12"><ClientsThink /></div>
+     <div className="mt-12"><MobileApp /></div>
+
      <div className=""><Footer /></div>
     </div>
   );

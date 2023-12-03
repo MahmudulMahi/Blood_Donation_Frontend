@@ -15,13 +15,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        {token ? (
+        {/* {token ? ( */}
           <Route path="/" element={<Home/>}>
-            {/* <Route index element={<Dashboard />} /> */}
+           
           </Route>
-        ) : (
+        {/* ) : (
           <Route path="/" element={<Navigate to="/login" />} />
-        )}
+        )} */}
       </Routes>
     </Router>
   );
