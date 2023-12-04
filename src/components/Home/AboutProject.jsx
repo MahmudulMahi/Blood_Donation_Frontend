@@ -75,9 +75,9 @@ export default function AboutProject() {
       </div>
 
       {/* About */}
-      <div className="gap-24 h-[550px] mt-8 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto ">
-        <div className="flex justify-center mt-20 space-x-8 hover:-translate-y-5 hover:border-b-4 hover:border-brandPrimary hover:rounded-xl  transition-all duration-300">
-          <div className="relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl border border-pink-300 w-[400px]">
+      <div className=" h-[550px] mt-8 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto lg:mt-12 md:mt-0">
+        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5 hover:border-b-4 rounded-xl hover:border-brandPrimary hover:rounded-xl transition-all duration-300 m-10 border">
+          <div className="relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl border border-brandPrimary">
             <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
               <img
                 src={RectangleImage}
@@ -140,21 +140,21 @@ export default function AboutProject() {
                 alignItems: "end",
               }}
             >
-               <div className="flex p-4">
-                  <button
-                    className="text-right align-end text-xs text-brandPrimary ml-6 font-semibold"
-                    type="button"
-                    data-ripple-light="true"
-                  >
-                    Learn more &#8594;
-                  </button>
-                </div>
+              <div className="flex p-4">
+                <button
+                  className="text-right align-end text-xs text-brandPrimary ml-6 font-semibold"
+                  type="button"
+                  data-ripple-light="true"
+                >
+                  Learn more &#8594;
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        {/* end */}
-        <div className="flex justify-center mt-20 space-x-8 hover:-translate-y-5 hover:border-b-4 hover:border-brandPrimary hover:rounded-xl  transition-all duration-300">
-          <div className="relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl border border-pink-300 w-[400px]">
+        {/* end 1*/}
+        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5 hover:border-b-4 rounded-xl hover:border-brandPrimary hover:rounded-xl transition-all duration-300 m-10 border">
+          <div className="relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl border border-brandPrimary">
             <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
               <img
                 src={RectangleImage}
@@ -217,21 +217,21 @@ export default function AboutProject() {
                 alignItems: "end",
               }}
             >
-               <div className="flex p-4">
-                  <button
-                    className="text-right align-end text-xs text-brandPrimary ml-6 font-semibold"
-                    type="button"
-                    data-ripple-light="true"
-                  >
-                    Learn more &#8594;
-                  </button>
-                </div>
+              <div className="flex p-4">
+                <button
+                  className="text-right align-end text-xs text-brandPrimary ml-6 font-semibold"
+                  type="button"
+                  data-ripple-light="true"
+                >
+                  Learn more &#8594;
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        {/* end */}
-        <div className="flex justify-center mt-20 space-x-8 hover:-translate-y-5 hover:border-b-4 hover:border-brandPrimary hover:rounded-xl  transition-all duration-300">
-          <div className="relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl border border-pink-300 w-[400px]">
+        {/* end 2 */}
+        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5 hover:border-b-4 rounded-xl hover:border-brandPrimary hover:rounded-xl transition-all duration-300 m-10 border">
+          <div className="relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl border border-brandPrimary">
             <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
               <img
                 src={RectangleImage}
@@ -271,7 +271,7 @@ export default function AboutProject() {
                   fontFamily: "Poppins",
                 }}
               >
-                About Blood
+               About Blood
               </h5>
               <p
                 className="block font-sans text-base antialiased font-light leading-relaxed text-inherit text- mt-4 text-justify"
@@ -294,19 +294,19 @@ export default function AboutProject() {
                 alignItems: "end",
               }}
             >
-               <div className="flex p-4">
-                  <button
-                    className="text-right align-end text-xs text-brandPrimary ml-6 font-semibold"
-                    type="button"
-                    data-ripple-light="true"
-                  >
-                    Learn more &#8594;
-                  </button>
-                </div>
+              <div className="flex p-4">
+                <button
+                  className="text-right align-end text-xs text-brandPrimary ml-6 font-semibold"
+                  type="button"
+                  data-ripple-light="true"
+                >
+                  Learn more &#8594;
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        {/* end */}
+        {/* end 3*/}
       </div>
       {/* end */}
     </div>

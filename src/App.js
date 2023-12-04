@@ -7,7 +7,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import Home from "./pages/Home";
-
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   const token = localStorage.getItem("token");
@@ -15,13 +15,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* {token ? ( */}
-          <Route path="/" element={<Home/>}>
-           
-          </Route>
-        {/* ) : (
-          <Route path="/" element={<Navigate to="/login" />} />
-        )} */}
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<AboutUs />}></Route>
       </Routes>
     </Router>
   );

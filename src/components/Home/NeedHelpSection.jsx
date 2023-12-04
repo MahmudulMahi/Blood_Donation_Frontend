@@ -1,11 +1,10 @@
 import React from "react";
-import TotalDonors from "../../assets/icons/TotalDonors.png";
 import ManHospitalBed from "../../assets/ManHospitalBed.png";
 
 const NeedHelpSection = () => {
   return (
     <div
-      className="h-[400px] object-fit mt-[120px] bg-[#E11B22B2] overflow-hidden"
+      className="lg:h-[400px] md:h-[400px] h-[1000px] object-fit bg-[#E11B22B2] overflow-hidden lg:mt-[100px] md:mt-[750px] mt-[1200px]"
       style={{
         backgroundSize: "auto",
         backgroundPosition: "center",
@@ -13,9 +12,9 @@ const NeedHelpSection = () => {
       }}
     >
       {/* start */}
-      <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto">
+      <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 md:w-11/12 mx-auto">
         <div className="ml-12 flex">
-          <div className="h-[400px]">
+          <div className="h-[400px] bg-[#EA5F64]">
             <img
               src={ManHospitalBed}
               alt="ManHospitalBed"

@@ -32,14 +32,14 @@ const HelpOther = () => {
           <div className="relative flex flex-col bg-[#F3A4A7] shadow-md rounded-2xl w-full">
             <div className="m-4">
               <div className="flex">
-                <div className="lg:w-[240px] md:w-[300px] w-[180px] lg:h-[240px] md:h-[260px] h-[240px] overflow-hidden rounded-2xl bg-white">
+                <div className="lg:w-[240px] md:w-[340px] w-[240px] lg:h-[240px] md:h-[260px] h-[240px] overflow-hidden rounded-2xl bg-white">
                   <img
                     src={BloodHandFirst}
                     alt="img-blur-shadow"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="m-[22px] lg:ml-[22px] md:ml-[18px] ml-[18px] mr-[0px] lg:w-[350px] md:w-[473px] w-[250px] lg:h-[155px] md:h-[175px] h-[155px] overflow-hidden rounded-2xl bg-white -mt-[0px]">
+                <div className="m-[22px] lg:ml-[22px] md:ml-[18px] ml-[18px] mr-[0px] lg:h-[155px] md:h-[175px] h-[155px] overflow-hidden rounded-2xl bg-white -mt-[0px] border">
                   <img
                     src={BloodHandSecond}
                     alt="img-blur-shadow"
@@ -56,7 +56,7 @@ const HelpOther = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="lg:ml-[22px] md:ml-[18px] ml-[18px] lg:w-[240px] md:w-[380px] w-[240px] lg:h-[247px] md:h-[227px] h-[247px] overflow-hidden rounded-2xl bg-white -mt-[65px]">
+                <div className="lg:ml-[22px] md:ml-[18px] ml-[18px] lg:w-[240px] md:w-[330px] w-[240px] lg:h-[247px] md:h-[227px] h-[247px] overflow-hidden rounded-2xl bg-white -mt-[65px]">
                   <img
                     src={BloodHandFive}
                     alt="BloodHandFirst"
@@ -64,11 +64,11 @@ const HelpOther = () => {
                   />
                 </div>
               </div>
-              <div className="lg:ml-[257px] md:ml-[315px] ml-[185px] lg:w-[80px] md:w-[80px] w-[53px] lg:h-[60px] h-[70px] overflow-hidden rounded-2xl bg-white lg:-mt-[242px] -mt-[248px] md:-mt-[234px]">
+              <div className=" justify-center flex lg:h-[60px] h-[70px] overflow-hidden rounded-2xl lg:-mt-[242px] -mt-[248px] md:-mt-[234px]">
                 <img
                   src={BloodHandThree}
                   alt="BloodHandFirst"
-                  className="w-full h-full object-cover"
+                  className="h-full object-cover w-[54px] lg:w-[84px] rounded-xl" 
                 />
               </div>
             </div>
@@ -99,8 +99,8 @@ const HelpOther = () => {
                     </div>
                   </div>
                   {/* gelo */}
-                  <div className="flex flex-col lg:w-[500px] md:w-[580px] w-[500px] ml-8 justify-center text-justify">
-                    <div className="flex items-center space-x-[385px] lg:space-x-[273px]">
+                  <div className="flex flex-col ml-8 justify-center text-justify">
+                    <div className="flex items-center justify-between">
                       <h2
                         className="font-semibold"
                         style={{
@@ -157,8 +157,8 @@ const HelpOther = () => {
                     </div>
                   </div>
                   {/* gelo 2*/}
-                  <div className="flex flex-col lg:w-[500px] md:w-[580px] w-[500px] ml-8 justify-center">
-                    <div className="flex items-center space-x-[408px] lg:space-x-[295px]">
+                  <div className="flex flex-col ml-8 justify-center">
+                    <div className="flex items-center justify-between">
                       <h2
                         className="font-semibold"
                         style={{
@@ -215,8 +215,8 @@ const HelpOther = () => {
                     </div>
                   </div>
                   {/* gelo 3*/}
-                  <div className="flex flex-col lg:w-[500px] md:w-[580px] w-[500px] ml-8 justify-center">
-                    <div className="flex items-center space-x-[428px] lg:space-x-[315px]">
+                  <div className="flex flex-col ml-8 justify-center">
+                    <div className="flex items-center justify-between">
                       <h2
                         className="font-semibold"
                         style={{
@@ -291,8 +291,8 @@ const HelpOther = () => {
                     </div>
                   </div>
                   {/* gelo */}
-                  <div className="w-[410px] justify-center text-justify mt-8">
-                    <div className="flex items-center space-x-[155px]">
+                  <div className="justify-center text-justify mt-8">
+                    <div className="flex items-center justify-between">
                       <h2
                         className="font-semibold"
                         style={{
@@ -364,8 +364,8 @@ const HelpOther = () => {
                     </div>
                   </div>
                   {/* gelo */}
-                  <div className="w-[410px] justify-center text-justify mt-8">
-                    <div className="flex items-center space-x-[185px]">
+                  <div className="justify-center text-justify mt-8">
+                    <div className="flex items-center justify-between">
                       <h2
                         className="font-semibold"
                         style={{
@@ -437,8 +437,8 @@ const HelpOther = () => {
                     </div>
                   </div>
                   {/* gelo */}
-                  <div className="w-[410px] justify-center text-justify mt-8">
-                    <div className="flex items-center space-x-[210px]">
+                  <div className="justify-center text-justify mt-8">
+                    <div className="flex items-center justify-between">
                       <h2
                         className="font-semibold"
                         style={{
