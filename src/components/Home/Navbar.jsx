@@ -13,11 +13,8 @@ import logo from "../../assets/logo.png";
 import { Link } from "react-scroll";
 import { useNavigate } from "react-router-dom";
 
-
 const Navbar = () => {
-  
   const navigate = useNavigate();
-
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -230,33 +227,35 @@ const Navbar = () => {
                       </Link>
                       {/* Modal Start */}
                       {activeModal === id && (
-        <div>
-          {navItems?.[activeModal - 1]?.optionList && (
-            <div
-              className={`absolute left-2/2 transform -translate-x-2/2 top-full`}
-              style={{ width: "calc(200% - 27px)" }}
-            >
-              <div className="bg-white max-w-md mx-auto rounded-b-sm py-4 pl-4 border border-t-0 shadow-xl">
-                <ul>
-                  {navItems?.[activeModal - 1]?.optionList?.map((val) => (
-                    <li key={val.path}>
-                      <button
-                        className="text-gray-900 hover:text-brandPrimary"
-                        onClick={() => {
-                          navigate(val.path);
-                          closeModal();
-                        }}
-                      >
-                        {val?.name}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          )}
-        </div>
-      )}
+                        <div>
+                          {navItems?.[activeModal - 1]?.optionList && (
+                            <div
+                              className={`absolute left-2/2 transform -translate-x-2/2 top-full`}
+                              style={{ width: "calc(200% - 27px)" }}
+                            >
+                              <div className="bg-white max-w-md mx-auto rounded-b-sm py-4 pl-4 border border-t-0 shadow-xl">
+                                <ul>
+                                  {navItems?.[activeModal - 1]?.optionList?.map(
+                                    (val) => (
+                                      <li key={val.path}>
+                                        <button
+                                          className="text-gray-900 hover:text-brandPrimary"
+                                          onClick={() => {
+                                            navigate(val.path);
+                                            closeModal();
+                                          }}
+                                        >
+                                          {val?.name}
+                                        </button>
+                                      </li>
+                                    )
+                                  )}
+                                </ul>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )}
 
                       {/* Modal End */}
                     </div>

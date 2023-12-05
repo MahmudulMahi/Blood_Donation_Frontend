@@ -4,6 +4,7 @@ import TotalDonors from "../../assets/icons/TotalDonors.png";
 import TotalBell from "../../assets/icons/TotalBell.png";
 import handShake from "../../assets/icons/handShake.png";
 import users from "../../assets/icons/users.png";
+import AnimatedNumberCounter from "./DynamicSolutions/AnimatedNumberCounter";
 
 const TotalSection = () => {
   return (
@@ -52,7 +53,7 @@ const TotalSection = () => {
                 fontWeight: 800,
               }}
             >
-              123 k
+              <AnimatedNumberCounter value={123} /> k
             </h1>
             <p
               className="mt-6"
@@ -99,7 +100,7 @@ const TotalSection = () => {
                 fontWeight: 800,
               }}
             >
-              123 k
+              <AnimatedNumberCounter value={249} /> k
             </h1>
             <p
               className="mt-6"
@@ -146,7 +147,7 @@ const TotalSection = () => {
                 fontWeight: 800,
               }}
             >
-              123 k
+              <AnimatedNumberCounter value={1684} /> k
             </h1>
             <p
               className="mt-6"
@@ -193,7 +194,7 @@ const TotalSection = () => {
                 fontWeight: 800,
               }}
             >
-              123 k
+              <AnimatedNumberCounter value={200} /> k
             </h1>
             <p
               className="mt-6"
