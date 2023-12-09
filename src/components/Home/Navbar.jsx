@@ -10,7 +10,7 @@ import gg_phone from "../../assets/icons/gg_phone.png";
 import React, { useState, useEffect } from "react";
 import { FaXmark, FaBars } from "react-icons/fa6";
 import logo from "../../assets/logo.png";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -46,14 +46,23 @@ const Navbar = () => {
     { link: "Home", path: "/", id: 1 },
     {
       link: "About Us",
-      path: "/about",
+      path: "",
       id: 2,
-      optionList: [{ name: "About", path: "/about" }],
+      optionList: [{ name: "About", path: "/about" },{ name: "Our Team", path: "/our-team" } ,{ name: "ISO 2008 Certified", path: "/iso-2008-certified" }],
     },
-    { link: "Blood", path: "blood", id: 3 },
-    { link: "Donor", path: "donor", id: 4 },
-    { link: "Campaign", path: "campaign", id: 5 },
-    { link: "Contact", path: "contact", id: 6 },
+    {
+      link: "Blood",
+      path: "",
+      id: 3,
+      optionList: [
+        { name: "Request Blood", path: "/request-blood", id: 1 },
+        { name: "About Blood", path: "/about-blood", id: 2 },
+        { name: "Why Give Blood", path: "/about", id: 3 },
+      ],
+    },
+    { link: "Donor", path: "", id: 4 },
+    { link: "Campaign", path: "", id: 5 },
+    { link: "Contact", path: "", id: 6 },
   ];
   const [activeModal, setActiveModal] = useState(null);
 
@@ -170,9 +179,7 @@ const Navbar = () => {
             className={`lg:px-14 md:px-14 px-14 h-full ${
               isSticky
                 ? "sticky top-0 left-0 right-0 bg-[white] duration-300 rounded-bl-lg shadow-md"
-                : `border-b-2 border-brandPrimary ${
-                    activeModal ? "border-b-0" : ""
-                  }`
+                : `border-b-0 ${activeModal ? "border-b-0" : ""}`
             }`}
           >
             <div className="flex justify-between items-center text-base gap-8 h-full ">
@@ -225,21 +232,24 @@ const Navbar = () => {
                       >
                         {link}
                       </Link>
+
                       {/* Modal Start */}
                       {activeModal === id && (
                         <div>
                           {navItems?.[activeModal - 1]?.optionList && (
                             <div
-                              className={`absolute left-2/2 transform -translate-x-2/2 top-full`}
-                              style={{ width: "calc(200% - 27px)" }}
+                              className={`absolute left-2/2 transform -translate-x-2/2 top-full mt-[3px]`}
+                              style={{ width: "calc(300% - 27px)" }}
                             >
                               <div className="bg-white max-w-md mx-auto rounded-b-sm py-4 pl-4 border border-t-0 shadow-xl">
                                 <ul>
                                   {navItems?.[activeModal - 1]?.optionList?.map(
-                                    (val) => (
+                                    (val, index) => (
                                       <li key={val.path}>
                                         <button
-                                          className="text-gray-900 hover:text-brandPrimary"
+                                          className={`text-gray-900 hover:text-brandPrimary ${
+                                            index > 0 ? "mt-2" : ""
+                                          }`}
                                           onClick={() => {
                                             navigate(val.path);
                                             closeModal();

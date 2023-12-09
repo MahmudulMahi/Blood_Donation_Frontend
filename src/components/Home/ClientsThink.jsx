@@ -30,10 +30,10 @@ export default function ClientsThink() {
 
   return (
     <div>
-      <div className="mt-6 flex justify-center items-center">
-        <div className="w-80">
-          <div className="bg-brandPrimary text-white px-4 py-2 rounded-md ml-2 mt-2 text-center font-semibold">
-            What Our Clients Think
+      <div className="mt-0 flex justify-center items-center">
+        <div className="w-72">
+          <div className="bg-brandPrimary text-white px-1 py-1 rounded-md text-center font-semibold h-12">
+            <div className="mt-2">What Our Clients Think</div>
           </div>
         </div>
       </div>
@@ -56,7 +56,9 @@ export default function ClientsThink() {
         {/* Pagination at the bottom */}
         <div className="flex justify-center items-center mt-4">
           <button
-            onClick={() => handlePagination((activeIndex - 1 + totalPages) % totalPages)}
+            onClick={() =>
+              handlePagination((activeIndex - 1 + totalPages) % totalPages)
+            }
             className="mx-1 px-2 py-1 text-brandPrimary"
           >
             {"<"}
@@ -71,7 +73,6 @@ export default function ClientsThink() {
             {">"}
           </button>
         </div>
-
       </div>
     </div>
   );

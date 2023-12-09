@@ -10,7 +10,7 @@ import HelpObject3 from "../../assets/icons/HelpObject3.png";
 
 const HelpOther = () => {
   return (
-    <div className="h-[450px] mt-20">
+    <div className="h-[450px] mt-16">
       <div>
         <h2
           className=" text-center"

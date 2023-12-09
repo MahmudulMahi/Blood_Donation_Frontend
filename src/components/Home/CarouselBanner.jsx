@@ -5,15 +5,16 @@ import { Carousel } from "flowbite-react";
 
 const CarouselBanner = () => {
   return (
-    <div>
+    <div className="">
       <div className="w-full pt-[52px] bg-white">
         <div
-          className="pt-0 h-[605px] object-fit"
+          className="pt-0 min-h-[605px] object-fit border border-black w-full"
           style={{
             backgroundImage: `url(${carouselBanner})`,
-            backgroundSize: "auto",
+            backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
+            width: "100%", // Ensure the image covers the full width
           }}
         >
           <div className="px-4 lg:px-14 h-[605px]">
@@ -87,14 +88,10 @@ const CarouselBanner = () => {
               </div>
             </Carousel>
 
-            <div className="-mt-[25px] ml-[648px] animate-pulse">
+            <div className="-mt-[25px] flex justify-center animate-pulse">
               <img src={iconPlay} alt="" />
             </div>
           </div>
-          {/* end */}
-          {/* <div className="">
-            <img src={iconPlay} alt="" />
-          </div> */}
         </div>
       </div>
 

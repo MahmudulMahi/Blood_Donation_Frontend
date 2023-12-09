@@ -1,23 +1,20 @@
 import React from "react";
 import loginImg from "../assets/loginImg.png";
 import bloodIcon from "../assets/Group 44.svg";
+import "../App.css";
 
 const Login = () => {
   return (
     <div className="flex flex-col lg:flex-row h-screen bg-white">
-      {/* Left Part with Image (Hidden on Small Screens) */}
       <div
         className="hidden lg:flex lg:w-1/2 bg-cover relative"
         style={{ backgroundImage: `url(${loginImg})`, backgroundSize: "cover" }}
       >
-        {/* Icon and Project Name */}
         <div className="absolute top-4 left-4 flex items-center">
           <img src={bloodIcon} alt="Icon" className="w-6 h-6 mr-2" />
           <p className="text-brandPrimary font-semibold">Blood Donation</p>
         </div>
       </div>
-
-      {/* Right Part with Login Form */}
       <div className="lg:w-1/2 p-4 lg:p-10 flex flex-col justify-center">
         <div className="mb-1 flex justify-center ">
           {" "}
@@ -31,53 +28,51 @@ const Login = () => {
         </div>
         <div className="mb-1 flex justify-center">
           <h1 className="text-xl lg:text-2xl font-semibold text-brandPrimary mb-2 lg:mb-4">
-            Bolood Donation
+            Blood Donation
           </h1>
         </div>
         <div className="mb-1  flex justify-center">
           <h1 className="text-xl lg:text-2xl font-semibold text-black mb-2 lg:mb-4">
-            Login
+            Log-In
           </h1>
         </div>
         <div className="flex justify-center">
-        <form className="space-y-4 w-full max-w-md  ">
-          <div className="flex flex-col">
-            <label htmlFor="username" className="text-gray-500 mb-1">
-              Username
-            </label>
-            <input type="text" id="username" className="border-b-2 border-l-2 border-gray-300 p-2 focus:outline-none focus:shadow-outline" />
-          </div>
-
-          <div className="flex flex-col">
-            <label htmlFor="password" className="text-gray-500 mb-1">
-              Password
-            </label>
-            <input type="password" id="password" className="border-b-2 border-l-2 border-gray-300 p-2 focus:outline-none focus:shadow-outline" />
-          </div>
-
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <input type="checkbox" id="remindMe" className="mr-2" />
-              <label htmlFor="remindMe" className="text-gray-500">
-                Remind me
-              </label>
+          <form className="space-y-4 w-full max-w-md  ">
+            <div className="flex flex-col">
+              <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                className="border-b-2 border-r-2 border-gray-200 p-2 focus:outline-none rounded focus:shadow-outline-brandPrimary"
+              />
             </div>
-            <a href="#" className="text-red-500">
-              Forget Password?
-            </a>
-          </div>
-
-          <button className="bg-red-500 text-white py-2 px-4 hover:bg-opacity-75 transition-all duration-300">
-            Login
-          </button>
-        </form>
+            <div className="flex flex-col mt-4">
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                className="border-b-2 border-r-2 border-gray-200 p-2 focus:outline-none rounded focus:shadow-outline-brandPrimary"
+              />
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <input type="checkbox" id="remindMe" className="mr-2" />
+                <label htmlFor="remindMe" className="text-gray-500">
+                  Remind me
+                </label>
+              </div>
+              <a href="#" className="text-red-500">
+                Forget Password?
+              </a>
+            </div>
+            <div className="flex justify-center">
+              <button className="bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-transparent hover:text-brandPrimary border hover:border-brandPrimary hover:font-semibold">
+                Login
+              </button>
+            </div>
+          </form>
         </div>
-        
-
-
       </div>
-
-      {/* Left Part with Image (Visible on Small Screens) */}
       <div
         className="lg:hidden w-full bg-cover"
         style={{

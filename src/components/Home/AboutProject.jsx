@@ -10,68 +10,70 @@ import emojion_handshake from "../../assets/icons/emojion_handshake.png";
 export default function AboutProject() {
   return (
     <div className="">
-      <div className="flex justify-end mt-4 text-xl font-semibold">
-        <img src={Rectangle} alt="" />
-        <p className="-ml-[140px] mt-[10px] font-bold text-brandPrimary text-[14px]">
-          Connect With Us
-        </p>
-        <div className="mt-1 ml-6 mr-4">
-          <div className="rounded-full text-white">
-            <div className="">
-              <img src={callRedIco} alt="" className="w-[40px] h-[40px]" />
+      <div className="mx-28">
+        <div className="flex justify-end mt-4 text-xl font-semibold">
+          <img src={Rectangle} alt="" />
+          <p className="-ml-[140px] mt-[10px] font-bold text-brandPrimary text-[14px]">
+            Connect With Us
+          </p>
+          <div className="mt-1 ml-6 mr-4">
+            <div className="rounded-full text-white">
+              <div className="">
+                <img src={callRedIco} alt="" className="w-[40px] h-[40px]" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <img src={charm_quote} alt="charm_quote" className="w-10 h-10" />
-      </div>
-      <div
-        className="flex justify-center mt-4 text-xl font-semibold"
-        style={{
-          fontFamily: "Poppins",
-          fontSize: "30px",
-          fontStyle: "normal",
-          fontWeight: 700,
-          lineHeight: "normal",
-          textTransform: "capitalize",
-        }}
-      >
-        The gift of blood is a gift
-      </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <img src={charm_quote} alt="charm_quote" className="w-10 h-10" />
+        </div>
+        <div
+          className="flex justify-center mt-4 text-xl font-semibold"
+          style={{
+            fontFamily: "Poppins",
+            fontSize: "30px",
+            fontStyle: "normal",
+            fontWeight: 700,
+            lineHeight: "normal",
+            textTransform: "capitalize",
+          }}
+        >
+          The gift of blood is a gift
+        </div>
 
-      <div
-        className="flex justify-center text-xl font-semibold"
-        style={{
-          fontFamily: "Poppins",
-          fontSize: "30px",
-          fontStyle: "normal",
-          fontWeight: 700,
-          lineHeight: "normal",
-          textTransform: "capitalize",
-        }}
-      >
-        to someone's life”
-      </div>
-      <div
-        className="flex justify-center text-brandPrimary mt-2"
-        style={{
-          fontFamily: "Poppins",
-          fontSize: "24px",
-          fontStyle: "normal",
-          fontWeight: 700,
-          lineHeight: "normal",
-          textTransform: "capitalize",
-        }}
-      >
-        John Doe
+        <div
+          className="flex justify-center text-xl font-semibold"
+          style={{
+            fontFamily: "Poppins",
+            fontSize: "30px",
+            fontStyle: "normal",
+            fontWeight: 700,
+            lineHeight: "normal",
+            textTransform: "capitalize",
+          }}
+        >
+          to someone's life”
+        </div>
+        <div
+          className="flex justify-center text-brandPrimary mt-2"
+          style={{
+            fontFamily: "Poppins",
+            fontSize: "24px",
+            fontStyle: "normal",
+            fontWeight: 700,
+            lineHeight: "normal",
+            textTransform: "capitalize",
+          }}
+        >
+          John Doe
+        </div>
       </div>
 
       {/* About */}
@@ -271,7 +273,7 @@ export default function AboutProject() {
                   fontFamily: "Poppins",
                 }}
               >
-               About Blood
+                About Blood
               </h5>
               <p
                 className="block font-sans text-base antialiased font-light leading-relaxed text-inherit text- mt-4 text-justify"

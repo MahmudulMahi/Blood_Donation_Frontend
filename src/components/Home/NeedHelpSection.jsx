@@ -4,7 +4,7 @@ import ManHospitalBed from "../../assets/ManHospitalBed.png";
 const NeedHelpSection = () => {
   return (
     <div
-      className="lg:h-[400px] md:h-[400px] h-[680px] object-fit bg-[#E85E63] lg:opacity-90 md:opacity-90 opacity-90 overflow-hidden lg:mt-[100px] md:mt-[750px] mt-[1200px]"
+      className="lg:h-[400px] md:h-[400px] h-[680px] object-fit bg-[#E85E63] lg:opacity-90 md:opacity-90 opacity-90 overflow-hidden lg:mt- md:mt-[750px] mt-[1200px]"
       style={{
         backgroundSize: "auto",
         backgroundPosition: "center",

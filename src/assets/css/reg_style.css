@@ -1,0 +1,8 @@
+.op {
+    content: "";
+    display: block;
+    /* position: absolute; */
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.25); /* Adjust the last value for opacity (0.1 to 1) */
+  }
+  

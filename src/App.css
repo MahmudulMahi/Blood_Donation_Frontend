@@ -71,3 +71,9 @@ header{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
 }
 
+/* Add this to your styles */
+.disabled {
+  opacity: 0.4; /* Adjust the opacity to control the level of blur */
+  filter: blur(0.1px); /* Add a blur effect */
+  pointer-events: none; /* Disable pointer events on the blurred element */
+}
