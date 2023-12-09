@@ -21,10 +21,8 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []); // The empty dependency array ensures this effect runs only once after mount
 
-
-
   const initialValues = {
-    fullName: 'John Doe',
+    fullName: "John Doe",
     // Add more fields and their initial values as needed
   };
 
@@ -54,13 +52,13 @@ const Home = () => {
       <div className="">
         <NeedHelpSection />
       </div>
-      <div className="mt-12">
+      <div>
         <ContactUs />
       </div>
-      <div className="mt-12">
+      <div className="">
         <ClientsThink />
       </div>
-      <div className="mt-12">
+      <div className="">
         <MobileApp />
       </div>
       <div className="">
@@ -68,13 +66,11 @@ const Home = () => {
       </div>
 
       <InputFields
-                      type="text"
-                      placeholder="Enter full name"
-                      onChange={formik.handleChange}
-                    />
+        type="text"
+        placeholder="Enter full name"
+        onChange={formik.handleChange}
+      />
     </div>
-
-    
   );
 };
 
