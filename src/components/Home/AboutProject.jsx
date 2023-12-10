@@ -10,16 +10,16 @@ import emojion_handshake from "../../assets/icons/emojion_handshake.png";
 export default function AboutProject() {
   return (
     <div className="">
-      <div className="mx-28">
+    <div className="lg:mx-28 md:mx-28 mx-12">
         <div className="flex justify-end mt-4 text-xl font-semibold">
-          <img src={Rectangle} alt="" />
-          <p className="-ml-[140px] mt-[10px] font-bold text-brandPrimary text-[14px]">
+          <img src={Rectangle} alt="" className="w-36 h-12"/>
+          <p className="lg:-ml-[133px] md:-ml-[133px] -ml-[124px] lg:mt-[6px] md:mt-[7px] mt-[6px] font-bold text-brandPrimary lg:text-[14px] md:text-[14px] text-[12px]">
             Connect With Us
           </p>
-          <div className="mt-1 ml-6 mr-4">
+          <div className="mt-1 lg:ml-3 md:ml-3 ml-5 mr-4">
             <div className="rounded-full text-white">
               <div className="">
-                <img src={callRedIco} alt="" className="w-[40px] h-[40px]" />
+                <img src={callRedIco} alt="" className="w-[40px] h-[40px] hover:rotate-90 hover:shadow-sm hover:rounded-full transition-all duration-500" />
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@ import AnimatedNumberCounter from "./DynamicSolutions/AnimatedNumberCounter";
 const TotalSection = () => {
   return (
     <div
-      className="lg:h-[330px] md:h-[615px] h-[1200px] object-fit lg:mt-16 md:mt-[750px] mt-[1250px] rounded-xl"
+      className="lg:h-[330px] md:h-[635px] h-[1250px] object-fit lg:mt-16 md:mt-[780px] mt-[1250px] rounded-xl"
       style={{
         backgroundImage: `url(${carouselBanner})`,
         backgroundSize: "auto",

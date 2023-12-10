@@ -131,7 +131,6 @@ function OurTeamSections() {
       </div>
 
       <div className="mt-8">
-        
         <div className="grid md:grid-cols-4 grid-cols-1 mt-4 gap-4 ">
           <div className="rounded-md shadow-2xl">
             <img
@@ -179,13 +178,11 @@ function OurTeamSections() {
         </div>
       </div>
 
-
-
       {/* seced image sections */}
 
       <div className="mt-16">
         <p className="p-2 md:w-1/6 w-full bg-red-700 rounded-md font-bold text-white  mt-10">
-        Volunteer
+          Volunteer
         </p>
         <div className="grid md:grid-cols-4 grid-cols-1 mt-4 gap-4 ">
           <div className="rounded-md shadow-2xl">
@@ -235,7 +232,6 @@ function OurTeamSections() {
       </div>
 
       <div>
-        
         <div className="grid md:grid-cols-4 grid-cols-1 mt-4 gap-4 ">
           <div className="rounded-md shadow-2xl">
             <img

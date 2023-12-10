@@ -5,7 +5,6 @@ import Footer from "../components/Home/Footer";
 import ContactUs from "../components/Home/ContactUs";
 import AboutBloodDonation from "./AboutUsSections/AboutBloodDonation";
 
-
 export default function AboutUs() {
   return (
     <div className="">
@@ -15,7 +14,6 @@ export default function AboutUs() {
       <div className="">
         <CarouselBanner />
       </div>
-    
       <div className="">
         <AboutBloodDonation />
       </div>

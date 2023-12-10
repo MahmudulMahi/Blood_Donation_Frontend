@@ -11,7 +11,7 @@ import { FiPhoneCall } from "react-icons/fi";
 const Footer = () => {
   return (
     <div className="">
-      <div className="bg-[#E11B22] text-left ml-auto mr-auto text-white mt-8">
+      <div className="bg-[#E11B22] text-left ml-auto mr-auto text-white ">
         <div className="p-10 bg-[#E11B22] max-w-[2036px] ml-auto mr-auto">
           <div className=" mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-11 gap-2">

@@ -10,7 +10,7 @@ import HelpObject3 from "../../assets/icons/HelpObject3.png";
 
 const HelpOther = () => {
   return (
-    <div className="h-[450px] mt-16">
+    <div className="h-[450px] mt-[60px]">
       <div>
         <h2
           className=" text-center"
@@ -29,7 +29,7 @@ const HelpOther = () => {
       <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 md:w-11/12 mx-auto lg:pl-12 pl-4 lg:pr-12 pr-4 mt-8 gap-8">
         {/* star  t */}
         <div className="flex justify-center h-[455px] overflow-hidden">
-          <div className="relative flex flex-col bg-[#F3A4A7] shadow-md rounded-2xl w-full">
+          <div className="relative flex flex-col bg-[#F3A4A7] rounded-2xl w-full">
             <div className="m-4">
               <div className="flex">
                 <div className="lg:w-[240px] md:w-[340px] w-[240px] lg:h-[240px] md:h-[260px] h-[240px] overflow-hidden rounded-2xl bg-white">
@@ -78,13 +78,13 @@ const HelpOther = () => {
 
         <div className="hidden lg:block md:block">
           <div className="flex justify-center lg:h-[455px] md:h-full h-[455px] overflow-hidden">
-            <div className="relative flex flex-col bg-white shadow-md rounded-2xl w-full">
+            <div className="relative flex flex-col bg-white rounded-2xl w-full">
               <div className="m-4">
                 {/* start */}
                 <div className="flex mt-[10px]">
                   <div>
                     <div
-                      className="lg:w-[100px] md:w-[150px] w-[100px] lg:h-[100px] md:h-[150px] h-[100px] flex items-center justify-center rounded-full border-[10px] border-[#EA5F64] bg-brandPrimary"
+                      className="lg:w-[100px] md:w-[150px] w-[100px] lg:h-[100px] md:h-[150px] h-[100px] flex items-center justify-center rounded-full border-[15px] border-[#EA5F64] bg-brandPrimary"
                       style={{
                         display: "flex",
                         flexDirection: "column",
@@ -142,7 +142,7 @@ const HelpOther = () => {
                 <div className="flex mt-[50px]">
                   <div>
                     <div
-                      className="lg:w-[100px] md:w-[150px] w-[100px] lg:h-[100px] md:h-[150px] h-[100px] flex items-center justify-center rounded-full border-[10px] border-[#EA5F64] bg-brandPrimary"
+                      className="lg:w-[100px] md:w-[150px] w-[100px] lg:h-[100px] md:h-[150px] h-[100px] flex items-center justify-center rounded-full border-[15px] border-[#EA5F64] bg-brandPrimary"
                       style={{
                         display: "flex",
                         flexDirection: "column",
@@ -200,7 +200,7 @@ const HelpOther = () => {
                 <div className="flex mt-[50px]">
                   <div>
                     <div
-                      className="lg:w-[100px] md:w-[150px] w-[100px] lg:h-[100px] md:h-[150px] h-[100px]w-[100px] h-[100px] flex items-center justify-center rounded-full border-[10px] border-[#EA5F64] bg-brandPrimary"
+                      className="lg:w-[100px] md:w-[150px] w-[100px] lg:h-[100px] md:h-[150px] h-[100px]w-[100px] h-[100px] flex items-center justify-center rounded-full border-[15px] border-[#EA5F64] bg-brandPrimary"
                       style={{
                         display: "flex",
                         flexDirection: "column",

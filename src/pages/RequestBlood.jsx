@@ -16,7 +16,7 @@ const RequestBlood = () => {
       <div className="">
         <RequestBloodPage />
       </div>
-      <div className="">
+      <div className="mt-44">
         <Footer />
       </div>
     </div>
