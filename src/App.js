@@ -14,6 +14,7 @@ import RequestBlood from "./pages/RequestBlood";
 import OurTeam from "./pages/AboutUs/Our Team/OurTeam";
 import ISOCertified from "./pages/AboutUs/Our Team/ISOCertified";
 import AboutBlood from "./pages/AboutBlood";
+import HealthAndEligibility from "./pages/Blood/HealthAndEligibility";
 
 function App() {
   const token = localStorage.getItem("token");
@@ -29,6 +30,7 @@ function App() {
         <Route path="/our-team" element={<OurTeam />}></Route>
         <Route path="/iso-2008-certified" element={<ISOCertified />}></Route>
         <Route path="/registration" element={<Registration />}></Route>
+        <Route path="/blood/health-and-eligibility" element={<HealthAndEligibility />}></Route>
        
       </Routes>
     </Router>
