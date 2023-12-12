@@ -78,7 +78,7 @@ export default function HealthAndEligibility() {
                 <p>How we thought of establishing this website</p>
               </div>
               <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border bg-red-100 border-gray-300 border-t-0 border-l-0">
-                <div className="grid grid-cols-4 gap-4 ">
+                <div className="grid grid-cols-4 gap-3 ">
                   {/* First Column */}
                   <div className="col-span-1 text-center mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
@@ -143,7 +143,7 @@ export default function HealthAndEligibility() {
                     </p>
                   </div>
                 </div>
-                <div className="grid grid-cols-3  mb-8">
+                <div className="grid grid-cols-3 mb-8">
                   {/* First Column */}
                   <div className="col-span-1 text-center mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
@@ -187,7 +187,6 @@ export default function HealthAndEligibility() {
                         />
                       </div>
                     </div>
-
                     <p className="text-center text-sm font-semibold">
                       Wait eight weeks between <br />
                       whole blood donations
@@ -202,8 +201,116 @@ export default function HealthAndEligibility() {
             <div className="text-white bg-brandPrimary rounded-md w-1/6 md:ml-10 p-3 relative">
               <p className="font-bold">Basic Eligibility</p>
             </div>
+            <div class="flex items-center ml-10 mr-20 rounded-md shadow-lg border bg-red-100 border-gray-300 mt-4 p-1">
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white font-bold mr-4">
+                1
+              </div>
+              <div class="flex-grow">
+                Basic eligibility requirements for blood donation
+              </div>
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-brandPrimary cursor-pointer text-white">
+                +
+              </div>
+            </div>
+
+            <div class="flex items-center ml-10 mr-20 mt-4 rounded-md shadow-lg border bg-red-100 border-gray-300 p-1">
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white font-bold mr-4">
+                2
+              </div>
+              <div class="flex-grow">Requirements for source plasma</div>
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-brandPrimary cursor-pointer text-white">
+                +
+              </div>
+            </div>
+            <div class="flex items-center ml-10 mr-20 mt-4 rounded-md shadow-lg border bg-red-100 border-gray-300 p-1">
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white font-bold mr-4">
+                3
+              </div>
+              <div class="flex-grow">COVID-19</div>
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-brandPrimary cursor-pointer text-white">
+                +
+              </div>
+            </div>
           </div>
           {/* Next section end */}
+          {/* last section start */}
+          <div className="mt-10 mb-10">
+            <div className="text-center text-xl font-semibold mb-2 mr-16 text-gray-700">
+              Other Factors That Can Impact Eligibility
+            </div>
+            <div className="text-white bg-brandPrimary rounded-md w-2/6 md:ml-10 p-4 mt-4">
+              <p>Additional Eligibility Requirements</p>
+            </div>
+            <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border border-gray-300 border-t-0 border-l-0 ">
+              <br></br>
+              <p className="p-2 text-sm">
+                If you're in good health and meet the general eligibility
+                criteria, then you are likely able to give blood. Even if you’ve
+                donated before, you may have specific questions about
+                eligibility if you recently got a tattoo, traveled abroad or
+                take certain medications.<br></br>
+                If you were told previously that you were disqualified from
+                donating blood you might be able to now.
+              </p>
+            </div>
+            <div class="flex items-center ml-10 mr-20 rounded-md shadow-lg border bg-red-100 border-gray-300 mt-4 p-1 ">
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white font-bold mr-4">
+                1
+              </div>
+              <div class="flex-grow">
+                Health conditions that impact blood donation
+              </div>
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-brandPrimary cursor-pointer text-white">
+                +
+              </div>
+            </div>
+            <div class="flex items-center ml-10 mr-20 rounded-md shadow-lg border bg-red-100 border-gray-300 mt-4 p-1">
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white font-bold mr-4">
+                2
+              </div>
+              <div class="flex-grow">
+                HIV/AIDS risk factors
+              </div>
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-brandPrimary cursor-pointer text-white">
+                +
+              </div>
+            </div>
+            <div class="flex items-center ml-10 mr-20 rounded-md shadow-lg border bg-red-100 border-gray-300 mt-4 p-1">
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white font-bold mr-4">
+                3
+              </div>
+              <div class="flex-grow">
+                Donating vlood if you have tattoos, piercings, permanent make-up & acupuncture
+              </div>
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-brandPrimary cursor-pointer text-white">
+                +
+              </div>
+            </div>
+            <div class="flex items-center ml-10 mr-20 rounded-md shadow-lg border bg-red-100 border-gray-300 mt-4 p-1">
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white font-bold mr-4">
+                4
+              </div>
+              <div class="flex-grow">
+                Travel restrictions due to malaria risk areas
+              </div>
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-brandPrimary cursor-pointer text-white">
+                +
+              </div>
+            </div>
+            <div class="flex items-center ml-10 mr-20 rounded-md shadow-lg border bg-red-100 border-gray-300 mt-4 p-1">
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white font-bold mr-4">
+                5
+              </div>
+              <div class="flex-grow">
+                Travel/Residency criteria
+              </div>
+              <div class="w-10 h-10 flex items-center justify-center rounded-full bg-brandPrimary cursor-pointer text-white">
+                +
+              </div>
+            </div>
+          </div>
+
+          {/* last section end */}
         </div>
       </div>
 

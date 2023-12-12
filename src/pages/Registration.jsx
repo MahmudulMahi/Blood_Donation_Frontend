@@ -36,7 +36,7 @@ const Registration = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageChange = (event) => {
-    const file = event.target.files[0];
+    const file = event.target.files?.[0];
 
     if (file) {
       const imageUrl = URL.createObjectURL(file);
@@ -152,7 +152,7 @@ const Registration = () => {
               <div className="flex flex-col">
                 <div className="w-24 h-24 overflow-hidden">
                   <label htmlFor="imageInput">
-                    <div className="w-full h-full object-cover cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg">
+                    <div className="w-full h-full object-cover cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg"   onClick={handleImageChange}>
                       {selectedImage ? (
                         <img
                           src={selectedImage}
@@ -173,7 +173,7 @@ const Registration = () => {
                     type="file"
                     id="imageInput"
                     accept="image/*"
-                    className=""
+                    className="hidden"
                     onChange={handleImageChange}
                   />
                 </div>
