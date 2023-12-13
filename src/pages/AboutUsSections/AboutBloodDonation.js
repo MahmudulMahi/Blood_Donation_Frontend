@@ -5,7 +5,17 @@ import ImageBlood1 from "../../assets/blood1.png";
 function AboutBloodDonation() {
   return (
     <div className="max-w-[2036px] ml-auto mr-auto">
-      <div className="grid grid-cols-4  mx-auto mt-4">
+      <div className="mx-28">
+        <div className="w-full h-20 flex justify-between items-center">
+          <div>
+            <p className="font-semibold">
+              {" "}
+              Home <span className="text-brandPrimary">&gt;</span> About Us{" "}
+              <span className="text-brandPrimary">&gt;</span> About
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-4  mx-auto mt-4">
         <div className="col-span-1 bg-brandPrimary md:ml-10 rounded-md ">
           <p className="font-bold mb-8 mt-4 text-white ml-6">
             About Blood Donation
@@ -17,7 +27,7 @@ function AboutBloodDonation() {
         <div></div>
 
         <div
-          className="col-span-3 -mt-10  rounded-md mr-20 "
+          className="col-span-3 -mt-10  rounded-md mr-20"
           style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
         >
           <p className=" p-2 text-sm">
@@ -60,7 +70,7 @@ function AboutBloodDonation() {
       </div>
 
       {/* blood image sectons */}
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-5  mt-10 text-sx ml-8 mr-8">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-5  mt-16 text-sx ml-8 mr-8 ">
         <div className="shadow-2xl p-4 text-16 rounded-sm">
           <div className="zindexnav relative">
             <p className="p-4 zindexnav bg-brandPrimary rounded-md font-bold text-white w-2/4 ">
@@ -84,13 +94,13 @@ function AboutBloodDonation() {
             </div>
           </div>
 
-          <p className="mt-4">
+          <p className="mt-4 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry standard dummy text ever
             since the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book.“
           </p>
-          <p className="mt-6">
+          <p className="mt-6 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry standard dummy text ever
             since the 1500s, when an unknown printer took a galley of type and
@@ -101,7 +111,7 @@ function AboutBloodDonation() {
         <div className="shadow-2xl p-4 text-16 rounded-sm">
           <div className="zindexnav relative">
             <p className="p-4 zindexnav bg-brandPrimary rounded-md font-bold text-white w-2/4 ">
-              Our Mission
+              Our Vision
             </p>
           </div>
           <div class="relative -mt-14">
@@ -121,13 +131,13 @@ function AboutBloodDonation() {
             </div>
           </div>
 
-          <p className="mt-4">
+          <p className="mt-4 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry standard dummy text ever
             since the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book.“
           </p>
-          <p className="mt-6">
+          <p className="mt-6 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry standard dummy text ever
             since the 1500s, when an unknown printer took a galley of type and
@@ -138,7 +148,7 @@ function AboutBloodDonation() {
         <div className="shadow-2xl p-4 text-16 rounded-sm">
           <div className="zindexnav relative">
             <p className="p-4 zindexnav bg-brandPrimary rounded-md font-bold text-white w-2/4 ">
-              Our Mission
+              Our Values
             </p>
           </div>
           <div class="relative -mt-14">
@@ -158,13 +168,13 @@ function AboutBloodDonation() {
             </div>
           </div>
 
-          <p className="mt-4">
+          <p className="mt-4 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry standard dummy text ever
             since the 1500s, when an unknown printer took a galley of type and
             scrambled it to make a type specimen book.“
           </p>
-          <p className="mt-6">
+          <p className="mt-6 text-sm">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry standard dummy text ever
             since the 1500s, when an unknown printer took a galley of type and
@@ -172,8 +182,9 @@ function AboutBloodDonation() {
           </p>
         </div>
       </div>
+      </div>
+
       
-    
     </div>
   );
 }

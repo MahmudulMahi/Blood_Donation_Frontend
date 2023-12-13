@@ -5,7 +5,7 @@ import scan2 from "../../assets/scan-2.jpeg";
 
 export default function MobileApp() {
   return (
-    <div className="bg-red-100 shadow-lg rounded-md overflow-hidden sm:h-auto md:h-auto lg:h-100">
+    <div className="bg-red-100 shadow-lg rounded-md overflow-hidden sm:h-auto md:h-auto lg:h-100 mt-6 mb-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
         <div className="sm:col-span-2 md:col-span-1 lg:col-span-1 px-12 py-12">
           <img

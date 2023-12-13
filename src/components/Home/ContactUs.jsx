@@ -4,7 +4,7 @@ import about from "../../assets/ab.jpeg";
 export default function ContactUs() {
   return (
     <div>
-      <div className="grid grid-cols-2 lg:mr-40 md:mr-0 mr-0 lg:ml-20 md:ml-0 ml-0 rounded-md bg-transparent lg:-mt-[15px] md:mt-12 mt-0 lg:p-20 md:p-20 p-12 pt-0">
+      <div className="grid grid-cols-2 lg:mr-40 md:mr-0 mr-0 lg:ml-20 md:ml-0 ml-0 rounded-md bg-transparent lg:-mt-[15px] md:mt-12 mt-8 lg:p-20 md:p-20 p-12 pt-0">
         {/* First Card */}
         <div className="bg-white lg:ml-6 md:ml-0 ml-0 mt-2 lg:mb-0 md:mb-0 mb-8 rounded lg:col-span-1 md:col-span-1 col-span-2">
           <div className="lg:ml-24 md:ml-0 ml-0">

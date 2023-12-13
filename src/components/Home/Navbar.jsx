@@ -48,7 +48,11 @@ const Navbar = () => {
       link: "About Us",
       path: "",
       id: 2,
-      optionList: [{ name: "About", path: "/about" },{ name: "Our Team", path: "/our-team" } ,{ name: "ISO 2008 Certified", path: "/iso-2008-certified" }],
+      optionList: [
+        { name: "About", path: "/about" },
+        { name: "Our Team", path: "/our-team" },
+        { name: "ISO 2008 Certified", path: "/iso-2008-certified" },
+      ],
     },
     {
       link: "Blood",
@@ -58,7 +62,11 @@ const Navbar = () => {
         { name: "Request Blood", path: "/request-blood", id: 1 },
         { name: "About Blood", path: "/about-blood", id: 2 },
         { name: "Why Give Blood", path: "/about", id: 3 },
-        { name: "Health And Eligibility", path: "/blood/health-and-eligibility", id: 3 },
+        {
+          name: "Health And Eligibility",
+          path: "/blood/health-and-eligibility",
+          id: 3,
+        },
       ],
     },
     { link: "Donor", path: "", id: 4 },
@@ -78,11 +86,11 @@ const Navbar = () => {
   console.log("Active Modal", activeModal);
 
   return (
-    <div className="w-full md:bg-transparent fixed top-0 left-0 right-0 inline-block zindexnav">
+    <div className="w-full md:bg-transparent  fixed top-0 left-0 right-0 inline-block zindexnav ">
       <div className="h-full ">
         {/* start */}
         <div
-          className={`hidden lg:grid lg:grid-cols-12  md:grid md:grid-cols-12 items-center bg-[#242424] h-8 ${
+          className={`hidden lg:grid lg:grid-cols-12  md:grid md:grid-cols-12 items-center lg:bg-brandPrimary md:bg-[#242424] bg-[#242424] h-8  ${
             isSticky
               ? "sticky top-0 left-0 right-0 bg-[#242424] duration-300"
               : "bg-[#242424]"
@@ -97,7 +105,7 @@ const Navbar = () => {
               }`}
             >
               <div
-                className="col-span-4 text-white flex items-center justify-center"
+                className="col-span-4 text-white flex items-left justify-left lg:pl-28 md:pl-12 pl-0"
                 style={{
                   fontFamily: "Poppins",
                   fontSize: "11px",
@@ -107,7 +115,7 @@ const Navbar = () => {
                 }}
               >
                 <img src={gg_phone} alt="" className="text-white w-4 h-4" />
-                <p className="ml-2">+12736781789</p>
+                <p className="ml-[13px]">+12736781789</p>
               </div>
 
               <div
@@ -140,14 +148,14 @@ const Navbar = () => {
             </div>
           </div>
           <div
-            className={`col-span-3 hidden lg:grid lg:grid-cols-12 md:grid md:grid-cols-12 items-center bg-brandPrimary h-8 ${
+            className={`col-span-3 hidden lg:grid lg:grid-cols-12 md:grid md:grid-cols-12 items-right bg-brandPrimary h-8 lg:pr-28 md:pr-0 pr-0 ${
               isSticky
                 ? "sticky top-0 left-0 right-0 bg-brandPrimary duration-300"
                 : ""
             }`}
           >
             <div
-              className="col-span-12 text-white flex items-center justify-center space-x-3"
+              className="col-span-12 text-white flex items-center justify-center space-x-3 lg:ml-[210px] md:ml-0 ml-0"
               style={{
                 fontFamily: "Poppins",
                 fontSize: "11px",
@@ -175,7 +183,7 @@ const Navbar = () => {
 
       {/* Navbar START */}
       <div>
-        <header className="zindexnav h-[60px] bg-white">
+        <header className="zindexnav h-[60px] bg-white ">
           <nav
             className={`lg:px-14 md:px-14 px-14 h-full ${
               isSticky
@@ -183,7 +191,7 @@ const Navbar = () => {
                 : `border-b-0 ${activeModal ? "border-b-0" : ""}`
             }`}
           >
-            <div className="flex justify-between items-center text-base gap-8 h-full ">
+            <div className="flex justify-between items-center text-base lg:gap-8 md:gap-4 gap-8 h-full lg:px-[55px] md:px-0 px-0 ">
               <div
                 className="border-[1px] border-gray-400 h-full pl-2 pr-2 overflow-hidden"
                 style={{
@@ -222,7 +230,7 @@ const Navbar = () => {
                         spy={true}
                         smooth={true}
                         offset={-100}
-                        className={`block text-gray-900 hover:text-brandPrimary px-4 py-5 border-r rounded-b-sm ${
+                        className={`block text-gray-900 hover:text-brandPrimary lg:px-12 md:px-4 px-4 py-5 border-r rounded-b-sm ${
                           index < navItems.length - 1 ? "" : "border-r-0"
                         } LinkWithBorder`}
                         style={{
@@ -239,14 +247,19 @@ const Navbar = () => {
                         <div>
                           {navItems?.[activeModal - 1]?.optionList && (
                             <div
-                              className={`absolute left-2/2 transform -translate-x-2/2 top-full mt-[1px]`}
+                              className={`absolute transform -translate-x-2/2 top-full mt-[1px] ${
+                                index === 1 ? "-left-32" : "-left-[86px]"
+                              }`}
                               style={{ width: "calc(300% - 27px)" }}
                             >
-                              <div className="bg-white max-w-md mx-auto rounded-b-sm  border border-t-0 shadow-xl">
-                                <ul >
+                              <div className="bg-white max-w-md mx-auto rounded-b-sm w-56 border border-t-0 shadow-xl">
+                                <ul>
                                   {navItems?.[activeModal - 1]?.optionList?.map(
                                     (val, index) => (
-                                      <li className="hover:bg-red-200 py-1 pl-1 text-xs"  key={val.path}>
+                                      <li
+                                        className="hover:bg-red-200 py-1 pl-1 text-xs"
+                                        key={val.path}
+                                      >
                                         <button
                                           className={`text-gray-900 hover:text-brandPrimary ${
                                             index > 0 ? "mt-2" : ""
@@ -274,14 +287,14 @@ const Navbar = () => {
                 </div>
 
                 <div className="hidden lg:flex md:flex items-center">
-                  <a
-                    href="/"
+                  <Link
+                    to="/home/search-donor"
                     className="hidden lg:flex md:flex items-center hover:text-gray-900"
                   >
                     <button className="bg-brandPrimary border font-normal hover:border-black hover:bg-brandPrimary rounded-full text-white py-2 px-4 transition-all duration-300">
                       Search Donor
                     </button>
-                  </a>
+                  </Link>
                 </div>
               </ul>
 

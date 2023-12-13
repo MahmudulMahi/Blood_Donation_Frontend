@@ -1,9 +1,8 @@
 import React from "react";
-import callRedIco from "../../assets/icons/callRedIco.png";
-import Rectangle from "../../assets/icons/Rectangle.png";
 import { useFormik } from "formik";
 import DynamicLabel from "../../components/InputFields/DynamicLabel";
 import InputFields from "../../components/InputFields/InputFields";
+import TitleTopComponent from "../../components/Blood/TitleTopComponent";
 
 const RequestBloodPage = () => {
   const initialValues = {
@@ -85,31 +84,9 @@ const RequestBloodPage = () => {
     <div className="">
       <div className="mx-28">
         {/* start */}
-        <div className="w-full h-20 flex justify-between items-center">
-          <div>
-            <p className="font-semibold">
-              {" "}
-              Home <span className="text-brandPrimary">&gt;</span> Blood{" "}
-              <span className="text-brandPrimary">&gt;</span> Request Blood
-            </p>
-          </div>
-
-          {/* START RIGHT */}
-          <div className="flex justify-end text-xl font-semibold">
-            <img src={Rectangle} alt="" />
-            <p className="-ml-[140px] mt-[10px] font-bold text-brandPrimary text-[14px]">
-              Connect With Us
-            </p>
-            <div className="mt-1 ml-6 mr-4">
-              <div className="rounded-full text-white">
-                <div className="">
-                  <img src={callRedIco} alt="" className="w-[40px] h-[40px]" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* END top*/}
+        <TitleTopComponent secondTitle={"Blood"} thirdTitle={"Request Blood"} />
+        {/* end top */}
+       
         <div className="mt-2">
           <p
             className="text-center"
@@ -280,28 +257,28 @@ const RequestBloodPage = () => {
 
               <div className="grid grid-cols-2 gap-4 mt-1">
                 <div className="col-span-1">
-                <div className="mt-3">
-                <label htmlFor="imageUpload">Upload Image:</label> <br />
-                <input
-                  type="file"
-                  id="imageUpload"
-                  name="image"
-                  accept="image/*" // Set accepted file types (in this case, images)
-                  onChange={handleFileChange}
-                  style={{ display: "none" }} // Hide the default file input style
-                  className="bg-gray-500 text-white"
-                />
-                <div className="border border-gray-400 px-4 py-2 w-28 rounded-lg mt-1">
-                  <button
-                    onClick={() =>
-                      document.getElementById("imageUpload").click()
-                    }
-                    className="bg-gray-400 text-white rounded-md px-2 py-1 cursor-pointer"
-                  >
-                    Browse
-                  </button>
-                </div>
-              </div>
+                  <div className="mt-3">
+                    <label htmlFor="imageUpload">Upload Image:</label> <br />
+                    <input
+                      type="file"
+                      id="imageUpload"
+                      name="image"
+                      accept="image/*" // Set accepted file types (in this case, images)
+                      onChange={handleFileChange}
+                      style={{ display: "none" }} // Hide the default file input style
+                      className="bg-gray-500 text-white"
+                    />
+                    <div className="border border-gray-400 px-4 py-2 w-28 rounded-lg mt-1">
+                      <button
+                        onClick={() =>
+                          document.getElementById("imageUpload").click()
+                        }
+                        className="bg-gray-400 text-white rounded-md px-2 py-1 cursor-pointer"
+                      >
+                        Browse
+                      </button>
+                    </div>
+                  </div>
                 </div>
                 <div className="col-span-1"></div>
               </div>
