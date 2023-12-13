@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/jJ9WDJ4/Rectangle-375.png",
+    "icon": "https://i.ibb.co/Dt72ktq/Rectangle-370.png",
+    "title": "What is a Blood Donation?",
+    "details": "Blood that's taken straight from a donor. After it's donated, we usually separate blood into red blood cells, plasma and platelets in our labs"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/jJ9WDJ4/Rectangle-375.png",
+    "icon": "https://i.ibb.co/Dt72ktq/Rectangle-370.png",
+    "title": "How Long Do Red Blood Cells Last?",
+    "details": "Red blood cells only last 42 days from when they’re donated. In Bangladesh annual demand for blood in Bangladesh is around eight lakh units."
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/jJ9WDJ4/Rectangle-375.png",
+    "icon": "https://i.ibb.co/Dt72ktq/Rectangle-370.png",
+    "title": "Your Blood Can Save Lives",
+    "details": "Did you know one blood donation can save up to three lives? Just think about how many lives you could change by coming back for more."
+  }
+]
