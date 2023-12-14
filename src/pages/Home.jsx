@@ -120,12 +120,6 @@ const Home = () => {
       <AnimatedComponent delay={visibleSections.footer ? 0 : 1000}>
         <Footer id="footer" />
       </AnimatedComponent>
-
-      <InputFields
-        type="text"
-        placeholder="Enter full name"
-        onChange={formik.handleChange}
-      />
     </div>
   );
 };

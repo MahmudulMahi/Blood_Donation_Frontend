@@ -89,12 +89,12 @@ function OurTeamSections() {
           </div>
         </div>
 
-        <div>
+        <div className="relative">
           <p className="p-2 md:w-1/6 w-full bg-red-700 rounded-md font-bold text-white  mt-10">
             Executive Committee
           </p>
           <div className="grid md:grid-cols-4 grid-cols-1 mt-4 gap-4 ">
-            <div className="rounded-md shadow-2xl">
+            <div className="rounded-md shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -105,7 +105,7 @@ function OurTeamSections() {
               <p className="text-red-700 p-2 -mt-1">Chief Executive Officer</p>
             </div>
 
-            <div className="rounded-md md:mt-20 shadow-2xl">
+            <div className="rounded-md md:mt-20 shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -116,7 +116,7 @@ function OurTeamSections() {
               <p className="text-red-700 p-2 -mt-1">Chief Executive Officer</p>
             </div>
 
-            <div className="rounded-md shadow-2xl ">
+            <div className="rounded-md shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -127,7 +127,7 @@ function OurTeamSections() {
               <p className="text-red-700 p-2 -mt-1">Chief Executive Officer</p>
             </div>
 
-            <div className="rounded-md md:mt-20 shadow-2xl">
+            <div className="rounded-md md:mt-20 shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -140,9 +140,12 @@ function OurTeamSections() {
           </div>
         </div>
 
+
+
+
         <div className="mt-8">
-          <div className="grid md:grid-cols-4 grid-cols-1 mt-4 gap-4 ">
-            <div className="rounded-md shadow-2xl">
+          <div className="grid md:grid-cols-4 grid-cols-1 mt-4 gap-4 md:h-80">
+            <div className="rounded-md shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -153,7 +156,7 @@ function OurTeamSections() {
               <p className="text-red-700 p-2 -mt-1">Chief Executive Officer</p>
             </div>
 
-            <div className="rounded-md md:mt-20 shadow-2xl">
+            <div className="rounded-md md:mt-20 shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -164,7 +167,7 @@ function OurTeamSections() {
               <p className="text-red-700 p-2 -mt-1">Chief Executive Officer</p>
             </div>
 
-            <div className="rounded-md shadow-2xl ">
+            <div className="rounded-md shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -175,7 +178,7 @@ function OurTeamSections() {
               <p className="text-red-700 p-2 -mt-1">Chief Executive Officer</p>
             </div>
 
-            <div className="rounded-md md:mt-20 shadow-2xl">
+            <div className="rounded-md md:mt-20 shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -195,7 +198,7 @@ function OurTeamSections() {
             Volunteer
           </p>
           <div className="grid md:grid-cols-4 grid-cols-1 mt-4 gap-4 ">
-            <div className="rounded-md shadow-2xl">
+            <div className="rounded-md shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -206,7 +209,7 @@ function OurTeamSections() {
               <p className="text-red-700 p-2 -mt-1">Chief Executive Officer</p>
             </div>
 
-            <div className="rounded-md md:mt-20 shadow-2xl">
+            <div className="rounded-md md:mt-20 shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -217,7 +220,7 @@ function OurTeamSections() {
               <p className="text-red-700 p-2 -mt-1">Chief Executive Officer</p>
             </div>
 
-            <div className="rounded-md shadow-2xl ">
+            <div className="rounded-md shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -228,7 +231,7 @@ function OurTeamSections() {
               <p className="text-red-700 p-2 -mt-1">Chief Executive Officer</p>
             </div>
 
-            <div className="rounded-md md:mt-20 shadow-2xl">
+            <div className="rounded-md md:mt-20 shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -243,7 +246,7 @@ function OurTeamSections() {
 
         <div>
           <div className="grid md:grid-cols-4 grid-cols-1 mt-4 gap-4 ">
-            <div className="rounded-md shadow-2xl">
+            <div className="rounded-md shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -254,7 +257,7 @@ function OurTeamSections() {
               <p className="text-red-700 p-2 -mt-1">Chief Executive Officer</p>
             </div>
 
-            <div className="rounded-md md:mt-20 shadow-2xl">
+            <div className="rounded-md md:mt-20 shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -265,7 +268,7 @@ function OurTeamSections() {
               <p className="text-red-700 p-2 -mt-1">Chief Executive Officer</p>
             </div>
 
-            <div className="rounded-md shadow-2xl ">
+            <div className="rounded-md shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
@@ -276,7 +279,7 @@ function OurTeamSections() {
               <p className="text-red-700 p-2 -mt-1">Chief Executive Officer</p>
             </div>
 
-            <div className="rounded-md md:mt-20 shadow-2xl">
+            <div className="rounded-md md:mt-20 shadow-2xl md:h-80">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}

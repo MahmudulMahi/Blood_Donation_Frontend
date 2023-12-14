@@ -8,7 +8,7 @@ const CarouselBanner = () => {
     <div className="">
       <div className="w-full pt-[52px] bg-white">
         <div
-          className="pt-0 min-h-[605px] object-fit border border-black w-full"
+          className="pt-0 object-fit border border-black w-full"
           style={{
             backgroundImage: `url(${carouselBanner})`,
             backgroundSize: "cover",
@@ -17,7 +17,7 @@ const CarouselBanner = () => {
             width: "100%", // Ensure the image covers the full width
           }}
         >
-          <div className="px-4 lg:px-14 h-[605px]">
+          <div className="px-4 lg:px-14 h-full">
             <Carousel className="w-full inline-block  mx-auto h-[480px] ">
               <div
                 className="my-28 md:my-8 py-12 px-16 flex flex-col md:flex-row-reverse items-center justify-between gap-12"
