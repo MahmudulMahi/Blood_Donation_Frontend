@@ -11,6 +11,8 @@ import donatedimg4 from "../../assets/Stomach Care.png"
 import donatedimg5 from "../../assets/bone.png"
 import donatedimg6 from "../../assets/Rectangle 505.png"
 import donatedimg7 from "../../assets/Rectangle 504.png"
+
+import dropblood from "../../assets/Group 44.png"
 import AboutCard from "./AboutCard";
 export default function AboutBloodPage() {
 
@@ -199,19 +201,114 @@ export default function AboutBloodPage() {
       <div className="mt-12  bg-[#FFF]  w-full md:h-[300px] h-[800px] relative p-1 " style={{
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"
       }}>
-      <div>
-      <h2>   <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md text-left mb-10 md:mb-0 absolute -top-10">
-          Blood Types and Transfusion
-        </button></h2>
-      </div>
+        <div>
+          <h2>   <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md text-left mb-10 md:mb-0 absolute -top-10">
+            Blood Types and Transfusion
+          </button></h2>
+        </div>
 
-       <div className="absolute top-10">
-       <p>There are very specific ways in which blood types must be matched for a safe transfusion. The right blood transfusion can mean the difference between life and death. Use the interactive graphic below to learn more about matching blood types for transfusions.
-          Also, Rh-negative blood is given to Rh-negative patients, and Rh-positive or Rh-negative blood may be given to Rh-positive patients. The rules for plasma are the reverse.</p>
+        <div className="absolute top-10">
+          <p>There are very specific ways in which blood types must be matched for a safe transfusion. The right blood transfusion can mean the difference between life and death. Use the interactive graphic below to learn more about matching blood types for transfusions.
+            Also, Rh-negative blood is given to Rh-negative patients, and Rh-positive or Rh-negative blood may be given to Rh-positive patients. The rules for plasma are the reverse.</p>
 
           <li className="text-xl mt-6">The universal red cell donor has Type O negative blood.</li>
           <li className="text-xl">The universal red cell donor has Type O negative blood.</li>
-       </div>
+        </div>
+      </div>
+
+      {/* total blood supply */}
+      <div className="mt-12  bg-[#FFF]  w-full md:h-[300px] h-[800px] relative p-1 shadow-2xl " style={{
+        boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"
+      }}>
+        <div>
+          <h2>   <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md text-left mb-10 md:mb-0 absolute -top-10">
+            Total Blood Supply of World Bangladesh
+          </button></h2>
+        </div>
+        <div className="mt-10 grid grid-cols-4 text-center">
+          <div className="flex flex-col items-center">
+            <div >
+              <h2>O Positive</h2>
+              <p>(O+)</p>
+            </div>
+            <div>
+              <img  src={dropblood} alt="" />
+            </div>
+          </div>
+          {/* ------------ */}
+          <div className="flex flex-col items-center">
+            <div >
+              <h2>O Positive</h2>
+              <p>(O+)</p>
+            </div>
+            <div>
+              <img  src={dropblood} alt="" />
+            </div>
+          </div>
+          {/* ----------- */}
+          <div className="flex flex-col items-center">
+            <div >
+              <h2>O Positive</h2>
+              <p>(O+)</p>
+            </div>
+            <div>
+              <img  src={dropblood} alt="" />
+            </div>
+          </div>
+          {/* ------------ */}
+
+          <div className="flex flex-col items-center">
+            <div >
+              <h2>O Positive</h2>
+              <p>(O+)</p>
+            </div>
+            <div >
+              <img src={dropblood} alt="" />
+            </div>
+          </div>
+          {/* ----------- */}
+          <div className="flex flex-col items-center">
+            <div >
+              <h2>O Positive</h2>
+              <p>(O+)</p>
+            </div>
+            <div>
+              <img src={dropblood} alt="" />
+            </div>
+          </div>
+          {/* ------------- */}
+          <div className="flex flex-col items-center">
+            <div >
+              <h2>O Positive</h2>
+              <p>(O+)</p>
+            </div>
+            <div>
+              <img src={dropblood} alt="" />
+            </div>
+          </div>
+          {/* ----------- */}
+          <div className="flex flex-col items-center">
+            <div >
+              <h2>O Positive</h2>
+              <p>(O+)</p>
+            </div>
+            <div>
+              <img src={dropblood} alt="" />
+            </div>
+          </div>
+          {/* ---------- */}
+          <div className="flex flex-col items-center">
+            <div >
+              <h2>O Positive</h2>
+              <p>(O+)</p>
+            </div>
+            <div>
+              <img src={dropblood} alt="" />
+            </div>
+          </div>
+          {/* ======== */}
+        </div>
+
       </div>
     </div>
 
