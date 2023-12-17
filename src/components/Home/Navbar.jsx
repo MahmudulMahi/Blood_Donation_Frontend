@@ -69,7 +69,12 @@ const Navbar = () => {
         },
       ],
     },
-    { link: "Donor", path: "", id: 4 },
+    {
+      link: "Donor",
+      path: "",
+      id: 4,
+      optionList: [{ name: "Donate Blood", path: "/donate-blood", id: 1 }],
+    },
     { link: "Campaign", path: "", id: 5 },
     { link: "Contact", path: "", id: 6 },
   ];
@@ -248,7 +253,9 @@ const Navbar = () => {
                           {navItems?.[activeModal - 1]?.optionList && (
                             <div
                               className={`absolute transform -translate-x-2/2 top-full mt-[0px] ${
-                                index === 1 ? "lg:-left-4 md:-left-0 -left-4" : ""
+                                index === 1
+                                  ? "lg:-left-4 md:-left-0 -left-4"
+                                  : ""
                               }`}
                               style={{ width: "calc(300% - 27px)" }}
                             >
