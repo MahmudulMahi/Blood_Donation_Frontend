@@ -167,7 +167,7 @@ export default function HealthAndEligibility() {
               Transform The Lives Of Patient In Need By Donating Blood Today
             </div>
             <div>
-              <div className="text-white bg-brandPrimary rounded-md w-2/6 md:ml-80 p-4 relative">
+              <div className="text-white bg-brandPrimary rounded-md w-2/6 md:ml-96 p-4 relative">
                 <p>How we thought of establishing this website</p>
               </div>
               <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border bg-red-100 border-gray-300 border-t-0 border-l-0">
@@ -349,7 +349,7 @@ export default function HealthAndEligibility() {
             {dynamicItems.map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-col ml-10 mr-20 rounded-md shadow-lg border bg-red-100 border-gray-300 mt-4 p-1 `}
+                className={`flex flex-col ml-10 mr-20 rounded-md shadow-lg border bg-red-100 border-gray-300 mt-4 p-4 `}
               >
                 <div className="flex items-center">
                   <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white font-bold mr-4">
