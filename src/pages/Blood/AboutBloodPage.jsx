@@ -12,7 +12,7 @@ import donatedimg5 from "../../assets/bone.png"
 import donatedimg6 from "../../assets/Rectangle 505.png"
 import donatedimg7 from "../../assets/Rectangle 504.png"
 
-import dropblood from "../../assets/Group 44.png"
+import dropblood from "../../assets/Group 271.png"
 import AboutCard from "./AboutCard";
 export default function AboutBloodPage() {
 
@@ -217,7 +217,7 @@ export default function AboutBloodPage() {
       </div>
 
       {/* total blood supply */}
-      <div className="mt-12  bg-[#FFF]  w-full md:h-[300px] h-[800px] relative p-1 shadow-2xl " style={{
+      <div className="mt-12  bg-[#FFF]  w-full md:h-[700px] h-[1100px] relative p-1 shadow-2xl " style={{
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)"
       }}>
         <div>
@@ -225,86 +225,120 @@ export default function AboutBloodPage() {
             Total Blood Supply of World Bangladesh
           </button></h2>
         </div>
-        <div className="mt-10 grid grid-cols-4 text-center">
+        <div className="mt-14 grid grid-cols-2 md:grid-cols-4 text-center">
           <div className="flex flex-col items-center">
             <div >
               <h2>O Positive</h2>
               <p>(O+)</p>
             </div>
-            <div>
-              <img  src={dropblood} alt="" />
+            <div className="relative">
+              <img className="relative" src={dropblood} alt="" />
+             
+            </div>
+            <div className="absolute  ">
+                <p className=" text-2xl ">0.2%</p>
             </div>
           </div>
           {/* ------------ */}
           <div className="flex flex-col items-center">
             <div >
-              <h2>O Positive</h2>
-              <p>(O+)</p>
+              <h2>A Positive</h2>
+              <p>(A+)</p>
             </div>
-            <div>
-              <img  src={dropblood} alt="" />
+            <div className="relative">
+              <img className="relative" src={dropblood} alt="" />
+             
+            </div>
+            <div className="absolute  ">
+                <p className=" text-2xl ">0.2%</p>
             </div>
           </div>
           {/* ----------- */}
           <div className="flex flex-col items-center">
             <div >
-              <h2>O Positive</h2>
-              <p>(O+)</p>
+              <h2>B Positive</h2>
+              <p>(B+)</p>
             </div>
-            <div>
-              <img  src={dropblood} alt="" />
+            <div className="relative">
+              <img className="relative" src={dropblood} alt="" />
+             
+            </div>
+            <div className="absolute  ">
+                <p className=" text-2xl ">0.2%</p>
             </div>
           </div>
           {/* ------------ */}
 
           <div className="flex flex-col items-center">
             <div >
-              <h2>O Positive</h2>
-              <p>(O+)</p>
+              <h2>AB Positive</h2>
+              <p>(AB+)</p>
             </div>
-            <div >
-              <img src={dropblood} alt="" />
+            <div className="relative">
+              <img className="relative" src={dropblood} alt="" />
+             
+            </div>
+            <div className="absolute  ">
+                <p className=" text-2xl ">0.2%</p>
             </div>
           </div>
           {/* ----------- */}
           <div className="flex flex-col items-center">
             <div >
-              <h2>O Positive</h2>
-              <p>(O+)</p>
+              <h2>O Negative</h2>
+              <p>(O-)</p>
             </div>
-            <div>
-              <img src={dropblood} alt="" />
+            <div className="relative">
+              <img className="relative" src={dropblood} alt="" />
+             
+            </div>
+            <div className="absolute bottom-[115px]  md:bottom-[210px] ">
+                <p className=" text-2xl text-white">0.2%</p>
             </div>
           </div>
           {/* ------------- */}
           <div className="flex flex-col items-center">
             <div >
-              <h2>O Positive</h2>
-              <p>(O+)</p>
+              <h2>A Negative</h2>
+              <p>(A-)</p>
             </div>
-            <div>
-              <img src={dropblood} alt="" />
+            <div className="relative">
+              <img className="relative" src={dropblood} alt="" />
+             
+            </div>
+            <div className="absolute bottom-[115px]  md:bottom-[210px] ">
+                <p className=" text-2xl text-white">0.2%</p>
             </div>
           </div>
           {/* ----------- */}
           <div className="flex flex-col items-center">
             <div >
-              <h2>O Positive</h2>
-              <p>(O+)</p>
+              <h2>B Negative</h2>
+              <p>(B-)</p>
             </div>
-            <div>
-              <img src={dropblood} alt="" />
+            <div className="relative">
+              <img className="relative" src={dropblood} alt="" />
+             
+            </div>
+            <div className="absolute bottom-[115px]  md:bottom-[210px] ">
+                <p className=" text-2xl text-white">0.2%</p>
             </div>
           </div>
           {/* ---------- */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center ">
             <div >
-              <h2>O Positive</h2>
-              <p>(O+)</p>
+              <h2>AB Negative</h2>
+              <p>(AB-)</p>
+              
             </div>
-            <div>
-              <img src={dropblood} alt="" />
+            <div className="relative">
+              <img className="relative" src={dropblood} alt="" />
+             
             </div>
+            <div className="absolute bottom-[115px]  md:bottom-[210px] ">
+                <p className=" text-2xl text-white">0.2%</p>
+            </div>
+            
           </div>
           {/* ======== */}
         </div>
