@@ -36,6 +36,9 @@ header {
 .zindex {
   z-index: 100 !important;
 }
+.zindex-blood-animation {
+  z-index: 40 !important;
+}
 .zindexm {
   z-index: 200 !important;
 }
@@ -126,4 +129,33 @@ header {
 
 .last-child-gap-0 {
   margin-right: 0; /* or margin-right: initial; */
+}
+
+.about-blood-div-border {
+  box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  /* Adjust the values as needed */
+}
+
+.about-blood-div-border-two {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  /* Adjust the values as needed */
+}
+
+.ul-li {
+  list-style-type: none;
+}
+
+.ul-li li {
+  margin-left: 1em; /* Adjust the margin as needed */
+  margin-bottom: 7px; /* Adjust the margin as needed */
+}
+
+.ul-li li::before {
+  content: "\2022";
+  color: #444444;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
