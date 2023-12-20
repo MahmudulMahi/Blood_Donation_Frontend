@@ -6,7 +6,7 @@ const testimonials = [
   {
     id: 1,
     content:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since“",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make “",
     clientName: "Name Of the User",
     imageSrc: map,
   },
@@ -30,7 +30,7 @@ export default function ClientsThink() {
   const totalPages = testimonials.length;
 
   return (
-    <div className="lg:mx-32 md:mx-28 mx-28">
+    <div className="lg:mx-24 md:mx-28 mx-28">
       <div className="mt-0 flex justify-center items-center">
         <div className="w-72">
           <div className="bg-brandPrimary rounded-md text-white px-1 py-1 text-center font-semibold h-12">
@@ -44,9 +44,9 @@ export default function ClientsThink() {
             <div className="flex flex-col text-left">
               <div>
                 <p
-                  className="text-[#555] font-semibold text-lg mb-2 pl-8"
+                  className="text-[#555] font-semibold mb-2 pl-8"
                   style={{
-                    fontSize: "36px",
+                    fontSize: "24px",
                     fontStyle: "normal",
                     fontWeight: 400,
                     lineHeight: "normal",
@@ -64,7 +64,7 @@ export default function ClientsThink() {
                 ❝
               </div>
               <div className="pr-52 pl-[55px] text-left -mt-[26px]">
-                <p className="text-gray-800">
+                <p className="text-gray-800 text-md">
                   {testimonials[activeIndex].content}
                 </p>
               </div>
@@ -75,9 +75,9 @@ export default function ClientsThink() {
                 <img
                   src={testimonials[activeIndex].imageSrc}
                   alt="ClientImage"
-                  className="w-56 h-56 rounded-full"
+                  className="w-52 h-52 rounded-full"
                 />
-                <div className="flex -mt-56 ml-40">
+                <div className="flex -mt-52 ml-40">
                   {" "}
                   <img
                     src={RedVector}

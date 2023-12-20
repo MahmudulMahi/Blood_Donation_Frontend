@@ -9,8 +9,8 @@ import emojion_handshake from "../../assets/icons/emojion_handshake.png";
 
 export default function AboutProject() {
   return (
+    <div className="lg:mx-[88px] md:mx-28 mx-12">
     <div className="">
-    <div className="lg:mx-28 md:mx-28 mx-12">
         <div className="flex justify-end mt-4 text-xl font-semibold">
           <img src={Rectangle} alt="" className="w-36 h-12"/>
           <p className="lg:-ml-[133px] md:-ml-[133px] -ml-[124px] lg:mt-[6px] md:mt-[7px] mt-[6px] font-bold text-brandPrimary lg:text-[14px] md:text-[14px] text-[12px]">
@@ -77,9 +77,9 @@ export default function AboutProject() {
       </div>
 
       {/* About */}
-      <div className=" h-[550px] mt-8 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto lg:mt-12 md:mt-0">
-        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5 hover:border-b-4 rounded-xl hover:border-brandPrimary hover:rounded-xl transition-all duration-300 m-10 border">
-          <div className="relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl border border-brandPrimary">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:mt-12 md:mt-0 mt-8 gap-3 mx-[23px]">
+        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5 hover:border-b-4 rounded-lg hover:border-brandPrimary hover:rounded-xl transition-all duration-300 my-10 border">
+          <div className="relative flex flex-col text-gray-700 bg-white learn-more-div-border  rounded-lg border border-brandPrimary">
             <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
               <img
                 src={RectangleImage}
@@ -112,9 +112,9 @@ export default function AboutProject() {
               </div>
             </div>
 
-            <div className="p-6 -mt-2">
+            <div className="p-6 pb-0 -mt-4">
               <h5
-                className="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 text-center"
+                className="block font-sans text-lg antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 text-center"
                 style={{
                   fontFamily: "Poppins",
                 }}
@@ -122,7 +122,7 @@ export default function AboutProject() {
                 Am I Eligible To Donate Blood?
               </h5>
               <p
-                className="block font-sans text-base antialiased font-light leading-relaxed text-inherit text- mt-4 text-justify"
+                className="block font-sans text-md antialiased font-light leading-relaxed text-inherit text- mt-2 text-justify"
                 style={{
                   fontFamily: "Poppins",
                 }}
@@ -135,7 +135,7 @@ export default function AboutProject() {
             </div>
 
             <div
-              className="justify-end mt-4"
+              className="justify-end mt-0"
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -155,8 +155,8 @@ export default function AboutProject() {
           </div>
         </div>
         {/* end 1*/}
-        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5 hover:border-b-4 rounded-xl hover:border-brandPrimary hover:rounded-xl transition-all duration-300 m-10 border">
-          <div className="relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl border border-brandPrimary">
+        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5 hover:border-b-4 rounded-lg hover:border-brandPrimary hover:rounded-xl transition-all duration-300 my-10 border">
+          <div className="relative flex flex-col text-gray-700 bg-white learn-more-div-border  rounded-lg border border-brandPrimary">
             <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
               <img
                 src={RectangleImage}
@@ -189,9 +189,9 @@ export default function AboutProject() {
               </div>
             </div>
 
-            <div className="p-6 -mt-2">
+            <div className="p-6 pb-0 -mt-4">
               <h5
-                className="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 text-center"
+                className="block font-sans text-lg antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 text-center"
                 style={{
                   fontFamily: "Poppins",
                 }}
@@ -199,7 +199,7 @@ export default function AboutProject() {
                 How The Donation Helps
               </h5>
               <p
-                className="block font-sans text-base antialiased font-light leading-relaxed text-inherit text- mt-4 text-justify"
+                className="block font-sans text-md antialiased font-light leading-relaxed text-inherit text- mt-2 text-justify"
                 style={{
                   fontFamily: "Poppins",
                 }}
@@ -212,7 +212,7 @@ export default function AboutProject() {
             </div>
 
             <div
-              className="justify-end mt-4"
+              className="justify-end "
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -232,8 +232,8 @@ export default function AboutProject() {
           </div>
         </div>
         {/* end 2 */}
-        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5 hover:border-b-4 rounded-xl hover:border-brandPrimary hover:rounded-xl transition-all duration-300 m-10 border">
-          <div className="relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl border border-brandPrimary">
+        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5 hover:border-b-4 rounded-lg hover:border-brandPrimary hover:rounded-xl transition-all duration-300 my-10 border">
+          <div className="relative flex flex-col text-gray-700 bg-white learn-more-div-border  rounded-lg border border-brandPrimary">
             <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
               <img
                 src={RectangleImage}
@@ -266,9 +266,9 @@ export default function AboutProject() {
               </div>
             </div>
 
-            <div className="p-6 -mt-2">
+            <div className="p-6 pb-0 -mt-4">
               <h5
-                className="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 text-center"
+                className="block font-sans text-lg antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 text-center"
                 style={{
                   fontFamily: "Poppins",
                 }}
@@ -276,7 +276,7 @@ export default function AboutProject() {
                 About Blood
               </h5>
               <p
-                className="block font-sans text-base antialiased font-light leading-relaxed text-inherit text- mt-4 text-justify"
+                className="block font-sans text-md antialiased font-light leading-relaxed text-inherit text- mt-2 text-justify"
                 style={{
                   fontFamily: "Poppins",
                 }}
@@ -289,7 +289,7 @@ export default function AboutProject() {
             </div>
 
             <div
-              className="justify-end mt-4"
+              className="justify-end"
               style={{
                 display: "flex",
                 flexDirection: "column",

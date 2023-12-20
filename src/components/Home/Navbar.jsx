@@ -62,15 +62,17 @@ const Navbar = () => {
         { name: "Request Blood", path: "/request-blood", id: 1 },
         { name: "About Blood", path: "/about-blood", id: 2 },
         { name: "Why Give Blood", path: "/about", id: 3 },
+        { name: "Learn About Blood", path: "/learn-about-blood", id: 4 },
         {
           name: "Health And Eligibility",
           path: "/blood/health-and-eligibility",
-          id: 4,
+          id: 5,
         },
         {
           name: "Know The Risks",
           path: "/blood/know-the-risk",
-          id: 4,
+          id: 6,
+          
         },
       ],
     },

@@ -4,7 +4,8 @@ import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/material_green.css"; // Choose a theme that fits your design
 import "flatpickr/dist/l10n/default";
 import { useState } from "react";
-
+import ImageNews from "../../../src/assets/newsDoctors.png";
+import ConerImg from "../../../src/assets/Rectangle 660.png";
 function NewsSections() {
   const [selectedDate, setSelectedDate] = useState(null);
 
@@ -83,16 +84,100 @@ function NewsSections() {
             }}
           />
         </div>
-      
       </div>
-
 
       <div className="">
         <button className="bg-white text-[18px] text-black shadow-2xl py-3 px-8 rounded-lg  items-center ml-auto mr-auto ">
-        December
+          December
         </button>
 
         <hr className="-mt-6"></hr>
+      </div>
+
+      <div className="grid grid-cols-3 gap-6 mt-6">
+       
+
+        <div className="shadow-2xl bg-white">
+           <img  className="absolute top-0 left-0 h-8 w-8 z-40 relative" src={ConerImg} alt="" />
+          <img className="-mt-8" src={ImageNews} alt=""></img>
+          <p className="mt-1 font-bold text-center">World Blood Donor Day 2023</p>
+          <p className=" m-4 mt-3">The slogan for the 2023 World Blood Donor Day campaign is “Give blood, give plasma, share life, share often.” It focuses on patients requiring life-long transfusion support and underlines the role every single person can play, by giving the valuable gift of blood or plasma</p>
+
+         <p className="bg-red-600  py-2 rounded-b-md text-center text-white">Learn more</p>
+        </div>
+
+        <div className="shadow-2xl bg-white">
+           <img  className="absolute top-0 left-0 h-8 w-8 z-40 relative" src={ConerImg} alt="" />
+          <img className="-mt-8" src={ImageNews} alt=""></img>
+          <p className="mt-1 font-bold text-center">World Blood Donor Day 2023</p>
+          <p className=" m-4 mt-3">The slogan for the 2023 World Blood Donor Day campaign is “Give blood, give plasma, share life, share often.” It focuses on patients requiring life-long transfusion support and underlines the role every single person can play, by giving the valuable gift of blood or plasma</p>
+
+         <p className="bg-red-600  py-2 rounded-b-md text-center text-white">Learn more</p>
+        </div>
+
+        <div className="shadow-2xl bg-white">
+           <img  className="absolute top-0 left-0 h-8 w-8 z-40 relative" src={ConerImg} alt="" />
+          <img className="-mt-8" src={ImageNews} alt=""></img>
+          <p className="mt-1 font-bold text-center">World Blood Donor Day 2023</p>
+          <p className=" m-4 mt-3">The slogan for the 2023 World Blood Donor Day campaign is “Give blood, give plasma, share life, share often.” It focuses on patients requiring life-long transfusion support and underlines the role every single person can play, by giving the valuable gift of blood or plasma</p>
+
+         <p className="bg-red-600  py-2 rounded-b-md text-center text-white">Learn more</p>
+        </div>
+      </div>
+
+
+
+      {/* November */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div className="mt-10">
+        <button className="bg-white text-[18px] text-black shadow-2xl py-3 px-8 rounded-lg  items-center ml-auto mr-auto ">
+        November
+        </button>
+
+        <hr className="-mt-6"></hr>
+      </div>
+
+      <div className="grid grid-cols-3 gap-6 mt-10">
+       
+
+        <div className="shadow-2xl bg-white">
+           <img  className="absolute top-0 left-0 h-8 w-8 z-40 relative" src={ConerImg} alt="" />
+          <img className="-mt-8" src={ImageNews} alt=""></img>
+          <p className="mt-1 font-bold text-center">World Blood Donor Day 2023</p>
+          <p className=" m-4 mt-3">The slogan for the 2023 World Blood Donor Day campaign is “Give blood, give plasma, share life, share often.” It focuses on patients requiring life-long transfusion support and underlines the role every single person can play, by giving the valuable gift of blood or plasma</p>
+
+         <p className="bg-red-600  py-2 rounded-b-md text-center text-white">Learn more</p>
+        </div>
+
+        <div className="shadow-2xl bg-white">
+           <img  className="absolute top-0 left-0 h-8 w-8 z-40 relative" src={ConerImg} alt="" />
+          <img className="-mt-8" src={ImageNews} alt=""></img>
+          <p className="mt-1 font-bold text-center">World Blood Donor Day 2023</p>
+          <p className=" m-4 mt-3">The slogan for the 2023 World Blood Donor Day campaign is “Give blood, give plasma, share life, share often.” It focuses on patients requiring life-long transfusion support and underlines the role every single person can play, by giving the valuable gift of blood or plasma</p>
+
+         <p className="bg-red-600  py-2 rounded-b-md text-center text-white">Learn more</p>
+        </div>
+
+        <div className="shadow-2xl bg-white">
+           <img  className="absolute top-0 left-0 h-8 w-8 z-40 relative" src={ConerImg} alt="" />
+          <img className="-mt-8" src={ImageNews} alt=""></img>
+          <p className="mt-1 font-bold text-center">World Blood Donor Day 2023</p>
+          <p className=" m-4 mt-3">The slogan for the 2023 World Blood Donor Day campaign is “Give blood, give plasma, share life, share often.” It focuses on patients requiring life-long transfusion support and underlines the role every single person can play, by giving the valuable gift of blood or plasma</p>
+
+         <p className="bg-red-600  py-2 rounded-b-md text-center text-white">Learn more</p>
+        </div>
       </div>
     </div>
   );

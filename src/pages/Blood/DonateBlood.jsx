@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../components/Home/Navbar";
 import CarouselBanner from "../../components/Home/CarouselBanner";
 import Footer from "../../components/Home/Footer";
+import DonateBloodPage from "./DonateBloodPage";
 
 export default function DonateBlood() {
   return (
@@ -13,7 +14,7 @@ export default function DonateBlood() {
         <CarouselBanner />
       </div>
       <div className="">
-        Donate Blood component
+        <DonateBloodPage></DonateBloodPage>
       </div>
       <div className="mt-44">
         <Footer />

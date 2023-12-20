@@ -24,7 +24,7 @@ const SearchDonorPageComponent = () => {
 
       <div className="grid grid-cols-12">
         <div className="col-span-3 border-r border-[#44444480] pb-4 h-full flex flex-col">
-          <div className="mr-[25px] rounded-xl shadow-top-right-left-bottom-lg h-full flex-grow mt-4">
+          <div className="mr-3 rounded-xl shadow-top-right-left-bottom-lg h-full flex-grow mt-4">
             <div className="mx-4">
               <div className="ml-6 pt-[20px]">
                 <p className="font-semibold text-[#444]">Area</p>
@@ -141,7 +141,7 @@ const SearchDonorPageComponent = () => {
           </div>
         </div>
         {/* half */}
-        <div className="col-span-9 p-4 px-6 pt-1">
+        <div className="col-span-9 p-4 px-0 pl-3 pt-1">
           <div className=" ">
             <div className="flex justify-between items-center">
               <div className="">
@@ -187,7 +187,7 @@ const SearchDonorPageComponent = () => {
             {/* horizontal end */}
 
             {/* START DONOR CARD */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-1">
               <div className="col-span-1">
                 <DonorCardComponent
                   image={donor_card_icon}

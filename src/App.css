@@ -133,13 +133,13 @@ header {
 
 .about-blood-div-border {
   box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   /* Adjust the values as needed */
 }
 
 .about-blood-div-border-two {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
+  
   /* Adjust the values as needed */
 }
 
@@ -152,6 +152,12 @@ header {
   margin-bottom: 7px; /* Adjust the margin as needed */
 }
 
+.ul-li-no-button li {
+  margin-left: 1em; /* Adjust the margin as needed */
+  margin-bottom: 7px; /* Adjust the margin as needed */
+  list-style-type: none ;
+}
+
 .ul-li li::before {
   content: "\2022";
   color: #444444;
@@ -159,3 +165,19 @@ header {
   width: 1em;
   margin-left: -1em;
 }
+
+.learn-more-div-border {
+  box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.05);
+  /* Adjust the values as needed */
+}
+
+.learn-about-blood-button-border {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
+
+
