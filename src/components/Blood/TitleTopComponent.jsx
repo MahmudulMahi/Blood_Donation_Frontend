@@ -4,7 +4,7 @@ import Rectangle from "../../assets/icons/Rectangle.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
-const TitleTopComponent = ({secondTitle,thirdTitle}) => {
+const TitleTopComponent = ({secondTitle,thirdTitle,fourthTitle}) => {
   return (
     <div>
        <div className="w-full h-20 flex justify-between items-center">
@@ -19,6 +19,10 @@ const TitleTopComponent = ({secondTitle,thirdTitle}) => {
                 <FontAwesomeIcon icon={faAngleRight} />
               </span>{" "}
               {thirdTitle}
+              <span className="text-brandPrimary px-[2px]">
+                <FontAwesomeIcon icon={faAngleRight} />
+              </span>{" "}
+              {fourthTitle}
             </p>
           </div>
 

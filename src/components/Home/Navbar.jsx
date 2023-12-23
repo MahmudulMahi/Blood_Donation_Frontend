@@ -93,8 +93,10 @@ const Navbar = () => {
       optionList: [
         { name: "News", path: "/news" },
         { name: "Event", path: "/.." },
-        { name: "Stories", path: "/.." },
-        { name: "Gallery", path: "/.." },
+      
+        { name: "Gallery", path: "/campaign-gallery-all" },
+        { name: "Stories", path: "/stories" },
+       
        
      
       ],
