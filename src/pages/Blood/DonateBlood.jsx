@@ -4,6 +4,7 @@ import CarouselBanner from "../../components/Home/CarouselBanner";
 import Footer from "../../components/Home/Footer";
 import DonateBloodPage from "./DonateBloodPage";
 
+
 export default function DonateBlood() {
   return (
     <div>
@@ -13,9 +14,9 @@ export default function DonateBlood() {
       <div className="">
         <CarouselBanner />
       </div>
-      <div className="">
+      <div className="mx-24">
         <DonateBloodPage></DonateBloodPage>
-      </div>
+      </div> 
       <div className="mt-44">
         <Footer />
       </div>

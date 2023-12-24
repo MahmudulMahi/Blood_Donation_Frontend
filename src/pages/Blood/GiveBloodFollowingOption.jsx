@@ -3,6 +3,7 @@ import { useState } from 'react';
 import BloodBankCard from './BloodBankCard';
 import HospitalCard from './HospitalCard';
 import PatientsCard from './PatientsCard';
+import { GoArrowRight } from "react-icons/go";
 
 const GiveBloodFollowingOption = () => {
 
@@ -44,7 +45,11 @@ const GiveBloodFollowingOption = () => {
      {
         bloodBank.map(blood=><BloodBankCard key={blood.id} blood={blood}></BloodBankCard>)
       }
+     
+     
+     
      </div>
+     <button className='flex items-center gap-3 text-lg text-[#E11B22] ml-auto mt-4 '>see more <GoArrowRight /></button>
 
      <select id="countries" className=" mt-3 bg-gray-50 border border-gray-300 text-red-700  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-lg font-bold">
         <option selected className='text-[#E11B22]'>Hospital</option>
@@ -59,6 +64,7 @@ const GiveBloodFollowingOption = () => {
           hospital.map(ahospital =><HospitalCard key={ahospital.id} ahospital={ahospital}></HospitalCard>)
         }
       </div>
+      <button className='flex items-center gap-3 text-lg text-[#E11B22] ml-auto mt-4 '>see more <GoArrowRight /></button>
 
       <select id="countries" className=" mt-3 bg-gray-50 border border-gray-300 text-red-700  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-lg font-bold">
         <option selected className='text-[#E11B22]'>Patients</option>
@@ -73,6 +79,7 @@ const GiveBloodFollowingOption = () => {
             Patients.map(patient=><PatientsCard key={patient.id} patient={patient}></PatientsCard>)
           }
         </div>
+        <button className='flex items-center gap-3 text-lg text-[#E11B22] ml-auto mt-4 '>see more <GoArrowRight /></button>
     </div>
   );
 };

@@ -72,7 +72,6 @@ const Navbar = () => {
           name: "Know The Risks",
           path: "/blood/know-the-risk",
           id: 6,
-          
         },
       ],
     },
@@ -80,28 +79,23 @@ const Navbar = () => {
       link: "Donor",
       path: "",
       id: 4,
-      optionList: [{ name: "Donate Blood", path: "/donate-blood", id: 1 }],
+      optionList: [
+        { name: "Donate Blood", path: "/donate-blood", id: 1 },
+        { name: "First Time Blood Donation", path: "/first-time-blood", id: 2 },
+      ],
     },
-    
-
-
-
-     {
+    {
       link: "Campaign",
       path: "",
       id: 5,
       optionList: [
         { name: "News", path: "/news" },
         { name: "Event", path: "/.." },
-      
+
         { name: "Gallery", path: "/campaign-gallery-all" },
         { name: "Stories", path: "/stories" },
-       
-       
-     
       ],
     },
-
 
     { link: "Contact", path: "", id: 6 },
   ];

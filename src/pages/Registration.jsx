@@ -15,9 +15,7 @@ const Registration = () => {
     fullName: "",
     lastName: "",
     phoneNumber: 0,
-    dayID: initialDays[0], // Set the initial day value
-
-    // Add more fields and their initial values as needed
+    dayID: initialDays[0],
   };
 
   const formik = useFormik({
@@ -76,14 +74,12 @@ const Registration = () => {
     { label: "District 1", value: "District 1" },
     { label: "District 2", value: "District 2" },
     { label: "District 3", value: "District 3" },
-    // Add more districts as needed
   ];
 
   const areaOptions = [
     { label: "Area 1", value: "Area 1" },
     { label: "Area 2", value: "Area 2" },
     { label: "Area 3", value: "Area 3" },
-    // Add more areas as needed
   ];
 
   const genderOptions = [
@@ -111,7 +107,6 @@ const Registration = () => {
           backgroundImage: `url(${RegLayer})`,
           backgroundSize: "cover",
           backgroundColor: "rgba(255, 255, 255, 0.1)",
-          // transform: "scale(1.3)",  // Zoom by 10%
         }}
       >
         <div className="absolute w-full h-full bg-white opacity-95 px-48 pt-0">

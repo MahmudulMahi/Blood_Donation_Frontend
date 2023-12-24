@@ -10,7 +10,6 @@ import ContactUs from "../components/Home/ContactUs";
 import ClientsThink from "../components/Home/ClientsThink";
 import MobileApp from "../components/Home/MobileApp";
 import Footer from "../components/Home/Footer";
-import InputFields from "../components/InputFields/InputFields";
 import { useFormik } from "formik";
 
 const AnimatedComponent = ({ children, delay }) => {
@@ -69,8 +68,6 @@ const Home = () => {
     });
   };
   
-  
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -80,7 +77,6 @@ const Home = () => {
 
   const initialValues = {
     fullName: 'John Doe',
-    // Add more fields and their initial values as needed
   };
 
   const formik = useFormik({

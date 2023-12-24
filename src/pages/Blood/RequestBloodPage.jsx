@@ -48,7 +48,6 @@ const RequestBloodPage = () => {
     { label: "Monetary", value: "Monetary" },
     { label: "In-Kind", value: "In-Kind" },
     { label: "Service", value: "Service" },
-    // Add additional donation types as needed
   ];
 
   const transfusionOptions = [
@@ -56,27 +55,22 @@ const RequestBloodPage = () => {
     { label: "Red Blood Cells", value: "Red Blood Cells" },
     { label: "Platelets", value: "Platelets" },
     { label: "Plasma", value: "Plasma" },
-    // Add additional transfusion types as needed
   ];
 
   const districtOptions = [
     { label: "District A", value: "District A" },
     { label: "District B", value: "District B" },
     { label: "District C", value: "District C" },
-    // Add additional districts as needed
   ];
 
   const hospitalOptions = [
     { label: "City Hospital", value: "City Hospital" },
     { label: "General Medical Center", value: "General Medical Center" },
-    { label: "Community Health Hospital", value: "Community Health Hospital" },
-    // Add additional hospital names as needed
+    { label: "Community Health Hospital", value: "Community Health Hospital" }, 
   ];
 
   const handleFileChange = (event) => {
     const selectedFile = event.target.files[0];
-
-    // Handle the selected file as needed
     console.log("Selected File:", selectedFile);
   };
 

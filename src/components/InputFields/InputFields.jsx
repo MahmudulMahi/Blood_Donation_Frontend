@@ -5,7 +5,6 @@ import { InputText } from "primereact/inputtext";
 import { InputNumber } from "primereact/inputnumber";
 import { Calendar } from "primereact/calendar";
 import { InputTextarea } from "primereact/inputtextarea";
-import { classNames } from "primereact/utils";
 
 const InputFields = ({
   id,
@@ -62,27 +61,58 @@ const InputFields = ({
             onChange={onChange}
             id={id}
             {...rest}
+            style={{ width: "100%" }}
+            inputStyle={{
+              backgroundColor: "white",
+              color: "black",
+              paddingRight: "2rem",
+            }}
+            panelStyle={{
+              backgroundColor: "white",
+              border: "1px solid black",
+              borderTop: "none",
+              borderBottom: "1px solid black",
+              borderLeft: "1px solid black",
+              borderRight: "1px solid black",
+              borderRadius: "8px",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+            }}
           />
         );
-        case "dropdown":
-          return (
-            <div className={`p-inputgroup ${disabled ? "disabled" : ""}`}>
-              <Dropdown
-                {...field}
-                options={options}
-                placeholder={placeholder}
-                onChange={handleDropdownChange}
-                className={classNames(className, { "p-inputtext": showIcon })}
-                disabled={disabled}
-                {...rest}
-              />
-              {showIcon && (
-                <span className="p-inputgroup-addon">
-                  <i className="pi pi-calendar" style={{ color: iconColor }} />
-                </span>
-              )}
-            </div>
-          );
+      case "dropdown":
+        return (
+          <div
+            className={`relative ${
+              disabled ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+          >
+            <select
+              {...field}
+              onChange={(e) => onChange({ target: { value: e.target.value } })}
+              className={`block w-full p-2 border rounded-md ${
+                disabled ? "bg-gray-200" : "bg-white"
+              } focus:outline-none focus:border-brandPrimary ${className}`}
+              disabled={disabled}
+              {...rest}
+            >
+              {options.map((option) => (
+                <option
+                  key={option.value}
+                  value={option.value}
+                  className="text-sm"
+                >
+                  {option.label}
+                </option>
+              ))}
+            </select>
+            {showIcon && (
+              <span className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                <i className="pi pi-calendar" style={{ color: iconColor }} />
+              </span>
+            )}
+          </div>
+        );
+
       case "time":
       case "day":
         return (
