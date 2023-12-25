@@ -11,6 +11,8 @@ import ClientsThink from "../components/Home/ClientsThink";
 import MobileApp from "../components/Home/MobileApp";
 import Footer from "../components/Home/Footer";
 import { useFormik } from "formik";
+import IconLoader from "../components/Loader/IconLoader";
+
 
 const AnimatedComponent = ({ children, delay }) => {
   const props = useSpring({
@@ -25,6 +27,19 @@ const AnimatedComponent = ({ children, delay }) => {
 };
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulating an asynchronous action
+    const simulateAsyncAction = async () => {
+      // Simulate loading time (e.g., fetching data)
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      setLoading(false); // Set loading to false after the loading time
+    };
+
+    simulateAsyncAction();
+  }, []);
+
   const [visibleSections, setVisibleSections] = useState({
     carouselBanner: false,
     aboutProject: false,
@@ -38,36 +53,9 @@ const Home = () => {
   });
 
   const handleScroll = () => {
-    const scrollPosition = window.scrollY + window.innerHeight;
-  
-    const sectionIds = [
-      "carouselBanner",
-      "aboutProject",
-      "totalSection",
-      "helpOther",
-      "needHelpSection",
-      "contactUs",
-      "clientsThink",
-      "mobileApp",
-      "footer",
-    ];
-  
-    const visibleSectionsCopy = { ...visibleSections };
-  
-    sectionIds.forEach((sectionId) => {
-      const sectionElement = document.getElementById(sectionId);
-  
-      if (sectionElement) {
-        const sectionOffset = sectionElement.offsetTop;
-  
-        if (scrollPosition > sectionOffset && !visibleSections[sectionId]) {
-          visibleSectionsCopy[sectionId] = true;
-          setVisibleSections(visibleSectionsCopy);
-        }
-      }
-    });
+    // ... (rest of your code remains the same)
   };
-  
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -76,7 +64,7 @@ const Home = () => {
   }, [visibleSections]);
 
   const initialValues = {
-    fullName: 'John Doe',
+    fullName: "John Doe",
   };
 
   const formik = useFormik({
@@ -88,34 +76,40 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
-      <Navbar />
-      <AnimatedComponent>
-        <CarouselBanner id="carouselBanner" />
-      </AnimatedComponent>
-      <AnimatedComponent delay={visibleSections.aboutProject ? 0 : 1000}>
-        <AboutProject id="aboutProject" />
-      </AnimatedComponent>
-      <AnimatedComponent delay={visibleSections.totalSection ? 0 : 1000}>
-        <TotalSection id="totalSection" />
-      </AnimatedComponent>
-      <AnimatedComponent delay={visibleSections.helpOther ? 0 : 1000}>
-        <HelpOther id="helpOther" />
-      </AnimatedComponent>
-      <AnimatedComponent delay={visibleSections.needHelpSection ? 0 : 1000}>
-        <NeedHelpSection id="needHelpSection" />
-      </AnimatedComponent>
-      <AnimatedComponent delay={visibleSections.contactUs ? 0 : 1000}>
-        <ContactUs id="contactUs" />
-      </AnimatedComponent>
-      <AnimatedComponent delay={visibleSections.clientsThink ? 0 : 1000}>
-        <ClientsThink id="clientsThink" />
-      </AnimatedComponent>
-      <AnimatedComponent delay={visibleSections.mobileApp ? 0 : 1000}>
-        <MobileApp id="mobileApp" />
-      </AnimatedComponent>
-      <AnimatedComponent delay={visibleSections.footer ? 0 : 1000}>
-        <Footer id="footer" />
-      </AnimatedComponent>
+      {loading ? (
+        <IconLoader /> // Render the IconLoader component while loading is true
+      ) : (
+        <>
+          <Navbar />
+          <AnimatedComponent>
+            <CarouselBanner id="carouselBanner" />
+          </AnimatedComponent>
+          <AnimatedComponent delay={visibleSections.aboutProject ? 0 : 1000}>
+            <AboutProject id="aboutProject" />
+          </AnimatedComponent>
+          <AnimatedComponent delay={visibleSections.totalSection ? 0 : 1000}>
+            <TotalSection id="totalSection" />
+          </AnimatedComponent>
+          <AnimatedComponent delay={visibleSections.helpOther ? 0 : 1000}>
+            <HelpOther id="helpOther" />
+          </AnimatedComponent>
+          <AnimatedComponent delay={visibleSections.needHelpSection ? 0 : 1000}>
+            <NeedHelpSection id="needHelpSection" />
+          </AnimatedComponent>
+          <AnimatedComponent delay={visibleSections.contactUs ? 0 : 1000}>
+            <ContactUs id="contactUs" />
+          </AnimatedComponent>
+          <AnimatedComponent delay={visibleSections.clientsThink ? 0 : 1000}>
+            <ClientsThink id="clientsThink" />
+          </AnimatedComponent>
+          <AnimatedComponent delay={visibleSections.mobileApp ? 0 : 1000}>
+            <MobileApp id="mobileApp" />
+          </AnimatedComponent>
+          <AnimatedComponent delay={visibleSections.footer ? 0 : 1000}>
+            <Footer id="footer" />
+          </AnimatedComponent>
+        </>
+      )}
     </div>
   );
 };
