@@ -114,7 +114,7 @@ export default function HealthAndEligibility() {
       </div>
       {/* Page Start */}
       <div>
-        <div className="mx-28">
+        <div className="mx-4 md:mx-10 lg:mx-20 xl:mx-28">
           <div className="w-full h-20 flex justify-between items-center">
             <div>
               <p className="font-semibold">
@@ -126,9 +126,10 @@ export default function HealthAndEligibility() {
             </div>
           </div>
           <div className="mt-10 mb-6">
-            <div className="text-white bg-brandPrimary rounded-md w-2/6 md:ml-10 p-4">
+            <div className="text-white bg-brandPrimary rounded-md w-full md:w-2/3 lg:w-1/2 xl:w-2/6 mx-auto md:ml-10 p-4">
               <p>Why Eligibility Required For Blood Donation</p>
             </div>
+
             <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border border-gray-300 border-t-0 border-l-0">
               <br></br>
               <p className="p-2 text-sm">
@@ -163,126 +164,130 @@ export default function HealthAndEligibility() {
           </div>
 
           <div className="mt-20 mb-5">
-            <div className="text-center text-xl font-semibold mb-2 mr-16 text-gray-700">
+            <div className="text-center text-lg md:text-xl lg:text-2xl font-semibold mb-2 md:mr-16 text-gray-700">
               Transform The Lives Of Patient In Need By Donating Blood Today
             </div>
+
             <div>
-              <div className="text-white bg-brandPrimary rounded-md w-2/6 md:ml-96 p-4 relative">
-                <p>How we thought of establishing this website</p>
+              <div className="text-white bg-brandPrimary rounded-md md:w-2/6 md:ml-96 p-4 relative mt-5">
+                <p className="text-center md:text-left">
+                  How we thought of establishing this website
+                </p>
               </div>
-              <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border bg-red-100 border-gray-300 border-t-0 border-l-0">
-                <div className="grid grid-cols-4 gap-3 ">
+
+              <div className="md:ml-10 md:mr-20 rounded-md md:-mt-6 lg:-mt-6  z-30 shadow-lg border bg-red-100 border-gray-300 border-t-0 border-l-0 ">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   {/* First Column */}
-                  <div className="col-span-1 text-center mt-20">
+                  <div className="col-span-1 text-center sm:mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
                       <div className="w-12 h-12 bg-brandPrimary rounded-full">
                         <img
-                          className="w-11 h-11 object-cover rounded-full  mx-auto"
+                          className="w-11 h-11 object-cover rounded-full mx-auto"
                           src={ha1} // Replace with your image source
                           alt="Image 3"
                         />
                       </div>
                     </div>
-                    <p className="text-center text-sm font-semibold">
-                      Must be at least 16 years <br /> old
+                    <p className="text-center text-xs sm:text-sm font-semibold">
+                      Must be at least 16 years old
                     </p>
                   </div>
 
                   {/* Second Column */}
-                  <div className="col-span-1 text-center mt-20">
+                  <div className="col-span-1 text-center sm:mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
                       <div className="w-12 h-12 bg-brandPrimary rounded-full">
                         <img
-                          className="w-11 h-11 object-cover rounded-full  mx-auto"
+                          className="w-11 h-11 object-cover rounded-full mx-auto"
                           src={ha2} // Replace with your image source
                           alt="Image 3"
                         />
                       </div>
                     </div>
-                    <p className="text-center text-sm font-semibold">
-                      Weight at least <br /> 50kg (110 pounds)
+                    <p className="text-center text-xs sm:text-sm font-semibold">
+                      Weight at least 50kg (110 pounds)
                     </p>
                   </div>
 
                   {/* Third Column */}
-                  <div className="col-span-1 text-center mt-20">
+                  <div className="col-span-1 text-center sm:mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
                       <div className="w-12 h-12 bg-brandPrimary rounded-full">
                         <img
-                          className="w-11 h-11 object-cover rounded-full  mx-auto"
+                          className="w-11 h-11 object-cover rounded-full mx-auto"
                           src={ha3} // Replace with your image source
                           alt="Image 3"
                         />
                       </div>
                     </div>
-                    <p className="text-center text-sm font-semibold">
+                    <p className="text-center text-xs sm:text-sm font-semibold">
                       Be in good general health
                     </p>
                   </div>
 
                   {/* Fourth Column */}
-                  <div className="col-span-1 text-center mt-20">
+                  <div className="col-span-1 text-center sm:mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
                       <div className="w-12 h-12 bg-brandPrimary rounded-full">
                         <img
-                          className="w-11 h-11 object-cover rounded-full  mx-auto"
+                          className="w-11 h-11 object-cover rounded-full mx-auto"
                           src={ha4} // Replace with your image source
                           alt="Image 3"
                         />
                       </div>
                     </div>
-                    <p className="text-center text-sm font-semibold">
+                    <p className="text-center text-xs sm:text-sm font-semibold">
                       Bring your ID
                     </p>
                   </div>
                 </div>
-                <div className="grid grid-cols-3 mb-8">
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 mb-8">
                   {/* First Column */}
-                  <div className="col-span-1 text-center mt-20">
+                  <div className="col-span-1 text-center sm:mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
                       <div className="w-12 h-12 bg-brandPrimary rounded-full">
                         <img
-                          className="w-11 h-11 object-cover rounded-full  mx-auto"
+                          className="w-11 h-11 object-cover rounded-full mx-auto"
                           src={ha5} // Replace with your image source
                           alt="Image 3"
                         />
                       </div>
                     </div>
-                    <p className="text-center text-sm font-semibold">
-                      Eat within 2 hours ahead of <br /> your donation
+                    <p className="text-center text-xs sm:text-sm font-semibold">
+                      Eat within 2 hours ahead of your donation
                     </p>
                   </div>
 
                   {/* Second Column */}
-                  <div className="col-span-1 text-center mt-20">
+                  <div className="col-span-1 text-center sm:mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
                       <div className="w-12 h-12 bg-brandPrimary rounded-full">
                         <img
-                          className="w-11 h-11 object-cover rounded-full  mx-auto"
+                          className="w-11 h-11 object-cover rounded-full mx-auto"
                           src={ha6} // Replace with your image source
                           alt="Image 3"
                         />
                       </div>
                     </div>
-                    <p className="text-center text-sm font-semibold">
-                      Drink plenty of non- <br /> alcoholic liquids
+                    <p className="text-center text-xs sm:text-sm font-semibold">
+                      Drink plenty of non-alcoholic liquids
                     </p>
                   </div>
 
                   {/* Third Column */}
-                  <div className="col-span-1 text-center mt-20">
+                  <div className="col-span-1 text-center sm:mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
                       <div className="w-12 h-12 bg-brandPrimary rounded-full">
                         <img
-                          className="w-11 h-11 object-cover rounded-full  mx-auto"
+                          className="w-11 h-11 object-cover rounded-full mx-auto"
                           src={ha7} // Replace with your image source
                           alt="Image 3"
                         />
                       </div>
                     </div>
-                    <p className="text-center text-sm font-semibold">
-                      Wait eight weeks between <br />
-                      whole blood donations
+                    <p className="text-center text-xs sm:text-sm font-semibold">
+                      Wait eight weeks between whole blood donations
                     </p>
                   </div>
                 </div>
@@ -290,11 +295,11 @@ export default function HealthAndEligibility() {
             </div>
           </div>
           {/* next section */}
-          <div className="mt-20 mb-5">
+          <div className="mt-10 mb-5">
             {items.map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-col ml-10 mr-20 mt-4 rounded-md shadow-lg border bg-red-100 border-gray-300 p-4`}
+                className={`flex flex-col md:ml-10 md:mr-20 mt-4 rounded-md shadow-lg border bg-red-100 border-gray-300 p-4`}
               >
                 <div className="flex items-center">
                   <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white font-bold mr-4">
@@ -311,8 +316,8 @@ export default function HealthAndEligibility() {
                   </div>
                 </div>
                 {item.expanded && (
-                  <div className="ml-16 mt-2">
-                    <ul className="list-disc list-inside pl-6 text-sm font-serif">
+                  <div className="ml-4 mt-2 md:ml-6">
+                    <ul className="list-disc list-inside pl-4 text-sm font-serif">
                       {item.details.map((detail, idx) => (
                         <li key={idx} className="mb-1">
                           {detail}
@@ -328,12 +333,14 @@ export default function HealthAndEligibility() {
           {/* Next section end */}
           {/* last section start */}
           <div className="mt-10 mb-10">
-            <div className="text-center text-xl font-semibold mb-2 mr-16 text-gray-700">
+            <div className="text-center text-xl font-semibold mb-2 mr-2 md:mr-16 text-gray-700">
               Other Factors That Can Impact Eligibility
             </div>
-            <div className="text-white bg-brandPrimary rounded-md w-2/6 md:ml-10 p-4 mt-4">
+
+            <div className="text-white bg-brandPrimary rounded-md w-full md:w-2/6 md:ml-10 p-4 mt-4">
               <p>Additional Eligibility Requirements</p>
             </div>
+
             <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border border-gray-300 border-t-0 border-l-0 ">
               <br></br>
               <p className="p-2 text-sm">
@@ -349,10 +356,10 @@ export default function HealthAndEligibility() {
             {dynamicItems.map((item, index) => (
               <div
                 key={index}
-                className={`flex flex-col ml-10 mr-20 rounded-md shadow-lg border bg-red-100 border-gray-300 mt-4 p-4 `}
+                className={`flex flex-col ml-4 sm:ml-6 md:ml-10 mr-4 sm:mr-6 md:mr-20 rounded-md shadow-lg border bg-red-100 border-gray-300 mt-4 p-4 `}
               >
                 <div className="flex items-center">
-                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white font-bold mr-4">
+                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white font-bold mr-2 sm:mr-4">
                     {item.number}
                   </div>
                   <div className="flex-grow">
@@ -366,7 +373,7 @@ export default function HealthAndEligibility() {
                   </div>
                 </div>
                 {item.isExpanded && (
-                  <div className="ml-16 mt-2">
+                  <div className="ml-4 sm:ml-6 md:ml-16 mt-2">
                     <ul className="list-disc list-inside pl-6 text-sm font-serif">
                       {item.details.map((detail, detailIndex) => (
                         <li key={detailIndex} className="mb-1">

@@ -18,8 +18,7 @@ const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-
-  const [isHovered, setIsHovered] = useState(false); //On Hover Change Image
+  const [isHovered, setIsHovered] = useState(false);
 
   //set toggle Menu
   const toggleMenu = () => {
@@ -61,7 +60,7 @@ const Navbar = () => {
       optionList: [
         { name: "Request Blood", path: "/request-blood", id: 1 },
         { name: "About Blood", path: "/about-blood", id: 2 },
-        { name: "Why Give Blood", path: "/about", id: 3 },
+        // { name: "Why Give Blood", path: "/about", id: 3 },
         { name: "Learn About Blood", path: "/learn-about-blood", id: 4 },
         {
           name: "Health And Eligibility",
@@ -90,8 +89,7 @@ const Navbar = () => {
       id: 5,
       optionList: [
         { name: "News", path: "/news" },
-        { name: "Event", path: "/.." },
-
+        // { name: "Event", path: "/.." },
         { name: "Gallery", path: "/campaign-gallery-all" },
         { name: "Stories", path: "/stories" },
       ],

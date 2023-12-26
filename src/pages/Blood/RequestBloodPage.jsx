@@ -66,7 +66,7 @@ const RequestBloodPage = () => {
   const hospitalOptions = [
     { label: "City Hospital", value: "City Hospital" },
     { label: "General Medical Center", value: "General Medical Center" },
-    { label: "Community Health Hospital", value: "Community Health Hospital" }, 
+    { label: "Community Health Hospital", value: "Community Health Hospital" },
   ];
 
   const handleFileChange = (event) => {
@@ -75,225 +75,213 @@ const RequestBloodPage = () => {
   };
 
   return (
-    <div className="">
-      <div className="mx-28">
-        {/* start */}
-        <TitleTopComponent secondTitle={"Blood"} thirdTitle={"Request Blood"} />
-        {/* end top */}
-       
-        <div className="mt-2">
-          <p
-            className="text-center"
-            style={{
-              fontSize: "24px",
-              fontStyle: "normal",
-              fontWeight: 700,
-              lineHeight: "normal",
-              textTransform: "capitalize",
-            }}
-          >
-            Please fill the following form to request blood
-          </p>
+    <div className="mx-4 md:mx-8 lg:mx-16 xl:mx-24">
+      {/* Top Section */}
+      <TitleTopComponent secondTitle={"Blood"} thirdTitle={"Request Blood"} />
+      {/* End Top Section */}
 
-          <form
-            onSubmit={formik.handleSubmit}
-            className="mt-4 shadow-bottom-left-right rounded-xl"
-          >
-            <div className="mx-4 my-4">
-              <div className="grid grid-cols-2 gap-4 ">
-                <div className="col-span-1">
-                  <DynamicLabel label="Enter Patient Name" isRequired={true} />
-                  <div className="mt-1">
-                    <InputFields
-                      id="patientName"
-                      type="text"
-                      placeholder="Patient Name"
-                      onChange={formik.handleChange}
-                      className="border border-gray-400 rounded-md p-2 w-full"
-                    />
-                  </div>
-                </div>
-                <div className="col-span-1">
-                  <DynamicLabel label="Select Urgency" isRequired={true} />
-                  <div className="mt-1">
-                    <InputFields
-                      type="dropdown"
-                      placeholder="Scheduling/Urgent"
-                      options={urgencyOptions}
-                      onChange={formik.handleChange}
-                      className="border border-gray-400 rounded-md p-2 w-full"
-                      showIcon={true}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4 mt-3">
-                <div className="col-span-1">
-                  <DynamicLabel label="Blood Group" isRequired={true} />
-                  <div className="mt-1">
-                    <InputFields
-                      type="dropdown"
-                      placeholder="Select"
-                      options={bloodGroupOptions}
-                      onChange={formik.handleChange}
-                      className="border border-gray-400 rounded-md p-2 w-full"
-                      showIcon={true}
-                      iconColor="black"
-                    />
-                  </div>
-                </div>
-                <div className="col-span-1">
-                  <DynamicLabel
-                    label="Select The Date When Blood Needed"
-                    isRequired={true}
-                  />
-                  <div className="mt-1">
-                    <InputFields
-                      type="date"
-                      id="datePicker"
-                      field={{ value: null }} // Pass an initial value if needed
-                      onChange={formik.handleChange}
-                      placeholder="Select a date"
-                      className="w-full "
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4 mt-3">
-                <div className="col-span-1">
-                  <DynamicLabel
-                    label="Request Donation Type"
-                    isRequired={true}
-                  />
-                  <div className="mt-1">
-                    <InputFields
-                      type="dropdown"
-                      placeholder="Select"
-                      options={donationTypeOptions}
-                      onChange={formik.handleChange}
-                      className="border border-gray-400 rounded-md p-2 w-full"
-                      showIcon={true}
-                      iconColor="black"
-                    />
-                  </div>
-                </div>
-                <div className="col-span-1">
-                  <DynamicLabel label="Disease Name" isRequired={true} />
-                  <div className="mt-1">
-                    <InputFields
-                      type="dropdown"
-                      placeholder="Select"
-                      options={transfusionOptions}
-                      onChange={formik.handleChange}
-                      className="border border-gray-400 rounded-md p-2 w-full"
-                      showIcon={true}
-                      iconColor="black"
-                    />
-                  </div>
-                </div>
-              </div>
+      <div className="mt-2">
+        <p className="text-center text-xl md:text-2xl lg:text-3xl font-semibold mb-4">
+          Please fill the following form to request blood
+        </p>
 
-              <div className="grid grid-cols-2 gap-4 mt-3">
-                <div className="col-span-1">
-                  <DynamicLabel label="Patient Age" isRequired={true} />
-                  <div className="mt-1">
-                    <InputFields
-                      id="patientAge"
-                      type="text"
-                      placeholder="Patient Age"
-                      onChange={formik.handleChange}
-                      className="border border-gray-400 rounded-md p-2 w-full"
-                    />
-                  </div>
-                </div>
-                <div className="col-span-1">
-                  <DynamicLabel label="District" isRequired={true} />
-                  <div className="mt-1">
-                    <InputFields
-                      type="dropdown"
-                      placeholder="Select District"
-                      options={districtOptions}
-                      onChange={formik.handleChange}
-                      className="border border-gray-400 rounded-md p-2 w-full"
-                      showIcon={true}
-                    />
-                  </div>
-                </div>
+        <form
+          onSubmit={formik.handleSubmit}
+          className="mt-4 shadow-md rounded-xl px-4 py-6 md:px-8 lg:px-12 xl:px-16"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="col-span-1">
+              <DynamicLabel label="Enter Patient Name" isRequired={true} />
+              <div className="mt-1">
+                <InputFields
+                  id="patientName"
+                  type="text"
+                  placeholder="Patient Name"
+                  onChange={formik.handleChange}
+                  className="border border-gray-400 rounded-md p-2 w-full"
+                />
               </div>
+            </div>
 
-              <div className="grid grid-cols-2 gap-4 mt-3">
-                <div className="col-span-1">
-                  <DynamicLabel label="Phone Number" isRequired={true} />
-                  <div className="mt-1">
-                    <InputFields
-                      id="phoneNumber"
-                      type="text"
-                      placeholder="Enter Phone Number"
-                      onChange={formik.handleChange}
-                      className="border border-gray-400 rounded-md p-2 w-full"
-                    />
-                  </div>
-                </div>
-                <div className="col-span-1">
-                  <DynamicLabel label="Enter Hospital Name" isRequired={true} />
-                  <div className="mt-1">
-                    <InputFields
-                      type="dropdown"
-                      placeholder="Select Hospital"
-                      options={hospitalOptions}
-                      onChange={formik.handleChange}
-                      className="border border-gray-400 rounded-md p-2 w-full"
-                      showIcon={true}
-                    />
-                  </div>
-                </div>
+            <div className="col-span-1">
+              <DynamicLabel label="Select Urgency" isRequired={true} />
+              <div className="mt-1">
+                <InputFields
+                  type="dropdown"
+                  placeholder="Scheduling/Urgent"
+                  options={urgencyOptions}
+                  onChange={formik.handleChange}
+                  className="border border-gray-400 rounded-md p-2 w-full"
+                  showIcon={true}
+                />
               </div>
+            </div>
+          </div>
 
-              <div className="grid grid-cols-2 gap-4 mt-1">
-                <div className="col-span-1">
-                  <div className="mt-3">
-                    <label htmlFor="imageUpload">Upload Image:</label> <br />
-                    <input
-                      type="file"
-                      id="imageUpload"
-                      name="image"
-                      accept="image/*" // Set accepted file types (in this case, images)
-                      onChange={handleFileChange}
-                      style={{ display: "none" }} // Hide the default file input style
-                      className="bg-gray-500 text-white"
-                    />
-                    <div className="border border-gray-400 px-4 py-2 w-28 rounded-lg mt-1">
-                      <button
-                        onClick={() =>
-                          document.getElementById("imageUpload").click()
-                        }
-                        className="bg-gray-400 text-white rounded-md px-2 py-1 cursor-pointer"
-                      >
-                        Browse
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-span-1"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+            <div className="col-span-1">
+              <DynamicLabel label="Blood Group" isRequired={true} />
+              <div className="mt-1">
+                <InputFields
+                  type="dropdown"
+                  placeholder="Select"
+                  options={bloodGroupOptions}
+                  onChange={formik.handleChange}
+                  className="border border-gray-400 rounded-md p-2 w-full"
+                  showIcon={true}
+                  iconColor="black"
+                />
               </div>
-              {/* end */}
+            </div>
 
-              <div className="flex justify-center items-center pb-4">
-                <div className="flex-grow text-center">
-                  {" "}
-                  {/* New container for center alignment */}
+            <div className="col-span-1">
+              <DynamicLabel
+                label="Select The Date When Blood Needed"
+                isRequired={true}
+              />
+              <div className="mt-1">
+                <InputFields
+                  type="date"
+                  id="datePicker"
+                  field={{ value: null }}
+                  onChange={formik.handleChange}
+                  placeholder="Select a date"
+                  className="w-full"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+            <div className="col-span-1">
+              <DynamicLabel label="Request Donation Type" isRequired={true} />
+              <div className="mt-1">
+                <InputFields
+                  type="dropdown"
+                  placeholder="Select"
+                  options={donationTypeOptions}
+                  onChange={formik.handleChange}
+                  className="border border-gray-400 rounded-md p-2 w-full"
+                  showIcon={true}
+                  iconColor="black"
+                />
+              </div>
+            </div>
+
+            <div className="col-span-1">
+              <DynamicLabel label="Disease Name" isRequired={true} />
+              <div className="mt-1">
+                <InputFields
+                  type="dropdown"
+                  placeholder="Select"
+                  options={transfusionOptions}
+                  onChange={formik.handleChange}
+                  className="border border-gray-400 rounded-md p-2 w-full"
+                  showIcon={true}
+                  iconColor="black"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+            <div className="col-span-1">
+              <DynamicLabel label="Patient Age" isRequired={true} />
+              <div className="mt-1">
+                <InputFields
+                  id="patientAge"
+                  type="text"
+                  placeholder="Patient Age"
+                  onChange={formik.handleChange}
+                  className="border border-gray-400 rounded-md p-2 w-full"
+                />
+              </div>
+            </div>
+
+            <div className="col-span-1">
+              <DynamicLabel label="District" isRequired={true} />
+              <div className="mt-1">
+                <InputFields
+                  type="dropdown"
+                  placeholder="Select District"
+                  options={districtOptions}
+                  onChange={formik.handleChange}
+                  className="border border-gray-400 rounded-md p-2 w-full"
+                  showIcon={true}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+            <div className="col-span-1">
+              <DynamicLabel label="Phone Number" isRequired={true} />
+              <div className="mt-1">
+                <InputFields
+                  id="phoneNumber"
+                  type="text"
+                  placeholder="Enter Phone Number"
+                  onChange={formik.handleChange}
+                  className="border border-gray-400 rounded-md p-2 w-full"
+                />
+              </div>
+            </div>
+
+            <div className="col-span-1">
+              <DynamicLabel label="Enter Hospital Name" isRequired={true} />
+              <div className="mt-1">
+                <InputFields
+                  type="dropdown"
+                  placeholder="Select Hospital"
+                  options={hospitalOptions}
+                  onChange={formik.handleChange}
+                  className="border border-gray-400 rounded-md p-2 w-full"
+                  showIcon={true}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4 mt-1">
+            <div className="col-span-1">
+              <div className="mt-3">
+                <label htmlFor="imageUpload">Upload Image:</label> <br />
+                <input
+                  type="file"
+                  id="imageUpload"
+                  name="image"
+                  accept="image/*"
+                  onChange={handleFileChange}
+                  style={{ display: "none" }}
+                  className="bg-gray-500 text-white"
+                />
+                <div className="border border-gray-400 px-4 py-2 w-28 rounded-lg mt-1">
                   <button
-                    type="submit"
-                    className="bg-brandPrimary text-white py-2 px-4 rounded-md shadow-bottom-right"
+                    onClick={() =>
+                      document.getElementById("imageUpload").click()
+                    }
+                    className="bg-gray-400 text-white rounded-md px-2 py-1 cursor-pointer"
                   >
-                    Request For Blood
+                    Browse
                   </button>
                 </div>
               </div>
             </div>
-          </form>
-        </div>
-        {/* end */}
+            <div className="col-span-1"></div>
+          </div>
+          {/* ... (more form fields) */}
+
+          <div className="flex justify-center items-center pb-4 mt-2">
+            <div className="flex-grow text-center">
+              <button
+                type="submit"
+                className="bg-brandPrimary text-white py-2 px-4 rounded-md shadow-bottom-right"
+              >
+                Request For Blood
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   );

@@ -70,14 +70,14 @@ export default function ClientsThink() {
               </div>
             </div>
 
-            <div className="flex-shrink-0 -mt-40">
+            <div className="flex-shrink-0 -mt-32">
               <div className="">
                 <img
                   src={testimonials[activeIndex].imageSrc}
                   alt="ClientImage"
-                  className="w-52 h-52 rounded-full"
+                  className="w-48 h-48 rounded-full"
                 />
-                <div className="flex -mt-52 ml-40">
+                <div className="flex -mt-48 ml-36">
                   {" "}
                   <img
                     src={RedVector}
