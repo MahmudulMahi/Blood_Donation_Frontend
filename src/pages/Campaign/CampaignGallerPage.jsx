@@ -37,59 +37,66 @@ export default function CampaignGallerPage() {
   return (
     <div>
       {/* Calendar start */}
-      <div className="flex justify-end space-x-3 p-2 mt-2">
-        <select
-          className="border p-2 rounded-lg focus:outline-none"
-          value={selectedDay}
-          onChange={(e) => setSelectedDay(e.target.value)}
-        >
-          <option value="" disabled>
-            Day
-          </option>
-          {days.map((day) => (
-            <option key={day} value={day}>
-              {day}
+      <div className="flex flex-col md:flex-row items-center justify-end space-y-2 md:space-y-0 md:space-x-3 p-4 mt-4 bg-gray-100 rounded-lg shadow-md">
+        <div className="relative w-full md:w-32">
+          <select
+            className="w-full border p-2 rounded-lg focus:outline-none"
+            value={selectedDay}
+            onChange={(e) => setSelectedDay(e.target.value)}
+          >
+            <option value="" disabled>
+              Day
             </option>
-          ))}
-        </select>
+            {days.map((day) => (
+              <option key={day} value={day}>
+                {day}
+              </option>
+            ))}
+          </select>
+        </div>
 
-        <select
-          className="border p-2 rounded-lg focus:outline-none"
-          value={selectedMonth}
-          onChange={(e) => setSelectedMonth(e.target.value)}
-        >
-          <option value="" disabled>
-            Month
-          </option>
-          {months.map((month, index) => (
-            <option key={index} value={index + 1}>
-              {month}
+        <div className="relative w-full md:w-32">
+          <select
+            className="w-full border p-2 rounded-lg focus:outline-none"
+            value={selectedMonth}
+            onChange={(e) => setSelectedMonth(e.target.value)}
+          >
+            <option value="" disabled>
+              Month
             </option>
-          ))}
-        </select>
+            {months.map((month, index) => (
+              <option key={index} value={index + 1}>
+                {month}
+              </option>
+            ))}
+          </select>
+        </div>
 
-        <select
-          className="border p-2 rounded-lg focus:outline-none"
-          value={selectedYear}
-          onChange={(e) => setSelectedYear(e.target.value)}
-        >
-          <option value="" disabled>
-            Year
-          </option>
-          {years.map((year) => (
-            <option key={year} value={year}>
-              {year}
+        <div className="relative w-full md:w-32">
+          <select
+            className="w-full border p-2 rounded-lg focus:outline-none"
+            value={selectedYear}
+            onChange={(e) => setSelectedYear(e.target.value)}
+          >
+            <option value="" disabled>
+              Year
             </option>
-          ))}
-        </select>
+            {years.map((year) => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
+        </div>
 
         <button
-          className="bg-white text-brandPrimary p-3 rounded focus:outline-none"
+          className="bg-brandPrimary text-white p-3 rounded focus:outline-none w-full md:w-auto mt-2 md:mt-0"
           onClick={handleSearch}
         >
           <FaSearch />
         </button>
       </div>
+
       {/* Calendar End */}
       {/* DATE DESIGN */}
       <div className="flex items-center space-x-4 mt-5 mb-2">
@@ -100,52 +107,53 @@ export default function CampaignGallerPage() {
       </div>
       {/* Date End */}
       {/* Gallery Start */}
-      <div className="grid grid-cols-4 gap-6 mt-2 mb-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6 mt-2 mb-2">
         <div className="shadow-2xl bg-white">
           <img
-            className=" top-0 left-0 h-8 w-8 z-40 relative"
+            className="top-0 left-0 h-8 w-8 z-40 relative"
             src={ConerImg}
             alt=""
           />
           <img className="-mt-8" src={ImageNews} alt=""></img>
-          <p className="bg-red-600  py-2 text-sm rounded-b-md text-center text-white">
+          <p className="bg-red-600 py-2 text-sm rounded-b-md text-center text-white">
             [For Dev]shadow only use when mouse point the specific box
           </p>
         </div>
         <div className="shadow-2xl bg-white">
           <img
-            className=" top-0 left-0 h-8 w-8 z-40 relative"
+            className="top-0 left-0 h-8 w-8 z-40 relative"
             src={ConerImg}
             alt=""
           />
           <img className="-mt-8" src={ImageNews} alt=""></img>
-          <p className="bg-red-600  py-2 text-sm rounded-b-md text-center text-white">
+          <p className="bg-red-600 py-2 text-sm rounded-b-md text-center text-white">
             [For Dev]shadow only use when mouse point the specific box
           </p>
         </div>
         <div className="shadow-2xl bg-white">
           <img
-            className=" top-0 left-0 h-8 w-8 z-40 relative"
+            className="top-0 left-0 h-8 w-8 z-40 relative"
             src={ConerImg}
             alt=""
           />
           <img className="-mt-8" src={ImageNews} alt=""></img>
-          <p className="bg-white  py-2 text-sm rounded-b-md text-center text-black">
+          <p className="bg-white py-2 text-sm rounded-b-md text-center text-black">
             World Blood Donor Day 2023
           </p>
         </div>
         <div className="shadow-2xl bg-white">
           <img
-            className=" top-0 left-0 h-8 w-8 z-40 relative"
+            className="top-0 left-0 h-8 w-8 z-40 relative"
             src={ConerImg}
             alt=""
           />
           <img className="-mt-8" src={ImageNews} alt=""></img>
-          <p className="bg-white  py-2 text-sm rounded-b-md text-center text-black">
+          <p className="bg-white py-2 text-sm rounded-b-md text-center text-black">
             World Blood Donor Day 2023
           </p>
         </div>
       </div>
+
       {/* Gallery End */}
       {/* DATE DESIGN */}
       <div className="flex items-center space-x-4 mt-10 mb-2">
@@ -156,7 +164,7 @@ export default function CampaignGallerPage() {
       </div>
       {/* Date End */}
       {/* Gallery Start */}
-      <div className="grid grid-cols-4 gap-6 mt-2 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-2 mb-8">
         <div className="shadow-2xl bg-white">
           <img
             className=" top-0 left-0 h-8 w-8 z-40 relative"
@@ -248,7 +256,7 @@ export default function CampaignGallerPage() {
       </div>
       {/* Gallery End */}
       <div className="mb-5">
-        <Pagination totalPages={20}/>
+        <Pagination totalPages={20} />
       </div>
     </div>
   );

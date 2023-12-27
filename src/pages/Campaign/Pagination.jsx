@@ -1,7 +1,13 @@
 import React from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
-const Pagination = ({ currentPage, totalPages, onPrevClick, onNextClick, onPageClick }) => {
+const Pagination = ({
+  currentPage,
+  totalPages,
+  onPrevClick,
+  onNextClick,
+  onPageClick,
+}) => {
   const renderPageNumbers = () => {
     const visiblePages = 2; // Number of visible page numbers on each side of the current page
     const pages = [];
@@ -17,7 +23,9 @@ const Pagination = ({ currentPage, totalPages, onPrevClick, onNextClick, onPageC
           <button
             key={i}
             onClick={() => onPageClick(i)}
-            className={`pagination-number ${currentPage === i ? "bg-brandPrimary" : "bg-white shadow border"} text-black h-8 w-8 mx-1`}
+            className={`pagination-number ${
+              currentPage === i ? "bg-brandPrimary" : "bg-white shadow border"
+            } text-black h-8 w-8 mx-1`}
           >
             {i}
           </button>
@@ -42,17 +50,17 @@ const Pagination = ({ currentPage, totalPages, onPrevClick, onNextClick, onPageC
       <div className="flex items-center justify-center mt-4">
         <span className="text-brandPrimary">Show More</span>
       </div>
-      <div className="flex justify-end ml-4 items-center">
+      <div className="flex flex-col md:flex-row justify-center items-center ml-4 mt-2">
         <button
           onClick={onPrevClick}
           disabled={currentPage === 1}
           className={`pagination-button ${
             currentPage === 1 ? "bg-gray-200" : "bg-brandPrimary"
-          } text-white h-8 w-8 mx-1`}
+          } text-white h-8 w-8 mx-1 mb-2 md:mb-0`}
         >
           <FaAngleLeft className="ml-2" />
         </button>
-        <div className="mx-2 flex">
+        <div className="mx-2 flex flex-wrap justify-center">
           {renderPageNumbers()}
         </div>
         <button

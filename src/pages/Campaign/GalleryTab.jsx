@@ -33,13 +33,13 @@ export default function GalleryTab() {
   return (
     <div>
       <div className="flex items-center justify-center">
-        <div className="max-w-md rounded-lg shadow-lg">
+        <div className="max-w-md md:max-w-xl lg:max-w-2xl rounded-lg shadow-lg">
           <div className="flex justify-between bg-white p-2 rounded-t-lg">
             {tabs.map((tab) => (
               <button
                 key={tab.name}
                 onClick={() => handleTabClick(tab.name)}
-                className={`flex flex-col items-center px-8 py-2 rounded focus:outline-none ${
+                className={`flex flex-col items-center px-4 md:px-8 py-2 rounded focus:outline-none ${
                   selectedTab === tab.name
                     ? "bg-red-500 text-white"
                     : "bg-white text-black"
@@ -52,6 +52,7 @@ export default function GalleryTab() {
           </div>
         </div>
       </div>
+
       {renderComponent()}
     </div>
   );

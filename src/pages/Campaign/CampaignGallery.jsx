@@ -16,7 +16,7 @@ export default function CampaignGallery() {
       <div className="">
         <CarouselBanner />
       </div>
-      <div className="mx-28">
+      <div className="mx-4 sm:mx-8 md:mx-16 lg:mx-28">
         <div>
           <TitleTopComponent
             secondTitle={"Campaign"}

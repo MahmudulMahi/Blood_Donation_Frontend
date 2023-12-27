@@ -2,11 +2,12 @@ import React from "react";
 
 export default function KnowTheRiskPage() {
   return (
-    <div className="mx-28">
+    <div className="mx-4 sm:mx-6 md:mx-10 lg:mx-20 xl:mx-28">
       <div className="mt-10 mb-6">
-        <div className="text-white bg-brandPrimary rounded-md w-1/6 md:ml-10 p-4">
+        <div className="text-white bg-brandPrimary rounded-md w-full md:w-1/2 lg:w-1/4 xl:w-1/6 md:ml-4 lg:ml-10 p-4">
           <p>Know The Risks</p>
         </div>
+
         <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border border-gray-300 border-t-0 border-l-0">
           <br></br>
           <p className="p-2 text-sm">
@@ -19,9 +20,10 @@ export default function KnowTheRiskPage() {
       </div>
       <div className="mt-20 mb-5">
         <div>
-          <div className="text-white bg-brandPrimary rounded-md w-3/6 mr-auto ml-auto p-4 relative text-center">
-            <p>What type of Reaction i might have after i donate blood?</p>
+          <div className="text-white bg-brandPrimary rounded-md w-full md:w-3/4 lg:w-3/6 xl:w-3/6 mx-auto p-4 relative text-center">
+            <p>What type of Reaction might I have after I donate blood?</p>
           </div>
+
           <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border border-gray-300 border-t-0 border-l-0">
             <div>
               <div className="flex items-center mt-8 p-2">
@@ -65,64 +67,65 @@ export default function KnowTheRiskPage() {
         </div>
       </div>
       <div className="mt-20 mb-5">
-        <div className="text-center text-xl font-semibold mb-2 mr-16 text-gray-700">
-          "When Giving Blood The Chances of giving reaction is very low"
+        <div className="text-center text-lg md:text-xl lg:text-2xl font-semibold mb-2 mr-4 md:mr-16 text-gray-700">
+          "When giving blood, the chances of having a reaction are very low."
         </div>
-        <div className="md:ml-10 md:mr-20 rounded-md  shadow-lg border border-gray-300 ">
-          <div className="grid grid-cols-3 gap-2">
-            <div className="col-span-1 p-4">
+
+        <div className="md:ml-10 md:mr-20 rounded-md shadow-lg border border-gray-300 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+            <div className="p-4">
               <p className="text-lg font-bold text-brandPrimary">
                 {" "}
                 VERY COMMON
               </p>
               <p className="text-sm mt-2 font-semibold">(More than 1 in 10)</p>
-              <ul class="list-disc pl-6 mt-2">
-                <li class="text-xs">Minor bruising</li>
+              <ul className="list-disc pl-6 mt-2">
+                <li className="text-xs">Minor bruising</li>
               </ul>
             </div>
-            <div className="col-span-1 p-4">
+            <div className="p-4">
               <p className="text-lg font-bold text-brandPrimary"> COMMON</p>
               <p className="text-sm mt-2 font-semibold">
                 (1 in 10 to 1 in 100)
               </p>
-              <ul class="list-disc pl-6 mt-2">
-                <li class="text-xs">Feeling faint</li>
+              <ul className="list-disc pl-6 mt-2">
+                <li className="text-xs">Feeling faint</li>
               </ul>
             </div>
-            <div className="col-span-1 p-4">
+            <div className="p-4">
               <p className="text-lg font-bold text-brandPrimary"> UNCOMMON</p>
               <p className="text-sm mt-2 font-semibold">
                 (1 in 100 to 1 in 1000)
               </p>
-              <ul class="list-disc pl-6 mt-2">
-                <li class="text-xs">Large bruise</li>
-                <li class="text-xs">Fainting1</li>
-                <li class="text-xs">Nerve irritation</li>
-                <li class="text-xs">Painful arm</li>
-                <li class="text-xs">
+              <ul className="list-disc pl-6 mt-2">
+                <li className="text-xs">Large bruise</li>
+                <li className="text-xs">Fainting1</li>
+                <li className="text-xs">Nerve irritation</li>
+                <li className="text-xs">Painful arm</li>
+                <li className="text-xs">
                   Swelling or pain in arm from fluid leaking into tissues
                 </li>
-                <li class="text-xs">Mild citrate reaction</li>
+                <li className="text-xs">Mild citrate reaction</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
       <div className="mt-8 mb-5">
-        <div className="md:ml-10 md:mr-20 rounded-md  shadow-lg border border-gray-300 ">
-          <div className="grid grid-cols-3 gap-2">
+        <div className="md:ml-10 md:mr-20 rounded-md shadow-lg border border-gray-300 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
             <div className="col-span-1 p-4">
               <p className="text-lg font-bold text-brandPrimary"> RARE</p>
               <p className="text-sm mt-2 font-semibold">
                 (1 in 1000 to 1 in 10000)
               </p>
-              <ul class="list-disc pl-6 mt-2">
-                <li class="text-xs">Delayed bleeding</li>
-                <li class="text-xs">Localized allergic reaction</li>
-                <li class="text-xs">
+              <ul className="list-disc pl-6 mt-2">
+                <li className="text-xs">Delayed bleeding</li>
+                <li className="text-xs">Localized allergic reaction</li>
+                <li className="text-xs">
                   Any event requiring outside medical care
                 </li>
-                <li class="text-xs">Moderate citrate reaction</li>
+                <li className="text-xs">Moderate citrate reaction</li>
               </ul>
             </div>
             <div className="col-span-1 p-4">
@@ -130,10 +133,10 @@ export default function KnowTheRiskPage() {
               <p className="text-sm mt-2 font-semibold">
                 (1 in 10000 to 1 in 100000(1 Lakh))
               </p>
-              <ul class="list-disc pl-6 mt-2">
-                <li class="text-xs">Piercing of an artery</li>
-                <li class="text-xs">Local inflammation of the vein</li>
-                <li class="text-xs">Chest pain</li>
+              <ul className="list-disc pl-6 mt-2">
+                <li className="text-xs">Piercing of an artery</li>
+                <li className="text-xs">Local inflammation of the vein</li>
+                <li className="text-xs">Chest pain</li>
               </ul>
             </div>
             <div className="col-span-1 p-4">
@@ -143,29 +146,37 @@ export default function KnowTheRiskPage() {
               <p className="text-sm mt-2 font-semibold">
                 (1 in 100000(1 Lakh) to 1 in 1000000(10 Lakh))
               </p>
-              <ul class="list-disc pl-6 mt-2">
-                <li class="text-xs">Cellulitis (skin infection)</li>
-                <li class="text-xs">
-                  Nerve injury causing prolonged period of pain or weakness
+              <ul className="list-disc pl-6 mt-2">
+                <li className="text-xs">Cellulitis (skin infection)</li>
+                <li className="text-xs">
+                  Nerve injury causing a prolonged period of pain or weakness
                 </li>
-                <li class="text-xs">
+                <li className="text-xs">
                   {" "}
-                  Clot in the deep veins of arm (uncommonly, the clot may travel
-                  to the lungs which may rarely cause significant symptoms)
+                  Clot in the deep veins of the arm (uncommonly, the clot may
+                  travel to the lungs which may rarely cause significant
+                  symptoms)
                 </li>
-                <li class="text-xs">
-                  Symptoms from return of damaged red cells
+                <li className="text-xs">
+                  Symptoms from the return of damaged red cells
                 </li>
-                <li class="text-xs">Severe citrate reaction</li>
+                <li className="text-xs">Severe citrate reaction</li>
               </ul>
               <p className="text-sm mt-6 font-semibold">
                 (Less than 1 in 1000000(1 Lakh))
               </p>
-              <ul class="list-disc pl-6 mt-2">
-                <li class="text-xs">Major allergic reaction (anaphylaxis)</li>
-                <li class="text-xs">Major blood vessel or tendon injury</li>
-                <li class="text-xs"> Symptoms from return of clotted blood.</li>
-                <li class="text-xs">Symptoms from air entering the vein.</li>
+              <ul className="list-disc pl-6 mt-2">
+                <li className="text-xs">
+                  Major allergic reaction (anaphylaxis)
+                </li>
+                <li className="text-xs">Major blood vessel or tendon injury</li>
+                <li className="text-xs">
+                  {" "}
+                  Symptoms from the return of clotted blood.
+                </li>
+                <li className="text-xs">
+                  Symptoms from air entering the vein.
+                </li>
               </ul>
             </div>
           </div>
@@ -173,9 +184,10 @@ export default function KnowTheRiskPage() {
       </div>
 
       <div className="mt-10 mb-6">
-        <div className="text-white bg-brandPrimary rounded-md w-1/6 md:ml-10 p-3">
+        <div className="text-white bg-brandPrimary rounded-md w-full md:w-1/6 md:ml-10 p-3">
           <p>Reaction Symptoms</p>
         </div>
+
         <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border border-gray-300 border-t-0 border-l-0 ">
           <br></br>
           <div className="ml-4 p-4">
