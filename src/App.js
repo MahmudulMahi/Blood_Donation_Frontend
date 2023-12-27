@@ -25,6 +25,8 @@ import CampaignGallery from "./pages/Campaign/CampaignGallery";
 import NewsDetails from "./pages/News/NewsDetailsSectons/NewsDetails";
 import Stories from "./pages/Stories/Stories";
 import FirstTimeBlood from "./pages/Donor/FirstTimeBlood";
+import PreparingToGiveBlood from "./pages/Donor/PreparingToGiveBlood";
+
 
 function App() {
   const token = localStorage.getItem("token");
@@ -50,7 +52,10 @@ function App() {
         <Route path="/details" element={<NewsDetails />}></Route>
         <Route path="/stories" element={<Stories/>}></Route>
         <Route path="/first-time-blood" element={<FirstTimeBlood/>}></Route>
+        <Route path="/preparing-to-give-blood" element={<PreparingToGiveBlood></PreparingToGiveBlood>}></Route>
+        
       </Routes>
+      
     </Router>
   );
 }

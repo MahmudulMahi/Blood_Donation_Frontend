@@ -81,6 +81,7 @@ const Navbar = () => {
       optionList: [
         { name: "Donate Blood", path: "/donate-blood", id: 1 },
         { name: "First Time Blood Donation", path: "/first-time-blood", id: 2 },
+        { name: "Preparing to give blood", path: "/preparing-to-give-blood", id: 3 },
       ],
     },
     {
