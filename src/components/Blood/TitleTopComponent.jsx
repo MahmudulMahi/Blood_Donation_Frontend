@@ -7,7 +7,7 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 const TitleTopComponent = ({ secondTitle, thirdTitle, fourthTitle }) => {
   return (
     <div className="">
-      <div className="lg:h-20 md:h-20 h-16 flex justify-between items-center lg:mx-28 md:mx-0 mx-3 lg:mt-0 md:mt-0 mt-2">
+      <div className="lg:h-20 md:h-20 h-16 flex justify-between items-center md:mx-0 mx-3 lg:mt-0 md:mt-0 mt-2">
         <div className="lg:text-base md:text-base text-[11px]">
           <p className="font-semibold">
             Home{" "}

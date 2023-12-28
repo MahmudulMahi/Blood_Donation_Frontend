@@ -8,9 +8,11 @@ export default function ContactUs() {
         {/* First Card */}
         <div className="bg-white lg:ml-6 md:ml-0 ml-0 mt-2 lg:mb-0 md:mb-0 mb-8 rounded lg:col-span-1 md:col-span-1 col-span-2">
           <div className="lg:ml-24 md:ml-0 ml-0">
-            <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 lg:mt-2 md:mt-2 mt-0 font-bold shadow-md">
-              Contact Us
-            </button>
+            <div>
+              <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 lg:mt-0 md:mt-0 mt-0 font-bold shadow-md">
+                Contact Us
+              </button>
+            </div>
             <p className="text-gray-600 mb-2 mt-2 text-2xl font-bold ml-2">
               You can <span className="text-brandPrimary">Connect</span> with us
             </p>

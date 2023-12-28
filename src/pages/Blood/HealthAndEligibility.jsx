@@ -9,6 +9,7 @@ import ha4 from "../../assets/HAE/hae4.svg";
 import ha5 from "../../assets/HAE/hae5.svg";
 import ha6 from "../../assets/HAE/hae6.svg";
 import ha7 from "../../assets/HAE/hae7.svg";
+import TitleTopComponent from "../../components/Blood/TitleTopComponent";
 
 export default function HealthAndEligibility() {
   const [items, setItems] = useState([
@@ -115,7 +116,7 @@ export default function HealthAndEligibility() {
       {/* Page Start */}
       <div>
         <div className="mx-4 md:mx-10 lg:mx-20 xl:mx-28">
-          <div className="w-full h-20 flex justify-between items-center">
+          {/* <div className="w-full h-20 flex justify-between items-center">
             <div>
               <p className="font-semibold">
                 {" "}
@@ -124,7 +125,10 @@ export default function HealthAndEligibility() {
                 Eligibility
               </p>
             </div>
-          </div>
+          </div> */}
+          <div>
+          <TitleTopComponent secondTitle={"Blood"} thirdTitle={"Health And Eligibility"} />
+        </div>
           <div className="mt-10 mb-6">
             <div className="text-white bg-brandPrimary rounded-md w-full md:w-2/3 lg:w-1/2 xl:w-2/6 mx-auto md:ml-10 p-4">
               <p>Why Eligibility Required For Blood Donation</p>

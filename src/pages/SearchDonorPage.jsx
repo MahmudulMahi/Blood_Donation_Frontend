@@ -3,6 +3,7 @@ import CarouselBanner from "../components/Home/CarouselBanner";
 import Navbar from "../components/Home/Navbar";
 import Footer from "../components/Home/Footer";
 import SearchDonorPageComponent from "../components/Home/SearchDonor/SearchDonorPageComponent";
+import SearchCarousel from "../components/Home/Carousel/SearchCarousel";
 
 const SearchDonorPage = () => {
   return (
@@ -11,7 +12,7 @@ const SearchDonorPage = () => {
         <Navbar />
       </div>
       <div className="">
-        <CarouselBanner />
+        <SearchCarousel />
       </div>
       <div className="">
         <SearchDonorPageComponent />

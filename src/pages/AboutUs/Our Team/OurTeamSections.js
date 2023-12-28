@@ -1,19 +1,14 @@
 import React from "react";
 import locations from "../../../assets/locations.jpeg";
 import locations1 from "../../../assets/locations-1.png";
+import TitleTopComponent from "../../../components/Blood/TitleTopComponent";
 
 function OurTeamSections() {
   return (
     <div className="mx-28">
-      <div className="w-full h-20 flex justify-between items-center">
-          <div>
-            <p className="font-semibold">
-              {" "}
-              Home <span className="text-brandPrimary">&gt;</span> About Us{" "}
-              <span className="text-brandPrimary">&gt;</span> Our Board
-            </p>
-          </div>
-        </div>
+      <div>
+        <TitleTopComponent secondTitle={"About Us"} thirdTitle={"Our Board"} />
+      </div>
       <div className="w-11/12 ml-auto mr-auto">
         <p className="p-2 md:w-1/6 w-full bg-red-700 rounded-md font-bold text-white  mt-6">
           About Founder
@@ -139,9 +134,6 @@ function OurTeamSections() {
             </div>
           </div>
         </div>
-
-
-
 
         <div className="mt-8">
           <div className="grid md:grid-cols-4 grid-cols-1 mt-4 gap-4 md:h-80">

@@ -14,7 +14,7 @@ export default function DonateBlood() {
       <div className="">
         <CarouselBanner />
       </div>
-      <div className="">
+      <div className="mx-24">
         <DonateBloodPage></DonateBloodPage>
       </div> 
       <div className="mt-44">

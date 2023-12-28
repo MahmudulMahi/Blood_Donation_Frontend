@@ -1,11 +1,15 @@
 import React from "react";
 import images1 from "../../../assets/bloodLogo.jpg";
 import images2 from "../../../assets/bloodlogo2.png";
+import TitleTopComponent from "../../../components/Blood/TitleTopComponent";
 
 function IsoCertificateSections() {
   return (
-    <div className="w-11/12 ml-auto mr-auto mt-6">
-      <p className="p-2 md:w-1/6 w-full bg-red-700 rounded-md font-bold text-white mt-6">
+    <div className="mx-28">
+       <div>
+          <TitleTopComponent secondTitle={"About Us"} thirdTitle={"iso-2008-certified"} />
+        </div>
+      <p className="p-2 md:w-1/6 w-full bg-red-700 rounded-md font-bold text-white mt-2">
         ISO 2008 Certified
       </p>
       <div >
