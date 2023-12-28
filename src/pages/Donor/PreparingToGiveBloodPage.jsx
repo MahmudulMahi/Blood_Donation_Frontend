@@ -38,7 +38,7 @@ const PreparingToGiveBloodPage = () => {
         </div>
       </button>
 
-      <div className="mt-12 rounded-lg  bg-[#FFF] w-full md:h-[200px] h-[800px]  relative p-1 " style={{
+      <div className="mt-12 rounded-lg  bg-[#FFF] w-full  h-[400px] md:h-[200px] lg:h-[150px]  relative p-1 " style={{
 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 4px 4px 0px"
       }}>
@@ -48,13 +48,13 @@ const PreparingToGiveBloodPage = () => {
           </button></h2>
         </div>
 
-        <div className="absolute top-10 ml-2 p-10">
-          <p>Eating regularly before donating will help to keep your blood sugar levels stable. This is important so that you don’t feel lightheaded or dizzy after your donation. Having a snack before you donate can help maintain these blood sugar levels. Ensuring that your diet contains foods rich in iron - such as meats and green leafy vegetables - will help to keep you feeling well during and after donation.</p>
+        <div className="absolute top-4 ml-2 p-2 md:p-10">
+          <p className='mt-6 md:mt-0'>Eating regularly before donating will help to keep your blood sugar levels stable. This is important so that you don’t feel lightheaded or dizzy after your donation. Having a snack before you donate can help maintain these blood sugar levels. Ensuring that your diet contains foods rich in iron - such as meats and green leafy vegetables - will help to keep you feeling well during and after donation.</p>
         </div>
       </div>
 
       {/* ------------drink----- */}
-      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full md:h-[300px] h-[800px] relative p-1 " style={{
+      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full h-[680px] md:h-[400px] lg:h-[300px]  relative p-1 " style={{
 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 4px 4px 0px"
       }}>
@@ -64,8 +64,8 @@ const PreparingToGiveBloodPage = () => {
           </button></h2>
         </div>
 
-        <div className="absolute top-10 ml-2 p-10">
-          <p> <span className='mb-3 block' > Almost half of the blood that you donate is made up of water. The fluids that you lose during donation can cause a drop in blood pressure – causing you to feel faint and dizzy.</span>
+        <div className="absolute top-4 ml-2 p-2 md:p-10">
+          <p className='mt-6 md:mt-0'> <span className='mb-3 block' > Almost half of the blood that you donate is made up of water. The fluids that you lose during donation can cause a drop in blood pressure – causing you to feel faint and dizzy.</span>
 
             <span className='mb-3 block'>
               To help prevent this from happening we ask you to drink 500ml of water immediately before you donate - we’ll give this to you before you donate. Please help us reduce our plastic usage by bringing your own refillable bottle.
@@ -80,7 +80,7 @@ const PreparingToGiveBloodPage = () => {
       </div>
 
       {/* ----------Were------- */}
-      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full md:h-[200px] h-[800px] relative p-1 " style={{
+      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full lg:h-[200px] md:h-[270px] h-[450px] relative p-1 " style={{
 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 4px 4px 0px"
       }}>
@@ -90,8 +90,8 @@ const PreparingToGiveBloodPage = () => {
           </button></h2>
         </div>
 
-        <div className="absolute top-10 ml-2 p-10">
-          <p> <span className='mb-3 block' > Avoid doing any vigorous exercise or heavy lifting the day of your donation – both before and after you’ve donated.</span>
+        <div className="absolute top-4 ml-2 p-2 md:p-10">
+          <p className='mt-6 md:mt-0'> <span className='mb-3 block' > Avoid doing any vigorous exercise or heavy lifting the day of your donation – both before and after you’ve donated.</span>
 
             <span className='mb-3 block'>
               Keeping your body in a rested state is important to give it a chance to replenish the fluids lost during donation, which will help you avoid feeling dizzy or lightheaded and keep you well. Light exercise such as walking is fine, but please make sure that you are fully recovered and hydrated prior to your donation.
@@ -101,7 +101,7 @@ const PreparingToGiveBloodPage = () => {
         </div>
       </div>
       {/* ---------distract-------- */}
-      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full md:h-[200px] h-[800px] relative p-1 " style={{
+      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full lg:h-[200px] md:h-[250px] h-[400px] relative p-1 " style={{
 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 4px 4px 0px"
       }}>
@@ -111,8 +111,8 @@ const PreparingToGiveBloodPage = () => {
           </button></h2>
         </div>
 
-        <div className="absolute top-10 ml-2 p-10">
-          <p> <span className='mb-3 block' > We will need to roll up your sleeve past your elbow when you donate – to allow easy access to your veins. To make sure that you are comfortable, please wear clothing with loose sleeves</span>
+        <div className="absolute top-4 ml-2 p-2 md:p-10">
+          <p className='mt-6 md:mt-0'> <span className='mb-3 block' > We will need to roll up your sleeve past your elbow when you donate – to allow easy access to your veins. To make sure that you are comfortable, please wear clothing with loose sleeves</span>
 
             <span className='mb-3 block'>
               While not required, please consider wearing a face covering to protect others. Face masks are available if you would like to wear one. Just ask one of our staff.
@@ -122,7 +122,7 @@ const PreparingToGiveBloodPage = () => {
         </div>
       </div>
       {/* -----------sleep-------- */}
-      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full md:h-[300px] h-[800px] relative p-1 " style={{
+      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full lg:h-[330px] md:h-[450px] h-[750px] relative p-1 " style={{
 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 4px 4px 0px"
       }}>
@@ -132,8 +132,8 @@ const PreparingToGiveBloodPage = () => {
           </button></h2>
         </div>
 
-        <div className="absolute top-10 ml-2 p-10">
-          <p> <span className='mb-3 block' > It is normal to feel nervous when you come along to donate – particularly if this is your first time. Our friendly and helpful staff will put you at ease straightaway.</span>
+        <div className="absolute top-4 ml-2 p-2 md:p-10">
+          <p className='mt-6 md:mt-0'> <span className='mb-3 block' > It is normal to feel nervous when you come along to donate – particularly if this is your first time. Our friendly and helpful staff will put you at ease straightaway.</span>
 
             <span className='mb-3 block'>
               Distraction is key. You could bring a book to read or listen to some music while you donate.
@@ -149,7 +149,7 @@ const PreparingToGiveBloodPage = () => {
       </div>
 
       {/* --------know------- */}
-      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full md:h-[200px] h-[800px] relative p-1 " style={{
+      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full lg:h-[250px] md:h-[300px] h-[500px] relative p-1 " style={{
 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 4px 4px 0px"
       }}>
@@ -159,8 +159,8 @@ const PreparingToGiveBloodPage = () => {
           </button></h2>
         </div>
 
-        <div className="absolute top-10 ml-2 p-10">
-          <p> <span className='mb-3 block' > Once you’ve made the decision to donate and made the effort to go along to your appointment, you want to be sure that you can actually donate.</span>
+        <div className="absolute top-4 ml-2 p-2 md:p-10">
+          <p className='mt-6 md:mt-0'> <span className='mb-3 block' > Once you’ve made the decision to donate and made the effort to go along to your appointment, you want to be sure that you can actually donate.</span>
 
             <span className='mb-3 block'>
               Although most people can donate, there are some restrictions - depending on things like your health, medication, and whether you've been abroad recently.
@@ -174,7 +174,7 @@ const PreparingToGiveBloodPage = () => {
         </div>
       </div>
       {/* ----------sleep------- */}
-      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full md:h-[300px] h-[800px] relative p-1 " style={{
+      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full lg:h-[330px] md:h-[400px] h-[650px] relative p-1 " style={{
 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 4px 4px 0px"
       }}>
@@ -184,8 +184,8 @@ const PreparingToGiveBloodPage = () => {
           </button></h2>
         </div>
 
-        <div className="absolute top-10 ml-2 p-10">
-          <p> <span className='mb-3 block' > Almost half of the blood that you donate is made up of water. The fluids that you lose during donation can cause a drop in blood pressure – causing you to feel faint and dizzy.</span>
+        <div className="absolute top-4 ml-2 p-2 md:p-10">
+          <p className='mt-6 md:mt-0'> <span className='mb-3 block' > Almost half of the blood that you donate is made up of water. The fluids that you lose during donation can cause a drop in blood pressure – causing you to feel faint and dizzy.</span>
 
             <span className='mb-3 block'>
               To help prevent this from happening we ask you to drink 500ml of water immediately before you donate - we’ll give this to you before you donate. Please help us reduce our plastic usage by bringing your own refillable bottle.
@@ -198,29 +198,7 @@ const PreparingToGiveBloodPage = () => {
             It is essential to avoid alcohol before and after donating as this may affect hydration levels and delay recovery.</p>
         </div>
       </div>
-      <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md w-full ">
-        <div className='flex items-center justify-center '>
-          <div className=''>
-            Day of the donation
-          </div>
-          <div className='absolute right-3 lg:right-32 text-2xl' >
-            <IoMdArrowDropdown />
-          </div>
-        </div>
-      </button>
-
-      <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md w-full ">
-        <div className='flex items-center justify-center '>
-          <div className=''>
-            After giving  blood
-          </div>
-          <div className='absolute right-3 lg:right-32 text-2xl' >
-            <IoMdArrowDropdown />
-          </div>
-        </div>
-      </button>
-
-      <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md w-full ">
+      <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-6 md:mt-2  font-bold shadow-md w-full ">
         <div className='flex items-center justify-center '>
           <div className=''>
             Hours and locations
@@ -230,18 +208,18 @@ const PreparingToGiveBloodPage = () => {
           </div>
         </div>
       </button>
-      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full md:h-[330px] h-[800px] relative p-1 " style={{
+      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full lg:h-[380px] md:h-[430px] h-[750px] relative p-1 " style={{
 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 4px 4px 0px"
       }}>
         <div>
-          <h2>   <button className="bg-[#e11b221a] w-[320px] text-black lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md text-left mb-10 md:mb-0 absolute -top-10 text-2xl">
+          <h2>   <button className="bg-[#e11b221a] w-[200px] md:w-[320px] text-black lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md text-left mb-10 md:mb-0 absolute -top-10 text-2xl">
             Hours and locations
           </button></h2>
         </div>
 
-        <div className="absolute top-10 ml-2 p-10">
-          <p> <span className='mb-3 block' > You can search for a donor center to find the best place to donate, whether you're home or away.</span>
+        <div className="absolute top-12 md:top-4 ml-2 p-2 md:p-10">
+          <p className='mt-6 md:mt-0'> <span className='mb-3 block' > You can search for a donor center to find the best place to donate, whether you're home or away.</span>
 
             <span className='mb-3 block'>
               We've listed 'donation type' in the website, if you're unsure what you can donate.
@@ -259,18 +237,18 @@ const PreparingToGiveBloodPage = () => {
         </div>
       </div>
       {/* ------------ */}
-      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full md:h-[330px] h-[800px] relative p-1 " style={{
+      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full lg:h-[380px] md:h-[500px] h-[850px] relative p-1 " style={{
 
         boxShadow: "rgba(0, 0, 0, 0.25) 0px 4px 4px 0px"
       }}>
         <div>
-          <h2>   <button className="bg-[#e11b221a] w-[370px] text-black lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md text-left mb-10 md:mb-0 absolute -top-10 text-2xl">
+          <h2>   <button className="bg-[#e11b221a] w-[200px] md:w-[370px] text-black lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md text-left mb-10 md:mb-0 absolute -top-10 text-2xl">
             Keep your bandage on
           </button></h2>
         </div>
 
-        <div className="absolute top-10 ml-2 p-10">
-          <p> <span className='mb-3 block' > You can reduce the risk of bruising by keeping the bandage on your arm for 2 hours after donating, and by avoiding heavy lifting and strenuous use of your arm for the next 24 hours.</span>
+        <div className="absolute top-12 md:top-4 ml-2 p-2 md:p-10">
+          <p className='mt-6 md:mt-0'> <span className='mb-3 block' > You can reduce the risk of bruising by keeping the bandage on your arm for 2 hours after donating, and by avoiding heavy lifting and strenuous use of your arm for the next 24 hours.</span>
 
             <span className='mb-3 block'>
               If a bruise is causing any kind of discomfort, try the following:
@@ -308,8 +286,8 @@ const PreparingToGiveBloodPage = () => {
           </button></h2>
         </div>
 
-        <div className="absolute top-10 ml-2 p-10">
-          <p> <span className='mb-3 block' > Before donating blood, please eat regular meals, drink plenty of fluid (non-alcoholic) and avoid vigorous exercise or exertion.</span>
+        <div className="absolute md:top-4 top-10 ml-2 p-2 md:p-10">
+          <p className='mt-6 md:mt-0'> <span className='mb-3 block' > Before donating blood, please eat regular meals, drink plenty of fluid (non-alcoholic) and avoid vigorous exercise or exertion.</span>
 
             <span className='mb-3 block'>
               We will provide 500ml of fluid just before you donate. By drinking this over about 5 minutes, it will help with your wellbeing during and after donation.
