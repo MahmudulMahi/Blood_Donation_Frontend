@@ -95,8 +95,19 @@ const Navbar = () => {
       ],
     },
 
-    { link: "Contact", path: "", id: 6 },
+    {
+      link: "Contact",
+      path: "/contact-us",
+      id: 6,
+    },
+    {
+      link: "Login",
+      path: "/login",
+      id: 7,
+     
+    },
   ];
+  
   const [activeModal, setActiveModal] = useState(null);
 
   const openModal = (id) => {
@@ -108,6 +119,7 @@ const Navbar = () => {
   };
 
   console.log("Active Modal", activeModal);
+  const index = 1;
 
   return (
     <div className="w-full md:bg-transparent  fixed top-0 left-0 right-0 inline-block zindexnav ">
@@ -279,11 +291,11 @@ const Navbar = () => {
                               style={{ width: "calc(300% - 27px)" }}
                             >
                               <div className="bg-white max-w-md mx-auto rounded-b-sm w-56 border border-t-0 shadow-xl">
-                                <ul>
+                                <ul className="p-3 ">
                                   {navItems?.[activeModal - 1]?.optionList?.map(
                                     (val, index) => (
                                       <li
-                                        className="hover:bg-red-200 py-1 pl-1 text-xs"
+                                        className="hover:bg-red-200 py-1 pl-1 text-xs rounded-sm"
                                         key={val.path}
                                       >
                                         <button

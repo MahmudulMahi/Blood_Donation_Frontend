@@ -116,16 +116,6 @@ export default function HealthAndEligibility() {
       {/* Page Start */}
       <div>
         <div className="mx-4 md:mx-10 lg:mx-20 xl:mx-28">
-          {/* <div className="w-full h-20 flex justify-between items-center">
-            <div>
-              <p className="font-semibold">
-                {" "}
-                Home <span className="text-brandPrimary">&gt;</span> Blood{" "}
-                <span className="text-brandPrimary">&gt;</span> Health And
-                Eligibility
-              </p>
-            </div>
-          </div> */}
           <div>
           <TitleTopComponent secondTitle={"Blood"} thirdTitle={"Health And Eligibility"} />
         </div>

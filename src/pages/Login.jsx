@@ -2,8 +2,10 @@ import React from "react";
 import loginImg from "../assets/loginImg.png";
 import bloodIcon from "../assets/Group 44.svg";
 import "../App.css";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col lg:flex-row h-screen bg-white">
       <div
@@ -69,6 +71,19 @@ const Login = () => {
               <button className="bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-transparent hover:text-brandPrimary border hover:border-brandPrimary hover:font-semibold">
                 Login
               </button>
+            </div>
+            <div className="text-brandPrimary text-center mt-2">
+              Don't have an account?{" "}
+              <a
+                href="/registration"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/registration");
+                }}
+                className="underline hover:blue-400"
+              >
+                Sign up from here
+              </a>
             </div>
           </form>
         </div>

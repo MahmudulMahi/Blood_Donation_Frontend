@@ -14,7 +14,7 @@ export default function FirstTimeBlood() {
         <CarouselBanner />
       </div>{" "}
       {/* First Time Blood Donation Page start */}
-      <div className="mx-28">
+      <div className="mx-4 md:mx-8 lg:mx-16 xl:mx-28">
         <div>
           <TitleTopComponent
             secondTitle={"Donor"}
@@ -22,9 +22,10 @@ export default function FirstTimeBlood() {
           />
         </div>
         <div className="mt-10 mb-6">
-          <div className="text-white bg-brandPrimary rounded-md w-2/6 md:ml-10 p-4">
+          <div className="text-white bg-brandPrimary rounded-md w-full md:w-2/3 lg:w-1/2 xl:w-2/5 mx-auto md:ml-10 p-4">
             <p>Why Donate Your Blood?</p>
           </div>
+
           <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border border-gray-300 border-t-0 border-l-0">
             <br></br>
             <p className="p-4 text-sm">
@@ -45,12 +46,13 @@ export default function FirstTimeBlood() {
           </div>
         </div>
         <div className="mt-20 mb-5">
-          <div className="text-center text-xl font-semibold mb-2 mr-16 text-gray-700">
+          <div className="text-center text-lg md:text-xl lg:font-semibold lg:mb-2 lg:mr-16 xl:text-2xl xl:font-semibold xl:mb-4 xl:mr-24 text-gray-700">
             "One pint can save three lives"
           </div>
-          <div className="text-white bg-brandPrimary rounded-md w-2/6 md:ml-10 p-4">
+          <div className="text-white bg-brandPrimary rounded-md w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto md:ml-10 p-4">
             <p>The Benefits of Donating Blood</p>
           </div>
+
           <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border border-gray-300 border-t-0 border-l-0">
             <br></br>
             <p className="p-4 text-sm">
@@ -85,9 +87,10 @@ export default function FirstTimeBlood() {
           </div>
         </div>
         <div className="mt-20 mb-5">
-          <div className="text-white bg-brandPrimary rounded-md w-2/6 md:ml-10 p-4">
+          <div className="text-white bg-brandPrimary rounded-md w-full md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto md:ml-10 p-4">
             <p>How Do You Know if You Can Donate?</p>
           </div>
+
           <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border border-gray-300 border-t-0 border-l-0">
             <br></br>
             <p className="p-4 text-sm">

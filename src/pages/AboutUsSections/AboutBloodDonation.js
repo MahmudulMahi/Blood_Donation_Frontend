@@ -5,27 +5,28 @@ import TitleTopComponent from "../../components/Blood/TitleTopComponent";
 
 function AboutBloodDonation() {
   return (
-    <div className="max-w-[2036px] ml-auto mr-auto">
-      <div className="mx-28">
+    <div className=" ml-auto mr-auto">
+      <div className="">
         <div>
           <TitleTopComponent secondTitle={"About Us"} thirdTitle={"About"} />
         </div>
-        <div className="grid grid-cols-4  mx-auto mt-4">
-          <div className="col-span-1 bg-brandPrimary md:ml-10 rounded-md ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mx-auto mt-4">
+          <div className="col-span-1 bg-brandPrimary md:ml-10 rounded-md">
             <p className="font-bold mb-8 mt-4 text-white ml-6">
               About Blood Donation
             </p>
           </div>
+          {/* Add similar blocks for other columns if needed */}
         </div>
 
-        <div className="grid grid-cols-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
           <div></div>
 
           <div
-            className="col-span-3 -mt-10  rounded-md mr-20"
+            className="col-span-1 sm:col-span-2 md:col-span-3 -mt-10  rounded-md sm:mr-2 md:mr-4"
             style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
           >
-            <p className=" p-2 text-sm">
+            <p className="p-2 text-sm">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum is that it has a more-or-less normal
@@ -41,9 +42,10 @@ function AboutBloodDonation() {
         </div>
 
         <div className="mt-10">
-          <div className="text-white bg-brandPrimary rounded-md w-2/6 md:ml-10 p-4">
+          <div className="text-white bg-brandPrimary rounded-md w-full md:w-2/6 md:ml-10 p-4">
             <p>How we thought of establishing this website</p>
           </div>
+
           <div
             className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg"
             // style={{ boxShadow: "rgba(2, 0, 0.77, 0.35) 0px 5px 15px" }}
@@ -65,7 +67,7 @@ function AboutBloodDonation() {
         </div>
 
         {/* blood image sectons */}
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-5  mt-16 text-sx ml-8 mr-8 ">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-5 mt-16 text-xs sm:text-sm md:text-base">
           <div className="shadow-2xl p-4 text-16 rounded-sm">
             <div className="zindexm relative">
               <p className="p-4 zindexm bg-brandPrimary rounded-md font-bold text-white w-2/4 ">

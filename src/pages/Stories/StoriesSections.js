@@ -15,22 +15,22 @@ const StoriesSections = () => {
           </p>
           <div className="flex justify-between">
             <p></p>
-            <p className="text-white -mt-4 mr-8 text-[12px]">Client’s Name</p>
+            <p className="text-white -mt-4 mr-8 text-[12px] hidden sm:block">Client’s Name</p>
           </div>
-          <p className="text-[12px] p-8 text-white -mt-8">
+          <p className="text-[12px] p-8 text-white -mt-8 hidden sm:block">
             The slogan for the 2023 World Blood Donor Day campaign is “Give
             blood, give plasma, share life, share often.” It focuses on patients
             requiring life-long transfusion support and underlines the role
             every single person can play, by giving the valuable gift of blood
             or plasma
           </p>
-          <p className="bg-white text-black w-24 ml-8 text-center py-1 cursor-pointer rounded-md">
+          <p className="bg-white text-black w-24 ml-8 text-center py-1 cursor-pointer rounded-md hidden sm:block">
             Read More
           </p>
         </div>
         <div className="col-span-2 ">
           <img
-            className=" items-center ml-auto mr-auto w-full md:h-72"
+            className=" items-center ml-auto mr-auto w-full md:h-72 h-full"
             style={{
               clipPath: "polygon(10% 0% , 100% 0%, 100% 100%, 0% 100%)",
             }}
@@ -40,19 +40,24 @@ const StoriesSections = () => {
         </div>
       </div>
 
-      <div className="mt-6 grid grid-cols-2 gap-6">
-        <div className="grid grid-cols-3 bg-red-700 mt-6">
-          <div className="col-span-1 text-justify">
+
+
+
+
+
+      <div className="mt-6 grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 grid-cols-4 bg-red-700 mt-6">
+          <div className="md:col-span-1 col-span-2 text-justify">
             <p className="font-bold text-white p-2 text-[11px]">
               What Our Happy clients say!
             </p>
             <div className="flex justify-between">
               {/* <p></p> */}
-              <p className="text-white  p-2 mr-2 text-left text-[11px]">
+              <p className="text-white  p-2 mr-2 text-left text-[11px] hidden sm:block ">
                 Client’s Name
               </p>
             </div>
-            <p className="text-[11px] p-2 text-white -mt-2">
+            <p className="text-[11px] p-2 text-white -mt-2 hidden sm:block">
               The slogan for the 2023 World Blood Donor Day campaign is “Give
               blood, give plasma.”
             </p>
@@ -62,7 +67,7 @@ const StoriesSections = () => {
           </div>
           <div className="col-span-2 ">
             <img
-              className=" items-center ml-auto mr-auto w-full md:h-52"
+              className=" items-center ml-auto mr-auto w-full md:h-52 h-full"
               style={{
                 clipPath: "polygon(10% 0% , 100% 0%, 100% 100%, 0% 100%)",
               }}
@@ -72,19 +77,23 @@ const StoriesSections = () => {
           </div>
         </div>
 
+
+
+
+
         {/* secent */}
-        <div className="grid grid-cols-3 bg-red-700 mt-6">
-          <div className="col-span-1 text-justify">
+        <div className="grid md:grid-cols-3 grid-cols-4 bg-red-700 mt-6">
+          <div className="md:col-span-1 col-span-2 text-justify">
             <p className="font-bold text-white p-2 text-[11px]">
               What Our Happy clients say!
             </p>
             <div className="flex justify-between">
               {/* <p></p> */}
-              <p className="text-white  p-2 mr-2 text-left text-[11px]">
+              <p className="text-white  p-2 mr-2 text-left text-[11px] hidden sm:block ">
                 Client’s Name
               </p>
             </div>
-            <p className="text-[11px] p-2 text-white -mt-2">
+            <p className="text-[11px] p-2 text-white -mt-2 hidden sm:block">
               The slogan for the 2023 World Blood Donor Day campaign is “Give
               blood, give plasma.”
             </p>
@@ -94,7 +103,7 @@ const StoriesSections = () => {
           </div>
           <div className="col-span-2 ">
             <img
-              className=" items-center ml-auto mr-auto w-full md:h-52"
+              className=" items-center ml-auto mr-auto w-full md:h-52 h-full"
               style={{
                 clipPath: "polygon(10% 0% , 100% 0%, 100% 100%, 0% 100%)",
               }}
@@ -105,19 +114,22 @@ const StoriesSections = () => {
         </div>
       </div>
 
-      <div className="mt-6 grid grid-cols-2 gap-6">
-        <div className="grid grid-cols-3 bg-red-700 mt-6">
-          <div className="col-span-1 text-justify">
+     
+
+
+      <div className="mt-6 grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 grid-cols-4 bg-red-700 mt-6">
+          <div className="md:col-span-1 col-span-2 text-justify">
             <p className="font-bold text-white p-2 text-[11px]">
               What Our Happy clients say!
             </p>
             <div className="flex justify-between">
               {/* <p></p> */}
-              <p className="text-white  p-2 mr-2 text-left text-[11px]">
+              <p className="text-white  p-2 mr-2 text-left text-[11px] hidden sm:block ">
                 Client’s Name
               </p>
             </div>
-            <p className="text-[11px] p-2 text-white -mt-2">
+            <p className="text-[11px] p-2 text-white -mt-2 hidden sm:block">
               The slogan for the 2023 World Blood Donor Day campaign is “Give
               blood, give plasma.”
             </p>
@@ -127,7 +139,7 @@ const StoriesSections = () => {
           </div>
           <div className="col-span-2 ">
             <img
-              className=" items-center ml-auto mr-auto w-full md:h-52"
+              className=" items-center ml-auto mr-auto w-full md:h-52 h-full"
               style={{
                 clipPath: "polygon(10% 0% , 100% 0%, 100% 100%, 0% 100%)",
               }}
@@ -137,19 +149,23 @@ const StoriesSections = () => {
           </div>
         </div>
 
+
+
+
+
         {/* secent */}
-        <div className="grid grid-cols-3 bg-red-700 mt-6">
-          <div className="col-span-1 text-justify">
+        <div className="grid md:grid-cols-3 grid-cols-4 bg-red-700 mt-6">
+          <div className="md:col-span-1 col-span-2 text-justify">
             <p className="font-bold text-white p-2 text-[11px]">
               What Our Happy clients say!
             </p>
             <div className="flex justify-between">
               {/* <p></p> */}
-              <p className="text-white  p-2 mr-2 text-left text-[11px]">
+              <p className="text-white  p-2 mr-2 text-left text-[11px] hidden sm:block ">
                 Client’s Name
               </p>
             </div>
-            <p className="text-[11px] p-2 text-white -mt-2">
+            <p className="text-[11px] p-2 text-white -mt-2 hidden sm:block">
               The slogan for the 2023 World Blood Donor Day campaign is “Give
               blood, give plasma.”
             </p>
@@ -159,7 +175,7 @@ const StoriesSections = () => {
           </div>
           <div className="col-span-2 ">
             <img
-              className=" items-center ml-auto mr-auto w-full md:h-52"
+              className=" items-center ml-auto mr-auto w-full md:h-52 h-full"
               style={{
                 clipPath: "polygon(10% 0% , 100% 0%, 100% 100%, 0% 100%)",
               }}
@@ -173,17 +189,20 @@ const StoriesSections = () => {
 
 
 
-      <div className="mt-6 grid grid-cols-2 gap-6">
-        <div className="grid grid-cols-3 bg-red-700 mt-6">
-          <div className="col-span-1 text-justify">
+
+      <div className="mt-6 grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-3 grid-cols-4 bg-red-700 mt-6">
+          <div className="md:col-span-1 col-span-2 text-justify">
             <p className="font-bold text-white p-2 text-[11px]">
               What Our Happy clients say!
             </p>
             <div className="flex justify-between">
               {/* <p></p> */}
-              <p className="text-white  p-2 mr-2 text-left text-[11px]">Client’s Name</p>
+              <p className="text-white  p-2 mr-2 text-left text-[11px] hidden sm:block ">
+                Client’s Name
+              </p>
             </div>
-            <p className="text-[11px] p-2 text-white -mt-2">
+            <p className="text-[11px] p-2 text-white -mt-2 hidden sm:block">
               The slogan for the 2023 World Blood Donor Day campaign is “Give
               blood, give plasma.”
             </p>
@@ -193,7 +212,7 @@ const StoriesSections = () => {
           </div>
           <div className="col-span-2 ">
             <img
-              className=" items-center ml-auto mr-auto w-full md:h-52"
+              className=" items-center ml-auto mr-auto w-full md:h-52 h-full"
               style={{
                 clipPath: "polygon(10% 0% , 100% 0%, 100% 100%, 0% 100%)",
               }}
@@ -202,18 +221,24 @@ const StoriesSections = () => {
             ></img>
           </div>
         </div>
+
+
+
+
 
         {/* secent */}
-        <div className="grid grid-cols-3 bg-red-700 mt-6">
-          <div className="col-span-1 text-justify">
+        <div className="grid md:grid-cols-3 grid-cols-4 bg-red-700 mt-6">
+          <div className="md:col-span-1 col-span-2 text-justify">
             <p className="font-bold text-white p-2 text-[11px]">
               What Our Happy clients say!
             </p>
             <div className="flex justify-between">
               {/* <p></p> */}
-              <p className="text-white  p-2 mr-2 text-left text-[11px]">Client’s Name</p>
+              <p className="text-white  p-2 mr-2 text-left text-[11px] hidden sm:block ">
+                Client’s Name
+              </p>
             </div>
-            <p className="text-[11px] p-2 text-white -mt-2">
+            <p className="text-[11px] p-2 text-white -mt-2 hidden sm:block">
               The slogan for the 2023 World Blood Donor Day campaign is “Give
               blood, give plasma.”
             </p>
@@ -223,7 +248,7 @@ const StoriesSections = () => {
           </div>
           <div className="col-span-2 ">
             <img
-              className=" items-center ml-auto mr-auto w-full md:h-52"
+              className=" items-center ml-auto mr-auto w-full md:h-52 h-full"
               style={{
                 clipPath: "polygon(10% 0% , 100% 0%, 100% 100%, 0% 100%)",
               }}
@@ -232,14 +257,12 @@ const StoriesSections = () => {
             ></img>
           </div>
         </div>
-
-
-
-
-        
-
-       
       </div>
+
+
+
+
+      
     </div>
   );
 };

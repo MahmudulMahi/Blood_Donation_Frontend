@@ -7,7 +7,7 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 const TitleTopComponent = ({ secondTitle, thirdTitle, fourthTitle }) => {
   return (
     <div className="">
-      <div className="lg:h-20 md:h-20 h-16 flex justify-between items-center md:mx-0 mx-3 lg:mt-0 md:mt-0 mt-2">
+      <div className="lg:h-20 md:h-20 h-16 flex justify-between items-center lg:mx-28 md:mx-10 mx-3 lg:mt-0 md:mt-0 mt-2">
         <div className="lg:text-base md:text-base text-[11px]">
           <p className="font-semibold">
             Home{" "}
@@ -29,14 +29,22 @@ const TitleTopComponent = ({ secondTitle, thirdTitle, fourthTitle }) => {
         {/* START RIGHT */}
         {/* start for small */}
         <div className="flex justify-end mt-2 text-xl font-semibold lg:hidden md:hidden">
-          <img src={Rectangle} alt="" className="w-32 h-10"/>
-          <p className="lg:-ml-[133px] md:-ml-[133px] -ml-[124px] lg:mt-[6px] md:mt-[7px] mt-[6px] font-bold text-brandPrimary lg:text-[14px] md:text-[14px] text-[10px]">
-            Connect With Us
-          </p>
-          <div className="mt-1 lg:ml-3 md:ml-3 ml-10">
+          <div className="">
+            <img src={Rectangle} alt="" className="lg:w-32 md:w-32 w-28 h-10" />
+          </div>
+          <div className="lg:-ml-[133px] md:-ml-[133px] -ml-[95px] lg:mt-[6px] md:mt-[7px] mt-[4px] ">
+            <p className="font-bold text-brandPrimary lg:text-[14px] md:text-[14px] text-[10px]">
+              Connect With Us
+            </p>
+          </div>
+          <div className="mt-1 lg:ml-3 md:ml-3 ml-2">
             <div className="rounded-full text-white">
               <div className="">
-                <img src={callRedIco} alt="" className="w-[30px] h-[30px] hover:rotate-90 hover:shadow-sm hover:rounded-full transition-all duration-500" />
+                <img
+                  src={callRedIco}
+                  alt=""
+                  className="w-[30px] h-[30px] hover:rotate-90 hover:shadow-sm hover:rounded-full transition-all duration-500"
+                />
               </div>
             </div>
           </div>
@@ -62,8 +70,6 @@ const TitleTopComponent = ({ secondTitle, thirdTitle, fourthTitle }) => {
         </div>
       </div>
       {/* END top*/}
-
-
     </div>
   );
 };

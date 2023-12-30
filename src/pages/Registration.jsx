@@ -96,7 +96,7 @@ const Registration = () => {
 
   const handleLogin = () => {
     navigate("/login"); // Navigate to the "/login" path
-    console.log("Cliekd Back")
+    console.log("Cliekd Back");
   };
 
   return (
@@ -109,29 +109,27 @@ const Registration = () => {
           backgroundColor: "rgba(255, 255, 255, 0.1)",
         }}
       >
-        <div className="absolute w-full h-full bg-white opacity-95 px-48 pt-0">
-          <div className="">
-            {/* start */}
-            <div className="absolute top-0 left-0 h-full px-48 pt-2 flex w-full">
-              <div className="flex w-full h-20">
-                <div className="flex justify-center">
-                  {" "}
+        <div className="absolute w-full h-full bg-white opacity-95 px-4 pt-0 sm:px-8 md:px-16 lg:px-32 xl:px-48">
+          <div className="relative">
+            {/* Header */}
+            <div className="absolute top-0 left-0 h-full px-4 sm:px-8 w-full">
+              <div className="flex justify-between items-center w-full">
+                <div className="flex items-center">
                   <div className="w-10 h-16 flex justify-center">
-                    {" "}
                     <img
                       src={bloodIcon}
                       alt="Icon"
                       className="w-auto h-full mr-2"
                     />
                   </div>
-                  <div className="">
+                  <div>
                     <p className="text-brandPrimary text-xl font-semibold mt-2 ml-1">
                       Blood <br /> Donation
                     </p>
                   </div>
                 </div>
 
-                <div className="flex justify-end w-full items-center">
+                <div className="flex items-center">
                   <img
                     src={navEarthLogo}
                     alt="logo"
@@ -140,14 +138,16 @@ const Registration = () => {
                 </div>
               </div>
             </div>
-            {/* end */}
 
-            {/* start upload img */}
+            {/* Upload Image */}
             <div className="flex justify-center mt-8">
-              <div className="flex flex-col">
+              <div className="flex flex-col items-center">
                 <div className="w-24 h-24 overflow-hidden">
                   <label htmlFor="imageInput">
-                    <div className="w-full h-full object-cover cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg"   onClick={handleImageChange}>
+                    <div
+                      className="w-full h-full object-cover cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg"
+                      onClick={handleImageChange}
+                    >
                       {selectedImage ? (
                         <img
                           src={selectedImage}
@@ -158,7 +158,7 @@ const Registration = () => {
                         <img
                           src={group}
                           alt="Rounded Icon"
-                          className="w-full h-full object-cover rounded-full "
+                          className="w-full h-full object-cover rounded-full"
                         />
                       )}
                     </div>
@@ -186,11 +186,11 @@ const Registration = () => {
                 </div>
               </div>
             </div>
-            {/* end upload img */}
 
+            {/* Form */}
             <form onSubmit={formik.handleSubmit}>
               <div className="w-full mt-4">
-                <div className="grid grid-cols-12 gap-4 h-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto">
                   <div className="col-span-2 flex items-center">
                     <DynamicLabel label="Full Name" isRequired={true} />
                   </div>
@@ -228,7 +228,7 @@ const Registration = () => {
                   </div>
                 </div>
                 {/* END 1 */}
-                <div className="grid grid-cols-12 gap-4 h-auto mt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                   <div className="col-span-2 flex items-center">
                     <DynamicLabel label="Date of Birth" isRequired={true} />
                   </div>
@@ -285,7 +285,7 @@ const Registration = () => {
                   </div>
                 </div>
                 {/* end 2 */}
-                <div className="grid grid-cols-12 gap-4 h-auto mt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                   <div className="col-span-2 flex items-center">
                     <DynamicLabel label="Blood Group" isRequired={true} />
                   </div>
@@ -323,7 +323,7 @@ const Registration = () => {
                   </div>
                 </div>
                 {/* end 3 */}
-                <div className="grid grid-cols-12 gap-4 h-auto mt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                   <div className="col-span-2 flex items-start">
                     <DynamicLabel label="Last Donate Date" isRequired={true} />
                   </div>
@@ -382,7 +382,7 @@ const Registration = () => {
                   </div>
                 </div>
                 {/* end 4*/}
-                <div className="grid grid-cols-12 gap-4 h-auto mt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                   <div className="col-span-2 flex items-start">
                     <DynamicLabel label="Height & Weight" isRequired={true} />
                   </div>
@@ -437,7 +437,7 @@ const Registration = () => {
                   </div>
                 </div>
                 {/* end 5 */}
-                <div className="grid grid-cols-12 gap-4 h-auto mt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                   <div className="col-span-2 flex items-center">
                     <DynamicLabel label="Age" isRequired={true} />
                   </div>
@@ -467,7 +467,7 @@ const Registration = () => {
                   </div>
                 </div>
                 {/* end 6 */}
-                <div className="grid grid-cols-12 gap-4 h-auto mt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                   <div className="col-span-2 flex items-center">
                     <DynamicLabel label="Gender" isRequired={true} />
                   </div>
@@ -496,7 +496,7 @@ const Registration = () => {
                   </div>
                 </div>
                 {/* end 7 */}
-                <div className="grid grid-cols-12 gap-4 h-auto mt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                   <div className="col-span-2 flex items-center">
                     <DynamicLabel label="Any Disease" isRequired={false} />
                   </div>
@@ -520,28 +520,28 @@ const Registration = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex justify-between items-center mt-4">
-                <div className="flex-grow text-center zindexnav">
-                  {" "}
-                  {/* New container for center alignment */}
-                  <button
-                    type="submit"
-                    className="bg-brandPrimary text-white py-2 px-4 rounded-md shadow-bottom-right"
-                  >
-                    Register
-                  </button>
-                </div>
-
+            </form>
+            <div className="flex justify-between items-center mt-4">
+              <div className="flex-grow text-center">
                 <button
-                  type="button"
-                  onClick={handleLogin}
-                  className="text-brandPrimary py-2 px-4 rounded-md border border-brandPrimary hover:bg-brandPrimary hover:text-white cursor-pointer zindexnav"
+                  type="submit"
+                  onClick={formik.handleSubmit} // Assuming this is the correct submit handler
+                  className="bg-brandPrimary text-white py-2 px-4 rounded-md shadow-bottom-right cursor-pointer"
                 >
-                  Back
+                  Register
                 </button>
               </div>
-            </form>
+
+              {/* <button
+                type="button"
+                onClick={handleLogin}
+                className="text-brandPrimary py-2 px-4 rounded-md border border-brandPrimary hover:bg-brandPrimary hover:text-white cursor-pointer"
+              >
+                Back
+              </button> */}
+            </div>
+
+            {/* Buttons */}
           </div>
         </div>
       </div>

@@ -96,24 +96,23 @@ function NewsSections() {
         <hr className="-mt-6"></hr>
       </div>
 
-      <div className="grid grid-cols-3 gap-6 mt-6">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6 mt-6">
         <div className="shadow-2xl bg-white">
-         
           <img
             className="absolute top-0 left-0 h-8 w-8 z-40 relative"
             src={ConerImg}
             alt=""
           />
-           <Link to="/details">
-           <img className="-mt-8" src={ImageNews} alt=""></img>
+          <Link to="/details">
+            <img className="-mt-8" src={ImageNews} alt=""></img>
 
-           <img
-                className="justify-end h-8 w-8 z-40 relative bg-red-600 rounded-full p-2 -mt-10   ml-auto mr-2 ring-4 ring-red-300 "
-                src={video}
-                alt=""
-              />
-           </Link>
-       
+            <img
+              className="justify-end h-8 w-8 z-40 relative bg-red-600 rounded-full p-2 -mt-10   ml-auto mr-2 ring-4 ring-red-300 "
+              src={video}
+              alt=""
+            />
+          </Link>
+
           <p className="mt-2 font-bold text-center">
             World Blood Donor Day 2023
           </p>
@@ -187,7 +186,7 @@ function NewsSections() {
         <hr className="-mt-6"></hr>
       </div>
 
-      <div className="grid grid-cols-3 gap-6 mt-10">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6 mt-10">
         <div className="shadow-2xl bg-white">
           <img
             className="absolute top-0 left-0 h-8 w-8 z-40 relative"

@@ -3,13 +3,149 @@ import TitleTopComponent from "../../components/Blood/TitleTopComponent";
 
 export default function LearnAboutBloodPage() {
   // State to manage the fill color of the blood bag
-  const [fillColor, setFillColor] = useState("#E11B22");
+  // const [fillColor, setFillColor] = useState("#E11B22");
 
   // Function to handle the click event and change the fill color
-  const emptyBloodBag = () => {
-    setFillColor("white");
+  // const emptyBloodBag = () => {
+  //   setFillColor("white");
+  // };
+
+  // start blood group button state and functions
+  const [buttonAStyle, setButtonAStyle] = useState({
+    backgroundColor: "bg-brandPrimary",
+    textColor: "text-white",
+  });
+
+  const [buttonBStyle, setButtonBStyle] = useState({
+    backgroundColor: "bg-white",
+    textColor: "text-[#44444480]",
+  });
+
+  const [buttonABStyle, setButtonABStyle] = useState({
+    backgroundColor: "bg-white",
+    textColor: "text-[#44444480]",
+  });
+
+  const [buttonOStyle, setButtonOStyle] = useState({
+    backgroundColor: "bg-white",
+    textColor: "text-[#44444480]",
+  });
+
+  const [showGroupASVG, setShowGroupASVG] = useState(true); //group A svg state
+  const [showGroupBSVG, setShowGroupBSVG] = useState(false); //group B svg state
+  const [showGroupABSVG, setShowGroupABSVG] = useState(false); //group AB svg state
+  const [showGroupOSVG, setShowGroupOSVG] = useState(false); //group O svg state
+
+  const handleGroupAClick = () => {
+    setButtonAStyle({
+      backgroundColor: "bg-brandPrimary",
+      textColor: "text-white",
+    });
+    setShowGroupASVG(true);
+    setShowGroupBSVG(false);
+    setShowGroupABSVG(false);
+    setShowGroupOSVG(false);
+    // Reset other button styles if needed
+    resetOtherStyles("A");
   };
 
+  const handleGroupBClick = () => {
+    setButtonBStyle({
+      backgroundColor: "bg-brandPrimary",
+      textColor: "text-white",
+    });
+    setShowGroupBSVG(true);
+    setShowGroupASVG(false);
+    setShowGroupABSVG(false);
+    setShowGroupOSVG(false);
+    resetOtherStyles("B");
+  };
+
+  const handleGroupABClick = () => {
+    setButtonABStyle({
+      backgroundColor: "bg-brandPrimary",
+      textColor: "text-white",
+    });
+    setShowGroupABSVG(true);
+    setShowGroupBSVG(false);
+    setShowGroupASVG(false);
+    setShowGroupOSVG(false);
+    resetOtherStyles("AB");
+  };
+
+  const handleGroupOClick = () => {
+    setButtonOStyle({
+      backgroundColor: "bg-brandPrimary",
+      textColor: "text-white",
+    });
+    setShowGroupABSVG(false);
+    setShowGroupBSVG(false);
+    setShowGroupASVG(false);
+    setShowGroupOSVG(true);
+    resetOtherStyles("O");
+  };
+
+  const resetOtherStyles = (currentGroup) => {
+    if (currentGroup !== "A") {
+      setButtonAStyle({
+        backgroundColor: "bg-white",
+        textColor: "text-[#44444480]",
+      });
+    }
+    if (currentGroup !== "B") {
+      setButtonBStyle({
+        backgroundColor: "bg-white",
+        textColor: "text-[#44444480]",
+      });
+    }
+    if (currentGroup !== "AB") {
+      setButtonABStyle({
+        backgroundColor: "bg-white",
+        textColor: "text-[#44444480]",
+      });
+    }
+    if (currentGroup !== "O") {
+      setButtonOStyle({
+        backgroundColor: "bg-white",
+        textColor: "text-[#44444480]",
+      });
+    }
+  };
+  // end blood group button state and functions
+
+  // Start Blood Bag Animation Handle
+  const [showBloodGoing, setShowBloodGoing] = useState(false); //BloodGoing state
+  const [showBloodGoing2, setShowBloodGoing2] = useState(false); //BloodGoing 2 state
+  const [showBloodGoing3, setShowBloodGoing3] = useState(false); //BloodGoing 3 state
+  const [showBloodGoing4, setShowBloodGoing4] = useState(false); //BloodGoing 4 state
+  
+  const handleBloodGoing = () => {
+    setShowBloodGoing(true);
+    setShowBloodGoing2(false);
+    setShowBloodGoing3(false);
+    setShowBloodGoing4(false);
+  };
+  const handleBloodGoing2 = () => {
+    setShowBloodGoing(false);
+    setShowBloodGoing2(true);
+    setShowBloodGoing3(false);
+    setShowBloodGoing4(false);
+  };
+  const handleBloodGoing3 = () => {
+    setShowBloodGoing(false);
+    setShowBloodGoing2(false);
+    setShowBloodGoing3(true);
+    setShowBloodGoing4(false);
+  };
+  const handleBloodGoing4 = () => {
+    setShowBloodGoing(false);
+    setShowBloodGoing2(false);
+    setShowBloodGoing3(false);
+    setShowBloodGoing4(true);
+  };
+
+  console.log("showBloodGoing", showBloodGoing);
+  // End Blood Bag Animation Handle
   return (
     <div className="">
       <div>
@@ -19,9 +155,9 @@ export default function LearnAboutBloodPage() {
         />
       </div>
 
-      <div className="lg:mx-28 md:mx-28 mx-3">
+      <div className="lg:mx-28 md:mx-10 mx-3">
         <div className="mt-2">
-          <button className="bg-brandPrimary text-[18px] text-white lg:py-3 md:py-3 py-2 lg:px-4 md:px-4 px-3 rounded-lg ml-0">
+          <button className="bg-brandPrimary text-[18px] text-white lg:py-3 md:py-2 py-2 lg:px-4 md:px-3 px-3 rounded-lg ml-0">
             Learn About Blood
           </button>
           <div className="about-blood-div-border pb-8 -mt-6 rounded-lg">
@@ -34,7 +170,7 @@ export default function LearnAboutBloodPage() {
             </div>
 
             <div>
-              <ul className="text-[12px] lg:pl-12 lg:ml-0 md:ml-0 ml-12 pl-0 mt-2 font-semibold ul-li">
+              <ul className="text-[12px] lg:pl-12 md:pl-10 lg:ml-0 md:ml-0 ml-12 pl-0 mt-2 font-semibold ul-li">
                 <li className="">
                   transporting oxygen and nutrients to the lungs and tissues
                 </li>
@@ -70,7 +206,7 @@ export default function LearnAboutBloodPage() {
         </div>
 
         <div className="lg:mt-6 md:mt-6 mt-3">
-          <button className="bg-brandPrimary text-[18px] text-white lg:py-3 md:py-3 py-2 lg:px-4 md:px-4 px-3 rounded-lg ml-0">
+          <button className="bg-brandPrimary text-[18px] text-white lg:py-3 md:py-2 py-2 lg:px-4 md:px-3 px-3 rounded-lg ml-0">
             How Blood Type Is Determined
           </button>
           <div className="about-blood-div-border pb-8 -mt-6 rounded-lg">
@@ -107,33 +243,48 @@ export default function LearnAboutBloodPage() {
             Click on a blood type below to learn more
           </div>
 
-          <div className="grid lg:grid-cols-12 md:grid-cols-12 grid-cols-3 gap-4 mt-4">
+          <div className="grid lg:grid-cols-12 md:grid-cols-12 grid-cols-3 lg:gap-4 md:gap-4 gap-16 mt-4">
+            {/* First div group blood  */}
             <div className="lg:col-span-3 md:col-span-3 col-span-3 ">
               <div className="flex flex-col lg:justify-end md:justify-end justify-center lg:items-end md:items-end items-center lg:mt-28 md:mt-28 mt-4">
                 <div>
-                  <button className="bg-brandPrimary rounded-full lg:text-[18px] md:text-[18px] text-[24px] font-semibold text-center text-white px-6 py-2 learn-about-blood-button-border lg:w-36 md:w-36 w-96">
+                  <button
+                    className={`${buttonAStyle.backgroundColor} ${buttonAStyle.textColor} hover:bg-brandPrimary hover:text-white rounded-full lg:text-[18px] md:text-[18px] text-[24px] font-semibold text-center px-6 py-2 learn-about-blood-button-border lg:w-36 md:w-36 w-72`}
+                    onClick={handleGroupAClick}
+                  >
                     Group A
-                  </button>
-                </div>
-                <div className="lg:mt-6 md:mt-6 mt-8">
-                  <button className="rounded-full lg:text-[18px] md:text-[18px] text-[24px] font-semibold text-center text-[#44444480] px-6 py-2 learn-about-blood-button-border lg:w-36 md:w-36 w-96">
-                    Group B
                   </button>
                 </div>
 
                 <div className="lg:mt-6 md:mt-6 mt-8">
-                  <button className="rounded-full lg:text-[18px] md:text-[18px] text-[24px] font-semibold text-center text-[#44444480] px-6 py-2 learn-about-blood-button-border lg:w-36 md:w-36 w-96">
+                  <button
+                    className={`${buttonBStyle.backgroundColor} ${buttonBStyle.textColor} hover:bg-brandPrimary hover:text-white rounded-full lg:text-[18px] md:text-[18px] text-[24px] font-semibold text-center px-6 py-2 learn-about-blood-button-border lg:w-36 md:w-36 w-72`}
+                    onClick={handleGroupBClick}
+                  >
+                    Group B
+                  </button>
+                </div>
+                <div className="lg:mt-6 md:mt-6 mt-8">
+                  <button
+                    className={`${buttonABStyle.backgroundColor} ${buttonABStyle.textColor} hover:bg-brandPrimary hover:text-white rounded-full lg:text-[18px] md:text-[18px] text-[24px] font-semibold text-center px-6 py-2 learn-about-blood-button-border lg:w-36 md:w-36 w-72`}
+                    onClick={handleGroupABClick}
+                  >
                     Group AB
                   </button>
                 </div>
                 <div className="lg:mt-6 md:mt-6 mt-8">
-                  <button className="rounded-full lg:text-[18px] md:text-[18px] text-[24px] font-semibold text-center text-[#44444480] px-6 py-2 learn-about-blood-button-border lg:w-36 md:w-36 w-96">
+                  <button
+                    className={`${buttonOStyle.backgroundColor} ${buttonOStyle.textColor} hover:bg-brandPrimary hover:text-white rounded-full lg:text-[18px] md:text-[18px] text-[24px] font-semibold text-center px-6 py-2 learn-about-blood-button-border lg:w-36 md:w-36 w-72`}
+                    onClick={handleGroupOClick}
+                  >
                     Group O
                   </button>
                 </div>
               </div>
             </div>
-            <div className="lg:col-span-6 md:col-span-6 col-span-3 mt-8 border">
+
+            {/* Second Group div */}
+            <div className="lg:col-span-6 md:col-span-6 col-span-3 mt-8">
               <div className="flex justify-center mt-8 mb-8">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +301,8 @@ export default function LearnAboutBloodPage() {
                 </svg>
               </div>
 
-              <div className="flex -mt-[418px] ml-[198px]">
+              {/* start blood Tube */}
+              <div className="flex lg:-mt-[418px] md:-mt-[418px] -mt-[424px] justify-center">
                 <div className="ml-3">
                   <div className="-mt-[14px] -ml-4">
                     <svg
@@ -202,32 +354,146 @@ export default function LearnAboutBloodPage() {
                           Red Cells
                         </p>
                       </div>
-                      <div className="mt-[30px] rounded-full ml-[19px]">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="25"
-                          height="25"
-                          viewBox="0 0 25 25"
-                          fill="none"
-                        >
-                          {/* Your SVG content */}
-                          <circle cx="12.5" cy="12.5" r="10" fill="#fff" />
 
-                          {/* Add text in the middle of the SVG */}
-                          <text
-                            x="50%"
-                            y="50%"
-                            dominantBaseline="middle"
-                            textAnchor="middle"
-                            fill="#000000"
-                            fontSize="10"
-                            fontFamily="Arial"
-                            fontWeight="600"
+                      {/* here need condition */}
+                      {showGroupASVG && (
+                        <div className="mt-[30px] rounded-full ml-[19px]">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            viewBox="0 0 25 25"
+                            fill="none"
                           >
-                            A
-                          </text>
-                        </svg>
-                      </div>
+                            {/* Your SVG content */}
+                            <circle cx="12.5" cy="12.5" r="10" fill="#fff" />
+
+                            {/* Add text in the middle of the SVG */}
+                            <text
+                              x="50%"
+                              y="50%"
+                              dominantBaseline="middle"
+                              textAnchor="middle"
+                              fill="#000000"
+                              fontSize="10"
+                              fontFamily="Arial"
+                              fontWeight="600"
+                            >
+                              A
+                            </text>
+                          </svg>
+                        </div>
+                      )}
+                      {/* start Group B */}
+                      {showGroupBSVG && (
+                        <div className="mt-[30px] rounded-full ml-[19px]">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            viewBox="0 0 25 25"
+                            fill="none"
+                          >
+                            {/* Your SVG content */}
+                            <circle cx="12.5" cy="12.5" r="10" fill="#444" />
+
+                            {/* Add text in the middle of the SVG */}
+                            <text
+                              x="50%"
+                              y="50%"
+                              dominantBaseline="middle"
+                              textAnchor="middle"
+                              fill="#fff"
+                              fontSize="10"
+                              fontFamily="Arial"
+                              fontWeight="600"
+                            >
+                              B
+                            </text>
+                          </svg>
+                        </div>
+                      )}
+                      {/* start Group AB */}
+                      {showGroupABSVG && (
+                        <div className="mt-[30px] rounded-full ml-[19px]">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            viewBox="0 0 25 25"
+                            fill="none"
+                          >
+                            {/* Your SVG content */}
+                            <circle
+                              cx="12.5"
+                              cy="12.5"
+                              r="10"
+                              fill="##FF0000"
+                            />
+
+                            {/* Add text in the middle of the SVG */}
+                          </svg>
+                        </div>
+                      )}
+                      {/* start Group O */}
+                      {showGroupOSVG && (
+                        <div className="mt-[25px] rounded-full">
+                          <div className="ml-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25"
+                              height="25"
+                              viewBox="0 0 25 25"
+                              fill="none"
+                            >
+                              {/* Your SVG content */}
+                              <circle cx="12.5" cy="12.5" r="10" fill="#444" />
+
+                              {/* Add text in the middle of the SVG */}
+                              <text
+                                x="50%"
+                                y="50%"
+                                dominantBaseline="middle"
+                                textAnchor="middle"
+                                fill="#fff"
+                                fontSize="10"
+                                fontFamily="Arial"
+                                fontWeight="600"
+                              >
+                                B
+                              </text>
+                            </svg>
+                          </div>
+
+                          <div className="ml-8 -mt-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25"
+                              height="25"
+                              viewBox="0 0 25 25"
+                              fill="none"
+                            >
+                              {/* Your SVG content */}
+                              <circle cx="12.5" cy="12.5" r="10" fill="#fff" />
+
+                              {/* Add text in the middle of the SVG */}
+                              <text
+                                x="50%"
+                                y="50%"
+                                dominantBaseline="middle"
+                                textAnchor="middle"
+                                fill="#000000"
+                                fontSize="10"
+                                fontFamily="Arial"
+                                fontWeight="600"
+                              >
+                                A
+                              </text>
+                            </svg>
+                          </div>
+                        </div>
+                      )}
+
                       {/* 1st blood img */}
                       <div className="mt-[80px] ml-4">
                         <svg
@@ -329,59 +595,196 @@ export default function LearnAboutBloodPage() {
                     <div className=" rounded-full ml-[5px] ">
                       <p className="text-[12px] font-semibold">Plasma</p>
                     </div>
-                    <div className="mt-[30px] rounded-full ml-[15px]">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="25"
-                        height="25"
-                        viewBox="0 0 25 25"
-                        fill="none"
-                      >
-                        {/* Your SVG content */}
-                        <circle cx="12.5" cy="12.5" r="10" fill="#444" />
 
-                        {/* Add text in the middle of the SVG */}
-                        <text
-                          x="50%"
-                          y="50%"
-                          dominantBaseline="middle"
-                          textAnchor="middle"
-                          fill="#fff"
-                          fontSize="10"
-                          fontFamily="Arial"
-                          fontWeight="600"
+                    {/* here need condition */}
+                    {showGroupASVG && (
+                      <div className="mt-[30px] rounded-full ml-[15px]">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
                         >
-                          B
-                        </text>
-                      </svg>
-                    </div>
+                          {/* Your SVG content */}
+                          <circle cx="12.5" cy="12.5" r="10" fill="#444" />
+
+                          {/* Add text in the middle of the SVG */}
+                          <text
+                            x="50%"
+                            y="50%"
+                            dominantBaseline="middle"
+                            textAnchor="middle"
+                            fill="#fff"
+                            fontSize="10"
+                            fontFamily="Arial"
+                            fontWeight="600"
+                          >
+                            B
+                          </text>
+                        </svg>
+                      </div>
+                    )}
+                    {/* start Group B */}
+                    {showGroupBSVG && (
+                      <div className="mt-[30px] rounded-full ml-[15px]">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                        >
+                          {/* Your SVG content */}
+                          <circle cx="12.5" cy="12.5" r="10" fill="#fff" />
+
+                          {/* Add text in the middle of the SVG */}
+                          <text
+                            x="50%"
+                            y="50%"
+                            dominantBaseline="middle"
+                            textAnchor="middle"
+                            fill="#000000"
+                            fontSize="10"
+                            fontFamily="Arial"
+                            fontWeight="600"
+                          >
+                            A
+                          </text>
+                        </svg>
+                      </div>
+                    )}
+                    {/* start Group AB */}
+                    {showGroupABSVG && (
+                      <div className="mt-[25px] rounded-full">
+                        <div className="ml-1">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            viewBox="0 0 25 25"
+                            fill="none"
+                          >
+                            {/* Your SVG content */}
+                            <circle cx="12.5" cy="12.5" r="10" fill="#fff" />
+
+                            {/* Add text in the middle of the SVG */}
+                            <text
+                              x="50%"
+                              y="50%"
+                              dominantBaseline="middle"
+                              textAnchor="middle"
+                              fill="#000000"
+                              fontSize="10"
+                              fontFamily="Arial"
+                              fontWeight="600"
+                            >
+                              A
+                            </text>
+                          </svg>
+                        </div>
+
+                        <div className="ml-6 -mt-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            viewBox="0 0 25 25"
+                            fill="none"
+                          >
+                            {/* Your SVG content */}
+                            <circle cx="12.5" cy="12.5" r="10" fill="#444" />
+
+                            {/* Add text in the middle of the SVG */}
+                            <text
+                              x="50%"
+                              y="50%"
+                              dominantBaseline="middle"
+                              textAnchor="middle"
+                              fill="#fff"
+                              fontSize="10"
+                              fontFamily="Arial"
+                              fontWeight="600"
+                            >
+                              B
+                            </text>
+                          </svg>
+                        </div>
+                      </div>
+                    )}
+                    {/* start Group O */}
+                    {showGroupOSVG && (
+                      <div className="mt-[30px] rounded-full ml-[19px]">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                        >
+                          {/* Your SVG content */}
+                          <circle cx="12.5" cy="12.5" r="10" fill="##FF0000" />
+
+                          {/* Add text in the middle of the SVG */}
+                        </svg>
+                      </div>
+                    )}
+
+                    {/* end */}
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="lg:col-span-3 md:col-span-3 col-span-3">
-              <div className="text-[#444444] flex flex-col justify-start items-start mt-36">
-                <p className="text-[24px] font-semibold">Group A</p>
 
-                <p className="text-[14px] mt-8 border mr-12 font-semibold">
-                  has only the A antigen on red cells (and B antibody in the
-                  plasma)
+              {/* end Blood Tube */}
+            </div>
+
+            {/* Last Group Div */}
+            <div className="lg:col-span-3 md:col-span-3 col-span-3">
+              <div className="text-[#444444] flex flex-col lg:justify-start md:justify-start justify-center lg:items-start md:items-start items-center lg:mt-36 md:mt-36 mt-12">
+                <p className="text-[24px] font-semibold">
+                  Group {showGroupASVG && <span>A</span>}{" "}
+                  {showGroupBSVG && <span>B</span>}{" "}
+                  {showGroupABSVG && <span>AB</span>}{" "}
+                  {showGroupOSVG && <span>O</span>}
                 </p>
+
+                <div className="lg:mt-4 md:mt-8 mt-2 lg:mx-0 md:mx-0 mx-8 lg:mr-10 md:lg:mr-10 mr-0">
+                  <p className="text-[14px] lg:mr-12 md:mr-12 mr-0 font-semibold justify-center w-full">
+                    has {showGroupASVG && <span>only the A</span>}{" "}
+                    {showGroupBSVG && <span>only the B</span>}{" "}
+                    {showGroupABSVG && <span>both A and B</span>}{" "}
+                    {showGroupOSVG && <span>neither A nor B</span>}
+                    antigen on red cells
+                    {showGroupASVG && (
+                      <span>(and B antibody in the plasma)</span>
+                    )}{" "}
+                    {showGroupBSVG && (
+                      <span>(and A antibody in theplasma)</span>
+                    )}{" "}
+                    {showGroupABSVG && (
+                      <span>(but neither A nor B antibody in the plasma)</span>
+                    )}{" "}
+                    {showGroupOSVG && (
+                      <span>(but both A and B antibody are in the plasma)</span>
+                    )}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
         {/* end */}
+
         {/* START RED ANIMATION */}
         <div className="about-blood-div-border-two mt-12 pb-28 extraHere">
           <div className="flex justify-center items-center mt-8 text-[#444] font-semibold">
             Click on a blood type below to learn more
           </div>
 
-          <div className="mt-6 grid grid-cols-12 gap-1 px-20">
+          <div className="mt-6 lg:grid grid-cols-12 gap-1 px-20 md:hidden hidden">
             <div className="col-span-3">
               <div className="">
-                <p className="text-[#444] ml-16 mr-10 font-bold text-[16px]">
+                <p className="text-[#444] ml-24 font-bold text-[16px]">
                   Donor
                 </p>
               </div>
@@ -389,13 +792,13 @@ export default function LearnAboutBloodPage() {
             <div className="col-span-6"></div>
             <div className="col-span-3">
               <div className="">
-                <p className="text-[#444] ml-16 mr-10 font-bold text-[16px]">
+                <p className="text-[#444] ml-20 font-bold text-[16px]">
                   RECIPIENT
                 </p>
               </div>
             </div>
           </div>
-          <div className="mt-4 grid grid-cols-12 gap-1 px-20">
+          <div className="mt-4 lg:grid grid-cols-12 gap-1 px-20 md:hidden hidden">
             <div className="col-span-2 border border-white flex flex-col pl-16">
               {/* start 1st line of 1st blood bag */}
               <div
@@ -409,13 +812,14 @@ export default function LearnAboutBloodPage() {
                   height="48"
                   viewBox="0 0 75 70"
                   fill="none"
-                  className="zindextwo"
+                  className="zindextwo cursor-pointer"
                   style={{
                     position: "absolute",
                     left: "46%",
                     top: "49%",
                     transform: "translate(-20%, -50%)",
                   }}
+                  onClick={handleBloodGoing}
                 >
                   <path
                     d="M14.0438 70H60.8567L74.9005 55V50H68.6588V52.2333L60.0921 61.3833C58.9217 62.6333 57.3457 63.3333 55.6917 63.3333H21.2842C19.0528 63.3333 16.9775 62.05 15.8695 59.9667L14.0282 56.5333C13.1076 54.8167 11.8436 53.3333 10.3144 52.2167C9.89311 51.8833 9.61223 51.3833 9.61223 50.8167L9.61223 19.1833C9.61223 18.6167 9.89311 18.1167 10.3144 17.8C11.8436 16.6667 13.1076 15.1833 14.0282 13.4667L15.8695 10.0333C16.9775 7.95 19.0528 6.66667 21.2842 6.66667L55.6917 6.66667C57.3457 6.66667 58.9217 7.36667 60.0921 8.61667L69.1894 18.3333H74.9005V15L60.8567 0L14.0438 0L7.80214 11.6667L3.02723 14.7167C1.15472 15.9333 0 18.1 0 20.4333L0 49.5667C0 51.9 1.15472 54.0667 3.02723 55.2833L7.80214 58.3333L14.0438 70Z"
@@ -710,6 +1114,8 @@ export default function LearnAboutBloodPage() {
                     top: "49%",
                     transform: "translate(-20%, -50%)",
                   }}
+                  onClick={handleBloodGoing}
+                  className="cursor-pointer"
                 >
                   <path
                     d="M12.2843 57.3327H46.6917C48.3458 57.3327 49.9218 56.6327 51.0921 55.3827L59.6589 46.2327V43.9994H70.5819V35.666H59.6589V20.666H70.5819V12.3327L60.1894 12.3327L51.0921 2.61602C49.9218 1.36602 48.3458 0.666016 46.6917 0.666016L12.2843 0.666016C10.0529 0.666016 7.97752 1.94935 6.86962 4.03268L5.02831 7.46602C4.10766 9.18268 2.84372 10.666 1.3145 11.7993C0.893181 12.116 0.612305 12.616 0.612305 13.1827L0.612305 44.816C0.612305 45.3827 0.893181 45.8827 1.3145 46.216C2.84372 47.3327 4.10766 48.816 5.02831 50.5327L6.86962 53.966C7.97752 56.0494 10.0529 57.3327 12.2843 57.3327Z"
@@ -725,6 +1131,8 @@ export default function LearnAboutBloodPage() {
                   viewBox="0 0 34 34"
                   fill="none"
                   style={{ position: "absolute", left: "47px", top: "17px" }} // Adjust the position as per your requirement
+                  onClick={handleBloodGoing}
+                  className="cursor-pointer"
                 >
                   <path
                     d="M0.406494 17.0007C0.406494 26.2007 7.39721 33.6673 16.0108 33.6673C24.6243 33.6673 31.615 26.2007 31.615 17.0007C31.615 7.80065 24.6243 0.333984 16.0108 0.333984C7.39721 0.333984 0.406494 7.80065 0.406494 17.0007Z"
@@ -742,6 +1150,8 @@ export default function LearnAboutBloodPage() {
                     fontSize: "20px",
                     fontWeight: "600",
                   }}
+                  onClick={handleBloodGoing}
+                  className="cursor-pointer"
                 >
                   O
                 </text>
@@ -831,33 +1241,33 @@ export default function LearnAboutBloodPage() {
                 {/* here start red lines */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="850"
+                  width="800"
                   height="100"
-                  viewBox="0 0 100 100"
-                  style={{ position: "absolute", left: "95px", top: "24px" }}
+                  viewBox="0 0 1000 100"
+                  style={{ position: "absolute", left: "95px", top: "-24px" }}
                   className="zindexZero"
                 >
                   {/* Inline CSS for the pulsating animation */}
                   <style>
                     {`
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.2);
-        }
-        100% {
-          transform: scale(1);
-        }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
       }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
     `}
                   </style>
 
-                  {/* The path that represents the line */}
+                  {/* The path that represents the straight line */}
                   <path
-                    id="motionPath"
-                    d="M0.202148 1.5131C0.202148 1.5131 248 1.51303 412.5 1.51172C577 1.51041 903.202 124.513 903.202 124.513"
+                    id="motionPath0"
+                    d="M0 50 L1000 50" // Straight line from (0, 50) to (1000, 50)
                     fill="none"
                     stroke="#E11B22"
                     strokeOpacity="0.3"
@@ -865,26 +1275,28 @@ export default function LearnAboutBloodPage() {
                   />
 
                   {/* The red ball that will move along the path */}
-                  <circle
-                    id="movingBall"
-                    cx="1"
-                    cy="1.5135" // Adjusted slightly below the line to ensure visibility
-                    r="5"
-                    fill="#E11B22"
-                    style={{
-                      animation: "pulse 1s infinite alternate", // Apply the pulsating animation
-                    }}
-                    className="zindextwo"
-                  >
-                    {/* Animation to move the ball along the path */}
-                    <animateMotion
-                      dur="10s" // Increased duration to slow down the movement
-                      repeatCount="indefinite"
-                      rotate="auto"
+                  {showBloodGoing && (
+                    <circle
+                      id="movingBall"
+                      cx="1"
+                      cy="1" // Positioned at y-coordinate 50 to align with the straight line
+                      r="5"
+                      fill="#E11B22"
+                      style={{
+                        animation: "pulse 1s infinite alternate", // Apply the pulsating animation
+                      }}
+                      className="zindextwo"
                     >
-                      <mpath href="#motionPath" />
-                    </animateMotion>
-                  </circle>
+                      {/* Animation to move the ball along the path */}
+                      <animateMotion
+                        dur="10s" // Increased duration to slow down the movement
+                        repeatCount="indefinite"
+                        rotate="auto"
+                      >
+                        <mpath href="#motionPath0" />
+                      </animateMotion>
+                    </circle>
+                  )}
                 </svg>
 
                 {/* end red line 1 */}
@@ -916,6 +1328,7 @@ export default function LearnAboutBloodPage() {
 
                   {/* The path that represents the line */}
                   <path
+                    id="motionPath1"
                     d="M0.202148 1.5131C0.202148 1.5131 248 1.51303 412.5 1.51172C577 1.51041 903.202 124.513 903.202 124.513"
                     stroke="#E11B22"
                     strokeOpacity="0.4"
@@ -923,25 +1336,28 @@ export default function LearnAboutBloodPage() {
                   />
 
                   {/* The red ball that will move along the path */}
-                  <circle
-                    cx="0"
-                    cy="1.5131"
-                    r="5"
-                    fill="#E11B22"
-                    className="zindextwo"
-                    style={{
-                      animation: "pulse 1s infinite alternate", // Apply the pulsating animation
-                    }}
-                  >
-                    {/* Animation to move the ball along the path */}
-                    <animateMotion
-                      dur="8s" // Increased duration to slow down the movement
-                      repeatCount="indefinite"
-                      rotate="auto"
+                  {showBloodGoing && (
+                    <circle
+                      id="movingBall"
+                      cx="1"
+                      cy="1"
+                      r="5"
+                      fill="#E11B22"
+                      className="zindextwo"
+                      style={{
+                        animation: "pulse 1s infinite alternate", // Apply the pulsating animation
+                      }}
                     >
-                      <mpath href="#motionPath" />
-                    </animateMotion>
-                  </circle>
+                      {/* Animation to move the ball along the path */}
+                      <animateMotion
+                        dur="10s" // Increased duration to slow down the movement
+                        repeatCount="indefinite"
+                        rotate="auto"
+                      >
+                        <mpath href="#motionPath1" />
+                      </animateMotion>
+                    </circle>
+                  )}
                 </svg>
 
                 {/* end red line 2 */}
@@ -981,35 +1397,37 @@ export default function LearnAboutBloodPage() {
                   />
 
                   {/* The red ball that will move along the path */}
-                  <circle
-                    cx="0.123535"
-                    cy="1.77108"
-                    r="5"
-                    fill="#E11B22"
-                    className="zindextwo"
-                    style={{
-                      animation: "pulse 1s infinite alternate",
-                    }}
-                  >
-                    {/* Animation to move the ball along the path */}
-                    <animateMotion
-                      dur="10s"
-                      repeatCount="indefinite"
-                      rotate="auto"
+                  {showBloodGoing && (
+                    <circle
+                      cx="1"
+                      cy="1"
+                      r="5"
+                      fill="#E11B22"
+                      className="zindextwo"
+                      style={{
+                        animation: "pulse 1s infinite alternate",
+                      }}
                     >
-                      <mpath href="#motionPath2" />
-                    </animateMotion>
-                  </circle>
+                      {/* Animation to move the ball along the path */}
+                      <animateMotion
+                        dur="10s"
+                        repeatCount="indefinite"
+                        rotate="auto"
+                      >
+                        <mpath href="#motionPath2" />
+                      </animateMotion>
+                    </circle>
+                  )}
                 </svg>
 
                 {/* end  red line 3*/}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="874"
-                  height="336"
+                  width="864"
+                  height="326"
                   viewBox="0 0 905 367"
                   fill="none"
-                  style={{ position: "absolute", left: "80%", top: "22px" }} // Adjust the position as per your requirement
+                  style={{ position: "absolute", left: "70%", top: "24px" }} // Adjust the position as per your requirement
                   className="zindexZero"
                 >
                   {/* Pulsating animation */}
@@ -1038,32 +1456,35 @@ export default function LearnAboutBloodPage() {
                   />
 
                   {/* The red ball that will move along the path */}
-                  <circle
-                    cx="0.123535"
-                    cy="1.77108"
-                    r="5"
-                    fill="#E11B22"
-                    className="zindextwo"
-                    style={{
-                      animation: "pulse 1s infinite alternate",
-                    }}
-                  >
-                    {/* Animation to move the ball along the path */}
-                    <animateMotion
-                      dur="10s"
-                      repeatCount="indefinite"
-                      rotate="auto"
+                  {showBloodGoing && (
+                    <circle
+                      cx="1"
+                      cy="1"
+                      r="5"
+                      fill="#E11B22"
+                      className="zindextwo"
+                      style={{
+                        animation: "pulse 1s infinite alternate",
+                      }}
                     >
-                      <mpath href="#motionPath3" />
-                    </animateMotion>
-                  </circle>
+                      {/* Animation to move the ball along the path */}
+                      <animateMotion
+                        dur="10s"
+                        repeatCount="indefinite"
+                        rotate="auto"
+                      >
+                        <mpath href="#motionPath3" />
+                      </animateMotion>
+                    </circle>
+                  )}
                 </svg>
                 {/* end red line 4*/}
               </div>
               {/* end first blood bag 1 */}
 
-              {/* here remove */}
-              <div className="mt-8">
+              {/* here remove start */}
+
+              <div className="mt-12">
                 <div
                   className="mr-6"
                   style={{
@@ -1079,13 +1500,14 @@ export default function LearnAboutBloodPage() {
                     height="48"
                     viewBox="0 0 75 70"
                     fill="none"
-                    className="zindextwo"
+                    className="zindextwo cursor-pointer"
                     style={{
                       position: "absolute",
                       left: "46%",
                       top: "49%",
                       transform: "translate(-20%, -50%)",
                     }}
+                    onClick={handleBloodGoing2}
                   >
                     <path
                       d="M14.0438 70H60.8567L74.9005 55V50H68.6588V52.2333L60.0921 61.3833C58.9217 62.6333 57.3457 63.3333 55.6917 63.3333H21.2842C19.0528 63.3333 16.9775 62.05 15.8695 59.9667L14.0282 56.5333C13.1076 54.8167 11.8436 53.3333 10.3144 52.2167C9.89311 51.8833 9.61223 51.3833 9.61223 50.8167L9.61223 19.1833C9.61223 18.6167 9.89311 18.1167 10.3144 17.8C11.8436 16.6667 13.1076 15.1833 14.0282 13.4667L15.8695 10.0333C16.9775 7.95 19.0528 6.66667 21.2842 6.66667L55.6917 6.66667C57.3457 6.66667 58.9217 7.36667 60.0921 8.61667L69.1894 18.3333H74.9005V15L60.8567 0L14.0438 0L7.80214 11.6667L3.02723 14.7167C1.15472 15.9333 0 18.1 0 20.4333L0 49.5667C0 51.9 1.15472 54.0667 3.02723 55.2833L7.80214 58.3333L14.0438 70Z"
@@ -1126,6 +1548,8 @@ export default function LearnAboutBloodPage() {
                       top: "50%",
                       transform: "translate(-20%, -50%)",
                     }}
+                    className="cursor-pointer"
+                    onClick={handleBloodGoing}
                   >
                     <path
                       d="M0.658691 15.666L0.658691 0.666016L6.9004 0.666016L6.9004 15.666H0.658691Z"
@@ -1164,7 +1588,8 @@ export default function LearnAboutBloodPage() {
                       left: "58%",
                       top: "22%",
                     }}
-                    className="zindexOne animate-ping"
+                    className="zindexOne animate-ping cursor-pointer"
+                    onClick={handleBloodGoing}
                   >
                     <path
                       d="M3.3296 1.66667C3.3296 2.58714 2.63097 3.33333 1.76917 3.33333C0.907367 3.33333 0.20874 2.58714 0.20874 1.66667C0.20874 0.746192 0.907367 0 1.76917 0C2.63097 0 3.3296 0.746192 3.3296 1.66667Z"
@@ -1500,19 +1925,62 @@ export default function LearnAboutBloodPage() {
                   {/* here start red lines */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="882"
-                    height="80"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    style={{ position: "absolute", left: "30%", top: "25px" }} // Adjust the position as per your requirement
+                    width="800"
+                    height="100"
+                    viewBox="0 0 1000 100"
+                    style={{ position: "absolute", left: "95px", top: "-24px" }}
                     className="zindexZero"
                   >
+                    {/* Inline CSS for the pulsating animation */}
+                    <style>
+                      {`
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    `}
+                    </style>
+
+                    {/* The path that represents the straight line */}
                     <path
-                      d="M0.202148 1.5131C0.202148 1.5131 248 1.51303 412.5 1.51172C577 1.51041 903.202 124.513 903.202 124.513"
+                      id="motionPath0"
+                      d="M0 50 L1000 50" // Straight line from (0, 50) to (1000, 50)
+                      fill="none"
                       stroke="#E11B22"
-                      stroke-opacity="0.4"
-                      stroke-width="3"
+                      strokeOpacity="0.3"
+                      strokeWidth="3"
                     />
+
+                    {/* The red ball that will move along the path */}
+                    {showBloodGoing2 && (
+                      <circle
+                        id="movingBall"
+                        cx="1"
+                        cy="1" // Positioned at y-coordinate 50 to align with the straight line
+                        r="5"
+                        fill="#E11B22"
+                        style={{
+                          animation: "pulse 1s infinite alternate", // Apply the pulsating animation
+                        }}
+                        className="zindextwo"
+                      >
+                        {/* Animation to move the ball along the path */}
+                        <animateMotion
+                          dur="10s" // Increased duration to slow down the movement
+                          repeatCount="indefinite"
+                          rotate="auto"
+                        >
+                          <mpath href="#motionPath0" />
+                        </animateMotion>
+                      </circle>
+                    )}
                   </svg>
 
                   {/* end red line 1 */}
@@ -1525,18 +1993,59 @@ export default function LearnAboutBloodPage() {
                     style={{ position: "absolute", left: "108%", top: "23px" }} // Adjust the position as per your requirement
                     className="zindexZero"
                   >
+                    {/* Inline CSS for the pulsating animation */}
+                    <style>
+                      {`
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    `}
+                    </style>
                     <path
+                      id="motionPath2"
                       d="M0.123535 1.77108C0.123535 1.77108 238.124 1.77077 423.624 1.76758C609.123 1.76438 902.623 245.27 902.623 245.27"
                       stroke="#E11B22"
                       stroke-opacity="0.5"
                       stroke-width="3"
                     />
+                    {/* The red ball that will move along the path */}
+                    {showBloodGoing2 && (
+                      <circle
+                        id="movingBall"
+                        cx="1"
+                        cy="1" // Positioned at y-coordinate 50 to align with the straight line
+                        r="5"
+                        fill="#E11B22"
+                        style={{
+                          animation: "pulse 1s infinite alternate", // Apply the pulsating animation
+                        }}
+                        className="zindextwo"
+                      >
+                        {/* Animation to move the ball along the path */}
+                        <animateMotion
+                          dur="10s" // Increased duration to slow down the movement
+                          repeatCount="indefinite"
+                          rotate="auto"
+                        >
+                          <mpath href="#motionPath2" />
+                        </animateMotion>
+                      </circle>
+                    )}
                   </svg>
                   {/* end  red line 2*/}
                 </div>
               </div>
               {/* end second blood bag 2 */}
-              <div className="mt-8">
+
+              <div className="mt-12">
                 <div
                   className="mr-6"
                   style={{
@@ -1552,13 +2061,14 @@ export default function LearnAboutBloodPage() {
                     height="48"
                     viewBox="0 0 75 70"
                     fill="none"
-                    className="zindextwo"
+                    className="zindextwo cursor-pointer"
                     style={{
                       position: "absolute",
                       left: "46%",
                       top: "49%",
                       transform: "translate(-20%, -50%)",
                     }}
+                    onClick={handleBloodGoing3}
                   >
                     <path
                       d="M14.0438 70H60.8567L74.9005 55V50H68.6588V52.2333L60.0921 61.3833C58.9217 62.6333 57.3457 63.3333 55.6917 63.3333H21.2842C19.0528 63.3333 16.9775 62.05 15.8695 59.9667L14.0282 56.5333C13.1076 54.8167 11.8436 53.3333 10.3144 52.2167C9.89311 51.8833 9.61223 51.3833 9.61223 50.8167L9.61223 19.1833C9.61223 18.6167 9.89311 18.1167 10.3144 17.8C11.8436 16.6667 13.1076 15.1833 14.0282 13.4667L15.8695 10.0333C16.9775 7.95 19.0528 6.66667 21.2842 6.66667L55.6917 6.66667C57.3457 6.66667 58.9217 7.36667 60.0921 8.61667L69.1894 18.3333H74.9005V15L60.8567 0L14.0438 0L7.80214 11.6667L3.02723 14.7167C1.15472 15.9333 0 18.1 0 20.4333L0 49.5667C0 51.9 1.15472 54.0667 3.02723 55.2833L7.80214 58.3333L14.0438 70Z"
@@ -1973,19 +2483,62 @@ export default function LearnAboutBloodPage() {
                   {/* here start red lines */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="882"
-                    height="80"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    style={{ position: "absolute", left: "30%", top: "24px" }} // Adjust the position as per your requirement
+                    width="800"
+                    height="100"
+                    viewBox="0 0 1000 100"
+                    style={{ position: "absolute", left: "95px", top: "-24px" }}
                     className="zindexZero"
                   >
+                    {/* Inline CSS for the pulsating animation */}
+                    <style>
+                      {`
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    `}
+                    </style>
+
+                    {/* The path that represents the straight line */}
                     <path
-                      d="M0.202148 1.5131C0.202148 1.5131 248 1.51303 412.5 1.51172C577 1.51041 903.202 124.513 903.202 124.513"
+                      id="motionPath0"
+                      d="M0 50 L1000 50" // Straight line from (0, 50) to (1000, 50)
+                      fill="none"
                       stroke="#E11B22"
-                      stroke-opacity="0.3"
-                      stroke-width="3"
+                      strokeOpacity="0.3"
+                      strokeWidth="3"
                     />
+
+                    {/* The red ball that will move along the path */}
+                    {showBloodGoing3 && (
+                      <circle
+                        id="movingBall"
+                        cx="1"
+                        cy="1" // Positioned at y-coordinate 50 to align with the straight line
+                        r="5"
+                        fill="#E11B22"
+                        style={{
+                          animation: "pulse 1s infinite alternate", // Apply the pulsating animation
+                        }}
+                        className="zindextwo"
+                      >
+                        {/* Animation to move the ball along the path */}
+                        <animateMotion
+                          dur="10s" // Increased duration to slow down the movement
+                          repeatCount="indefinite"
+                          rotate="auto"
+                        >
+                          <mpath href="#motionPath0" />
+                        </animateMotion>
+                      </circle>
+                    )}
                   </svg>
 
                   {/* end red line 1 */}
@@ -1998,17 +2551,59 @@ export default function LearnAboutBloodPage() {
                     style={{ position: "absolute", left: "55%", top: "24px" }} // Adjust the position as per your requirement
                     className="zindexZero"
                   >
+                    {/* Inline CSS for the pulsating animation */}
+                    <style>
+                      {`
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    `}
+                    </style>
                     <path
+                      id="motionPath1"
                       d="M0.202148 1.5131C0.202148 1.5131 248 1.51303 412.5 1.51172C577 1.51041 903.202 124.513 903.202 124.513"
                       stroke="#E11B22"
                       stroke-opacity="0.4"
                       stroke-width="3"
                     />
+                    {/* The red ball that will move along the path */}
+                    {showBloodGoing3 && (
+                      <circle
+                        id="movingBall"
+                        cx="1"
+                        cy="1" // Positioned at y-coordinate 50 to align with the straight line
+                        r="5"
+                        fill="#E11B22"
+                        style={{
+                          animation: "pulse 1s infinite alternate", // Apply the pulsating animation
+                        }}
+                        className="zindextwo"
+                      >
+                        {/* Animation to move the ball along the path */}
+                        <animateMotion
+                          dur="10s" // Increased duration to slow down the movement
+                          repeatCount="indefinite"
+                          rotate="auto"
+                        >
+                          <mpath href="#motionPath1" />
+                        </animateMotion>
+                      </circle>
+                    )}
                   </svg>
                   {/* end red line 2 */}
                 </div>
               </div>
-              <div className="mt-8">
+              {/* end third blood bag 3 */}
+
+              <div className="mt-12">
                 <div
                   className="mr-6"
                   style={{
@@ -2031,6 +2626,7 @@ export default function LearnAboutBloodPage() {
                       top: "49%",
                       transform: "translate(-20%, -50%)",
                     }}
+                    onClick={handleBloodGoing4}
                   >
                     <path
                       d="M14.0438 70H60.8567L74.9005 55V50H68.6588V52.2333L60.0921 61.3833C58.9217 62.6333 57.3457 63.3333 55.6917 63.3333H21.2842C19.0528 63.3333 16.9775 62.05 15.8695 59.9667L14.0282 56.5333C13.1076 54.8167 11.8436 53.3333 10.3144 52.2167C9.89311 51.8833 9.61223 51.3833 9.61223 50.8167L9.61223 19.1833C9.61223 18.6167 9.89311 18.1167 10.3144 17.8C11.8436 16.6667 13.1076 15.1833 14.0282 13.4667L15.8695 10.0333C16.9775 7.95 19.0528 6.66667 21.2842 6.66667L55.6917 6.66667C57.3457 6.66667 58.9217 7.36667 60.0921 8.61667L69.1894 18.3333H74.9005V15L60.8567 0L14.0438 0L7.80214 11.6667L3.02723 14.7167C1.15472 15.9333 0 18.1 0 20.4333L0 49.5667C0 51.9 1.15472 54.0667 3.02723 55.2833L7.80214 58.3333L14.0438 70Z"
@@ -2445,35 +3041,75 @@ export default function LearnAboutBloodPage() {
                   {/* here start red lines */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="1580"
-                    height="116"
-                    viewBox="0 0 90 90"
-                    fill="none"
-                    style={{
-                      position: "absolute",
-                      left: "-635px",
-                      top: "24px",
-                    }} // Adjust the position as per your requirement
+                    width="800"
+                    height="100"
+                    viewBox="0 0 1000 100"
+                    style={{ position: "absolute", left: "95px", top: "-24px" }}
                     className="zindexZero"
                   >
+                    {/* Inline CSS for the pulsating animation */}
+                    <style>
+                      {`
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    `}
+                    </style>
+
+                    {/* The path that represents the straight line */}
                     <path
-                      d="M0.202148 1.5131C0.202148 1.5131 248 1.51303 412.5 1.51172C577 1.51041 903.202 124.513 903.202 124.513"
+                      id="motionPath0"
+                      d="M0 50 L1000 50" // Straight line from (0, 50) to (1000, 50)
+                      fill="none"
                       stroke="#E11B22"
-                      stroke-opacity="0.3"
-                      stroke-width="3"
+                      strokeOpacity="0.3"
+                      strokeWidth="3"
                     />
+
+                    {/* The red ball that will move along the path */}
+                    {showBloodGoing4 && (
+                      <circle
+                        id="movingBall"
+                        cx="1"
+                        cy="1" // Positioned at y-coordinate 50 to align with the straight line
+                        r="5"
+                        fill="#E11B22"
+                        style={{
+                          animation: "pulse 1s infinite alternate", // Apply the pulsating animation
+                        }}
+                        className="zindextwo"
+                      >
+                        {/* Animation to move the ball along the path */}
+                        <animateMotion
+                          dur="10s" // Increased duration to slow down the movement
+                          repeatCount="indefinite"
+                          rotate="auto"
+                        >
+                          <mpath href="#motionPath0" />
+                        </animateMotion>
+                      </circle>
+                    )}
                   </svg>
 
                   {/* end red line 1 */}
                 </div>
               </div>
-              {/* end third blood bag 3 */}
+
+              {/* end third blood bag 4 */}
 
               {/* here remove end */}
             </div>
             <div className="col-span-8"></div>
-            <div className="col-span-2">
-              <div>
+            <div className="col-span-2 h-96 -ml-1">
+              <div className="-mt-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="80"
@@ -2500,7 +3136,7 @@ export default function LearnAboutBloodPage() {
                 </svg>
               </div>
               {/* end O */}
-              <div className="mt-4">
+              <div className="mt-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="80"
@@ -2527,7 +3163,7 @@ export default function LearnAboutBloodPage() {
                 </svg>
               </div>
               {/* end A */}
-              <div className="mt-4">
+              <div className="mt-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="80"
@@ -2554,7 +3190,7 @@ export default function LearnAboutBloodPage() {
                 </svg>
               </div>
               {/* end B*/}
-              <div className="mt-4">
+              <div className="mt-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="80"

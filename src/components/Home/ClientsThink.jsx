@@ -33,7 +33,7 @@ export default function ClientsThink() {
     <div className="lg:mx-24 md:mx-28 mx-28">
       <div className="mt-0 flex justify-center items-center">
         <div className="w-72">
-          <div className="bg-brandPrimary rounded-md text-white px-1 py-1 text-center font-semibold h-12">
+        <div className="bg-brandPrimary rounded-md text-white px-2 py-2 md:h-16 md:px-4 md:py-4 text-center font-semibold">
             <div className="mt-2">What Our Clients Think</div>
           </div>
         </div>
