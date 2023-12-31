@@ -30,7 +30,7 @@ export default function ClientsThink() {
   const totalPages = testimonials.length;
 
   return (
-    <div className="lg:mx-24 md:mx-28 mx-28">
+    <div className="mx-4 sm:mx-8 md:mx-16 lg:mx-24 xl:mx-28">
       <div className="mt-0 flex justify-center items-center">
         <div className="w-72">
         <div className="bg-brandPrimary rounded-md text-white px-2 py-2 md:h-16 md:px-4 md:py-4 text-center font-semibold">

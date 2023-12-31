@@ -53,32 +53,26 @@ const InputFields = ({
         );
       case "date":
         return (
-          <Calendar
+          <input
+            type="date"
             {...field}
-            showIcon
             placeholder={placeholder}
-            className={className}
-            onChange={onChange}
+            className={`w-full ${className}`} // Use Tailwind CSS for width and additional classes
+            onChange={(e) => onChange(e.target.value)}
             id={id}
             {...rest}
-            style={{ width: "100%" }}
-            inputStyle={{
+            style={{
               backgroundColor: "white",
               color: "black",
               paddingRight: "2rem",
-            }}
-            panelStyle={{
-              backgroundColor: "white",
               border: "1px solid black",
-              borderTop: "none",
-              borderBottom: "1px solid black",
-              borderLeft: "1px solid black",
-              borderRight: "1px solid black",
               borderRadius: "8px",
+              padding: "8px",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
             }}
           />
         );
+
       case "dropdown":
         return (
           <div

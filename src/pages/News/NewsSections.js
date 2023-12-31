@@ -8,15 +8,44 @@ import ImageNews from "../../../src/assets/newsDoctors.png";
 import ConerImg from "../../../src/assets/Rectangle 660.png";
 import video from "../../../src/assets/Vector.png";
 import { Link } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 function NewsSections() {
   const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDay, setSelectedDay] = useState("");
+  const [selectedMonth, setSelectedMonth] = useState("");
+  const [selectedYear, setSelectedYear] = useState("");
+
+  const days = Array.from({ length: 31 }, (_, i) => i + 1);
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const years = Array.from({ length: 21 }, (_, i) => 2020 + i);
+
+  const handleSearch = () => {
+    // Implement your search functionality here
+    console.log("Search clicked!");
+    console.log("Selected Day:", selectedDay);
+    console.log("Selected Month:", selectedMonth);
+    console.log("Selected Year:", selectedYear);
+  };
 
   const handleDateChange = (dates) => {
     setSelectedDate(dates[0]);
   };
 
   return (
-    <div className="mx-28">
+    <div className="mx-4 sm:mx-8 md:mx-16 lg:mx-24 xl:mx-28">
       <div>
         <TitleTopComponent
           secondTitle={"Blood"}
@@ -64,28 +93,64 @@ function NewsSections() {
         <hr className="-mt-6"></hr>
       </div>
 
-      <div className="flex justify-between">
-        <div></div>
-
-        <div className=" justify-end ">
-          <label
-            htmlFor="datetimePicker"
-            className="block text-sm font-medium text-gray-700"
+      <div className="flex flex-col md:flex-row items-center justify-end space-y-2 md:space-y-0 md:space-x-3 p-4 mt-8 mb-2 bg-gray-100 rounded-lg shadow-md ">
+        <div className="relative w-full md:w-32">
+          <select
+            className="w-full border p-2 rounded-lg focus:outline-none"
+            value={selectedDay}
+            onChange={(e) => setSelectedDay(e.target.value)}
           >
-            Select Date and Time
-          </label>
-          <Flatpickr
-            id="datetimePicker"
-            className="form-input p-2 border rounded mt-1"
-            value={selectedDate}
-            onChange={handleDateChange}
-            options={{
-              enableTime: true,
-              dateFormat: "Y-m-d H:i",
-              // Add more options as needed
-            }}
-          />
+            <option value="" disabled>
+              Day
+            </option>
+            {days.map((day) => (
+              <option key={day} value={day}>
+                {day}
+              </option>
+            ))}
+          </select>
         </div>
+
+        <div className="relative w-full md:w-32">
+          <select
+            className="w-full border p-2 rounded-lg focus:outline-none"
+            value={selectedMonth}
+            onChange={(e) => setSelectedMonth(e.target.value)}
+          >
+            <option value="" disabled>
+              Month
+            </option>
+            {months.map((month, index) => (
+              <option key={index} value={index + 1}>
+                {month}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="relative w-full md:w-32">
+          <select
+            className="w-full border p-2 rounded-lg focus:outline-none"
+            value={selectedYear}
+            onChange={(e) => setSelectedYear(e.target.value)}
+          >
+            <option value="" disabled>
+              Year
+            </option>
+            {years.map((year) => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <button
+          className="bg-brandPrimary text-white p-3 rounded focus:outline-none w-full md:w-auto mt-2 md:mt-0"
+          onClick={handleSearch}
+        >
+          <FaSearch />
+        </button>
       </div>
 
       <div className="">

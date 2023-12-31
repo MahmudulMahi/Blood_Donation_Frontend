@@ -4,10 +4,12 @@ import doctorDoing from "../../../src/assets/doctor-doing-their-work-pediatrics-
 
 const StoriesSections = () => {
   return (
-    <div className="mx-28">
-        <div className="text-center ml-auto mr-auto">
-            <p className="text-centr p-2 bg-red-700 md:w-56 ml-auto mr-auto mt-6 text-white font-bold rounded-md">Stories Of our Clients</p>
-        </div>
+    <div className="mx-4 sm:mx-8 md:mx-16 lg:mx-24 xl:mx-28">
+      <div className="text-center ml-auto mr-auto">
+        <p className="text-centr p-2 bg-red-700 md:w-56 ml-auto mr-auto mt-6 text-white font-bold rounded-md">
+          Stories Of our Clients
+        </p>
+      </div>
       <div className="grid grid-cols-3 bg-red-700 mt-6">
         <div className="col-span-1 text-justify">
           <p className="font-bold text-white p-8 text-[14px]">
@@ -15,7 +17,9 @@ const StoriesSections = () => {
           </p>
           <div className="flex justify-between">
             <p></p>
-            <p className="text-white -mt-4 mr-8 text-[12px] hidden sm:block">Client’s Name</p>
+            <p className="text-white -mt-4 mr-8 text-[12px] hidden sm:block">
+              Client’s Name
+            </p>
           </div>
           <p className="text-[12px] p-8 text-white -mt-8 hidden sm:block">
             The slogan for the 2023 World Blood Donor Day campaign is “Give
@@ -40,11 +44,6 @@ const StoriesSections = () => {
         </div>
       </div>
 
-
-
-
-
-
       <div className="mt-6 grid md:grid-cols-2 gap-6">
         <div className="grid md:grid-cols-3 grid-cols-4 bg-red-700 mt-6">
           <div className="md:col-span-1 col-span-2 text-justify">
@@ -76,10 +75,6 @@ const StoriesSections = () => {
             ></img>
           </div>
         </div>
-
-
-
-
 
         {/* secent */}
         <div className="grid md:grid-cols-3 grid-cols-4 bg-red-700 mt-6">
@@ -114,9 +109,6 @@ const StoriesSections = () => {
         </div>
       </div>
 
-     
-
-
       <div className="mt-6 grid md:grid-cols-2 gap-6">
         <div className="grid md:grid-cols-3 grid-cols-4 bg-red-700 mt-6">
           <div className="md:col-span-1 col-span-2 text-justify">
@@ -148,10 +140,6 @@ const StoriesSections = () => {
             ></img>
           </div>
         </div>
-
-
-
-
 
         {/* secent */}
         <div className="grid md:grid-cols-3 grid-cols-4 bg-red-700 mt-6">
@@ -186,10 +174,6 @@ const StoriesSections = () => {
         </div>
       </div>
 
-
-
-
-
       <div className="mt-6 grid md:grid-cols-2 gap-6">
         <div className="grid md:grid-cols-3 grid-cols-4 bg-red-700 mt-6">
           <div className="md:col-span-1 col-span-2 text-justify">
@@ -221,10 +205,6 @@ const StoriesSections = () => {
             ></img>
           </div>
         </div>
-
-
-
-
 
         {/* secent */}
         <div className="grid md:grid-cols-3 grid-cols-4 bg-red-700 mt-6">
@@ -258,11 +238,6 @@ const StoriesSections = () => {
           </div>
         </div>
       </div>
-
-
-
-
-      
     </div>
   );
 };
