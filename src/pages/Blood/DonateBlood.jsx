@@ -3,6 +3,7 @@ import Navbar from "../../components/Home/Navbar";
 import CarouselBanner from "../../components/Home/CarouselBanner";
 import Footer from "../../components/Home/Footer";
 import DonateBloodPage from "./DonateBloodPage";
+import DonorCarousel from "../../components/Home/Carousel/DonorCarousel";
 
 
 export default function DonateBlood() {
@@ -12,7 +13,7 @@ export default function DonateBlood() {
         <Navbar />
       </div>
       <div className="">
-        <CarouselBanner />
+        <DonorCarousel />
       </div>
       <div className="mx-24">
         <DonateBloodPage></DonateBloodPage>
