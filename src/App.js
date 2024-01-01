@@ -30,7 +30,6 @@ import ContactUsPage from "./pages/ContactUsPage";
 
 function App() {
   const token = localStorage.getItem("token");
-
   return (
     <Router>
       <Routes>
