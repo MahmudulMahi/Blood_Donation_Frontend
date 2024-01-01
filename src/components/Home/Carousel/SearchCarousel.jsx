@@ -1,5 +1,8 @@
 import React from "react";
 import carouselBanner from "../../../assets/carouselBanner.jpg";
+import location from "../../../assets/ion_location.svg";
+import loading from "../../../assets/eos-icons_loading.svg";
+import location2 from "../../../assets/ion_location2.svg"
 
 export default function SearchCarousel() {
   return (
@@ -15,7 +18,7 @@ export default function SearchCarousel() {
             width: "100%",
           }}
         >
-          <div className="h-[500px] flex flex-col items-start  justify-start ml-32 mr-32 mb-20 text-white">
+          <div className="h-[500px] flex flex-col items-start  justify-start ml-32 mr-32 text-white -mt-10">
             <div className="text-xl font-bold mb-2 mt-60">
               Check Donor Near You
             </div>
@@ -69,6 +72,38 @@ export default function SearchCarousel() {
               <button className="bg-brandPrimary text-white rounded p-2">
                 Search Now
               </button>
+            </div>
+          </div>
+          <div className="flex justify-end ml-32 mr-32 text-white mb-20 -mt-28">
+            <div className="bg-gray-100 bg-opacity-70 p-3 rounded flex items-center">
+              <div className="bg-brandPrimary p-2 rounded">
+                <img
+                  src={location}
+                  alt="location"
+                  className="w-8 h-8 border-2 border-brandPrimary rounded"
+                />
+              </div>
+            </div>
+            <div className="ml-2 text-white mt-6">
+              Click Here To Open Your Location
+            </div>
+            <div className="bg-gray-100 bg-opacity-70 p-3 rounded flex items-center ml-2">
+              <div className="bg-brandPrimary p-2 rounded">
+                <img
+                  src={loading}
+                  alt="location"
+                  className="w-8 h-8 border-2 border-brandPrimary rounded"
+                />
+              </div>
+            </div>
+            <div className="bg-gray-100 bg-opacity-70 p-3 rounded flex items-center ml-3">
+              <div className="bg-white p-2 rounded">
+                <img
+                  src={location2}
+                  alt="location"
+                  className="w-8 h-8 border-2 border-white rounded"
+                />
+              </div>
             </div>
           </div>
         </div>
