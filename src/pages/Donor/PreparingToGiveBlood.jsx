@@ -17,7 +17,7 @@ const PreparingToGiveBlood = () => {
       <PreparingToGiveBloodPage></PreparingToGiveBloodPage>
     </div>
     
-      <div className='mt-96'>
+      <div className=''>
         <Footer></Footer>
       </div>
     </div>
