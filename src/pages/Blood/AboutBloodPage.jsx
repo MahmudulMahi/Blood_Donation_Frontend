@@ -24,7 +24,7 @@ export default function AboutBloodPage() {
       .then(data => setAboutCard(data))
   }, [])
   return (
-    <div className="mx-28">
+    <div className="lg:mx-28">
       {" "}
       <div className='flex flex-col md:flex-row justify-between mt-10   '>
         <div className='lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4'>
@@ -51,63 +51,69 @@ export default function AboutBloodPage() {
           Why Give Blood
         </button>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {
             aboutCard.map(card => <AboutCard key={card.id} card={card}></AboutCard>)
           }
         </div>
       </div>
       {/* Your blood donation essentials */}
-      <div className="flex flex-col md:flex-col lg:flex-row gap-10 p-1 mt-10 ">
-        <div>
+      <div className=" grid grid-cols-1 lg:grid-cols-4 mt-10 md:mt-0 items-center justify-center p-5 ">
+      {/* flex flex-col md:flex-col lg:flex-row gap-10 p-1 */}
+        <div className="col-span-1 mr-6">
           <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 lg:mt-2 md:mt-2 mt-0 font-bold shadow-md  text-left">
             <span className=""> Your blood</span> <br />
             donation essentials
           </button>
 
           <div >
-            <img className="w-[600px] md:w-full lg:w-[600px]  md:h-[600px] h-[300px] mt-12 rounded-2xl" src={blarimg} alt="" />
+            <img className=" w-full h-full   mt-12 rounded-2xl" src={blarimg} alt="" />
+            {/* w-[600px] md:w-full lg:w-[600px]  md:h-[600px] h-[300px] */}
           </div>
         </div>
 
-        <div className=" h-[900px] md:h-[1250px] lg:h-[800px]  w-full lg:w-3/4  bg-[#E11B221A] overflow-hidden rounded-xl">
-          <div className="flex flex-col md:flex-col lg:flex-row items-center md:gap-12 gap-2 justify-center mt-8">
-            <div className=" ">
-              <img className=" w-[100px] md:w-[200px] h-[100px] md:h-[200px] rounded-full" src={bloodPng} alt="" />
+        <div className="col-span-3 md:pl-5  mt-8  bg-[#E11B221A] overflow-hidden rounded-xl">
+        {/* h-[900px] md:h-[1250px] lg:h-[800px]  w-full lg:w-3/4  */}
+          <div className="flex flex-col md:flex-col lg:flex-row items-center  gap-2 justify-center mt-8">
+            <div className=" lg:w-1/4 ">
+            {/* w-[100px] md:w-[150px] h-[100px] md:h-[150px] */}
+              <img className=" w-[100px] h-[100px] rounded-full" src={bloodPng} alt="" />
             </div>
-            <div>
+            <div className="w-3/4">
               <h2 className="text-[#E11B22] pb-1 md:pb-5 ">How much blood do you give when you donate?</h2>
-              <p className=" w-[300px] md:w-[500px]">470ml. It's about 8% of the average adult's blood volume. Within 24-48 hours of donating, your body will have fully restored your blood volume.</p>
+              <p className=" ">
+              {/* w-[300px] md:w-[500px] */}
+                470ml. It's about 8% of the average adult's blood volume. Within 24-48 hours of donating, your body will have fully restored your blood volume.</p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-col lg:flex-row items-center md:gap-12 gap-2 justify-center mt-8">
-            <div className=" ">
-              <img className="w-[100px] md:w-[200px] h-[100px] md:h-[200px] rounded-full" src={bloodPng} alt="" />
+          <div className="flex flex-col md:flex-col lg:flex-row items-center  gap-2 justify-center mt-8">
+            <div className=" lg:w-1/4 ">
+              <img className=" w-[100px] h-[100px]  rounded-full" src={bloodPng} alt="" />
             </div>
-            <div>
+            <div className="w-3/4">
               <h2 className="text-[#E11B22] pb-1 md:pb-5 ">How much blood do you give when you donate?</h2>
-              <p className="w-[300px] md:w-[500px]">470ml. It's about 8% of the average adult's blood volume. Within 24-48 hours of donating, your body will have fully restored your blood volume.</p>
+              <p className=" ">
+              {/* w-[300px] md:w-[500px] */}
+                470ml. It's about 8% of the average adult's blood volume. Within 24-48 hours of donating, your body will have fully restored your blood volume.</p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-col lg:flex-row items-center md:gap-12 gap-2 justify-center mt-8">
-            <div className=" ">
-              <img className="w-[100px] md:w-[200px] h-[100px] md:h-[200px] rounded-full" src={bloodPng} alt="" />
+          <div className="flex flex-col md:flex-col lg:flex-row items-center  gap-2 justify-center mt-8">
+            <div className=" lg:w-1/4 ">
+              <img className="  w-[100px] h-[100px]  rounded-full " src={bloodPng} alt="" />
             </div>
-            <div>
+            <div className="w-3/4">
               <h2 className="text-[#E11B22] pb-1 md:pb-5 ">How much blood do you give when you donate?</h2>
-              <p className="w-[300px] md:w-[500px]">470ml. It's about 8% of the average adult's blood volume. Within 24-48 hours of donating, your body will have fully restored your blood volume.</p>
+              <p className=" ">
+              {/* w-[300px] md:w-[500px] */}
+                470ml. It's about 8% of the average adult's blood volume. Within 24-48 hours of donating, your body will have fully restored your blood volume.</p>
             </div>
           </div>
         </div>
       </div>
       {/* How your donated red blood cells help */}
-      <div className="mt-12 bg-[#FFF]  w-full lg:h-[600px] md:h-[700px] h-[1360px]  " style={{
+      <div className="mt-12 bg-[#FFF]  w-full lg:h-[600px] md:h-[700px] h-[1360px] p-2 " style={{
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"
       }}>
-
-
-
-
 
         <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-auto-flow  ">
           <h2>   <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md  mb-10 md:mb-0 ">
@@ -120,7 +126,7 @@ export default function AboutBloodPage() {
               <img src={donatedimg1} alt="" />
             </div>
             <div>
-              <h2 className="text-[#E11B22] font-bold text-[60px]">34%</h2>
+              <h2 className="text-[#E11B22] font-bold text-[50px]">34%</h2>
               <p className="text-[#E11B22]">cancer and
                 blood diseases</p>
             </div>
@@ -131,18 +137,18 @@ export default function AboutBloodPage() {
               <img src={donatedimg2} alt="" />
             </div>
             <div>
-              <h2 className="text-[#E11B22] font-bold text-[60px]">19%</h2>
+              <h2 className="text-[#E11B22] font-bold text-[50px]">19%</h2>
               <p className="text-[#E11B22] ">anemia and
                 other needs</p>
             </div>
           </div>
           {/* ========== */}
-          <div className="flex flex-row  items-center gap-6 lg:pl-10 space-y-7">
+          <div className="flex flex-row  items-center gap-6 space-y-7">
             <div>
               <img src={donatedimg3} alt="" />
             </div>
             <div>
-              <h2 className="text-[#E11B22] font-bold text-[60px]">18%</h2>
+              <h2 className="text-[#E11B22] font-bold text-[50px]">18%</h2>
               <p className="text-[#E11B22]">heart, organ and other <br />
                 non-orthopedic surgeries</p>
             </div>
@@ -153,7 +159,7 @@ export default function AboutBloodPage() {
               <img src={donatedimg4} alt="" />
             </div>
             <div>
-              <h2 className="text-[#E11B22] font-bold text-[60px]">13%</h2>
+              <h2 className="text-[#E11B22] font-bold text-[50px]">13%</h2>
               <p className="text-[#E11B22]">stomach, kidney and <br />
                 other diseases</p>
             </div>
@@ -164,18 +170,18 @@ export default function AboutBloodPage() {
               <img src={donatedimg5} alt="" />
             </div>
             <div>
-              <h2 className="text-[#E11B22] font-bold text-[60px]">34%</h2>
+              <h2 className="text-[#E11B22] font-bold text-[50px]">34%</h2>
               <p className="text-[#E11B22]">fractures and <br />
                 joint replacements</p>
             </div>
           </div>
           {/* ============= */}
-          <div className="flex flex-row items-center gap-6 lg:pl-10 space-y-7 ">
+          <div className="flex flex-row items-center gap-6  space-y-7 ">
             <div>
               <img src={donatedimg6} alt="" />
             </div>
             <div>
-              <h2 className="text-[#E11B22] font-bold text-[60px]">4%</h2>
+              <h2 className="text-[#E11B22] font-bold text-[50px]">4%</h2>
               <p className="text-[#E11B22]">help pregnant women, <br />
                 new mothers <br />
                 and young children</p>
@@ -187,7 +193,7 @@ export default function AboutBloodPage() {
               <img src={donatedimg7} alt="" />
             </div>
             <div>
-              <h2 className="text-[#E11B22] font-bold text-[60px]">2%</h2>
+              <h2 className="text-[#E11B22] font-bold text-[50px]">2%</h2>
               <p className="text-[#E11B22]">road incidents and <br />
                 other traumas
               </p>
@@ -198,7 +204,7 @@ export default function AboutBloodPage() {
 
       {/* Blood Types and Transfusion */}
 
-      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full md:h-[300px] h-[800px] relative p-1 " style={{
+      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full md:h-[300px] h-[550px] relative p-1 " style={{
 
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"
       }}>

@@ -27,7 +27,7 @@ const PreparingToGiveBloodPage = () => {
         </div>
       </div>
 
-      <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md w-full ">
+      <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2  lg:mt-8 md:mt-5 mt-3  font-bold shadow-md w-full ">
         <div className='flex items-center justify-center '>
           <div className=''>
             Preparing to give blood
@@ -198,7 +198,7 @@ const PreparingToGiveBloodPage = () => {
             It is essential to avoid alcohol before and after donating as this may affect hydration levels and delay recovery.</p>
         </div>
       </div>
-      <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-6 md:mt-2  font-bold shadow-md w-full ">
+      <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2  lg:mt-8 md:mt-5 mt-3  font-bold shadow-md w-full ">
         <div className='flex items-center justify-center '>
           <div className=''>
             Hours and locations
@@ -264,7 +264,7 @@ const PreparingToGiveBloodPage = () => {
         </div>
       </div>
 
-      <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md w-full ">
+      <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2  lg:mt-8 md:mt-5 mt-3  font-bold shadow-md w-full ">
         <div className='flex items-center justify-center '>
           <div className=''>
             Day of the donation
@@ -417,7 +417,7 @@ const PreparingToGiveBloodPage = () => {
         </div>
       </div>
 
-      <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md w-full ">
+      <button className= " bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2  lg:mt-8 md:mt-5 mt-3  font-bold shadow-md w-full ">
         <div className='flex items-center justify-center '>
           <div className=''>
             After giving blood
