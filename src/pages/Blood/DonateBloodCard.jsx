@@ -74,9 +74,9 @@ const DonateBloodCard = () => {
   return (
     
 
-<div className="w-full  p-4  border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+<div className="w-full border  rounded-lg shadow sm:p-8 ">
    
-   
+{/* dark:bg-gray-800 dark:border-gray-700 border-gray-200 */}
 <div className="flex flex-col items-start">
    
    
@@ -114,19 +114,19 @@ const DonateBloodCard = () => {
 
   
       {isOpen && (
-        <div className="grid grid-cols-4 gap-4 outline-none ">
-          {checkboxOptions.map((option, index) => (
-            <div key={index} className="flex items-center">
-              <input
-                type="checkbox"
-                className="form-checkbox text-red-500 h-5 w-5 mr-2"
-                id={`checkbox-${index}`}
-                onChange={() => {}}
-              />
-              <label htmlFor={`checkbox-${index}`}>{option}</label>
-            </div>
-          ))}
-        </div>
+    <div className="grid grid-cols-4 gap-3  ">
+    {checkboxOptions.map((option, index) => (
+      <div key={index} className="flex items-center justify-center">
+        <input
+          type="checkbox"
+          className="form-checkbox text-red-500 focus:ring-2 focus:ring-red-500 mr-[4px] "
+          id={`checkbox-${index}`}
+          onChange={() => {}}
+        />
+        <label htmlFor={`checkbox-${index}`}>{option}</label>
+      </div>
+    ))}
+  </div>
       )}
     </div>
 
@@ -162,12 +162,12 @@ const DonateBloodCard = () => {
   </div>
 )}
       {isOpen1 && (
-        <div className="grid grid-cols-4 gap-4 outline-none ">
+        <div className="grid grid-cols-4 gap-3 ">
           {checkboxOptions1.map((option, index) => (
-            <div key={index} className="flex items-center">
+            <div key={index} className="flex items-center justify-center ">
               <input
                 type="checkbox"
-                className="form-checkbox text-red-500 h-5 w-5 mr-2"
+                className="form-checkbox text-red-500 focus:ring-2 focus:ring-red-500 mr-[5px] "
                 id={`checkbox-${index}`}
                 onChange={() => {}}
               />

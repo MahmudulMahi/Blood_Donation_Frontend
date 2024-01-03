@@ -51,11 +51,11 @@ const DonateBloodPage = () => {
           Schedule
         </button>
       </div>
-      <div className="grid grid-cols-1  md:grid-cols-1 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1  md:grid-cols-1 lg:grid-cols-4 ">
         <div className="col-span-1  place-content-center lg:place-content-start w-full ">
           <DonateBloodCard></DonateBloodCard>
         </div>
-        <div className="col-span-3">
+        <div className="col-span-3 ml-7">
           <h2 className="text-lg font-bold mt-5">
             You Can Give Blood in the Following Options
           </h2>
