@@ -10,12 +10,14 @@ export default function KnowTheRiskPage() {
 
         <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border border-gray-300 border-t-0 border-l-0">
           <br></br>
-          <p className="p-2 text-sm">
-            We want to make sure you’re comfortable and safe when you give blood
-            and plasma. Most reactions are minor but we want you to be informed
-            to make decisions that are right for you and to provide you with
-            advice to help reduce the chance of a reaction.
-          </p>
+        
+            <p class="p-6 text-sm leading-relaxed">
+              We want to make sure you’re comfortable and safe when you give
+              blood and plasma. Most reactions are minor but we want you to be
+              informed to make decisions that are right for you and to provide
+              you with advice to help reduce the chance of a reaction.
+            </p>
+         
         </div>
       </div>
       <div className="mt-20 mb-5">

@@ -117,8 +117,11 @@ export default function HealthAndEligibility() {
       <div>
         <div className="mx-4 md:mx-10 lg:mx-20 xl:mx-28">
           <div>
-          <TitleTopComponent secondTitle={"Blood"} thirdTitle={"Health And Eligibility"} />
-        </div>
+            <TitleTopComponent
+              secondTitle={"Blood"}
+              thirdTitle={"Health And Eligibility"}
+            />
+          </div>
           <div className="mt-10 mb-6">
             <div className="text-white bg-brandPrimary rounded-md w-full md:w-2/3 lg:w-1/2 xl:w-2/6 mx-auto md:ml-10 p-4">
               <p>Why Eligibility Required For Blood Donation</p>
@@ -126,7 +129,7 @@ export default function HealthAndEligibility() {
 
             <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border border-gray-300 border-t-0 border-l-0">
               <br></br>
-              <p className="p-2 text-sm">
+              <p className="p-4 text-sm leading-relaxed">
                 You may be wondering if you can donate blood. Donating blood is
                 safe and easy to do, but there are a few basic requirements to
                 donate blood.If you're in good health and meet the general
@@ -337,7 +340,7 @@ export default function HealthAndEligibility() {
 
             <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border border-gray-300 border-t-0 border-l-0 ">
               <br></br>
-              <p className="p-2 text-sm">
+              <p className="p-6 text-sm leading-relaxed" style={{ marginBottom: "10px" }}>
                 If you're in good health and meet the general eligibility
                 criteria, then you are likely able to give blood. Even if you’ve
                 donated before, you may have specific questions about
