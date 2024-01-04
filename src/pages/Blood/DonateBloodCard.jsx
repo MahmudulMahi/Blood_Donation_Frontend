@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ideaicon from "../../assets/icons/ion_information-circle.png"
 import ideaicon2 from "../../assets/icons/Vector.png"
-
+import detailsicon from "../../assets/Polygon 1 (1).png"
 import arrowicon from "../../assets/icons/ion_caret-down-outline.png"
 import { AiOutlineCaretDown } from "react-icons/ai";
 
@@ -106,8 +106,11 @@ const DonateBloodCard = () => {
     </button>
 
     {isHovered && (
-  <div className="absolute left-[500px] mt-2 p-4 bg-[#E11B22] shadow-md">
-
+  <div className="absolute w-[300px] h-[100px] left-[395px] top-[620px] mt-2 p-4 bg-[#E11B22] shadow-md rounded-md">
+    {/* bg-[#E11B22] */}
+    <div className=' absolute -left-[33px]'>
+    <img src={detailsicon} alt="" />
+    </div>
     mahi mahi   dfghjklasdfghjkl;
   </div>
 )}
@@ -156,8 +159,10 @@ const DonateBloodCard = () => {
     </button>
     
     {isHovered1 && (
-  <div className="absolute left-[500px] mt-2 p-4 bg-[#E11B22] shadow-md">
-
+  <div className="absolute w-[300px] h-[100px] left-[395px] top-[760px] mt-2 p-4 bg-[#E11B22] shadow-md rounded-md">
+     <div className=' absolute -left-[33px]'>
+    <img src={detailsicon} alt="" />
+    </div>
     mahi mahi   dfghj;
   </div>
 )}
