@@ -28,6 +28,7 @@ import FirstTimeBlood from "./pages/Donor/FirstTimeBlood";
 import ContactUs from "./components/Home/ContactUs";
 import ContactUsPage from "./pages/ContactUsPage";
 import PreparingToGiveBlood from "./pages/Donor/PreparingToGiveBlood";
+import Schedule from "./pages/Blood/Schedule";
 
 function App() {
   const token = localStorage.getItem("token");
@@ -55,6 +56,7 @@ function App() {
         <Route path="/stories" element={<Stories/>}></Route>
         <Route path="/first-time-blood" element={<FirstTimeBlood/>}></Route>
         <Route path="/contact-us" element={<ContactUsPage/>}></Route>
+        <Route path="/donate-blood/schedule" element={<Schedule></Schedule>}></Route>
       </Routes>
     </Router>
   );
