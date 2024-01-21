@@ -106,7 +106,7 @@ const DonateBloodCard = () => {
     </button>
 
     {isHovered && (
-  <div className="absolute w-[300px] h-[100px] left-[395px] top-[620px] mt-2 p-4 bg-[#E11B22] shadow-md rounded-md">
+  <div className="absolute w-[300px]  h-[100px] left-[395px] top-[620px] mt-2 p-4 bg-[#E11B22] shadow-md rounded-md">
     {/* bg-[#E11B22] */}
     <div className=' absolute -left-[33px]'>
     <img src={detailsicon} alt="" />
