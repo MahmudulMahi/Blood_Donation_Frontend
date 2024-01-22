@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import ImageNews from "../../assets/newsDoctors.png";
 import ConerImg from "../../assets/Rectangle 660.png";
 import Pagination from "./Pagination";
+import axios from "axios";
 
 export default function CampaignGallerPage() {
   const [selectedDay, setSelectedDay] = useState("");
   const [selectedMonth, setSelectedMonth] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
+  const [data, setData] = useState([]);
 
   const days = Array.from({ length: 31 }, (_, i) => i + 1);
   const months = [
@@ -33,6 +35,18 @@ export default function CampaignGallerPage() {
     console.log("Selected Month:", selectedMonth);
     console.log("Selected Year:", selectedYear);
   };
+  useEffect(() => {
+  
+    axios.get('https://bloodbackend.visionarytechsolution.com/home/gallery')
+      .then(response => {
+      
+        setData(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }, []); 
+
 
   return (
     <div>
@@ -165,6 +179,56 @@ export default function CampaignGallerPage() {
       {/* Date End */}
       {/* Gallery Start */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-2 mb-8">
+
+      {data.map(item => (
+        <div key={item.id} className="shadow-2xl bg-white">
+          <img
+            className="top-0 left-0 h-8 w-8 z-40 relative"
+            src={ConerImg}
+            alt=""
+          />
+          <img className="-mt-8 w-[350px] h-[250px]" src={`https://bloodbackend.visionarytechsolution.com/${item.photo}`} alt=""></img>
+          <p className="bg-red-600 py-2 text-sm rounded-b-md text-center text-white">
+            {item.name}
+            <br />
+            {item.link}
+          </p>
+        </div>
+      ))}
+   
+        {/* <div className="shadow-2xl bg-white">
+          <img
+            className=" top-0 left-0 h-8 w-8 z-40 relative"
+            src={ConerImg}
+            alt=""
+          />
+          <img className="-mt-8" src={ImageNews} alt=""></img>
+          <p className="bg-red-600  py-2 text-sm rounded-b-md text-center text-white">
+            [For Dev]shadow only use when mouse point the specific box
+          </p>
+        </div>
+        <div className="shadow-2xl bg-white">
+          <img
+            className=" top-0 left-0 h-8 w-8 z-40 relative"
+            src={ConerImg}
+            alt=""
+          />
+          <img className="-mt-8" src={ImageNews} alt=""></img>
+          <p className="bg-white  py-2 text-sm rounded-b-md text-center text-black">
+            World Blood Donor Day 2023
+          </p>
+        </div>
+        <div className="shadow-2xl bg-white">
+          <img
+            className=" top-0 left-0 h-8 w-8 z-40 relative"
+            src={ConerImg}
+            alt=""
+          />
+          <img className="-mt-8" src={ImageNews} alt=""></img>
+          <p className="bg-white  py-2 text-sm rounded-b-md text-center text-black">
+            World Blood Donor Day 2023
+          </p>
+        </div>
         <div className="shadow-2xl bg-white">
           <img
             className=" top-0 left-0 h-8 w-8 z-40 relative"
@@ -208,51 +272,7 @@ export default function CampaignGallerPage() {
           <p className="bg-white  py-2 text-sm rounded-b-md text-center text-black">
             World Blood Donor Day 2023
           </p>
-        </div>
-        <div className="shadow-2xl bg-white">
-          <img
-            className=" top-0 left-0 h-8 w-8 z-40 relative"
-            src={ConerImg}
-            alt=""
-          />
-          <img className="-mt-8" src={ImageNews} alt=""></img>
-          <p className="bg-red-600  py-2 text-sm rounded-b-md text-center text-white">
-            [For Dev]shadow only use when mouse point the specific box
-          </p>
-        </div>
-        <div className="shadow-2xl bg-white">
-          <img
-            className=" top-0 left-0 h-8 w-8 z-40 relative"
-            src={ConerImg}
-            alt=""
-          />
-          <img className="-mt-8" src={ImageNews} alt=""></img>
-          <p className="bg-red-600  py-2 text-sm rounded-b-md text-center text-white">
-            [For Dev]shadow only use when mouse point the specific box
-          </p>
-        </div>
-        <div className="shadow-2xl bg-white">
-          <img
-            className=" top-0 left-0 h-8 w-8 z-40 relative"
-            src={ConerImg}
-            alt=""
-          />
-          <img className="-mt-8" src={ImageNews} alt=""></img>
-          <p className="bg-white  py-2 text-sm rounded-b-md text-center text-black">
-            World Blood Donor Day 2023
-          </p>
-        </div>
-        <div className="shadow-2xl bg-white">
-          <img
-            className=" top-0 left-0 h-8 w-8 z-40 relative"
-            src={ConerImg}
-            alt=""
-          />
-          <img className="-mt-8" src={ImageNews} alt=""></img>
-          <p className="bg-white  py-2 text-sm rounded-b-md text-center text-black">
-            World Blood Donor Day 2023
-          </p>
-        </div>
+        </div> */}
       </div>
       {/* Gallery End */}
       <div className="mb-5">
