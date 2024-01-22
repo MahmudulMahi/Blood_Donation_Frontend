@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ImageBlood from "../../assets/blood.jpeg";
 import ImageBlood1 from "../../assets/blood1.png";
 import TitleTopComponent from "../../components/Blood/TitleTopComponent";
+// import { useState } from "react";
+// import axios from "axios";
 
 function AboutBloodDonation() {
+
+  // const [content ,setContent]=useState('')
+
+  // useEffect(()=>{
+  //   axios.get('')
+  // },[])
   return (
     <div className=" ml-auto mr-auto">
       <div className="">

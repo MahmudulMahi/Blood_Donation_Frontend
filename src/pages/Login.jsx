@@ -2,10 +2,35 @@ import React from "react";
 import loginImg from "../assets/loginImg.png";
 import bloodIcon from "../assets/Group 44.svg";
 import "../App.css";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
+  const location=useLocation()
+  const handelLogin = e => {
+    e.preventDefault();
+    const form = e.target;
+  
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+    // axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+    // ,{headers:{'Authorization':`Bearer ${accessToken}`}}
+  
+    axios.post(`https://bloodbackend.visionarytechsolution.com/auth/login`, {email, password })
+      .then(res => {
+        console.log(res.data);
+        if (res.data.access) {
+          const accessToken = res.data.access;
+          localStorage.setItem("token",accessToken);
+          
+          navigate(location?.state ? location?.state : '/');
+        }
+      })
+      .catch(error => console.log(error));
+  };
+
   return (
     <div className="flex flex-col lg:flex-row h-screen bg-white">
       <div
@@ -39,11 +64,12 @@ const Login = () => {
           </h1>
         </div>
         <div className="flex justify-center">
-          <form className="space-y-4 w-full max-w-md  ">
+          <form  onSubmit={handelLogin} className="space-y-4 w-full max-w-md  ">
             <div className="flex flex-col">
               <input
-                type="text"
+                type="email"
                 id="username"
+                name="email"
                 placeholder="Username"
                 className="border-b-2 border-r-2 border-gray-200 p-2 focus:outline-none rounded focus:shadow-outline-brandPrimary"
               />
@@ -52,6 +78,7 @@ const Login = () => {
               <input
                 type="password"
                 id="password"
+                name="password"
                 placeholder="Password"
                 className="border-b-2 border-r-2 border-gray-200 p-2 focus:outline-none rounded focus:shadow-outline-brandPrimary"
               />

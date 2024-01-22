@@ -1,10 +1,14 @@
 import React from 'react';
+import hospitalimg from '../../assets/image 51.png'
 
 const HospitalCard = ({ahospital}) => {
-  const {image}=ahospital
+  const {name,location,image}=ahospital
   return (
-    <div>
-      <img src={image} alt="" />
+    <div className='text-center'>
+      <img src={hospitalimg} alt="" />
+      <p>{name}</p>
+      <p>{location}</p>
+      
     </div>
   );
 };
