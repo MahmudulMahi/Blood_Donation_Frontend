@@ -10,7 +10,7 @@ const IconLoader = () => {
       setLoading(false); 
     }, 2000);
 
-    const text = "Welcome To Blood Donation";
+    const text = "weelcome To Blood Donation";
     let index = 0;
 
     const textInterval = setInterval(() => {

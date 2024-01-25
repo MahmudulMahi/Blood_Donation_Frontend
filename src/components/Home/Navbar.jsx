@@ -229,7 +229,7 @@ const Navbar = () => {
           >
             <div className="flex justify-between items-center text-base lg:gap-8 md:gap-0 gap-8 h-full lg:px-[55px] md:px-0 px-0 ">
               <div
-                className="border-[1px] border-gray-400 h-full pl-2 pr-2 overflow-hidden"
+                className="border-gray-400 h-full pl-2 pr-2 overflow-hidden"
                 style={{
                   display: "flex",
                   justifyContent: "center",

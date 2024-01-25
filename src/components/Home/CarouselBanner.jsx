@@ -8,7 +8,7 @@ const CarouselBanner = () => {
     <div className="">
       <div className="w-full pt-[52px] bg-white">
         <div
-          className="pt-0 object-fit border border-black w-full"
+          className="pt-0 object-fit  w-full"
           style={{
             backgroundImage: `url(${carouselBanner})`,
             backgroundSize: "cover",
@@ -97,7 +97,7 @@ const CarouselBanner = () => {
 
       <div className="">
         <div
-          className="bg-[#e11b22b3] h-10 w-full -mt-[10px] text-white overflow-hidden"
+          className="bg-[#e11b22b3] h-10 w-full  text-white overflow-hidden"
           style={{
             fontFamily: "Poppins",
             fontSize: "14px",
