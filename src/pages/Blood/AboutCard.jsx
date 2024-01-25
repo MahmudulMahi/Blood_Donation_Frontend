@@ -5,7 +5,7 @@ const AboutCard = ({card}) => {
   return (
    
 
-    <div className=" w-full flex justify-center mt-12 space-x-2 hover:-translate-y-5 hover:border-b-4 rounded-xl hover:border-brandPrimary hover:rounded-xl transition-all duration-300 m-10 border">
+    <div className=" w-full flex justify-center mt-12 space-x-2 hover:-translate-y-5 hover:shadow-md hover:shadow-brandPrimary rounded-xl  hover:rounded-xl transition-all duration-300 m-10 border">
     <div className="relative flex flex-col text-gray-700 bg-white shadow-md  rounded-xl border border-brandPrimary">
       <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
         <img

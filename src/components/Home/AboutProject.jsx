@@ -78,7 +78,7 @@ export default function AboutProject() {
 
       {/* About */}
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:mt-12 md:mt-0 mt-8 gap-3 mx-[23px]">
-        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5 hover:border-b-4 rounded-lg hover:border-brandPrimary hover:rounded-xl transition-all duration-300 my-10 border">
+        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5  rounded-lg hover:shadow-md hover:shadow-brandPrimary hover:rounded-xl transition-all duration-300 my-10 border">
           <div className="relative flex flex-col text-gray-700 bg-white learn-more-div-border  rounded-lg border border-brandPrimary">
             <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
               <img
@@ -155,7 +155,7 @@ export default function AboutProject() {
           </div>
         </div>
         {/* end 1*/}
-        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5 hover:border-b-4 rounded-lg hover:border-brandPrimary hover:rounded-xl transition-all duration-300 my-10 border">
+        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5 rounded-lg  hover:shadow-md hover:shadow-brandPrimary hover:rounded-xl transition-all duration-300 my-10 border">
           <div className="relative flex flex-col text-gray-700 bg-white learn-more-div-border  rounded-lg border border-brandPrimary">
             <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
               <img
@@ -232,7 +232,7 @@ export default function AboutProject() {
           </div>
         </div>
         {/* end 2 */}
-        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5 hover:border-b-4 rounded-lg hover:border-brandPrimary hover:rounded-xl transition-all duration-300 my-10 border">
+        <div className="flex justify-center mt-10 space-x-2 hover:-translate-y-5  hover:shadow-md hover:shadow-brandPrimary  hover:rounded-xl transition-all duration-300 my-10 border">
           <div className="relative flex flex-col text-gray-700 bg-white learn-more-div-border  rounded-lg border border-brandPrimary">
             <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
               <img
