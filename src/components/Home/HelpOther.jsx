@@ -10,7 +10,7 @@ import HelpObject3 from "../../assets/icons/HelpObject3.png";
 
 const HelpOther = () => {
   return (
-    <div className="h-[450px] mt-[60px]">
+    <div className="h-[450px] mt-[60px] text-[#444]">
       <div>
         <h2
           className=" text-center"
@@ -21,6 +21,7 @@ const HelpOther = () => {
             fontWeight: 700,
             lineHeight: "normal",
             textTransform: "capitalize",
+            color:"#444"
           }}
         >
           Making your ways to help others
@@ -126,8 +127,9 @@ const HelpOther = () => {
                           fontSize: "13px",
                           fontStyle: "normal",
                           fontWeight: 500,
-                          lineHeight: "normal",
+                          // lineHeight: "normal",
                           textTransform: "capitalize",
+                          color:"#444"
                         }}
                       >
                         Lorem Ipsum is simply dummy text of the printing and
@@ -184,7 +186,7 @@ const HelpOther = () => {
                           fontSize: "13px",
                           fontStyle: "normal",
                           fontWeight: 500,
-                          lineHeight: "normal",
+                          // lineHeight: "normal",
                           textTransform: "capitalize",
                         }}
                       >
@@ -242,7 +244,7 @@ const HelpOther = () => {
                           fontSize: "13px",
                           fontStyle: "normal",
                           fontWeight: 500,
-                          lineHeight: "normal",
+                          // lineHeight: "normal",
                           textTransform: "capitalize",
                         }}
                       >

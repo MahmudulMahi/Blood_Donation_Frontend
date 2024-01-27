@@ -10,7 +10,7 @@ import { FiPhoneCall } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-10 text-lef">
       <div className="bg-[#E11B22] text-left ml-auto mr-auto text-white ">
         <div className="p-10 bg-[#E11B22] max-w-[2036px] ml-auto mr-auto">
           <div className=" mx-auto">
@@ -61,22 +61,22 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="mb-5 col-span-2">
-                <h4 className="pb-4 text-white "> About us</h4>
-                <p className="text-white  flex mb-2">
+              <div className="mb-5 col-span-2 ">
+                <h4 className=" text-white font-bold pb-4"> About us</h4>
+                <p className="text-white  flex ">
                   <span>
                     <MdBloodtype className="mt-1 w-6" />
                   </span>{" "}
                   About
                 </p>
-                <p className="text-white  flex mb-2">
+                <p className="text-white  flex mt-2">
                   {" "}
                   <span>
                     <MdBloodtype className="mt-1 w-6" />
                   </span>
                   Our Blood{" "}
                 </p>
-                <p className="text-white  flex mb-2">
+                <p className="text-white  flex mt-2">
                   <span>
                     <MdBloodtype className="mt-1 w-6" />
                   </span>
@@ -101,7 +101,7 @@ const Footer = () => {
                 </form>
               </div>
               <div className="mb-5 col-span-2">
-                <h4 className="text-white font-bold">Blood</h4>
+                <h4 className="text-white font-bold pb-4">Blood</h4>
                 <p className="flex mb-2">
                   <MdBloodtype className="mt-1" /> Request Blood
                 </p>
@@ -120,7 +120,7 @@ const Footer = () => {
               </div>
 
               <div className="mb-5 col-span-2">
-                <h4 className="pb-4 text-white">Donor</h4>
+                <h4 className="pb-4 text-white font-bold">Donor</h4>
                 <p className="flex mb-2">
                   <MdBloodtype className="mt-1" />
                   Donate Blood
@@ -140,7 +140,7 @@ const Footer = () => {
               </div>
 
               <div className="mb-5 col-span-1">
-                <h4 className="pb-4 text-white">Campaige</h4>
+                <h4 className="pb-4 text-white font-bold">Campaige</h4>
                 <p className="flex mb-2">
                   <MdBloodtype className="mt-1" />
                   News
@@ -160,7 +160,7 @@ const Footer = () => {
               </div>
 
               <div className="mb-5 col-span-2">
-                <h4 className="pb-4 text-white">Contact Info</h4>
+                <h4 className="pb-4 text-white font-bold">Contact Info</h4>
                 <div className="grid grid-cols-11 mb-2">
                   <p className="mb-2">
                     <FiPhoneCall className="mt-1" />

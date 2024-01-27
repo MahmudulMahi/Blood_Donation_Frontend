@@ -177,9 +177,9 @@ export default function HealthAndEligibility() {
                   {/* First Column */}
                   <div className="col-span-1 text-center sm:mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                      <div className="w-12 h-12 bg-brandPrimary rounded-full">
+                      <div className="w-16 h-16  bg-brandPrimary rounded-full">
                         <img
-                          className="w-11 h-11 object-cover rounded-full mx-auto"
+                          className="w-11 h-11 object-cover rounded-full mx-auto my-auto mt-2 "
                           src={ha1} // Replace with your image source
                           alt="Image 3"
                         />
@@ -193,9 +193,9 @@ export default function HealthAndEligibility() {
                   {/* Second Column */}
                   <div className="col-span-1 text-center sm:mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                      <div className="w-12 h-12 bg-brandPrimary rounded-full">
+                      <div className="w-16 h-16 bg-brandPrimary rounded-full">
                         <img
-                          className="w-11 h-11 object-cover rounded-full mx-auto"
+                          className="w-11 h-11 object-cover rounded-full mx-auto mt-2"
                           src={ha2} // Replace with your image source
                           alt="Image 3"
                         />
@@ -209,9 +209,9 @@ export default function HealthAndEligibility() {
                   {/* Third Column */}
                   <div className="col-span-1 text-center sm:mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                      <div className="w-12 h-12 bg-brandPrimary rounded-full">
+                      <div className="w-16 h-16 bg-brandPrimary rounded-full">
                         <img
-                          className="w-11 h-11 object-cover rounded-full mx-auto"
+                          className="w-11 h-11 object-cover rounded-full mx-auto mt-2"
                           src={ha3} // Replace with your image source
                           alt="Image 3"
                         />
@@ -225,9 +225,9 @@ export default function HealthAndEligibility() {
                   {/* Fourth Column */}
                   <div className="col-span-1 text-center sm:mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                      <div className="w-12 h-12 bg-brandPrimary rounded-full">
+                      <div className="w-16 h-16 bg-brandPrimary rounded-full">
                         <img
-                          className="w-11 h-11 object-cover rounded-full mx-auto"
+                          className="w-11 h-11 object-cover rounded-full mx-auto mt-2"
                           src={ha4} // Replace with your image source
                           alt="Image 3"
                         />
@@ -243,9 +243,9 @@ export default function HealthAndEligibility() {
                   {/* First Column */}
                   <div className="col-span-1 text-center sm:mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                      <div className="w-12 h-12 bg-brandPrimary rounded-full">
+                      <div className="w-16 h-16 bg-brandPrimary rounded-full">
                         <img
-                          className="w-11 h-11 object-cover rounded-full mx-auto"
+                          className="w-11 h-11 object-cover rounded-full mx-auto mt-2"
                           src={ha5} // Replace with your image source
                           alt="Image 3"
                         />
@@ -259,9 +259,9 @@ export default function HealthAndEligibility() {
                   {/* Second Column */}
                   <div className="col-span-1 text-center sm:mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                      <div className="w-12 h-12 bg-brandPrimary rounded-full">
+                      <div className="w-16 h-16 bg-brandPrimary rounded-full">
                         <img
-                          className="w-11 h-11 object-cover rounded-full mx-auto"
+                          className="w-11 h-11 object-cover rounded-full mx-auto mt-2"
                           src={ha6} // Replace with your image source
                           alt="Image 3"
                         />
@@ -275,9 +275,9 @@ export default function HealthAndEligibility() {
                   {/* Third Column */}
                   <div className="col-span-1 text-center sm:mt-20">
                     <div className="w-24 h-24 bg-red-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                      <div className="w-12 h-12 bg-brandPrimary rounded-full">
+                      <div className="w-16 h-16 bg-brandPrimary rounded-full">
                         <img
-                          className="w-11 h-11 object-cover rounded-full mx-auto"
+                          className="w-11 h-11 object-cover rounded-full mx-auto mt-2"
                           src={ha7} // Replace with your image source
                           alt="Image 3"
                         />

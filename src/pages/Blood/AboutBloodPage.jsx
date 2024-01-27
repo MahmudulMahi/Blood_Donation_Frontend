@@ -72,12 +72,12 @@ export default function AboutBloodPage() {
           </div>
         </div>
 
-        <div className="col-span-3 md:pl-5  mt-8  bg-[#E11B221A] overflow-hidden rounded-xl">
+        <div className="col-span-3 md:pl-5  mt-8  bg-[#E11B221A] overflow-hidden rounded-xl pb-10">
         {/* h-[900px] md:h-[1250px] lg:h-[800px]  w-full lg:w-3/4  */}
           <div className="flex flex-col md:flex-col lg:flex-row items-center  gap-2 justify-center mt-8">
             <div className=" lg:w-1/4 ">
             {/* w-[100px] md:w-[150px] h-[100px] md:h-[150px] */}
-              <img className=" w-[100px] h-[100px] rounded-full" src={bloodPng} alt="" />
+              <img className=" w-[150px] h-[150px] rounded-full" src={bloodPng} alt="" />
             </div>
             <div className="w-3/4">
               <h2 className="text-[#E11B22] pb-1 md:pb-5 ">How much blood do you give when you donate?</h2>
@@ -88,7 +88,7 @@ export default function AboutBloodPage() {
           </div>
           <div className="flex flex-col md:flex-col lg:flex-row items-center  gap-2 justify-center mt-8">
             <div className=" lg:w-1/4 ">
-              <img className=" w-[100px] h-[100px]  rounded-full" src={bloodPng} alt="" />
+              <img className=" w-[150px] h-[150px]  rounded-full" src={bloodPng} alt="" />
             </div>
             <div className="w-3/4">
               <h2 className="text-[#E11B22] pb-1 md:pb-5 ">How much blood do you give when you donate?</h2>
@@ -99,7 +99,7 @@ export default function AboutBloodPage() {
           </div>
           <div className="flex flex-col md:flex-col lg:flex-row items-center  gap-2 justify-center mt-8">
             <div className=" lg:w-1/4 ">
-              <img className="  w-[100px] h-[100px]  rounded-full " src={bloodPng} alt="" />
+              <img className="  w-[150px] h-[150px]  rounded-full " src={bloodPng} alt="" />
             </div>
             <div className="w-3/4">
               <h2 className="text-[#E11B22] pb-1 md:pb-5 ">How much blood do you give when you donate?</h2>
@@ -111,12 +111,12 @@ export default function AboutBloodPage() {
         </div>
       </div>
       {/* How your donated red blood cells help */}
-      <div className="mt-12 bg-[#FFF]  w-full lg:h-[600px] md:h-[700px] h-[1360px] p-2 " style={{
+      <div className="mt-12 bg-[#FFF]  w-full lg:h-[600px] md:h-[700px] h-[1360px]  rounded-lg " style={{
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"
       }}>
 
         <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-auto-flow  ">
-          <h2>   <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md  mb-10 md:mb-0 ">
+          <h2>   <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md   font-bold shadow-md  mb-10 md:mb-0 ">
             How your donated <br /> Red blood cells help
           </button></h2>
 
@@ -204,12 +204,12 @@ export default function AboutBloodPage() {
 
       {/* Blood Types and Transfusion */}
 
-      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full md:h-[300px] h-[550px] relative p-1 " style={{
+      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full md:h-[300px] h-[550px] relative  " style={{
 
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"
       }}>
         <div>
-          <h2>   <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md text-left mb-10 md:mb-0 absolute -top-10">
+          <h2>   <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md  mt-4 lg:mt-2 md:mt-2  font-bold shadow-md text-left mb-10 md:mb-0 absolute -top-10">
             Blood Types and Transfusion
           </button></h2>
         </div>
@@ -224,11 +224,11 @@ export default function AboutBloodPage() {
       </div>
 
       {/* total blood supply */}
-      <div className="mt-12 mb-8 rounded-lg  bg-[#FFF]  w-full md:h-[500px] h-[800px] relative p-1 shadow-2xl " style={{
+      <div className="mt-12 mb-8 rounded-lg  bg-[#FFF]  w-full md:h-[500px] h-[800px] relative  shadow-2xl " style={{
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"
       }}>
         <div>
-          <h2>   <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md ml-2 mt-4 lg:mt-2 md:mt-2  font-bold shadow-md text-left mb-10 md:mb-0 absolute -top-10">
+          <h2>   <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md  mt-4 lg:mt-2 md:mt-2  font-bold shadow-md text-left mb-10 md:mb-0 absolute -top-10">
             Total Blood Supply of World Bangladesh
           </button></h2>
         </div>
