@@ -9,9 +9,9 @@ import facebook from "../../assets/icons/bi_facebook.png";
 import gg_phone from "../../assets/icons/gg_phone.png";
 import React, { useState, useEffect } from "react";
 import { FaXmark, FaBars } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/mainLogo.png";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -81,7 +81,11 @@ const Navbar = () => {
       optionList: [
         { name: "Donate Blood", path: "/donate-blood", id: 1 },
         { name: "First Time Blood Donation", path: "/first-time-blood", id: 2 },
-        { name: "Preparing to give blood", path: "/preparing-to-give-blood", id: 3 },
+        {
+          name: "Preparing to give blood",
+          path: "/preparing-to-give-blood",
+          id: 3,
+        },
       ],
     },
     {
@@ -109,17 +113,31 @@ const Navbar = () => {
   ];
 
   const [activeModal, setActiveModal] = useState(null);
+  const [activeEarthModal, setActiveEarthModal] = useState(null);
 
   const openModal = (id) => {
     setActiveModal(id);
   };
 
+  const openEarthModal = () => {
+    setActiveEarthModal();
+    setIsHovered(true);
+  };
+
   const closeModal = () => {
     setActiveModal(null);
+  };
+  const closeEarthModal = () => {
+    setActiveEarthModal(null);
+    setIsHovered(false);
   };
 
   console.log("Active Modal", activeModal);
   const index = 1;
+
+  const handleEarthClick = () => {
+    navigate("/login");
+  };
 
   return (
     <div className="w-full md:bg-transparent  fixed top-0 left-0 right-0 inline-block zindexnav ">
@@ -286,6 +304,8 @@ const Navbar = () => {
                               className={`absolute transform -translate-x-2/2 top-full mt-[0px] ${
                                 index === 1
                                   ? "lg:-left-4 md:-left-0 -left-4"
+                                  : index === 4
+                                  ? "lg:-left-7 md:-left-0 -left-4"
                                   : ""
                               }`}
                               style={{ width: "calc(300% - 27px)" }}
@@ -339,6 +359,22 @@ const Navbar = () => {
               {/* button's for large devices */}
 
               <div className="space-x-6 hidden lg:flex items-center">
+                {/* <div
+                  className="rounded-full hover:bg-brandPrimary p-1"
+                  onMouseEnter={() => openEarthModal}
+                  onMouseLeave={closeEarthModal}
+                  onClick={handleEarthClick}
+                >
+                  <img
+                    src={isHovered ? navEarthLogoWhite : navEarthLogo}
+                    alt="logo"
+                    className="w-6 inline-block items-center rounded-full"
+
+                  />
+                </div> */}
+
+                {/* Earth Logo */}
+                {/* Earth Logo */}
                 <div
                   className="rounded-full hover:bg-brandPrimary p-1"
                   onMouseEnter={() => setIsHovered(true)}
@@ -347,9 +383,31 @@ const Navbar = () => {
                   <img
                     src={isHovered ? navEarthLogoWhite : navEarthLogo}
                     alt="logo"
-                    className="w-6 inline-block items-center rounded-full"
+                    className="w-6 inline-block items-center rounded-full "
                   />
+
+                  {/* Earth Modal */}
+                  {isHovered && (
+                    <div
+                      className="absolute top-full mt-2"
+                      onClick={() => {
+                        // Handle the "LOGIN" button click
+                        navigate("/login");
+                      }}
+                    >
+                      <div className="bg-white max-w-md mx-auto rounded-b-sm w-24 border border-t-0 shadow-xl -mt-[16px] -ml-9">
+                        <ul className="p-2">
+                          <li className="hover:bg-red-200 py-1 pl-1 text-xs rounded-sm">
+                            <button className="text-gray-900 hover:text-brandPrimary font-semibold">
+                              LOGIN
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  )}
                 </div>
+                {/* end */}
                 <div>
                   <div className="w-full bg-bodyColor rounded-3xl flex justify-center items-center cursor-pointer group">
                     <div className="flex flex-col gap-1.5 overflow-hidden">
@@ -419,5 +477,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
