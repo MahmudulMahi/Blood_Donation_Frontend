@@ -122,14 +122,14 @@ export default function HealthAndEligibility() {
               thirdTitle={"Health And Eligibility"}
             />
           </div>
-          <div className="mt-10 mb-6">
+          <div className="mt-10 mb-6 ">
             <div className="text-white bg-brandPrimary rounded-md w-full md:w-2/3 lg:w-1/2 xl:w-2/6 mx-auto md:ml-10 p-4">
-              <p>Why Eligibility Required For Blood Donation</p>
+              <p className="text-[20px]">Why Eligibility Required For Blood Donation</p>
             </div>
 
             <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border border-gray-300 border-t-0 border-l-0">
               <br></br>
-              <p className="p-4 text-sm leading-relaxed">
+              <p className="p-4 text-sm leading-8">
                 You may be wondering if you can donate blood. Donating blood is
                 safe and easy to do, but there are a few basic requirements to
                 donate blood.If you're in good health and meet the general
@@ -166,8 +166,8 @@ export default function HealthAndEligibility() {
             </div>
 
             <div>
-              <div className="text-white bg-brandPrimary rounded-md md:w-2/6 md:ml-96 p-4 relative mt-5">
-                <p className="text-center md:text-left">
+              <div className="text-white left-32  bg-brandPrimary rounded-md md:w-2/6 md:ml-96 p-4 relative mt-5">
+                <p className="text-center md:text-left ">
                   How we thought of establishing this website
                 </p>
               </div>
@@ -185,7 +185,7 @@ export default function HealthAndEligibility() {
                         />
                       </div>
                     </div>
-                    <p className="text-center text-xs sm:text-sm font-semibold">
+                    <p className="text-center text-xs  sm:text-sm font-semibold">
                       Must be at least 16 years old
                     </p>
                   </div>
@@ -201,7 +201,7 @@ export default function HealthAndEligibility() {
                         />
                       </div>
                     </div>
-                    <p className="text-center text-xs sm:text-sm font-semibold">
+                    <p className="text-center text-xs  sm:text-sm font-semibold">
                       Weight at least 50kg (110 pounds)
                     </p>
                   </div>
@@ -217,7 +217,7 @@ export default function HealthAndEligibility() {
                         />
                       </div>
                     </div>
-                    <p className="text-center text-xs sm:text-sm font-semibold">
+                    <p className="text-center text-xs  sm:text-sm font-semibold">
                       Be in good general health
                     </p>
                   </div>
@@ -233,7 +233,7 @@ export default function HealthAndEligibility() {
                         />
                       </div>
                     </div>
-                    <p className="text-center text-xs sm:text-sm font-semibold">
+                    <p className="text-center  text-xs sm:text-sm font-semibold">
                       Bring your ID
                     </p>
                   </div>
@@ -251,7 +251,7 @@ export default function HealthAndEligibility() {
                         />
                       </div>
                     </div>
-                    <p className="text-center text-xs sm:text-sm font-semibold">
+                    <p className="text-center  text-xs sm:text-sm font-semibold">
                       Eat within 2 hours ahead of your donation
                     </p>
                   </div>
@@ -267,7 +267,7 @@ export default function HealthAndEligibility() {
                         />
                       </div>
                     </div>
-                    <p className="text-center text-xs sm:text-sm font-semibold">
+                    <p className="text-center  text-xs sm:text-sm font-semibold">
                       Drink plenty of non-alcoholic liquids
                     </p>
                   </div>
@@ -283,7 +283,7 @@ export default function HealthAndEligibility() {
                         />
                       </div>
                     </div>
-                    <p className="text-center text-xs sm:text-sm font-semibold">
+                    <p className="text-center text-xs  sm:text-sm font-semibold">
                       Wait eight weeks between whole blood donations
                     </p>
                   </div>
@@ -335,12 +335,12 @@ export default function HealthAndEligibility() {
             </div>
 
             <div className="text-white bg-brandPrimary rounded-md w-full md:w-2/6 md:ml-10 p-4 mt-4">
-              <p>Additional Eligibility Requirements</p>
+              <p >Additional Eligibility Requirements</p>
             </div>
 
             <div className="md:ml-10 md:mr-20 rounded-md -mt-6 z-30 shadow-lg border border-gray-300 border-t-0 border-l-0 ">
               <br></br>
-              <p className="p-6 text-sm leading-relaxed" style={{ marginBottom: "10px" }}>
+              <p className="p-6 text-sm leading-8" style={{ marginBottom: "10px" }}>
                 If you're in good health and meet the general eligibility
                 criteria, then you are likely able to give blood. Even if you’ve
                 donated before, you may have specific questions about

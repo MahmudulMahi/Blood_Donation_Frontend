@@ -155,13 +155,13 @@ export default function LearnAboutBloodPage() {
         />
       </div>
 
-      <div className="lg:mx-28 md:mx-10 mx-3">
+      <div className="lg:mx-28 md:mx-10 mx-3 leading-8">
         <div className="mt-2">
           <button className="bg-brandPrimary text-[18px] text-white lg:py-3 md:py-2 py-2 lg:px-4 md:px-3 px-3 rounded-lg ml-0">
             Learn About Blood
           </button>
           <div className="about-blood-div-border pb-8 -mt-6 rounded-lg">
-            <div className="p-8 pb-0 lg:text-[12px] md:text-[12px] text-[13px] lg:pl-8 md:pl-8 pl-4">
+            <div className="p-8 pb-0 lg:text-[16px] md:text-[16px] text-[16px] lg:pl-8 md:pl-8 pl-4">
               <p className="text-justify">
                 Blood is a specialized body fluid. It has four main components:
                 plasma, red blood cells, white blood cells, and platelets. Blood
@@ -170,7 +170,7 @@ export default function LearnAboutBloodPage() {
             </div>
 
             <div>
-              <ul className="text-[12px] lg:pl-12 md:pl-10 lg:ml-0 md:ml-0 ml-12 pl-0 mt-2 font-semibold ul-li">
+              <ul className="text-[16px] lg:pl-12 md:pl-10 lg:ml-0 md:ml-0 ml-12 pl-0 mt-2 font-semibold ul-li">
                 <li className="">
                   transporting oxygen and nutrients to the lungs and tissues
                 </li>
@@ -188,7 +188,7 @@ export default function LearnAboutBloodPage() {
               </ul>
             </div>
 
-            <div className="lg:px-8 md:px-8 px-4 lg:text-[12px] md:text-[12px] text-[13px] lg:mt-2 md:mt-2 mt-0">
+            <div className="lg:px-8 md:px-8 px-4 lg:text-[16px] md:text-[12px] text-[13px] lg:mt-2 md:mt-2 mt-0">
               <p className="text-justify">
                 The blood that runs through the veins, arteries, and capillaries
                 is known as whole blood, a mixture of about 55 percent plasma
@@ -210,7 +210,7 @@ export default function LearnAboutBloodPage() {
             How Blood Type Is Determined
           </button>
           <div className="about-blood-div-border pb-8 -mt-6 rounded-lg">
-            <div className="p-8 pb-0 pt-10 lg:text-[12px] md:text-[12px] text-[13px] lg:pl-8 md:pl-8 pl-4">
+            <div className="p-8 pb-0 pt-10 lg:text-[16px] md:text-[12px] text-[13px] lg:pl-8 md:pl-8 pl-4">
               <p className="text-justify">
                 Blood types are determined by the presence or absence of certain
                 antigens–substances that can trigger an immune response if they
@@ -225,7 +225,7 @@ export default function LearnAboutBloodPage() {
               </p>
             </div>
 
-            <div className="lg:px-8 md:px-8 px-4 lg:text-[12px] md:text-[12px] text-[13px] lg:pt-8 md:pt-8 pt-4">
+            <div className="lg:px-8 md:px-8 px-4 lg:text-[16px] md:text-[12px] text-[13px] lg:pt-8 md:pt-8 pt-4">
               <p className="text-justify">
                 There are four major blood groups determined by the presence or
                 absence of two antigens, A and B, on the surface of red blood

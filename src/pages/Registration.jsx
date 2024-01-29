@@ -13,12 +13,12 @@ const Registration=()=>{
 
  
 
-  // const initialDays = Array.from({ length: 30 }, (_, index) => index + 1);
-  // const initialLastDays = Array.from({ length: 30 }, (_, index) => index + 1);
-  // const initialMonth = Array.from({ length: 12 }, (_, index) => index + 1);
-  // const initialLastMonth = Array.from({ length: 12 }, (_, index) => index + 1);
-  // const initialYear = Array.from({ length: 2023 }, (_, index) => index + 1);
-  // const initialLastYear = Array.from({ length: 2023 }, (_, index) => index + 1);
+  const initialDays = Array.from({ length: 30 }, (_, index) => index + 1);
+  const initialLastDays = Array.from({ length: 30 }, (_, index) => index + 1);
+  const initialMonth = Array.from({ length: 12 }, (_, index) => index + 1);
+  const initialLastMonth = Array.from({ length: 12 }, (_, index) => index + 1);
+  const initialYear = Array.from({ length: 2023 }, (_, index) => index + 1);
+  const initialLastYear = Array.from({ length: 2023 }, (_, index) => index + 1);
 
 
 
@@ -27,15 +27,15 @@ const Registration=()=>{
       fullName: "",
       lastName: "",
       phoneNumber: "",
-      dayID: "",
+      dayID: initialDays[1],
       email: "",
-      month: "",
-      year: "",
+      month: initialMonth[1],
+      year: initialYear[1],
       bloodgroup: "",
       nid: "",
-      lastday: "",
-      lastmonth: "",
-      lastyear: "",
+      lastday: initialLastDays[1],
+      lastmonth: initialLastMonth[1],
+      lastyear: initialLastYear[1],
       enteraddress: "", 
       feet: "",
       inch: "",
@@ -46,15 +46,28 @@ const Registration=()=>{
       gender:""
 
     },
-    onSubmit: (values, { setSubmitting }) => {
+    // , { setSubmitting }
+    onSubmit:(values ) => {
       console.log("values", values)
-      const isFormValid = Object.keys(values).every((key) => values[key] !== "");
+      // const isEmptyField = Object.values(values).some(value => value === "");
 
-      if (!isFormValid) {
-        console.log ("Please fill Up all fields before submitting.");
-        return;
-      }
+      // if (isEmptyField) {
+      //   console.log("Please fill in all fields before submitting.");
+      //   return;
+       
+      // }
+      // console.log("values", values)
+   
+      // const isFormValid = Object.values(values).every(value => value !== "" && value !== undefined && value !== null);
+
+      // if (!isFormValid) {
+      //   console.log ("Please fill Up all fields before submitting.");
+      //   return;
+      // }
+      // setSubmitting(true)
+   
       const dataToSend = {
+        
         first_name: values.fullName,
         last_name: values.lastName,
         password:values.password,
@@ -75,9 +88,7 @@ const Registration=()=>{
   
       axios.post(`https://bloodbackend.visionarytechsolution.com/auth/register`, dataToSend, {
         headers: {
-          'Content-Type': 'application/json',
-          
-          
+          'Content-Type': 'application/json',                  
         },
       })
       .then(response => {
@@ -86,7 +97,10 @@ const Registration=()=>{
       .catch(error => {
         console.error('Error posting data to the server:', error);
       });
+    
     },
+    
+    
   });
 
 
@@ -344,11 +358,11 @@ const Registration=()=>{
               </div>
 
               <form onSubmit={formik.handleSubmit}>
-              {formik.errors && (
+              {/* {formik.errors && (
         <div style={{ color: 'red', marginTop: '10px' }}>
           Please fill out all fields before submitting.
         </div>
-          )}
+          )} */}
                 <div className="w-full mt-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto">
                     <div className="col-span-2 flex items-center">
@@ -358,7 +372,7 @@ const Registration=()=>{
                       <InputFields
                         id="fullName"
                         type="text"
-                        placeholder="Full name"
+                        placeholder="First Name"
                         onChange={formik.handleChange}
                         value={formik.values.fullName}
                         className="border border-gray-400 rounded-md p-2 w-full"
@@ -368,7 +382,7 @@ const Registration=()=>{
                       <InputFields
                         id="lastName"
                         type="text"
-                        placeholder="Last name"
+                        placeholder="Last Name"
                         onChange={formik.handleChange}
                         value={formik.values.lastName}
                         className="border border-gray-400 rounded-md p-2 w-full"
