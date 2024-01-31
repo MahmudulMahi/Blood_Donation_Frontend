@@ -20,6 +20,7 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   //set toggle Menu
   const toggleMenu = () => {
@@ -142,6 +143,19 @@ const Navbar = () => {
 
   const handleButtonClick = () => {
     setIsModalOpen(!isModalOpen);
+  };
+
+  useEffect(() => {
+    // Check if the user is logged in when the component mounts
+    const storedToken = localStorage.getItem('token');
+    if (storedToken) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+  const handleLogout = () => {
+    // Clear the access token from local storage and set isLoggedIn to false
+    localStorage.removeItem('token');
+    setIsLoggedIn(false);
   };
 
   return (
@@ -422,27 +436,38 @@ const Navbar = () => {
                         <div  className=" bg-white max-w-md mx-auto rounded-b-sm w-32 border border-t-0 shadow-xl -mt-[19px] ml-12 ">
                           <ul className="p-2">
                             <li className="hover:bg-red-200 py-1 pl-1 text-xs rounded-sm">
+                      {isLoggedIn ?     <button
+                              onClick={handleLogout}
+                              className="text-gray-900 hover:text-brandPrimary font-semibold"
+                            >
+                              LOGOut
+                            </button>
+                          
+                            :
                             <button
-                                onClick={() => {
-                                
-                                  navigate("/login");
-                                }}
-                                className="text-gray-900 hover:text-brandPrimary font-semibold"
-                              >
-                                LOGIN
-                              </button>
+                            onClick={() => {
+                            
+                              navigate("/login");
+                            }}
+                            className="text-gray-900 hover:text-brandPrimary font-semibold"
+                          >
+                            LOGIN
+                          </button>
+                      }
                            
                             </li>
                             <li className="hover:bg-red-200 py-1 pl-1 text-xs rounded-sm">
-                            <button
-                                onClick={() => {
-                              
-                                  navigate("/registration");
-                                }}
-                                className="text-gray-900 hover:text-brandPrimary font-semibold"
-                              >
-                                REGISTRATION
-                              </button>
+                          {isLoggedIn ?""
+                              :<button
+                              onClick={() => {
+                            
+                                navigate("/registration");
+                              }}
+                              className="text-gray-900 hover:text-brandPrimary font-semibold"
+                            >
+                              REGISTRATION
+                            </button>
+                          }
                             </li>
                           </ul>
                         </div>

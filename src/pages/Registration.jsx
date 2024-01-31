@@ -36,7 +36,7 @@ const Registration=()=>{
       lastday: initialLastDays[1],
       lastmonth: initialLastMonth[1],
       lastyear: initialLastYear[1],
-      enteraddress: "", 
+      address: "", 
       feet: "",
       inch: "",
       age: "",
@@ -49,56 +49,54 @@ const Registration=()=>{
     // , { setSubmitting }
     onSubmit:(values ) => {
       console.log("values", values)
-      // const isEmptyField = Object.values(values).some(value => value === "");
+      const isEmptyField = Object.values(values).some(value => value === "");
 
-      // if (isEmptyField) {
-      //   console.log("Please fill in all fields before submitting.");
-      //   return;
+      if (isEmptyField) {
+        alert("Please fill in all fields before submitting.");
+        return;
        
-      // }
-      // console.log("values", values)
-   
-      // const isFormValid = Object.values(values).every(value => value !== "" && value !== undefined && value !== null);
-
-      // if (!isFormValid) {
-      //   console.log ("Please fill Up all fields before submitting.");
-      //   return;
-      // }
-      // setSubmitting(true)
-   
-      const dataToSend = {
+      }
+      else{
+        const dataToSend = {
         
-        first_name: values.fullName,
-        last_name: values.lastName,
-        password:values.password,
-        email: values.email,
-        dob: `${values.year}-${values.month}-${values.dayID}`,
-        blood_group: values.bloodgroup,
-        last_donate_date: `${values.lastyear}-${values.lastmonth}-${values.lastday}`,
-        height: values.feet + values.inch,
-        age: values.age,
-        phone_number: values.phoneNumber,
-        nid: values.nid,
-        address: values.enteraddress,
-        any_disease: values.disease,
-        weight:values.weight,
-        gender:values.gender
-
-      };
+          first_name: values.fullName,
+          last_name: values.lastName,
+          password:values.password,
+          email: values.email,
+          dob: `${values.year}-${values.month}-${values.dayID}`,
+          blood_group: values.bloodgroup,
+          last_donate_date: `${values.lastyear}-${values.lastmonth}-${values.lastday}`,
+          height: values.feet + values.inch,
+          age: values.age,
+          phone_number: values.phoneNumber,
+          nid: values.nid,
+          address: values.address,
+          any_disease: values.disease,
+          weight:values.weight,
+          gender:values.gender
   
-      axios.post(`https://bloodbackend.visionarytechsolution.com/auth/register`, dataToSend, {
-        headers: {
-          'Content-Type': 'application/json',                  
-        },
-      })
-      .then(response => {
-        console.log('Data successfully posted to the server:', response.data);
-      })
-      .catch(error => {
-        console.error('Error posting data to the server:', error);
-      });
+        };
+  
+        
     
-    },
+        axios.post(`https://bloodbackend.visionarytechsolution.com/auth/register`, dataToSend, {
+          headers: {
+            'Content-Type': 'application/json',                  
+          },
+        })
+        .then(response => {
+          console.log('Data successfully posted to the server:', response.data);
+        })
+        .catch(error => {
+          console.error('Error posting data to the server:', error);
+        });
+      
+      }
+      }
+      
+      
+   
+
     
     
   });
@@ -149,7 +147,7 @@ const Registration=()=>{
   };
   const handleDiseaseChange = (selectedDisease) => {
     formik.handleChange('disease')(selectedDisease);
-    console.log('Selected Year:', selectedDisease)
+    console.log('Selected disease:', selectedDisease)
 
   };
 
@@ -245,9 +243,9 @@ const Registration=()=>{
     ];
 
     const diseaseOptions = [
-      { label: "Diabetes", value: "Diabetes" },
-      { label: "Hypertension", value: "Hypertension" },
-      { label: "Asthma", value: "Asthma" },
+      { label: "Diabetes", value: "2" },
+      { label: "Hypertension", value: "1" },
+      { label: "Asthma", value: "3" },
     ];
 
   
@@ -477,6 +475,8 @@ const Registration=()=>{
                         className="border border-gray-400 rounded-md p-2 w-full"
                       />
                     </div>
+  
+                    
                   </div>
                
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
@@ -505,6 +505,20 @@ const Registration=()=>{
                     </div>
 
                     <div className="col-span-2 flex items-center">
+                      <DynamicLabel label="Email password" isRequired={false} />
+                    </div>
+                    <div className="col-span-3 zindexnav">
+                      <input
+                        id="password"
+                        type="password"
+                        placeholder="Enter password"
+                        onChange={formik.handleChange}
+                        value={formik.values.password}
+                        name='password'
+                        className="border border-gray-400 rounded-md p-2 w-full"
+                      />
+                    </div>
+                    {/* <div className="col-span-2 flex items-center">
                       <DynamicLabel label="NID" isRequired={false} />
                     </div>
                     <div className="col-span-3 zindexnav">
@@ -517,7 +531,7 @@ const Registration=()=>{
                         name='nid'
                         className="border border-gray-400 rounded-md p-2 w-full"
                       />
-                    </div>
+                    </div> */}
                   </div>
                 
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
@@ -575,11 +589,11 @@ const Registration=()=>{
                     </div>
                     <div className="col-span-3 zindexnav">
                       <InputFields
-                        id="enteraddress"
+                        id="address"
                         type="text"
                         placeholder="Enter Address"
                         onChange={formik.handleChange}
-                        value={formik.values.enteraddress}
+                        value={formik.values.address}
                         className="border border-gray-400 rounded-md p-2 w-full"
                         style={{
                           minHeight: "80px",
@@ -688,6 +702,7 @@ const Registration=()=>{
                         <div className="col-span-1"></div>
                       </div>
                     </div>
+                    
 
                     <div className="col-span-2 flex"></div>
                     <div className="col-span-3 zindexnav">
@@ -720,6 +735,20 @@ const Registration=()=>{
                         <div className="col-span-1"></div>
                       </div>
                     </div>
+                    <div className="col-span-2 flex items-center">
+                      <DynamicLabel label="NID" isRequired={false} />
+                    </div>
+                    <div className="col-span-3 zindexnav">
+                      <InputFields
+                        id="nid"
+                        type="text"
+                        placeholder="Enter NID Number"
+                        onChange={formik.handleChange}
+                        value={formik.values.nid}
+                        name='nid'
+                        className="border border-gray-400 rounded-md p-2 w-full"
+                      />
+                    </div>
 
                     <div className="col-span-2 flex"></div>
                     <div className="col-span-3 zindexnav">
@@ -733,18 +762,22 @@ const Registration=()=>{
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                     <div className="col-span-2 flex items-center">
-                      <DynamicLabel label="Any Disease" isRequired={false} />
+                      <DynamicLabel label="Any Disease" isRequired={true} />
                     </div>
                     <div className="col-span-5 zindexnav">
                       <InputFields
+                      id="disease"
                         type="dropdown"
-                        id="disease "
+                     
                         placeholder="Select"
                         options={diseaseOptions}
-                        onChange={handleDiseaseChange }
+                        onChange={handleDiseaseChange}
                         value={formik.values.disease}
                         name='disease'
                         className="border border-gray-400 rounded-md p-2 w-full"
+                        
+                        showIcon={true}
+                        iconColor="black"
                       />
                     </div>
 
