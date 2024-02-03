@@ -146,14 +146,14 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // Check if the user is logged in when the component mounts
+   
     const storedToken = localStorage.getItem('token');
     if (storedToken) {
       setIsLoggedIn(true);
     }
   }, []);
   const handleLogout = () => {
-    // Clear the access token from local storage and set isLoggedIn to false
+    
     localStorage.removeItem('token');
     setIsLoggedIn(false);
   };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import RegLayer from "../assets/regLayer.jpg";
 import bloodIcon from "../assets/Group 44.svg";
 import group from "../assets/Group.svg";
@@ -10,6 +10,15 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Registration=()=>{
+
+  const [disease, setDisease]=useState([])
+  useEffect(()=>{
+    axios.get(`https://bloodbackend.visionarytechsolution.com/auth/all_disease`)
+    .then(res=>{
+      setDisease(res.data)
+      console.log(res.data)
+    })
+  },[])
 
  
 
@@ -27,15 +36,15 @@ const Registration=()=>{
       fullName: "",
       lastName: "",
       phoneNumber: "",
-      dayID: initialDays[1],
+      dayID: initialDays[0] ,
       email: "",
-      month: initialMonth[1],
-      year: initialYear[1],
+      month: initialMonth[0],
+      year: initialYear[0],
       bloodgroup: "",
       nid: "",
-      lastday: initialLastDays[1],
-      lastmonth: initialLastMonth[1],
-      lastyear: initialLastYear[1],
+      lastday: initialLastDays[0],
+      lastmonth: initialLastMonth[0],
+      lastyear: initialLastYear[0],
       address: "", 
       feet: "",
       inch: "",
@@ -93,12 +102,7 @@ const Registration=()=>{
       
       }
       }
-      
-      
-   
-
-    
-    
+       
   });
 
 
@@ -242,11 +246,10 @@ const Registration=()=>{
       { label: "Other", value: "Other" },
     ];
 
-    const diseaseOptions = [
-      { label: "Diabetes", value: "2" },
-      { label: "Hypertension", value: "1" },
-      { label: "Asthma", value: "3" },
-    ];
+
+    const diseaseOptions = disease.map(aDisease => ({ key: aDisease.id, label: aDisease.name, value: aDisease.id }));
+
+    
 
   
 
