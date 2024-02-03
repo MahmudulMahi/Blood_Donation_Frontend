@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Registration=()=>{
+  const currentYear = new Date().getFullYear();
 
   const [disease, setDisease]=useState([])
   useEffect(()=>{
@@ -26,7 +27,7 @@ const Registration=()=>{
   const initialLastDays = Array.from({ length: 30 }, (_, index) => index + 1);
   const initialMonth = Array.from({ length: 12 }, (_, index) => index + 1);
   const initialLastMonth = Array.from({ length: 12 }, (_, index) => index + 1);
-  const initialYear = Array.from({ length: 2023 }, (_, index) => index + 1);
+  const initialYear = Array.from({ length: 50 }, (_, index) => index + 1);
   const initialLastYear = Array.from({ length: 2023 }, (_, index) => index + 1);
 
 
@@ -202,11 +203,11 @@ const Registration=()=>{
 
 
  
-    const yearsOptions = Array.from({ length: 10 }, (_, index) => ({
-      label: (2023 + index).toString(),
-      value: 2023 + index,
+    const yearsOptions = Array.from({ length: currentYear - 1970 + 1 }, (_, index) => ({
+      label: (1970 + index).toString(),
+      value: 1970 + index,
     }));
-    const yearsLastOptions = Array.from({ length: 10 }, (_, index) => ({
+    const yearsLastOptions = Array.from({ length: currentYear - 2023 + 1 }, (_, index) => ({
       label: (2023 + index).toString(),
       value: 2023 + index,
     }));
@@ -431,7 +432,9 @@ const Registration=()=>{
                             value={formik.values.dayID}
                             className="border border-gray-400 rounded-md p-2 w-full zindexnav"
                             showIcon={true}
+                            
                           />
+                          <p>Day</p>
                         </div>
                         <div className="col-span-1">
                           <InputFields
@@ -446,6 +449,7 @@ const Registration=()=>{
                             showIcon={true}
                             iconColor="black"
                           />
+                          <p>Month</p>
                         </div>
                         <div className="col-span-1">
                           <InputFields
@@ -460,6 +464,7 @@ const Registration=()=>{
                             showIcon={true}
                             iconColor="black"
                           />
+                          <p>year</p>
                         </div>
                       </div>
                     </div>
@@ -555,6 +560,7 @@ const Registration=()=>{
                             className="border border-gray-400 rounded-md p-2 w-full zindexnav"
                             showIcon={true}
                           />
+                          <p>Day</p>
                         </div>
                         <div className="col-span-1">
                           <InputFields
@@ -569,6 +575,7 @@ const Registration=()=>{
                             showIcon={true}
                             iconColor="black"
                           />
+                          <p>month</p>
                         </div>
                         <div className="col-span-1  ">
                           <InputFields
@@ -583,6 +590,7 @@ const Registration=()=>{
                             showIcon={true}
                             iconColor="black"
                           />
+                          <p>Year</p>
                         </div>
                       </div>
                     </div>
