@@ -5,26 +5,36 @@ import InputFields from "../../components/InputFields/InputFields";
 import TitleTopComponent from "../../components/Blood/TitleTopComponent";
 
 const RequestBloodPage = () => {
-  const initialValues = {
-    patientName: "",
-    patientAge: "",
-    phoneNumber: "",
-    lastName: "",
 
-    // Add more fields and their initial values as needed
-  };
+  const formik =useFormik({
 
-  const formik = useFormik({
-    initialValues: initialValues,
-    onSubmit: (values) => {
-      handleSubmit(values);
+    initialValues : {
+      patientName: "",
+      patientAge: "",
+      phoneNumber: "",
+      lastName: "",
+  
+      
     },
-  });
 
-  const handleSubmit = (values) => {
-    // Handle form submission
-    console.log(values);
-  };
+onSubmit:(values)=>{
+  console.log("values", values)
+  const isEmptyField = Object.values(values).some(value => value === "");
+  
+  if(isEmptyField){
+    alert("Please fill in all fields before submitting.")
+    return
+  }
+  else{
+    const bloodToSend={
+
+    }
+  }
+}
+})
+
+
+
 
   const urgencyOptions = [
     { label: "Low", value: "Low" },
@@ -98,6 +108,8 @@ const RequestBloodPage = () => {
                   type="text"
                   placeholder="Patient Name"
                   onChange={formik.handleChange}
+                  value={formik.values.patientName}
+                  name="patientName"
                   className="border border-gray-400 rounded-md p-2 w-full"
                 />
               </div>
@@ -107,10 +119,12 @@ const RequestBloodPage = () => {
               <DynamicLabel label="Select Urgency" isRequired={true} />
               <div className="mt-1">
                 <InputFields
+                  id="requestType"
                   type="dropdown"
                   placeholder="Scheduling/Urgent"
                   options={urgencyOptions}
                   onChange={formik.handleChange}
+                  value={formik.values.requestType}
                   className="border border-gray-400 rounded-md p-2 w-full"
                   showIcon={true}
                 />
@@ -123,10 +137,12 @@ const RequestBloodPage = () => {
               <DynamicLabel label="Blood Group" isRequired={true} />
               <div className="mt-1">
                 <InputFields
+                  id="bloodGroup"
                   type="dropdown"
                   placeholder="Select"
                   options={bloodGroupOptions}
                   onChange={formik.handleChange}
+                  value={formik.values.bloodGroup}
                   className="border border-gray-400 rounded-md p-2 w-full"
                   showIcon={true}
                   iconColor="black"
@@ -141,10 +157,12 @@ const RequestBloodPage = () => {
               />
               <div className="mt-1">
                 <InputFields
+             
                   type="date"
                   id="datePicker"
                   field={{ value: null }}
                   onChange={formik.handleChange}
+                  value={formik.values.datePicker}
                   placeholder="Select a date"
                   className="w-full"
                 />
@@ -157,10 +175,12 @@ const RequestBloodPage = () => {
               <DynamicLabel label="Request Donation Type" isRequired={true} />
               <div className="mt-1">
                 <InputFields
+                  id="donationType"
                   type="dropdown"
                   placeholder="Select"
                   options={donationTypeOptions}
                   onChange={formik.handleChange}
+                  value={formik.values.donationType}
                   className="border border-gray-400 rounded-md p-2 w-full"
                   showIcon={true}
                   iconColor="black"
@@ -172,10 +192,12 @@ const RequestBloodPage = () => {
               <DynamicLabel label="Disease Name" isRequired={true} />
               <div className="mt-1">
                 <InputFields
+                  id="transfusionBlood"
                   type="dropdown"
                   placeholder="Select"
                   options={transfusionOptions}
                   onChange={formik.handleChange}
+                  value={formik.values.transfusionBlood}
                   className="border border-gray-400 rounded-md p-2 w-full"
                   showIcon={true}
                   iconColor="black"
@@ -193,6 +215,7 @@ const RequestBloodPage = () => {
                   type="text"
                   placeholder="Patient Age"
                   onChange={formik.handleChange}
+                  value={formik.values.patientAge}
                   className="border border-gray-400 rounded-md p-2 w-full"
                 />
               </div>
@@ -202,10 +225,12 @@ const RequestBloodPage = () => {
               <DynamicLabel label="District" isRequired={true} />
               <div className="mt-1">
                 <InputFields
+                  id="district"
                   type="dropdown"
                   placeholder="Select District"
                   options={districtOptions}
                   onChange={formik.handleChange}
+                  value={formik.values.district}
                   className="border border-gray-400 rounded-md p-2 w-full"
                   showIcon={true}
                 />
@@ -222,6 +247,7 @@ const RequestBloodPage = () => {
                   type="text"
                   placeholder="Enter Phone Number"
                   onChange={formik.handleChange}
+                  value={formik.values.phoneNumber}
                   className="border border-gray-400 rounded-md p-2 w-full"
                 />
               </div>
@@ -231,10 +257,12 @@ const RequestBloodPage = () => {
               <DynamicLabel label="Enter Hospital Name" isRequired={true} />
               <div className="mt-1">
                 <InputFields
+                  id="hospital"
                   type="dropdown"
                   placeholder="Select Hospital"
                   options={hospitalOptions}
                   onChange={formik.handleChange}
+                  value={formik.values.hospital}
                   className="border border-gray-400 rounded-md p-2 w-full"
                   showIcon={true}
                 />

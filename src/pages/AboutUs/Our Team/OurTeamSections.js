@@ -7,7 +7,7 @@ function OurTeamSections() {
   return (
     <div className="mx-4 sm:mx-8 md:mx-16 lg:mx-28 xl:mx-36">
       <div>
-        <TitleTopComponent secondTitle={"About Us"} thirdTitle={"Our Board"} />
+        <TitleTopComponent secondTitle={"About Us"} thirdTitle={"Our Team"} />
       </div>
       <div className="w-full ml-auto mr-auto">
         <p className="p-2 md:w-1/6 w-full bg-red-700 rounded-md font-bold text-white  mt-6">

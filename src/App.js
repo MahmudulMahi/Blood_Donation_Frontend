@@ -1,10 +1,11 @@
 import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   Navigate,
+  useLocation,
 } from "react-router-dom";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
@@ -34,14 +35,16 @@ import Registration from "./pages/Registration";
 function App() {
   const token = localStorage.getItem("token");
 
+
   return (
     <Router>
+
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={<AboutUs />}></Route>
-        <Route path="/request-blood" element={<RequestBlood/>}></Route>
-        <Route path="/about-blood" element={<AboutBlood/>}></Route>
-        <Route path="/login" element={<Login />}></Route>
+        <Route  path="/" element={<Home />}></Route>
+        <Route  path="/about" element={<AboutUs />}></Route>
+        <Route  path="/request-blood" element={<RequestBlood/>}></Route>
+        <Route  path="/about-blood" element={<AboutBlood/>}></Route>
+        <Route  path="/login" element={<Login />}></Route>
         <Route path="/our-team" element={<OurTeam />}></Route>
         <Route path="/iso-2008-certified" element={<ISOCertified />}></Route>
         <Route path="/registration" element={<Registration />}></Route>

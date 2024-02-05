@@ -111,34 +111,35 @@ export default function AboutBloodPage() {
         </div>
       </div>
       {/* How your donated red blood cells help */}
-      <div className="mt-12 bg-[#FFF]  w-full lg:h-[600px] md:h-[700px] h-[1360px]  rounded-lg " style={{
+      {/* w-full lg:h-[600px] md:h-[700px] h-[1360px] */}
+      <div className="mt-12 bg-[#FFF]    rounded-lg  " style={{
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"
       }}>
 
-        <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-auto-flow  ">
-          <h2>   <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md   font-bold shadow-md  mb-10 md:mb-0 ">
+        <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-auto-flow gap-14 ">
+          <h2>   <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md   font-bold shadow-md  mb-10 md:mb-0 p-0   ">
             How your donated <br /> Red blood cells help
           </button></h2>
 
 
-          <div className="flex flex-row  items-center gap-6 lg:col-start-2   ">
+          <div className="flex flex-row  items-center gap-6 lg:col-start-2 lg:pt-5 md:pt-5 ">
             <div>
               <img src={donatedimg1} alt="" />
             </div>
             <div>
               <h2 className="text-[#E11B22] font-bold text-[50px]">34%</h2>
-              <p className="text-[#E11B22]">cancer and
+              <p className="text-[#E11B22] mt-5">cancer and
                 blood diseases</p>
             </div>
           </div>
           {/* ---------- */}
-          <div className="flex flex-row   items-center gap-6 space-y-7 ">
+          <div className="flex flex-row   items-center gap-6 space-y-7 md:pl-5 ">
             <div>
               <img src={donatedimg2} alt="" />
             </div>
             <div>
               <h2 className="text-[#E11B22] font-bold text-[50px]">19%</h2>
-              <p className="text-[#E11B22] ">anemia and
+              <p className="text-[#E11B22] mt-5 ">anemia and
                 other needs</p>
             </div>
           </div>
@@ -149,18 +150,18 @@ export default function AboutBloodPage() {
             </div>
             <div>
               <h2 className="text-[#E11B22] font-bold text-[50px]">18%</h2>
-              <p className="text-[#E11B22]">heart, organ and other <br />
+              <p className="text-[#E11B22] mt-5">heart, organ and other <br />
                 non-orthopedic surgeries</p>
             </div>
           </div>
           {/* =========== */}
-          <div className="flex flex-row  items-center gap-6 space-y-7 ">
+          <div className="flex flex-row  items-center gap-6 space-y-7 md:pl-5 ">
             <div>
               <img src={donatedimg4} alt="" />
             </div>
             <div>
               <h2 className="text-[#E11B22] font-bold text-[50px]">13%</h2>
-              <p className="text-[#E11B22]">stomach, kidney and <br />
+              <p className="text-[#E11B22] mt-5">stomach, kidney and <br />
                 other diseases</p>
             </div>
           </div>
@@ -171,30 +172,30 @@ export default function AboutBloodPage() {
             </div>
             <div>
               <h2 className="text-[#E11B22] font-bold text-[50px]">34%</h2>
-              <p className="text-[#E11B22]">fractures and <br />
+              <p className="text-[#E11B22] mt-5">fractures and <br />
                 joint replacements</p>
             </div>
           </div>
           {/* ============= */}
-          <div className="flex flex-row items-center gap-6  space-y-7 ">
+          <div className="flex flex-row items-center gap-6  space-y-7 lg:pb-10 md:pb-10 md:pl-5 lg:pl-0">
             <div>
               <img src={donatedimg6} alt="" />
             </div>
             <div>
               <h2 className="text-[#E11B22] font-bold text-[50px]">4%</h2>
-              <p className="text-[#E11B22]">help pregnant women, <br />
+              <p className="text-[#E11B22] mt-5">help pregnant women, <br />
                 new mothers <br />
                 and young children</p>
             </div>
           </div>
           {/* ========== */}
-          <div className="flex flex-row items-center gap-6 space-y-7 ">
+          <div className="flex flex-row items-center gap-6 space-y-7 lg:pb-10 md:pb-10 pb-5">
             <div>
               <img src={donatedimg7} alt="" />
             </div>
             <div>
               <h2 className="text-[#E11B22] font-bold text-[50px]">2%</h2>
-              <p className="text-[#E11B22]">road incidents and <br />
+              <p className="text-[#E11B22] mt-5">road incidents and <br />
                 other traumas
               </p>
             </div>
@@ -203,18 +204,21 @@ export default function AboutBloodPage() {
       </div>
 
       {/* Blood Types and Transfusion */}
+      {/* md:h-[300px] h-[550px] relative */}
 
-      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full md:h-[300px] h-[550px] relative  " style={{
+      <div className="mt-12 rounded-lg  bg-[#FFF]  w-full shadow-lg md:h-[250px] h-[550px] lg:h-[200px] relative " style={{
 
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"
       }}>
         <div>
-          <h2>   <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md  mt-4 lg:mt-2 md:mt-2  font-bold shadow-md text-left mb-10 md:mb-0 absolute -top-10">
+        {/* absolute -top-10 */}
+          <h2>   <button className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md   lg:mt-2 md:mt-2  font-bold shadow-md text-left mb-10 md:mb-0 absolute -top-10">
+         
             Blood Types and Transfusion
           </button></h2>
         </div>
-
-        <div className="absolute top-10 ml-2">
+        {/*  */}
+        <div className="absolute top-10 ml-2 pl-5 ">
           <p>There are very specific ways in which blood types must be matched for a safe transfusion. The right blood transfusion can mean the difference between life and death. Use the interactive graphic below to learn more about matching blood types for transfusions.
             Also, Rh-negative blood is given to Rh-negative patients, and Rh-positive or Rh-negative blood may be given to Rh-positive patients. The rules for plasma are the reverse.</p>
 

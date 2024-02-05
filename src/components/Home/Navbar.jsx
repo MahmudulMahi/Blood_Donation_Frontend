@@ -41,18 +41,22 @@ const Navbar = () => {
       window.addEventListener("scroll", handleScroll);
     };
   });
+    const handleClick = () => {
+    // Scroll to the top when the link is clicked
+    window.scrollTo({ top: 20, behavior: 'smooth' });
+  };
 
   //navItems array
   const navItems = [
-    { link: "Home", path: "/", id: 1 },
+    {onclick:{handleClick} ,link: "Home", path: "/", id: 1 },
     {
       link: "About Us",
       path: "",
       id: 2,
       optionList: [
-        { name: "About", path: "/about" },
-        { name: "Our Team", path: "/our-team" },
-        { name: "ISO 2008 Certified", path: "/iso-2008-certified" },
+        {onclick:{handleClick}, name: "About", path: "/about" },
+        { onclick:{handleClick}, name: "Our Team", path: "/our-team" },
+        { onclick:{handleClick}, name: "ISO 2008 Certified", path: "/iso-2008-certified" },
       ],
     },
     {
