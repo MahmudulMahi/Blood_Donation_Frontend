@@ -148,7 +148,7 @@ function OurTeamSections() {
               <p className="text-red-700 p-2 -mt-1">Chief Executive Officer</p>
             </div>
 
-            <div className="rounded-md md:mt-10 shadow-2xl bg-white ">
+            <div className="rounded-md md:mt-10 shadow-2xl bg-white text-center ">
               <img
                 className="rounded-md p-2 mt-2 w-full"
                 src={locations1}
