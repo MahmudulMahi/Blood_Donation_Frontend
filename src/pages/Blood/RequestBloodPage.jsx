@@ -12,24 +12,31 @@ const RequestBloodPage = () => {
       patientName: "",
       patientAge: "",
       phoneNumber: "",
-      lastName: "",
-  
+      requestType:"",
+      bloodGroup:"",
+      date:"",
+      donationType:"",
+      transfusionBlood:"",
+      district:"",
+      hospital:"",
+      selectedFile:""
+      
       
     },
 
 onSubmit:(values)=>{
   console.log("values", values)
-  const isEmptyField = Object.values(values).some(value => value === "");
+  // const isEmptyField = Object.values(values).some(value => value === "");
   
-  if(isEmptyField){
-    alert("Please fill in all fields before submitting.")
-    return
-  }
-  else{
-    const bloodToSend={
+  // if(isEmptyField){
+  //   alert("Please fill in all fields before submitting.")
+  //   return
+  // }
+  // else{
+  //   const bloodToSend={
 
-    }
-  }
+  //   }
+  // }
 }
 })
 
@@ -42,6 +49,11 @@ onSubmit:(values)=>{
     { label: "High", value: "High" },
     { label: "Urgent", value: "Urgent" },
   ];
+  const handleRequestTypeChange = (selectedRequestType) => {
+    formik.handleChange('requestType')(selectedRequestType);
+    console.log('Selected requestType:', selectedRequestType)
+
+  };
 
   const bloodGroupOptions = [
     { label: "A+", value: "A+" },
@@ -53,12 +65,23 @@ onSubmit:(values)=>{
     { label: "O+", value: "O+" },
     { label: "O-", value: "O-" },
   ];
+  
+  const handleBloodGroupChange = (selectedBloodGroup) => {
+    formik.handleChange('bloodGroup')(selectedBloodGroup);
+    console.log('Selected bloodGroup:', selectedBloodGroup)
+
+  };
 
   const donationTypeOptions = [
     { label: "Monetary", value: "Monetary" },
     { label: "In-Kind", value: "In-Kind" },
     { label: "Service", value: "Service" },
   ];
+  const handleDonationTypeChange = (selectedDonationType) => {
+    formik.handleChange('donationType')(selectedDonationType);
+    console.log('Selected donationType:', selectedDonationType)
+
+  };
 
   const transfusionOptions = [
     { label: "Whole Blood", value: "Whole Blood" },
@@ -66,23 +89,51 @@ onSubmit:(values)=>{
     { label: "Platelets", value: "Platelets" },
     { label: "Plasma", value: "Plasma" },
   ];
+  const handleTransfusionChange = (selectedTransfusion) => {
+    formik.handleChange('transfusionBlood')(selectedTransfusion);
+    console.log('Selected transfusionBlood:', selectedTransfusion)
+
+  };
 
   const districtOptions = [
     { label: "District A", value: "District A" },
     { label: "District B", value: "District B" },
     { label: "District C", value: "District C" },
   ];
+  
+  const handleDistrictChange = (selectedDistrict) => {
+    formik.handleChange('district')(selectedDistrict);
+    console.log('Selected district:', selectedDistrict)
+
+  };
 
   const hospitalOptions = [
     { label: "City Hospital", value: "City Hospital" },
     { label: "General Medical Center", value: "General Medical Center" },
     { label: "Community Health Hospital", value: "Community Health Hospital" },
   ];
+  
 
+  const handleHospitalChange = (selectedHospital) => {
+    formik.handleChange('hospital')(selectedHospital);
+    console.log('Selected hospital:', selectedHospital)
+
+  };
+
+  // const handleFileChange = (event) => {
+  //   const selectedFile = event.target.files[0];
+  //   console.log("Selected File:", selectedFile);
+  // };
   const handleFileChange = (event) => {
     const selectedFile = event.target.files[0];
+    formik.setFieldValue('file', selectedFile);
     console.log("Selected File:", selectedFile);
   };
+
+  const dateChange =(date)=>{
+    formik.handleChange('date')(date)
+    console.log("date",date)
+  }
 
   return (
     <div className="mx-4 md:mx-8 lg:mx-16 xl:mx-24">
@@ -123,7 +174,7 @@ onSubmit:(values)=>{
                   type="dropdown"
                   placeholder="Scheduling/Urgent"
                   options={urgencyOptions}
-                  onChange={formik.handleChange}
+                  onChange={handleRequestTypeChange}
                   value={formik.values.requestType}
                   className="border border-gray-400 rounded-md p-2 w-full"
                   showIcon={true}
@@ -141,7 +192,7 @@ onSubmit:(values)=>{
                   type="dropdown"
                   placeholder="Select"
                   options={bloodGroupOptions}
-                  onChange={formik.handleChange}
+                  onChange={handleBloodGroupChange }
                   value={formik.values.bloodGroup}
                   className="border border-gray-400 rounded-md p-2 w-full"
                   showIcon={true}
@@ -158,11 +209,13 @@ onSubmit:(values)=>{
               <div className="mt-1">
                 <InputFields
              
+                  
+                  id="date"
+                  name="date"
                   type="date"
-                  id="datePicker"
                   field={{ value: null }}
-                  onChange={formik.handleChange}
-                  value={formik.values.datePicker}
+                  onChange={dateChange}
+                  value={formik.values.date}
                   placeholder="Select a date"
                   className="w-full"
                 />
@@ -179,7 +232,7 @@ onSubmit:(values)=>{
                   type="dropdown"
                   placeholder="Select"
                   options={donationTypeOptions}
-                  onChange={formik.handleChange}
+                  onChange={handleDonationTypeChange}
                   value={formik.values.donationType}
                   className="border border-gray-400 rounded-md p-2 w-full"
                   showIcon={true}
@@ -196,7 +249,7 @@ onSubmit:(values)=>{
                   type="dropdown"
                   placeholder="Select"
                   options={transfusionOptions}
-                  onChange={formik.handleChange}
+                  onChange={handleTransfusionChange}
                   value={formik.values.transfusionBlood}
                   className="border border-gray-400 rounded-md p-2 w-full"
                   showIcon={true}
@@ -229,7 +282,7 @@ onSubmit:(values)=>{
                   type="dropdown"
                   placeholder="Select District"
                   options={districtOptions}
-                  onChange={formik.handleChange}
+                  onChange={handleDistrictChange}
                   value={formik.values.district}
                   className="border border-gray-400 rounded-md p-2 w-full"
                   showIcon={true}
@@ -261,7 +314,7 @@ onSubmit:(values)=>{
                   type="dropdown"
                   placeholder="Select Hospital"
                   options={hospitalOptions}
-                  onChange={formik.handleChange}
+                  onChange={handleHospitalChange}
                   value={formik.values.hospital}
                   className="border border-gray-400 rounded-md p-2 w-full"
                   showIcon={true}
@@ -284,20 +337,20 @@ onSubmit:(values)=>{
                   className="bg-gray-500 text-white"
                 />
                 <div className="border border-gray-400 px-4 py-2 w-28 rounded-lg mt-1">
-                  <button
+                  <div
                     onClick={() =>
                       document.getElementById("imageUpload").click()
                     }
                     className="bg-gray-400 text-white rounded-md px-2 py-1 cursor-pointer"
                   >
                     Browse
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-span-1"></div>
-          </div>
-          {/* ... (more form fields) */}
+          </div> 
+           {/* (more form fields) */}
 
           <div className="flex justify-center items-center pb-4 mt-2">
             <div className="flex-grow text-center">
