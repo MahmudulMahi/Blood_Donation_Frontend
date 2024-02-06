@@ -5,14 +5,14 @@ import TitleTopComponent from "../../../components/Blood/TitleTopComponent";
 
 function IsoCertificateSections() {
   return (
-    <div className="mx-4 sm:mx-8 md:mx-16 lg:mx-28">
+    <div  className="mx-4 sm:mx-8 md:mx-16 lg:mx-28">
       <div>
         <TitleTopComponent
           secondTitle={"About Us"}
           thirdTitle={"iso-2008-certified"}
         />
       </div>
-      <p className="p-2 md:w-1/6 w-full bg-red-700 rounded-md font-bold text-white mt-2">
+      <p id="/iso-2008-certified" tabIndex="-1" className="p-2 md:w-1/6 w-full bg-red-700 rounded-md font-bold text-white mt-2">
         ISO 2008 Certified
       </p>
       <div>

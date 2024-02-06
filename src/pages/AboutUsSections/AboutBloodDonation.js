@@ -13,7 +13,7 @@ function AboutBloodDonation() {
   //   axios.get('')
   // },[])
   return (
-    <div className=" ml-auto mr-auto">
+    <div id="/about" tabIndex="-1" className=" ml-auto mr-auto">
       <div className="">
         <div>
           <TitleTopComponent secondTitle={"About Us"} thirdTitle={"About"} />

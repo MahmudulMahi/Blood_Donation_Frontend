@@ -4,7 +4,7 @@ export default function KnowTheRiskPage() {
   return (
     <div className="mx-4 sm:mx-6 md:mx-10 lg:mx-20 xl:mx-28">
       <div className="mt-10 mb-6">
-        <div className="text-white bg-brandPrimary rounded-md w-full md:w-1/2 lg:w-1/4 xl:w-1/6 md:ml-4 lg:ml-10 p-4">
+        <div id="/blood/know-the-risk" tabIndex="-1" className="text-white bg-brandPrimary rounded-md w-full md:w-1/2 lg:w-1/4 xl:w-1/6 md:ml-4 lg:ml-10 p-4">
           <p>Know The Risks</p>
         </div>
 

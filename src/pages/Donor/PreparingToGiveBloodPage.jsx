@@ -32,8 +32,8 @@ const PreparingToGiveBloodPage = () => {
       </div>
 
       <button onClick={() => setisshow(!isshow)} className="bg-brandPrimary text-white lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4 rounded-md  lg:mt-8 md:mt-5 mt-3  font-bold shadow-md w-full ">
-        <div className='flex items-center justify-center '>
-          <div className=''>
+        <div  className='flex items-center justify-center '>
+          <div id="/preparing-to-give-blood" tabIndex="-1" className=''>
             Preparing to give blood
           </div>
           <div className='absolute right-3 lg:right-32 text-2xl' >

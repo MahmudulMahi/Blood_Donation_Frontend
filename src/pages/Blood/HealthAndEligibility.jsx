@@ -123,7 +123,7 @@ export default function HealthAndEligibility() {
             />
           </div>
           <div className="mt-10 mb-6 ">
-            <div className="text-white bg-brandPrimary rounded-md w-full md:w-2/3 lg:w-1/2 xl:w-2/6 mx-auto md:ml-10 p-4">
+            <div id="/blood/health-and-eligibility" tabIndex="-1" className="text-white bg-brandPrimary rounded-md w-full md:w-2/3 lg:w-1/2 xl:w-2/6 mx-auto md:ml-10 p-4">
               <p className="text-[20px]">Why Eligibility Required For Blood Donation</p>
             </div>
 

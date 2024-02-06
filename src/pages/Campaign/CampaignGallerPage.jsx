@@ -51,7 +51,7 @@ export default function CampaignGallerPage() {
   return (
     <div>
       {/* Calendar start */}
-      <div className="flex flex-col md:flex-row items-center justify-end space-y-2 md:space-y-0 md:space-x-3 p-4 mt-4 bg-gray-100 rounded-lg shadow-md">
+      <div id="/campaign-gallery-all" tabIndex="-1" className="flex flex-col md:flex-row items-center justify-end space-y-2 md:space-y-0 md:space-x-3 p-4 mt-4 bg-gray-100 rounded-lg shadow-md">
         <div className="relative w-full md:w-32">
           <select
             className="w-full border p-2 rounded-lg focus:outline-none"

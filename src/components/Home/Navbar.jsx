@@ -9,12 +9,22 @@ import facebook from "../../assets/icons/bi_facebook.png";
 import gg_phone from "../../assets/icons/gg_phone.png";
 import React, { useState, useEffect } from "react";
 import { FaXmark, FaBars } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../../assets/mainLogo.png";
 import { Link } from "react-router-dom";
 
+
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    // Focus on the route page when the route changes
+    const routeElement = document.getElementById(location.pathname);
+    if (routeElement) {
+      routeElement.focus();
+    }
+  }, [location]);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -41,22 +51,19 @@ const Navbar = () => {
       window.addEventListener("scroll", handleScroll);
     };
   });
-    const handleClick = () => {
-    // Scroll to the top when the link is clicked
-    window.scrollTo({ top: 20, behavior: 'smooth' });
-  };
+  
 
   //navItems array
   const navItems = [
-    {onclick:{handleClick} ,link: "Home", path: "/", id: 1 },
+    { link: "Home", path: "/", id: 1 },
     {
       link: "About Us",
       path: "",
       id: 2,
       optionList: [
-        {onclick:{handleClick}, name: "About", path: "/about" },
-        { onclick:{handleClick}, name: "Our Team", path: "/our-team" },
-        { onclick:{handleClick}, name: "ISO 2008 Certified", path: "/iso-2008-certified" },
+        { name: "About", path: "/about" },
+        {  name: "Our Team", path: "/our-team" },
+        {  name: "ISO 2008 Certified", path: "/iso-2008-certified" },
       ],
     },
     {

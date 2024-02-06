@@ -53,7 +53,7 @@ function NewsSections() {
         />
       </div>
 
-      <div className="mt-6">
+      <div id="/news" tabIndex="-1" className="mt-6">
         <button className="bg-brandPrimary text-[18px] text-white py-3 px-4 rounded-lg ml-0">
           Why do We Campaign?
         </button>

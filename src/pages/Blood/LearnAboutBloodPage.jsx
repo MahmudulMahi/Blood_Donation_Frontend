@@ -147,7 +147,7 @@ export default function LearnAboutBloodPage() {
   console.log("showBloodGoing", showBloodGoing);
   // End Blood Bag Animation Handle
   return (
-    <div className="">
+    <div  className="">
       <div>
         <TitleTopComponent
           secondTitle={"Blood"}
@@ -157,7 +157,7 @@ export default function LearnAboutBloodPage() {
 
       <div className="lg:mx-28 md:mx-10 mx-3 leading-8">
         <div className="mt-2">
-          <button className="bg-brandPrimary text-[18px] text-white lg:py-3 md:py-2 py-2 lg:px-4 md:px-3 px-3 rounded-lg ml-0">
+          <button id="/learn-about-blood" tabIndex="-1" className="bg-brandPrimary text-[18px] text-white lg:py-3 md:py-2 py-2 lg:px-4 md:px-3 px-3 rounded-lg ml-0">
             Learn About Blood
           </button>
           <div className="about-blood-div-border pb-8 -mt-6 rounded-lg">

@@ -22,7 +22,7 @@ export default function FirstTimeBlood() {
           />
         </div>
         <div className="mt-10 mb-6">
-          <div className="text-white bg-brandPrimary rounded-md w-full md:w-2/3 lg:w-1/2 xl:w-2/5 mx-auto md:ml-10 p-4">
+          <div id="/first-time-blood" tabIndex="-1" className="text-white bg-brandPrimary rounded-md w-full md:w-2/3 lg:w-1/2 xl:w-2/5 mx-auto md:ml-10 p-4">
             <p>Why Donate Your Blood?</p>
           </div>
 

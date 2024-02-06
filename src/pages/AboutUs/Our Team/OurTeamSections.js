@@ -5,8 +5,8 @@ import TitleTopComponent from "../../../components/Blood/TitleTopComponent";
 
 function OurTeamSections() {
   return (
-    <div className="mx-4 sm:mx-8 md:mx-16 lg:mx-28 xl:mx-36">
-      <div>
+    <div id="/our-team" tabIndex="-1"  className="mx-4 sm:mx-8 md:mx-16 lg:mx-28 xl:mx-36">
+      <div >
         <TitleTopComponent secondTitle={"About Us"} thirdTitle={"Our Team"} />
       </div>
       <div className="w-full ml-auto mr-auto">

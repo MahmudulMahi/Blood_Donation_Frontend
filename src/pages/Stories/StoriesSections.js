@@ -5,7 +5,7 @@ import doctorDoing from "../../../src/assets/doctor-doing-their-work-pediatrics-
 const StoriesSections = () => {
   return (
     <div className="mx-4 sm:mx-8 md:mx-16 lg:mx-24 xl:mx-28">
-      <div className="text-center ml-auto mr-auto">
+      <div id="/stories" tabIndex="-1" className="text-center ml-auto mr-auto">
         <p className="text-centr p-2 bg-red-700 md:w-56 ml-auto mr-auto mt-6 text-white font-bold rounded-md">
           Stories Of our Clients
         </p>

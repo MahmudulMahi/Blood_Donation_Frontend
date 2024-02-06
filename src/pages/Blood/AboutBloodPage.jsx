@@ -24,10 +24,10 @@ export default function AboutBloodPage() {
       .then(data => setAboutCard(data))
   }, [])
   return (
-    <div className="lg:mx-28">
+    <div  className="lg:mx-28">
       {" "}
       <div className='flex flex-col md:flex-row justify-between mt-10   '>
-        <div className='lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4'>
+        <div id="/about-blood" tabIndex="-1" className='lg:px-6 md:px-4 px-6 lg:py-4 md:py-2 py-4'>
           <h2 className='flex items-center mx-auto mt-4 text-[16px] font-semibold '><a href="#home">Home</a> <span className='text-red-700'> <IoIosArrowForward /> </span> <a href="#about">About Us</a> <span className='text-red-700'> <IoIosArrowForward /> </span> <a href="#board">Our Board</a></h2>
         </div>
         <div className='flex items-center mt-5'>
