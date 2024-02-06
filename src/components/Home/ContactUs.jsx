@@ -2,6 +2,25 @@ import React from "react";
 import about from "../../assets/ab.jpeg";
 
 export default function ContactUs() {
+
+  const handleContact =e=>{
+    e.preventDefault()
+    const form=e.target
+
+    const fullName=form.fullName.value
+    const email=form.email.value
+    const subject=form.subject.value
+    const message=form.message.value
+
+    if (!fullName || !email || !subject || !message) {
+      alert('Please fill in all fields');
+      return; // Stop further execution
+    }
+    else{
+      console.log(fullName,email,subject,message)
+    }
+
+  }
   return (
     <div>
       <div className="grid grid-cols-2 lg:mr-40 md:mr-0 mr-0 lg:ml-20 md:ml-0 ml-0 rounded-md bg-transparent lg:-mt-[15px] md:mt-12 mt-8 lg:p-20 md:p-20 p-12 pt-0">
@@ -33,7 +52,7 @@ export default function ContactUs() {
         {/* Second Card */}
         <div className="mb-0 rounded-md rounded-bl-none shadow-right-bottom-two lg:col-span-1 md:col-span-1 col-span-2 bg-[#E11B2266] ">
           <div className="bg-white p-6 pb-2 mb-0 rounded-md">
-            <form className="lg:ml-8 md:ml-8 ml-0 lg:mr-8 md:mr-8 mr-0">
+            <form onSubmit={handleContact} className="lg:ml-8 md:ml-8 ml-0 lg:mr-8 md:mr-8 mr-0">
               <div className="mb-6 ml-2 mr-2">
                 <input
                   type="text"
