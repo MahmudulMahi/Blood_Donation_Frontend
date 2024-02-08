@@ -4,6 +4,8 @@ import axios from "axios";
 
 export default function ContactUs() {
 
+  // const [isValid, setIsValid] = useState(true);
+
   const handleContact =e=>{
     e.preventDefault()
     const form=e.target
@@ -16,6 +18,7 @@ export default function ContactUs() {
     if (!fullName || !email || !subject || !message) {
       alert('Please fill in all fields');
       return; // Stop further execution
+      
     }
     else{
       const contactSend ={
@@ -27,7 +30,8 @@ export default function ContactUs() {
       console.log(fullName,email,subject,message)
       axios.post(`https://bloodbackend.visionarytechsolution.com/home/contact_us`,contactSend)
       .then(res =>{
-        console.log("data send successfully",res.data)
+        alert("data send successfully",res.data)
+        form.reset();
       })
       .catch(error =>{
         console.log("error",error)

@@ -26,17 +26,28 @@ const RequestBloodPage = () => {
 
 onSubmit:(values)=>{
   console.log("values", values)
-  // const isEmptyField = Object.values(values).some(value => value === "");
+  const isEmptyField = Object.values(values).some(value => value === "");
   
-  // if(isEmptyField){
-  //   alert("Please fill in all fields before submitting.")
-  //   return
-  // }
-  // else{
-  //   const bloodToSend={
+  if(isEmptyField){
+    alert("Please fill in all fields before submitting.")
+    return
+  }
+  else{
+    // const bloodToSend={
+    //   patient_name:values.patientName,
+    //   blood_group:values.bloodGroup,
+    //   request_donation_type:values.donationType,
+    //   patient_age:values.patientAge,
+    //   phone_nember:values.phoneNumber,
+    //   urgency:values.requestType,
+    //   hospital_name:values.hospital,
+    //   date_when_blood_need:values.date,
+    //   disease_name:values.transfusionBlood,
+    //   district:values.district,
+    //   imeage:values.selectedFile
 
-  //   }
-  // }
+    // }
+  }
 }
 })
 

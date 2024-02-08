@@ -56,17 +56,17 @@ const Registration=()=>{
       gender:""
 
     },
-    // , { setSubmitting }
+  
     onSubmit:(values ) => {
       console.log("values", values)
-      const isEmptyField = Object.values(values).some(value => value === "");
+      // const isEmptyField = Object.values(values).some(value => value === "");
 
-      if (isEmptyField) {
-        alert("Please fill in all fields before submitting.");
-        return;
+      // if (isEmptyField) {
+      //   alert("Please fill in all fields before submitting.");
+      //   return;
        
-      }
-      else{
+      // }
+      // else{
         const dataToSend = {
         
           first_name: values.fullName,
@@ -101,7 +101,7 @@ const Registration=()=>{
           console.error('Error posting data to the server:', error);
         });
       
-      }
+      // }
       }
        
   });
