@@ -1,5 +1,6 @@
 import React from "react";
 import about from "../../assets/ab.jpeg";
+import axios from "axios";
 
 export default function ContactUs() {
 
@@ -17,7 +18,20 @@ export default function ContactUs() {
       return; // Stop further execution
     }
     else{
+      const contactSend ={
+        name:fullName,
+        email:email,
+        subject:subject,
+        message:message
+      }
       console.log(fullName,email,subject,message)
+      axios.post(`https://bloodbackend.visionarytechsolution.com/home/contact_us`,contactSend)
+      .then(res =>{
+        console.log("data send successfully",res.data)
+      })
+      .catch(error =>{
+        console.log("error",error)
+      })
     }
 
   }
