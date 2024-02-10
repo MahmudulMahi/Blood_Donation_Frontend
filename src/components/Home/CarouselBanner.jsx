@@ -2,7 +2,7 @@ import React from "react";
 import iconPlay from "../../assets/iconPlay.png";
 import carouselBanner from "../../assets/carouselBanner.jpg";
 import { Carousel } from "flowbite-react";
-
+import Marquee from "react-fast-marquee";
 const CarouselBanner = () => {
   return (
     <div className="">
@@ -110,14 +110,25 @@ const CarouselBanner = () => {
           }}
         >
           <p
-            style={{
-              whiteSpace: "nowrap",
-              animation: "scrollText 60s linear infinite",
-            }}
+          //     style={{
+          //       whiteSpace: "nowrap",
+          //       animation: "scrollText 60s linear infinite",
+          //       position: "absolute", // Add position absolute
+          // right: "100%", // Start from the right
+          //     }}
           >
-            Note: To donate blood you have to be more than 16 years old. Note:
-            To donate blood you have to be more than 16 years old. Note: To
-            donate blood you have to be more than 16 years old.
+            <div className="flex items-start">
+              <div>
+                Note:
+              </div>
+              <div className="w-full">
+                <Marquee>
+                  To donate blood you have to be more than 16 years old.
+                  donate blood you have to be more than 16 years old.
+                  donate blood you have to be more than 16 years old.
+                </Marquee>
+              </div>
+            </div>
           </p>
         </div>
       </div>
