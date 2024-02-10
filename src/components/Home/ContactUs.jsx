@@ -1,6 +1,7 @@
 import React from "react";
 import about from "../../assets/ab.jpeg";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 export default function ContactUs() {
 
@@ -30,7 +31,13 @@ export default function ContactUs() {
       console.log(fullName,email,subject,message)
       axios.post(`https://bloodbackend.visionarytechsolution.com/home/contact_us`,contactSend)
       .then(res =>{
-        alert("data send successfully",res.data)
+        Swal.fire({
+          position: "top-middle",
+          icon: "success",
+          title: "Data save successfully",
+          showConfirmButton: false,
+          timer: 1500
+        });
         form.reset();
       })
       .catch(error =>{

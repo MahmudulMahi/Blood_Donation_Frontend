@@ -17,6 +17,12 @@ const Login = () => {
     console.log(email, password);
     // axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
     // ,{headers:{'Authorization':`Bearer ${accessToken}`}}
+    if(!email || !password ){
+      alert('Please fill in all fields')
+      return
+    }
+    else{
+
   
     axios.post(`https://bloodbackend.visionarytechsolution.com/auth/login`, {email, password })
       .then(res => {
@@ -29,6 +35,7 @@ const Login = () => {
         }
       })
       .catch(error => console.log(error));
+    }
   };
 
   return (

@@ -12,6 +12,8 @@ import Swal from "sweetalert2";
 
 const Registration = () => {
   const currentYear = new Date().getFullYear();
+  const [birthDate, setBirthDate] = useState('');
+  const [age, setAge] = useState(null);
 
   // const [error,setError]=useState('')
 
@@ -73,7 +75,9 @@ const Registration = () => {
 
       }
       else{
+    
       const dataToSend = {
+
 
         first_name: values.fullName,
         last_name: values.lastName,
@@ -91,9 +95,10 @@ const Registration = () => {
         weight: values.weight,
         gender: values.gender
 
+
       };
-
-
+    
+  
 
       axios.post(`https://bloodbackend.visionarytechsolution.com/auth/register`, dataToSend, {
         headers: {
@@ -130,6 +135,12 @@ const Registration = () => {
     }
 
   });
+  // setBirthDate(formik.values.dob);
+  // const today = new Date();
+  // const dob = new Date(birthDate);
+  // const diff = today - dob;
+  // const ageInYears = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+  // setAge(ageInYears);
 
 
   const handleDayChange = (selectedDay) => {
@@ -399,6 +410,9 @@ const Registration = () => {
           {/* {
             error && <p className="text-red-600">{error}</p>
           } */}
+           {age !== null && (
+        <p>Your age is: {age} years</p>
+      )}
               <div className="w-full mt-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto">
                   <div className="col-span-2 flex items-center">
