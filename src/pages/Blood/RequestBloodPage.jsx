@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import DynamicLabel from "../../components/InputFields/DynamicLabel";
 import InputFields from "../../components/InputFields/InputFields";
 import TitleTopComponent from "../../components/Blood/TitleTopComponent";
+import axios from "axios";
 
 const RequestBloodPage = () => {
 
@@ -19,12 +20,12 @@ const RequestBloodPage = () => {
       transfusionBlood:"",
       district:"",
       hospital:"",
-      selectedFile:""
+      // selectedFile:""
       
       
     },
 
-onSubmit:(values)=>{
+onSubmit:async(values)=>{
   console.log("values", values)
   const isEmptyField = Object.values(values).some(value => value === "");
   
@@ -33,20 +34,43 @@ onSubmit:(values)=>{
     return
   }
   else{
-    // const bloodToSend={
-    //   patient_name:values.patientName,
-    //   blood_group:values.bloodGroup,
-    //   request_donation_type:values.donationType,
-    //   patient_age:values.patientAge,
-    //   phone_nember:values.phoneNumber,
-    //   urgency:values.requestType,
-    //   hospital_name:values.hospital,
-    //   date_when_blood_need:values.date,
-    //   disease_name:values.transfusionBlood,
-    //   district:values.district,
-    //   imeage:values.selectedFile
+    const position = await new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(resolve, reject);
+    });
 
-    // }
+    const { latitude, longitude } = position.coords;
+    console.log("lat",latitude,longitude)
+    
+    const bloodToSend={
+      patient_name:values.patientName,
+      blood_group:values.bloodGroup,
+      request_donation_type:values.donationType,
+      patient_age:values.patientAge,
+      phone_nember:values.phoneNumber,
+      urgency:values.requestType,
+      hospital_name:values.hospital,
+      date_when_blood_need:values.date,
+      disease_name:values.transfusionBlood,
+      district:values.district,
+      latitude,
+      longitude,
+      // imeage:values.selectedFile
+
+    }
+    axios.post(`https://bloodbackend.visionarytechsolution.com/requestblood/request_blood`,bloodToSend,{
+      headers:{
+        'Content-Type':'application/json',
+        
+      },
+    })
+    .then(res=>{
+      console.log("Data successfully posted to the server:",res.data)
+    })
+    .then(error =>{
+      console.log("error",error)
+    })
+
+    
   }
 }
 })
@@ -135,11 +159,12 @@ onSubmit:(values)=>{
   //   const selectedFile = event.target.files[0];
   //   console.log("Selected File:", selectedFile);
   // };
-  const handleFileChange = (event) => {
-    const selectedFile = event.target.files[0];
-    formik.setFieldValue('file', selectedFile);
-    console.log("Selected File:", selectedFile);
-  };
+  // const handleFileChange = (event) => {
+  //   const selectedFile = event.target.files[0];
+  //   console.log('lllllll',selectedFile)
+  //   formik.setFieldValue('selectedFile', selectedFile);
+  //   console.log("Selected File:", selectedFile);
+  // };
 
   const dateChange =(date)=>{
     formik.handleChange('date')(date)
@@ -334,13 +359,13 @@ onSubmit:(values)=>{
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 mt-1">
+          {/* <div className="grid grid-cols-2 gap-4 mt-1">
             <div className="col-span-1">
               <div className="mt-3">
                 <label htmlFor="imageUpload">Upload Image:</label> <br />
                 <input
                   type="file"
-                  id="imageUpload"
+                  id="selectedFile"
                   name="image"
                   accept="image/*"
                   onChange={handleFileChange}
@@ -350,7 +375,7 @@ onSubmit:(values)=>{
                 <div className="border border-gray-400 px-4 py-2 w-28 rounded-lg mt-1">
                   <div
                     onClick={() =>
-                      document.getElementById("imageUpload").click()
+                      document.getElementById("selectedFile").click()
                     }
                     className="bg-gray-400 text-white rounded-md px-2 py-1 cursor-pointer"
                   >
@@ -360,7 +385,7 @@ onSubmit:(values)=>{
               </div>
             </div>
             <div className="col-span-1"></div>
-          </div> 
+          </div>  */}
            {/* (more form fields) */}
 
           <div className="flex justify-center items-center pb-4 mt-2">
