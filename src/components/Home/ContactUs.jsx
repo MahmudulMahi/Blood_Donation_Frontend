@@ -49,7 +49,7 @@ export default function ContactUs() {
 
         })
         .finally(() => {
-          setIsLoading(false); // Set loading state to false after form submission (success or error)
+          setIsLoading(false); 
         });
     }
    

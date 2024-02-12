@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TitleTopComponent from "../../Blood/TitleTopComponent";
 import donor_card_icon from "../../../assets/donor_card_icon.jpeg";
 import donor_card_icon3 from "../../../assets/donor_card_icon3.jpeg";
 import donor_card_icon2 from "../../../assets/donor_card_icon2.jpeg";
 import DonorCardComponent from "../../DonorCardComponent";
+import axios from "axios";
 
 const SearchDonorPageComponent = () => {
+
+  const [reqBloodCard,setReqBloodCard]=useState([])
+
+  useEffect(()=>{
+    axios.get(`https://bloodbackend.visionarytechsolution.com/requestblood/request_blood`)
+    .then(res=>{
+      setReqBloodCard(res.data)
+    })
+    .catch(error=>{
+      console.log("error",error)
+    })
+  },[])
   return (
     <div className="mx-28">
       <div>
@@ -187,22 +200,28 @@ const SearchDonorPageComponent = () => {
             {/* horizontal end */}
 
             {/* START DONOR CARD */}
-            <div className="grid grid-cols-3 gap-1">
-              <div className="col-span-1">
-                <DonorCardComponent
-                  image={donor_card_icon}
-                  donorName="MD. Salaudding Ayub"
-                  donorAddress="Adabor, Dhaka"
-                  description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.“ "
-                  bloodGroup="A+"
-                  age="25"
-                  weight="58"
-                  height="5 Feet 7 inch"
-                  extraColumnLeft=""
-                  extraColumnRight=""
-                />
-              </div>
-              <div className="col-span-1">
+            <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {
+            reqBloodCard.map(areqBloodCard =>        <div className="col-span-1">
+            <DonorCardComponent
+              image={areqBloodCard?.image}
+              donorName={areqBloodCard.patient_name}
+              
+              donorAddress={areqBloodCard.district}
+              
+              description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.“ "
+              bloodGroup={areqBloodCard.blood_group}
+              
+              age={areqBloodCard.patient_age}
+              weight={areqBloodCard.user.weight}
+              height={areqBloodCard.user.height}
+              extraColumnLeft=""
+              extraColumnRight=""
+            />
+          </div>)
+        
+          }
+              {/* <div className="col-span-1">
                 <DonorCardComponent
                   image={donor_card_icon3}
                   donorName="MD. Salaudding Ayub"
@@ -215,8 +234,8 @@ const SearchDonorPageComponent = () => {
                   extraColumnLeft=""
                   extraColumnRight=""
                 />
-              </div>
-              <div className="col-span-1 last-child-gap-0">
+              </div> */}
+              {/* <div className="col-span-1 last-child-gap-0">
                 <DonorCardComponent
                   image={donor_card_icon2}
                   donorName="MD. Salaudding Ayub"
@@ -229,10 +248,10 @@ const SearchDonorPageComponent = () => {
                   extraColumnLeft=""
                   extraColumnRight=""
                 />
-              </div>
+              </div> */}
             </div>
             {/* end 1st three */}
-            <div className="grid grid-cols-3 gap-4 mt-5">
+            {/* <div className="grid grid-cols-3 gap-4 mt-5">
               <div className="col-span-1">
                 <DonorCardComponent
                   image={donor_card_icon}
@@ -275,9 +294,9 @@ const SearchDonorPageComponent = () => {
                   extraColumnRight=""
                 />
               </div>
-            </div>
+            </div> */}
             {/* end 2nd three */}
-            <div className="grid grid-cols-3 gap-4 mt-5">
+            {/* <div className="grid grid-cols-3 gap-4 mt-5">
               <div className="col-span-1">
                 <DonorCardComponent
                   image={donor_card_icon}
@@ -320,9 +339,9 @@ const SearchDonorPageComponent = () => {
                   extraColumnRight=""
                 />
               </div>
-            </div>
+            </div> */}
             {/* end 3rd card */}
-            <div className="grid grid-cols-3 gap-4 mt-5">
+            {/* <div className="grid grid-cols-3 gap-4 mt-5">
               <div className="col-span-1">
                 <DonorCardComponent
                   image={donor_card_icon}
@@ -365,7 +384,7 @@ const SearchDonorPageComponent = () => {
                   extraColumnRight=""
                 />
               </div>
-            </div>
+            </div> */}
             {/* end 4rth card */}
             {/* end 4rth card */}
             {/* END DONOR CARD */}

@@ -12,6 +12,8 @@ import Swal from "sweetalert2";
 
 const Registration = () => {
   const currentYear = new Date().getFullYear();
+ 
+  
   const [birthDate, setBirthDate] = useState('');
   const [age, setAge] = useState(null);
 
@@ -74,8 +76,9 @@ const Registration = () => {
         return;
 
       }
-      else{
     
+      else{
+        
       const dataToSend = {
 
 
@@ -98,7 +101,7 @@ const Registration = () => {
 
       };
     
-  
+    
 
       axios.post(`https://bloodbackend.visionarytechsolution.com/auth/register`, dataToSend, {
         headers: {
@@ -130,11 +133,18 @@ const Registration = () => {
           // });
           // setError(error.message)
         });
-
+      
+      
       }
+    
     }
 
   });
+
+
+
+  
+
   // setBirthDate(formik.values.dob);
   // const today = new Date();
   // const dob = new Date(birthDate);
@@ -413,6 +423,7 @@ const Registration = () => {
            {age !== null && (
         <p>Your age is: {age} years</p>
       )}
+      
               <div className="w-full mt-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto">
                   <div className="col-span-2 flex items-center">
@@ -862,7 +873,7 @@ const Registration = () => {
 
               <div className="flex justify-center mt-5">
                 <button className="bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-transparent hover:text-brandPrimary border hover:border-brandPrimary hover:font-semibold z-10">
-                  Registration
+                Registration
                 </button>
               </div>
             </form>

@@ -3,6 +3,7 @@ import carouselBanner from "../../../assets/carouselBanner.jpg";
 import location from "../../../assets/ion_location.svg";
 import loading from "../../../assets/eos-icons_loading.svg";
 import location2 from "../../../assets/ion_location2.svg";
+import Marquee from "react-fast-marquee";
 
 export default function DonorCarousel() {
   return (
@@ -76,7 +77,7 @@ export default function DonorCarousel() {
 
       <div className="">
         <div
-          className="bg-[#e11b22b3] h-10 w-full -mt-[10px] text-white overflow-hidden"
+          className="bg-[#e11b22b3] h-10 w-full -mt-[1px] text-white overflow-hidden"
           style={{
             fontFamily: "Poppins",
             fontSize: "14px",
@@ -89,14 +90,24 @@ export default function DonorCarousel() {
           }}
         >
           <p
-            style={{
-              whiteSpace: "nowrap",
-              animation: "scrollText 60s linear infinite",
-            }}
+            // style={{
+            //   whiteSpace: "nowrap",
+            //   animation: "scrollText 60s linear infinite",
+            // }}
           >
-            Note: To donate blood you have to be more than 16 years old. Note:
-            To donate blood you have to be more than 16 years old. Note: To
-            donate blood you have to be more than 16 years old.
+    <div className="flex items-start justify-between">
+              <div>
+                Note:
+              </div>
+              <div className="w-full">
+                <Marquee>
+                  To donate blood you have to be more than 16 years old.
+                  donate blood you have to be more than 16 years old.
+                  donate blood you have to be more than 16 years old.
+                </Marquee>
+              </div>
+            </div>
+        
           </p>
         </div>
       </div>

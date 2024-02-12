@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import carouselBanner from "../../../assets/carouselBanner.jpg";
 import location from "../../../assets/ion_location.svg";
 import loading from "../../../assets/eos-icons_loading.svg";
 import location2 from "../../../assets/ion_location2.svg"
+import Marquee from "react-fast-marquee";
+import axios from "axios";
 
 export default function SearchCarousel() {
+
+  const [reqBlood, setReqBlood]=useState([])
+  console.log(reqBlood)
+
+  useEffect(()=>{
+    axios.get(`https://bloodbackend.visionarytechsolution.com/requestblood/request_blood`)
+    .then(res=>{
+      setReqBlood(res.data)
+    })
+    .catch(err=>{
+      console.log("error",err)
+    })
+  },[])
   return (
     <div className="">
       <div className="w-full pt-[52px] bg-white">
@@ -29,9 +44,15 @@ export default function SearchCarousel() {
                 <option value="" disabled selected hidden>
                   Enter Blood Group
                 </option>
-                <option>A+</option>
+                {
+                  reqBlood.map(areqBlood => <option key={areqBlood.id}>{areqBlood.blood_group}
+                    </option>)
+                    
+                }
+               
+                {/* <option>A+</option>
                 <option>B+</option>
-                <option>O+</option>
+                <option>O+</option> */}
                 {/* Add more blood group options as needed */}
               </select>
 
@@ -111,7 +132,7 @@ export default function SearchCarousel() {
 
       <div className="">
         <div
-          className="bg-[#e11b22b3] h-10 w-full -mt-[10px] text-white overflow-hidden"
+          className="bg-[#e11b22b3] h-10 w-full -mt-[2px] text-white overflow-hidden"
           style={{
             fontFamily: "Poppins",
             fontSize: "14px",
@@ -124,14 +145,23 @@ export default function SearchCarousel() {
           }}
         >
           <p
-            style={{
-              whiteSpace: "nowrap",
-              animation: "scrollText 60s linear infinite",
-            }}
+            // style={{
+            //   whiteSpace: "nowrap",
+            //   animation: "scrollText 60s linear infinite",
+            // }}
           >
-            Note: To donate blood you have to be more than 16 years old. Note:
-            To donate blood you have to be more than 16 years old. Note: To
-            donate blood you have to be more than 16 years old.
+            <div className="flex items-start justify-between">
+              <div>
+                Note:
+              </div>
+              <div className="w-full">
+                <Marquee>
+                  To donate blood you have to be more than 16 years old.
+                  donate blood you have to be more than 16 years old.
+                  donate blood you have to be more than 16 years old.
+                </Marquee>
+              </div>
+            </div>
           </p>
         </div>
       </div>
