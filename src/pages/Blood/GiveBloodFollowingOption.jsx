@@ -92,7 +92,7 @@ const GiveBloodFollowingOption = () => {
             hospital.slice(0, 3).map(ahospital => <HospitalCard key={ahospital.id} ahospital={ahospital}></HospitalCard>)
         }
       </div>
-      {bloodBank.length > 3 && <button onClick={() => setisshowHospital(!isshowHospital)} className='flex items-center gap-3 text-lg text-[#E11B22] ml-auto mt-4 '>{isshow ? "Show less" : "see more"} <GoArrowRight /></button>}
+      {bloodBank.length > 3 && <button onClick={() => setisshowHospital(!isshowHospital)} className='flex items-center gap-3 text-lg text-[#E11B22] ml-auto mt-4 '>{isshowHospital ? "Show less" : "see more"} <GoArrowRight /></button>}
 
       <button type="button" className=" mt-3 bg-gray-50 border border-gray-300 text-red-700  rounded-lg   block w-full p-2.5    dark:text-white   text-lg font-bold text-left">
         <div className='flex '>
@@ -111,7 +111,7 @@ const GiveBloodFollowingOption = () => {
             Patients.slice(0, 4).map(patient => <PatientsCard key={patient.id} patient={patient}></PatientsCard>)
         }
       </div>
-      {bloodBank.length > 3 && <button onClick={() => setisshowPatients(!isshowPatients)} className='flex items-center gap-3 text-lg text-[#E11B22] ml-auto mt-4 '>{isshow ? "Show less" : "see more"} <GoArrowRight /></button>}
+      {bloodBank.length > 3 && <button onClick={() => setisshowPatients(!isshowPatients)} className='flex items-center gap-3 text-lg text-[#E11B22] ml-auto mt-4 '>{isshowPatients ? "Show less" : "see more"} <GoArrowRight /></button>}
     </div>
   );
 };

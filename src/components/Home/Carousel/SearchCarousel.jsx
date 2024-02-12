@@ -9,7 +9,9 @@ import axios from "axios";
 export default function SearchCarousel() {
 
   const [reqBlood, setReqBlood]=useState([])
+
   console.log(reqBlood)
+  const [hospital, setHospital]=useState([])
 
   useEffect(()=>{
     axios.get(`https://bloodbackend.visionarytechsolution.com/requestblood/request_blood`)
@@ -18,6 +20,17 @@ export default function SearchCarousel() {
     })
     .catch(err=>{
       console.log("error",err)
+    })
+  },[])
+
+
+  useEffect(()=>{
+    axios.get(`https://bloodbackend.visionarytechsolution.com/home/hospitals`)
+    .then(res=>{
+      setHospital(res.data)
+    })
+    .catch(error=>{
+      console.log("error",error)
     })
   },[])
   return (
@@ -75,9 +88,12 @@ export default function SearchCarousel() {
                 <option value="" disabled selected hidden>
                   Hospital Name
                 </option>
-                <option>Hospital 1</option>
+                {
+                  hospital.map(ahospital =><option>{ahospital.name}</option>)
+                }
+                {/* <option>Hospital 1</option>
                 <option>Hospital 2</option>
-                <option>Hospital 3</option>
+                <option>Hospital 3</option> */}
                 {/* Add more hospital options as needed */}
               </select>
 

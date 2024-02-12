@@ -7,6 +7,7 @@ import twitter from "../../assets/icons/formkit_twitter.png";
 import pinterest from "../../assets/icons/bi_pinterest.png";
 import facebook from "../../assets/icons/bi_facebook.png";
 import gg_phone from "../../assets/icons/gg_phone.png";
+import userimg from "../../assets/map.jpeg"
 import React, { useState, useEffect } from "react";
 import { FaXmark, FaBars } from "react-icons/fa6";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -430,6 +431,16 @@ const Navbar = () => {
                     </div>
                   )} */}
                 </div>
+                {/* ------------ */}
+                {
+                  isLoggedIn ? <div className="w-9 h-9 ">
+                  <img className="rounded-full border-gray-400 border-2" src={userimg} alt="" />
+                  </div>
+                  :""
+                }
+               
+                {/* ----------- */}
+
                 {/* end */}
                 <div 
                 // onMouseEnter={() => setIsHovered(true)}
