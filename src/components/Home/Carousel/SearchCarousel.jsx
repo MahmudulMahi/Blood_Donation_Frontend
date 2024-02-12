@@ -61,9 +61,12 @@ export default function SearchCarousel() {
                 <option value="" disabled selected hidden>
                   Select District
                 </option>
+                {
+                  reqBlood.map(aDistrict => <option key={aDistrict.id}>{aDistrict.district}</option>)
+                }
                 <option>District 1</option>
-                <option>District 2</option>
-                <option>District 3</option>
+                {/* <option>District 2</option>
+                <option>District 3</option> */}
                 {/* Add more district options as needed */}
               </select>
 
