@@ -28,7 +28,7 @@ const Login = () => {
       .then(res => {
         console.log(res.data);
         if (res.data.access) {
-          const accessToken = res.data.access;
+          const accessToken =res.data.access;
           localStorage.setItem("token",accessToken);
           
           navigate(location?.state ? location?.state : '/');

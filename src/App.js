@@ -5,7 +5,8 @@ import {
   Route,
   Routes,
   Navigate,
-  useLocation,
+  useLocation
+
 } from "react-router-dom";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
@@ -31,18 +32,23 @@ import ContactUsPage from "./pages/ContactUsPage";
 import PreparingToGiveBlood from "./pages/Donor/PreparingToGiveBlood";
 import Schedule from "./pages/Blood/Schedule";
 import Registration from "./pages/Registration";
+import AuthProvider from "./components/Loader/AuthProvider";
+import PrivateRoute from "./components/Loader/PrivateRoute";
+
+
 
 function App() {
   const token = localStorage.getItem("token");
 
 
   return (
+   
     <Router>
-
-      <Routes>
+ 
+      <Routes>   
         <Route  path="/" element={<Home />}></Route>
-        <Route  path="/about" element={<AboutUs />}></Route>
-        <Route  path="/request-blood" element={<RequestBlood/>}></Route>
+        <Route  path="/about" element={<AboutUs />}></Route> 
+        <Route  path="/request-blood" element={<RequestBlood/>}></Route>  
         <Route  path="/about-blood" element={<AboutBlood/>}></Route>
         <Route  path="/login" element={<Login />}></Route>
         <Route path="/our-team" element={<OurTeam />}></Route>
@@ -61,8 +67,11 @@ function App() {
         <Route path="/first-time-blood" element={<FirstTimeBlood/>}></Route>
         <Route path="/contact-us" element={<ContactUsPage/>}></Route>
         <Route path="/donate-blood/schedule" element={<Schedule></Schedule>}></Route>
+        
       </Routes>
+     
     </Router>
+   
   );
 }
 

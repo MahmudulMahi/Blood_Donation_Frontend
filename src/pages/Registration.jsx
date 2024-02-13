@@ -17,7 +17,7 @@ const Registration = () => {
   const [birthDate, setBirthDate] = useState('');
   const [age, setAge] = useState(null);
 
-  // const [error,setError]=useState('')
+  const [error,setError]=useState('')
 
   const [disease, setDisease] = useState([])
   useEffect(() => {
@@ -72,7 +72,7 @@ const Registration = () => {
 
       if (isEmptyField) {
         alert("Please fill in all fields before submitting.");
-        formik.setErrors({});
+        setError('');
         return;
 
       }
@@ -417,12 +417,12 @@ const Registration = () => {
           Please fill out all fields before submitting.
         </div>
           )} */}
-          {/* {
+          {
             error && <p className="text-red-600">{error}</p>
-          } */}
-           {age !== null && (
+          }
+           {/* {age !== null && (
         <p>Your age is: {age} years</p>
-      )}
+      )} */}
       
               <div className="w-full mt-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto">
