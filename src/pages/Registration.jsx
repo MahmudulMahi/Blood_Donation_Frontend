@@ -12,12 +12,12 @@ import Swal from "sweetalert2";
 
 const Registration = () => {
   const currentYear = new Date().getFullYear();
- 
-  
+
+
   const [birthDate, setBirthDate] = useState('');
   const [age, setAge] = useState(null);
 
-  const [error,setError]=useState('')
+  const [error, setError] = useState('')
 
   const [disease, setDisease] = useState([])
   useEffect(() => {
@@ -60,7 +60,7 @@ const Registration = () => {
       disease: "",
       password: "",
       weight: "",
-      gender: ""
+      gender: "male"
 
     },
 
@@ -76,74 +76,75 @@ const Registration = () => {
         return;
 
       }
-    
-      else{
-        
-      const dataToSend = {
+
+      else {
+
+        const dataToSend = {
 
 
-        first_name: values.fullName,
-        last_name: values.lastName,
-        password: values.password,
-        email: values.email,
-        dob: `${values.year}-${values.month}-${values.dayID}`,
-        blood_group: values.bloodgroup,
-        last_donate_date: `${values.lastyear}-${values.lastmonth}-${values.lastday}`,
-        height: values.feet + values.inch,
-        age: values.age,
-        phone_number: values.phoneNumber,
-        nid: values.nid,
-        address: values.address,
-        any_disease: values.disease,
-        weight: values.weight,
-        gender: values.gender
+          first_name: values.fullName,
+          last_name: values.lastName,
+          password: values.password,
+          email: values.email,
+          dob: `${values.year}-${values.month}-${values.dayID}`,
+          blood_group: values.bloodgroup,
+          last_donate_date: `${values.lastyear}-${values.lastmonth}-${values.lastday}`,
+          height: values.feet + values.inch,
+          age: values.age,
+          phone_number: values.phoneNumber,
+          nid: values.nid,
+          address: values.address,
+          any_disease: values.disease,
+          weight: values.weight,
+          gender: values.gender
 
 
-      };
-    
-    
 
-      axios.post(`https://bloodbackend.visionarytechsolution.com/auth/register`, dataToSend, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-        .then(response => {
-          console.log('Data successfully posted to the server:', response.data);
-         
-          if(response.data.id){
-            Swal.fire({
-              position: "top-middle",
-              icon: "success",
-              title: "Registration Successfully",
-              showConfirmButton: false,
-              timer: 1500
-            });
-          }
-          formik.resetForm();
-         
+        };
+
+
+
+        axios.post(`https://bloodbackend.visionarytechsolution.com/auth/register`, dataToSend, {
+          headers: {
+            'Content-Type': 'application/json',
+          },
         })
-        .catch(error => {
-          console.log(error)
-          // Swal.fire({
-          //   icon: "error",
-          //   title: "Oops...",
-          //   text: "Something went wrong!",
-          //   footer: '<a href="#">Why do I have this issue?</a>'
-          // });
-          // setError(error.message)
-        });
-      
-      
+          .then(response => {
+            console.log('Data successfully posted to the server:', response.data);
+
+            if (response.data.id) {
+              Swal.fire({
+                position: "top-middle",
+                icon: "success",
+                title: "Registration Successfully",
+                showConfirmButton: false,
+                timer: 1500
+              });
+            }
+            formik.resetForm();
+
+          })
+          .catch(error => {
+            console.log(error.response)
+            if (error.data.status === 406) {
+              alert("Email is already registered.");
+            } else {
+
+              alert('An unexpected error occurred.');
+            }
+
+          });
+
+
       }
-    
+
     }
 
   });
 
 
 
-  
+
 
   // setBirthDate(formik.values.dob);
   // const today = new Date();
@@ -417,17 +418,17 @@ const Registration = () => {
           Please fill out all fields before submitting.
         </div>
           )} */}
-          {
-            error && <p className="text-red-600">{error}</p>
-          }
-           {/* {age !== null && (
+              {
+                error && <p className="text-red-600">{error}</p>
+              }
+              {/* {age !== null && (
         <p>Your age is: {age} years</p>
       )} */}
-      
+
               <div className="w-full mt-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto">
                   <div className="col-span-2 flex items-center">
-                    <DynamicLabel label="Full Name" isRequired={true} />
+                    <DynamicLabel label="Full Name" />
                   </div>
                   <div className="col-span-3 zindexnav">
                     <InputFields
@@ -437,6 +438,7 @@ const Registration = () => {
                       onChange={formik.handleChange}
                       value={formik.values.fullName}
                       className="border border-gray-400 rounded-md p-2 w-full"
+                      required
                     />
                   </div>
                   <div className="col-span-2 zindexnav">
@@ -447,6 +449,7 @@ const Registration = () => {
                       onChange={formik.handleChange}
                       value={formik.values.lastName}
                       className="border border-gray-400 rounded-md p-2 w-full"
+                      required
                     />
                   </div>
                   {/* __________ */}
@@ -461,7 +464,7 @@ const Registration = () => {
                       />
                     </div> */}
                   <div className="col-span-2 flex items-center">
-                    <DynamicLabel label="Phone Number" isRequired={true} />
+                    <DynamicLabel label="Phone Number" />
                   </div>
                   <div className="col-span-3 zindexnav">
                     <InputFields
@@ -471,13 +474,14 @@ const Registration = () => {
                       onChange={formik.handleChange}
                       value={formik.values.phoneNumber}
                       className="border border-gray-400 rounded-md p-2 w-full"
+                      required
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                   <div className="col-span-2 flex items-center">
-                    <DynamicLabel label="Date of Birth" isRequired={true} />
+                    <DynamicLabel label="Date of Birth" />
                   </div>
                   <div className="col-span-5 zindexnav">
                     <div className="grid grid-cols-3 gap-4">
@@ -490,6 +494,7 @@ const Registration = () => {
                           onChange={handleDayChange}
                           value={formik.values.dayID}
                           className="border border-gray-400 rounded-md p-2 w-full zindexnav"
+                          required
                           showIcon={true}
 
                         />
@@ -507,6 +512,7 @@ const Registration = () => {
                           className="border border-gray-400 rounded-md p-2 w-full zindexnav"
                           showIcon={true}
                           iconColor="black"
+                          required
                         />
                         <p>Month</p>
                       </div>
@@ -522,6 +528,7 @@ const Registration = () => {
                           className="border border-gray-400 rounded-md p-2 w-full zindexnav"
                           showIcon={true}
                           iconColor="black"
+                          required
                         />
                         <p>year</p>
                       </div>
@@ -529,7 +536,7 @@ const Registration = () => {
                   </div>
 
                   <div className="col-span-2 flex items-center">
-                    <DynamicLabel label="Email Address" isRequired={false} />
+                    <DynamicLabel label="Email Address" />
                   </div>
                   <div className="col-span-3 zindexnav">
                     <InputFields
@@ -540,6 +547,7 @@ const Registration = () => {
                       value={formik.values.email}
                       name='email'
                       className="border border-gray-400 rounded-md p-2 w-full"
+                      required
                     />
                   </div>
 
@@ -548,7 +556,7 @@ const Registration = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                   <div className="col-span-2 flex items-center">
-                    <DynamicLabel label="Blood Group" isRequired={true} />
+                    <DynamicLabel label="Blood Group" />
                   </div>
                   <div className="col-span-5 zindexnav">
                     <div className="grid grid-cols-3 gap-4">
@@ -564,6 +572,7 @@ const Registration = () => {
                           className="border border-gray-400 rounded-md p-2 w-full zindexnav"
                           showIcon={true}
                           iconColor="black"
+                          required
                         />
                       </div>
                       <div className="col-span-1"></div>
@@ -572,7 +581,7 @@ const Registration = () => {
                   </div>
 
                   <div className="col-span-2 flex items-center">
-                    <DynamicLabel label=" password" isRequired={false} />
+                    <DynamicLabel label=" password" />
                   </div>
                   <div className="col-span-3 zindexnav">
                     <input
@@ -583,6 +592,7 @@ const Registration = () => {
                       value={formik.values.password}
                       name='password'
                       className="border border-gray-400 rounded-md p-2 w-full"
+                      required
                     />
                   </div>
                   {/* <div className="col-span-2 flex items-center">
@@ -603,7 +613,7 @@ const Registration = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                   <div className="col-span-2 flex items-start">
-                    <DynamicLabel label="Last Donate Date" isRequired={true} />
+                    <DynamicLabel label="Last Donate Date" />
                   </div>
                   <div className="col-span-5 zindexnav">
                     <div className="grid grid-cols-3 gap-4">
@@ -618,6 +628,7 @@ const Registration = () => {
                           name='day'
                           className="border border-gray-400 rounded-md p-2 w-full zindexnav"
                           showIcon={true}
+                          required
                         />
                         <p>Day</p>
                       </div>
@@ -633,6 +644,7 @@ const Registration = () => {
                           className="border border-gray-400 rounded-md p-2 w-full zindexnav"
                           showIcon={true}
                           iconColor="black"
+                          required
                         />
                         <p>month</p>
                       </div>
@@ -648,30 +660,33 @@ const Registration = () => {
                           className="border  border-gray-400 rounded-md p-2 w-full zindexnav"
                           showIcon={true}
                           iconColor="black"
+                          required
                         />
                         <p>Year</p>
                       </div>
                     </div>
                   </div>
 
+
                   <div className="col-span-2 flex">
-                      <DynamicLabel label="Address" isRequired={false} />
-                    </div>
+                    <DynamicLabel label="Address" />
+                  </div>
                   <div className="col-span-3 zindexnav">
-                      <InputFields
-                        id="address"
-                        type="text"
-                        placeholder="Enter Address"
-                        onChange={formik.handleChange}
-                        value={formik.values.address}
-                        className="border border-gray-400 rounded-md p-2 w-full"
-                        style={{
-                          minHeight: "80px",
-                          maxHeight: "80px",
-                          resize: "none",
-                        }}
-                      />
-                    </div>
+                    <InputFields
+                      id="address"
+                      type="text"
+                      placeholder="Enter Address"
+                      onChange={formik.handleChange}
+                      value={formik.values.address}
+                      className="border border-gray-400 rounded-md p-2 w-full"
+                      required
+                      style={{
+                        minHeight: "80px",
+                        maxHeight: "80px",
+                        resize: "none",
+                      }}
+                    />
+                  </div>
                   {/* <div className="col-span-2 flex items-center">
                     <DynamicLabel label=" password" isRequired={false} />
                   </div> */}
@@ -690,7 +705,7 @@ const Registration = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                   <div className="col-span-2 flex items-start">
-                    <DynamicLabel label="Height & Weight" isRequired={true} />
+                    <DynamicLabel label="Height & Weight" />
                   </div>
                   <div className="col-span-5 zindexnav">
                     <div className="grid grid-cols-3 gap-4">
@@ -703,6 +718,7 @@ const Registration = () => {
                           value={formik.values.feet}
                           name='feet'
                           className="border border-gray-400 rounded-md p-2 w-full"
+                          required
                         />
                       </div>
                       <div className="col-span-1">
@@ -714,6 +730,7 @@ const Registration = () => {
                           value={formik.values.inch}
                           name='inch'
                           className="border border-gray-400 rounded-md p-2 w-full"
+                          required
                         />
                       </div>
                       {/* <div className="col-span-2 flex items-start">
@@ -729,6 +746,7 @@ const Registration = () => {
                           value={formik.values.weight}
                           name='weight'
                           className="border border-gray-400 rounded-md p-2 w-full"
+                          required
                         />
                       </div>
                     </div>
@@ -747,6 +765,7 @@ const Registration = () => {
                           onChange={handleDistrictChange}
                           value={formik.values.district}
                           className="border border-gray-400 rounded-md p-2 w-full"
+                          required
                         />
                       </div>
                       <div className="col-span-2">
@@ -767,7 +786,7 @@ const Registration = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                   <div className="col-span-2 flex items-center">
-                    <DynamicLabel label="Age" isRequired={true} />
+                    <DynamicLabel label="Age" />
                   </div>
                   <div className="col-span-5 zindexnav">
                     <div className="grid grid-cols-3 gap-4">
@@ -780,6 +799,7 @@ const Registration = () => {
                           value={formik.values.age}
                           name='age'
                           className="border border-gray-400 rounded-md p-2 w-full"
+                          required
                         />
                       </div>
                       <div className="col-span-1"></div>
@@ -800,7 +820,7 @@ const Registration = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                   <div className="col-span-2 flex items-center">
-                    <DynamicLabel label="Gender" isRequired={true} />
+                    <DynamicLabel label="Gender" />
                   </div>
                   <div className="col-span-5 zindexnav">
                     <div className="grid grid-cols-3 gap-4">
@@ -814,13 +834,14 @@ const Registration = () => {
                           value={formik.values.gender}
 
                           className="border border-gray-400 rounded-md p-2 w-full"
+                          required
                         />
                       </div>
                       <div className="col-span-1"></div>
                     </div>
                   </div>
                   <div className="col-span-2 flex items-center">
-                    <DynamicLabel label="NID" isRequired={false} />
+                    <DynamicLabel label="NID" />
                   </div>
                   <div className="col-span-3 zindexnav">
                     <InputFields
@@ -831,6 +852,7 @@ const Registration = () => {
                       value={formik.values.nid}
                       name='nid'
                       className="border border-gray-400 rounded-md p-2 w-full"
+                      required
                     />
                   </div>
 
@@ -846,7 +868,7 @@ const Registration = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 h-auto mt-2">
                   <div className="col-span-2 flex items-center">
-                    <DynamicLabel label="Any Disease" isRequired={true} />
+                    <DynamicLabel label="Any Disease" />
                   </div>
                   <div className="col-span-5 zindexnav">
                     <InputFields
@@ -859,21 +881,22 @@ const Registration = () => {
                       value={formik.values.disease}
                       name='disease'
                       className="border border-gray-400 rounded-md p-2 w-full"
+                      required
 
                       showIcon={true}
                       iconColor="black"
                     />
                   </div>
-                  <div className="col-span-1"></div>                 
-             
+                  <div className="col-span-1"></div>
+
                 </div>
               </div>
- 
+
 
 
               <div className="flex justify-center mt-5">
                 <button className="bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-transparent hover:text-brandPrimary border hover:border-brandPrimary hover:font-semibold z-10">
-                Registration
+                  Registration
                 </button>
               </div>
             </form>
