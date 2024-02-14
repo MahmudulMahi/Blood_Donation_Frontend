@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useFormik } from "formik";
 import DynamicLabel from "../../components/InputFields/DynamicLabel";
 import InputFields from "../../components/InputFields/InputFields";
 import TitleTopComponent from "../../components/Blood/TitleTopComponent";
 import axios from "axios";
+import { useLocation } from 'react-router-dom';
+
 
 const RequestBloodPage = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token && location.pathname !== '/login') {
+   
+      window.location.href = '/login';
+    }
+  }, [location]);
 
   const formik =useFormik({
 
@@ -27,6 +39,7 @@ const RequestBloodPage = () => {
 
 onSubmit:async(values)=>{
   console.log("values", values)
+
   const isEmptyField = Object.values(values).some(value => value === "");
   
   if(isEmptyField){
@@ -41,6 +54,7 @@ onSubmit:async(values)=>{
     const { latitude, longitude } = position.coords;
     console.log("lat",latitude,longitude)
     
+   
     const bloodToSend={
       patient_name:values.patientName,
       blood_group:values.bloodGroup,
@@ -69,7 +83,7 @@ onSubmit:async(values)=>{
     .then(error =>{
       console.log("error",error)
     })
-
+ 
     
   }
 }
