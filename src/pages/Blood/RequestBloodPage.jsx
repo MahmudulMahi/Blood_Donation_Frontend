@@ -1,23 +1,47 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import DynamicLabel from "../../components/InputFields/DynamicLabel";
 import InputFields from "../../components/InputFields/InputFields";
 import TitleTopComponent from "../../components/Blood/TitleTopComponent";
 import axios from "axios";
 import { useLocation } from 'react-router-dom';
+import { jwtDecode } from "jwt-decode";
 
 
 const RequestBloodPage = () => {
 
   const location = useLocation();
+  const [imeage, setImeage]=useState(null)
+
+
+
+
+
+  // const [userId,setUserId]=useState("")
+
+  // const token=localStorage.getItem('token');
+
+  // useEffect(() => {
+  //   if (token) {
+  //     const decodedToken = jwtDecode(token);
+  //     setUserId(decodedToken.user_id);
+  //   }
+  // }, [token]); 
+  
+  // console.log("idddd",userId);
+
+
+
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (!token && location.pathname !== '/login') {
+    const token = localStorage?.getItem('token');
+    if (!token && location?.pathname !== '/login') {
    
       window.location.href = '/login';
     }
   }, [location]);
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const formik =useFormik({
 
@@ -25,25 +49,30 @@ const RequestBloodPage = () => {
       patientName: "",
       patientAge: "",
       phoneNumber: "",
-      requestType:"",
+      requestType:"low",
       bloodGroup:"",
       date:"",
       donationType:"",
       transfusionBlood:"",
       district:"",
       hospital:"",
-      // selectedFile:""
+    
+      selectedFile:null,
+      
       
       
     },
-
-onSubmit:async(values)=>{
+    
+onSubmit:async(values,{ setSubmitting})=>{
   console.log("values", values)
+  setIsLoading(true);
 
   const isEmptyField = Object.values(values).some(value => value === "");
   
   if(isEmptyField){
     alert("Please fill in all fields before submitting.")
+    setIsLoading(false); 
+    setSubmitting(false);
     return
   }
   else{
@@ -52,42 +81,75 @@ onSubmit:async(values)=>{
     });
 
     const { latitude, longitude } = position.coords;
-    console.log("lat",latitude,longitude)
+    console.log("latitude",latitude)
+    console.log("longitude",longitude)
     
    
-    const bloodToSend={
-      patient_name:values.patientName,
-      blood_group:values.bloodGroup,
-      request_donation_type:values.donationType,
-      patient_age:values.patientAge,
-      phone_nember:values.phoneNumber,
-      urgency:values.requestType,
-      hospital_name:values.hospital,
-      date_when_blood_need:values.date,
-      disease_name:values.transfusionBlood,
-      district:values.district,
-      latitude,
-      longitude,
-      // imeage:values.selectedFile
+    // const bloodToSend={
+    //   patient_name:values.patientName,
+    //   blood_group:values.bloodGroup,
+    //   request_donation_type:values.donationType,
+    //   patient_age:values.patientAge,
+    //   phone_nember:values.phoneNumber,
+    //   urgency:values.requestType,
+    //   hospital_name:values.hospital,
+    //   date_when_blood_need:values.date,
+    //   disease_name:values.transfusionBlood,
+    //   district:values.district,
+    //   imeage:values.selectedFile,
+    //   latitude,
+    //   longitude,      
+    //   is_managed:true
 
-    }
-    axios.post(`https://bloodbackend.visionarytechsolution.com/requestblood/request_blood`,bloodToSend,{
-      headers:{
-        'Content-Type':'application/json',
-        
+    // }
+    const formData = new FormData();
+formData.append('patient_name', values.patientName);
+formData.append('blood_group', values.bloodGroup);
+formData.append('request_donation_type', values.donationType);
+formData.append('patient_age', values.patientAge);
+formData.append('phone_nember', values.phoneNumber);
+formData.append('urgency', values.requestType);
+formData.append('hospital_name', values.hospital);
+formData.append('date_when_blood_need', values.date);
+formData.append('disease_name', values.transfusionBlood);
+formData.append('district', values.district);
+formData.append('latitude', latitude);
+formData.append('longitude', longitude);
+// formData.append('imeage', values.selectedFile);
+formData.append('imeage', imeage);
+formData.append('is_managed', true);
+
+console.log("FormData object:",...formData);
+
+    axios.post(`https://bloodbackend.visionarytechsolution.com/requestblood/request_blood`,formData,
+    {
+      headers: {
+        'Content-Type': 'multipart/form-data',
       },
-    })
+    }
+    )
     .then(res=>{
       console.log("Data successfully posted to the server:",res.data)
     })
     .then(error =>{
       console.log("error",error)
     })
+    .finally(()=>{
+      setIsLoading(false); 
+      setSubmitting(false);
+    })
  
     
   }
 }
 })
+// const handleFileChange = (event) => {
+//   const selectedFile = event.target.files[0];
+//   console.log('Selected File:', selectedFile);
+//   formik.setFieldValue('selectedFile', selectedFile);
+// };
+
+
 
 
 
@@ -169,10 +231,10 @@ onSubmit:async(values)=>{
 
   };
 
-  // const handleFileChange = (event) => {
-  //   const selectedFile = event.target.files[0];
-  //   console.log("Selected File:", selectedFile);
-  // };
+  const handleFileChange = (event) => {
+    setImeage(event.target.files[0]);
+    
+  };
   // const handleFileChange = (event) => {
   //   const selectedFile = event.target.files[0];
   //   console.log('lllllll',selectedFile)
@@ -373,7 +435,7 @@ onSubmit:async(values)=>{
             </div>
           </div>
 
-          {/* <div className="grid grid-cols-2 gap-4 mt-1">
+          <div className="grid grid-cols-2 gap-4 mt-1">
             <div className="col-span-1">
               <div className="mt-3">
                 <label htmlFor="imageUpload">Upload Image:</label> <br />
@@ -399,7 +461,7 @@ onSubmit:async(values)=>{
               </div>
             </div>
             <div className="col-span-1"></div>
-          </div>  */}
+          </div> 
            {/* (more form fields) */}
 
           <div className="flex justify-center items-center pb-4 mt-2">
@@ -407,6 +469,7 @@ onSubmit:async(values)=>{
               <button
                 type="submit"
                 className="bg-brandPrimary text-white py-2 px-4 rounded-md shadow-bottom-right"
+                
               >
                 Request For Blood
               </button>
